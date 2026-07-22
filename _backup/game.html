@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Harvest Frontier Game</title>
+    <!-- นำเข้าฟอนต์ Pixel/8-bit จาก Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- นำเข้าไฟล์ CSS พื้นฐาน -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Game Container สำหรับควบคุมสัดส่วน 16:9 แบบ Responsive -->
+    <div id="game-container">
+        <!-- ตัว Canvas สำหรับ Render กราฟิก Tilemap และตัวละคร -->
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- เลเยอร์สีแดงตอนหนีตาย (Escape Sequence) -->
+        <div id="escape-overlay" class="hidden"></div>
+
+        <!-- HUD Overlay (ปุ่มกดด้านบนระหว่างเล่น) -->
+        <div id="hud-ui" class="overlay-ui hidden">
+            <div class="hud-buttons">
+                <button class="hud-btn" id="btn-journal">สมุดบันทึก (B)</button>
+                <button class="hud-btn" id="btn-settings">⚙️ SETTINGS</button>
+            </div>
+        </div>
+
+        <!-- หน้าจอ Main Menu -->
+        <div id="main-menu-ui" class="ui-layer">
+            <h1 id="game-title" class="game-title">HARVEST FRONTIER GAME</h1>
+            <p id="game-subtitle" class="subtitle">The Ignorance Devourer</p>
+            <div class="menu-buttons">
+                <button class="menu-btn arcade-btn" id="btn-start">START GAME</button>
+                <button class="menu-btn arcade-btn" id="btn-menu-settings">SETTINGS</button>
+                <button class="menu-btn arcade-btn" id="btn-credits">CREDITS</button>
+            </div>
+        </div>
+
+        <!-- หน้าจอ Settings -->
+        <div id="settings-ui" class="ui-layer hidden">
+            <div class="panel-box">
+                <h2 id="settings-title" class="panel-title">SETTINGS</h2>
+                <div class="settings-group">
+                    <label id="lbl-bgm">BGM VOLUME</label>
+                    <input type="range" id="bgm-slider" min="0" max="100" value="50">
+                </div>
+                <div class="settings-group">
+                    <label id="lbl-sfx">SFX VOLUME</label>
+                    <input type="range" id="sfx-slider" min="0" max="100" value="50">
+                </div>
+                <div class="settings-group" style="position: relative;">
+                    <label id="lbl-language">LANGUAGE</label>
+                    <div class="vn-dropdown" style="display: flex; flex-direction: column; align-items: flex-end;">
+                        <!-- ปุ่มหลักใช้ทริกเกอร์ดรอปดาวน์ -->
+                        <button class="vn-dropdown-btn" id="btn-lang-toggle">TH ▼</button>
+                        <!-- ตัวเลือกภาษาที่จะสไลด์ลงมา -->
+                        <div class="vn-dropdown-menu" id="lang-dropdown-menu">
+                            <button class="vn-lang-opt" id="btn-lang-th">ไทย (TH)</button>
+                            <button class="vn-lang-opt" id="btn-lang-en">English (EN)</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="menu-btn arcade-btn" id="btn-mute">MUTE AUDIO</button>
+                <button class="menu-btn arcade-btn close-btn" id="btn-close-settings">BACK</button>
+            </div>
+        </div>
+
+        <!-- หน้าจอ Boss Quiz (เมื่อเจอ NPC/Boss) -->
+        <div id="quiz-ui" class="ui-layer hidden">
+            <div class="panel-box quiz-panel boss-theme">
+                <h2 id="quiz-title" class="boss-title">WARNING: BOSS APPROACHING</h2>
+                <div id="quiz-timer" style="color: #ff5252; font-size: 14px; text-align: center; margin-bottom: 10px;">
+                    เวลา: 15s</div>
+                <p id="quiz-question">คำถาม: ...</p>
+                <div class="quiz-options">
+                    <button class="quiz-btn arcade-btn" data-index="0">A. ตัวเลือก 1</button>
+                    <button class="quiz-btn arcade-btn" data-index="1">B. ตัวเลือก 2</button>
+                    <button class="quiz-btn arcade-btn" data-index="2">C. ตัวเลือก 3</button>
+                    <button class="quiz-btn arcade-btn" data-index="3">D. ตัวเลือก 4</button>
+                </div>
+                <div id="quiz-feedback" style="margin-top: 10px; font-size: 12px; color: #FFEB3B; text-align: center;">
+                </div>
+            </div>
+        </div>
+
+        <!-- หน้าจอจบเกม (Game Over / Victory) -->
+        <div id="game-over-ui" class="ui-layer hidden">
+            <div class="panel-box" style="text-align: center; max-width: 400px; margin: 0 auto;">
+                <h2 style="color: #FFD700; margin-bottom: 20px;">🏆 ขอแสดงความยินดี 🏆</h2>
+                <p>คุณนำปัญญากลับคืนสู่หมู่บ้านสำเร็จ!</p>
+                <div style="margin: 20px 0; background: rgba(0,0,0,0.5); padding: 15px; border-radius: 8px;">
+                    <p style="margin-bottom: 10px;">คำตอบที่ถูก: <span id="ending-score"
+                            style="color: #4CAF50; font-size: 20px;">0 / 60</span> ข้อ</p>
+                    <p style="margin-bottom: 10px;">คิดเป็น: <span id="ending-percent"
+                            style="color: #03A9F4; font-size: 20px;">0%</span></p>
+                    <h3 id="ending-trophy" style="font-size: 28px; margin-top: 10px;">ถ้วยรางวัล: -</h3>
+                </div>
+                <p id="ending-message" style="margin-bottom: 20px; font-size: 12px;">กำลังบันทึกข้อมูล...</p>
+                <button id="btn-restart" class="arcade-btn">เล่นอีกครั้ง</button>
+            </div>
+        </div>
+
+        <!-- หน้าจอสมุดบันทึก (Encyclopedia) -->
+        <div id="journal-ui" class="ui-layer hidden">
+            <div class="panel-box journal-panel">
+                <button id="btn-close-journal" class="journal-close-btn">X</button>
+                <h2 class="journal-title">📖 สมุดบันทึกไร่แดนขอบฟ้า</h2>
+                <div id="journal-content" class="journal-content">
+                    <p class="journal-empty">ยังไม่มีข้อมูล... ออกสำรวจเพื่อเก็บความรู้สิ!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- หน้าจอ Zone Selection (เลือกจุดหมาย) -->
+        <div id="zone-select-ui" class="ui-layer hidden">
+            <div class="panel-box">
+                <h2 class="panel-title">SELECT DESTINATION</h2>
+                <div class="menu-buttons" style="margin: 0 auto;">
+                    <button class="menu-btn arcade-btn" id="btn-zone-mountain">เกาะพืชพรรณ (2)</button>
+                    <button class="menu-btn arcade-btn" id="btn-zone-river">เกาะฤดูกาล (3)</button>
+                    <button class="menu-btn arcade-btn" id="btn-zone-village">เกาะศัตรูพืช (4)</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- หน้าจอ Dialog / สนทนากับ NPC -->
+        <div id="dialog-ui" class="ui-layer hidden" style="background-color: rgba(0,0,0,0.5);">
+            <div class="panel-box" style="position: absolute; bottom: 20px; width: 90%;">
+                <h2 id="dialog-name" style="text-align: left; color: #4CAF50; margin-bottom: 15px; font-size: 16px;">NPC
+                    NAME</h2>
+                <p id="dialog-text" style="text-align: left; font-size: 12px; line-height: 1.8; color: #fff;">NPC TEXT
+                </p>
+                <p
+                    style="text-align: right; font-size: 10px; color: #FFEB3B; margin-top: 15px; animation: blink 1s infinite;">
+                    [ กด E เพื่อทำงานต่อ ]</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1622 @@
+[
+  {
+    "id": 1,
+    "category": "soil",
+    "question": {
+      "th": "ชาวบ้านกำลังเดือดร้อนเพราะ 'ดินเปรี้ยว' พืชผลไม่ยอมโต เราควรใช้อะไรโรยเพื่อแก้ปัญหานี้?",
+      "en": "The villagers are suffering from 'acidic soil' and crops won't grow. What should we apply to fix this?"
+    },
+    "choices": {
+      "th": [
+        "ปุ๋ยคอก",
+        "ปูนขาว",
+        "น้ำส้มควันไม้",
+        "ทรายหยาบ"
+      ],
+      "en": [
+        "Manure",
+        "Lime (Calcium Hydroxide)",
+        "Wood Vinegar",
+        "Coarse Sand"
+      ]
+    },
+    "answer": 1,
+    "explanation": {
+      "th": "ปูนขาวมีฤทธิ์เป็นด่าง ช่วยปรับสภาพดินเปรี้ยว (เป็นกรดจัด) ให้กลับมาเป็นกลางได้ดีที่สุด",
+      "en": "Lime is alkaline and helps neutralize highly acidic (sour) soil."
+    }
+  },
+  {
+    "id": 2,
+    "category": "soil",
+    "question": {
+      "th": "ค่า pH ของดินข้อใดต่อไปนี้ที่เหมาะสมสำหรับพืชส่วนใหญ่ในการดูดซึมสารอาหารได้ดีที่สุด?",
+      "en": "Which of the following soil pH ranges is best for most crops to absorb nutrients effectively?"
+    },
+    "choices": {
+      "th": [
+        "pH 3.0 - 4.5 (กรดจัด)",
+        "pH 5.5 - 7.0 (กรดอ่อน-กลาง)",
+        "pH 8.5 - 10.0 (ด่างจัด)",
+        "pH 1.0 - 2.0 (กรดรุนแรง)"
+      ],
+      "en": [
+        "pH 3.0 - 4.5 (Strongly Acidic)",
+        "pH 5.5 - 7.0 (Slightly Acidic to Neutral)",
+        "pH 8.5 - 10.0 (Strongly Alkaline)",
+        "pH 1.0 - 2.0 (Extreme Acidic)"
+      ]
+    },
+    "answer": 1,
+    "explanation": {
+      "th": "ดินที่มีค่า pH 5.5 - 7.0 เป็นกรดอ่อน ๆ ถึงกลาง เป็นช่วงที่สารอาหารละลายน้ำและพืชดูดซึมได้ง่ายที่สุด",
+      "en": "Soil with pH 5.5 - 7.0 is slightly acidic to neutral, allowing nutrients to dissolve and absorb best."
+    }
+  },
+  {
+    "id": 3,
+    "category": "soil",
+    "question": {
+      "th": "เมื่อตรวจพบว่าดินมีค่า pH สูงเกินไป (ดินเค็มหรือดินด่าง) ควรใช้อะไรในการปรับลดความเป็นด่าง?",
+      "en": "If the soil pH is found to be too high (alkaline/salty), what should be used to lower it?"
+    },
+    "choices": {
+      "th": [
+        "ปูนขาว",
+        "ขี้เ ashesแกลบ",
+        "ปุ๋ยหมักใบไม้หรือกำมะถันผง",
+        "ทรายชายหาด"
+      ],
+      "en": [
+        "Lime",
+        "Rice husk ash",
+        "Leaf compost or sulfur powder",
+        "Beach sand"
+      ]
+    },
+    "answer": 2,
+    "explanation": {
+      "th": "ปุ๋ยอินทรีย์ ปุ๋ยหมักใบไม้ หรือกำมะถันผง มีฤทธิ์เป็นกรดอ่อน ๆ ช่วยลดค่า pH ของดินที่เป็นด่างได้",
+      "en": "Organic compost or sulfur powder has a mildly acidic property that helps lower alkaline soil pH."
+    }
+  },
+  {
+    "id": 4,
+    "category": "soil",
+    "question": {
+      "th": "ดินชนิดใดระบายน้ำและอากาศได้แย่ที่สุด แต่เก็บน้ำและสารอาหารได้ดีที่สุด?",
+      "en": "Which soil type has the poorest drainage and aeration but holds water and nutrients best?"
+    },
+    "choices": {
+      "th": [
+        "ดินทราย",
+        "ดินร่วน",
+        "ดินเหนียว",
+        "ดินตะกอน"
+      ],
+      "en": [
+        "Sandy soil",
+        "Loam soil",
+        "Clay soil",
+        "Silt soil"
+      ]
+    },
+    "answer": 2,
+    "explanation": {
+      "th": "ดินเหนียวมีเนื้อดินละเอียด แน่น ทำให้น้ำไหลผ่านได้ยาก แต่อุ้มน้ำและธาตุอาหารไว้ได้ดีมาก",
+      "en": "Clay soil has very fine, tight particles that restrict water flow but hold nutrients and moisture extremely well."
+    }
+  },
+  {
+    "id": 5,
+    "category": "soil",
+    "question": {
+      "th": "อัตราส่วนผสมของ 'ดินร่วนที่สมบูรณ์แบบ' สำหรับพืชทั่วไป (Ideal Soil Composition) คือข้อใด?",
+      "en": "What is the ideal soil composition ratio for general plant growth?"
+    },
+    "choices": {
+      "th": [
+        "แร่ธาตุ 45%, น้ำ 25%, อากาศ 25%, อินทรียวัตถุ 5%",
+        "ทราย 90%, น้ำ 5%, อากาศ 5%",
+        "หิน 50%, น้ำ 50%",
+        "ดินเหนียว 80%, อินทรียวัตถุ 20%"
+      ],
+      "en": [
+        "Minerals 45%, Water 25%, Air 25%, Organic Matter 5%",
+        "Sand 90%, Water 5%, Air 5%",
+        "Rock 50%, Water 50%",
+        "Clay 80%, Organic Matter 20%"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "ดินอุดมคติประกอบด้วยเนื้อดิน (แร่ธาตุ) 45%, ช่องว่างที่มีน้ำ 25%, ช่องว่างที่มีอากาศ 25%, และอินทรียวัตถุ 5%",
+      "en": "Ideal soil contains 45% mineral matter, 25% air space, 25% water space, and 5% organic matter."
+    }
+  },
+  {
+    "id": 6,
+    "category": "soil",
+    "question": {
+      "th": "การเติมอินทรียวัตถุ (เช่น ปุ๋ยคอก ปุ๋ยหมัก) ลงในดินเหนียวช่วยแก้ปัญหาอะไร?",
+      "en": "What does adding organic matter (such as manure or compost) to clay soil help improve?"
+    },
+    "choices": {
+      "th": [
+        "ทำให้ระบายน้ำและอากาศได้ดีขึ้น ดินร่วนซุยขึ้น",
+        "ทำให้ดินเหนียวแน่นยิ่งขึ้น",
+        "ทำให้หน้าดินแข็งตัวและกันวัชพืช",
+        "ทำให้ดินกลายเป็นกรดจัดทันที"
+      ],
+      "en": [
+        "Improves drainage and aeration, making it looser",
+        "Makes the clay tighter and harder",
+        "Hardens the topsoil to prevent weeds",
+        "Immediately turns the soil highly acidic"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "อินทรียวัตถุช่วยแทรกตัวในเนื้อดินเหนียว ทำให้เกิดโครงสร้างดินเป็นก้อนกลมเล็ก ๆ ระบายน้ำและอากาศได้ดีขึ้น",
+      "en": "Organic matter loosens the clay structure, improving both drainage and aeration."
+    }
+  },
+  {
+    "id": 7,
+    "category": "soil",
+    "question": {
+      "th": "ทำไมการรรดน้ำต้นไม้มากเกินไปจนน้ำท่วมขังถึงทำให้พืชเหี่ยวเฉาและตายได้?",
+      "en": "Why does overwatering crops to the point of waterlogging cause them to wilt and die?"
+    },
+    "choices": {
+      "th": [
+        "รากพืชขาดอากาศหายใจ",
+        "พืชได้รับแสงแดดมากเกินไป",
+        "ค่า pH ของดินเปลี่ยนเป็นด่างจัดทันที",
+        "น้ำทำลายใบของพืชโดยตรง"
+      ],
+      "en": [
+        "Plant roots suffocate from lack of oxygen",
+        "Plants receive too much sunlight",
+        "Soil pH immediately turns highly alkaline",
+        "Water directly damages plant leaves"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "น้ำท่วมขังจะไล่อากาศออกจากช่องว่างในดิน ทำให้รากพืชไม่มีออกซิเจนเพื่อหายใจและเน่าเสีย",
+      "en": "Waterlogging expels air from soil pores, suffocating the roots due to a lack of oxygen."
+    }
+  },
+  {
+    "id": 8,
+    "category": "soil",
+    "question": {
+      "th": "ระยะเวลาใดในรอบวันที่เหมาะสมที่สุดสำหรับการรดน้ำต้นไม้เพื่อลดการระเหยและการเกิดเชื้อรา?",
+      "en": "What is the best time of day to water plants to reduce evaporation and prevent fungal growth?"
+    },
+    "choices": {
+      "th": [
+        "ตอนเที่ยงวันแดดจัด",
+        "ตอนเช้าตรู่",
+        "ตอนหัวค่ำหรือดึก",
+        "บ่ายสามโมงตรง"
+      ],
+      "en": [
+        "Noon under direct hot sun",
+        "Early morning",
+        "Late evening or night",
+        "3 o'clock in the afternoon"
+      ]
+    },
+    "answer": 1,
+    "explanation": {
+      "th": "การรดน้ำตอนเช้าตรู่ช่วยให้พืชมีน้ำใช้ตลอดวัน และใบพืชแห้งเร็ว ลดโอกาสสะสมความชื้นเกิดเชื้อราในคืนนั้น",
+      "en": "Early morning watering gives plants water for the day, and leaves dry quickly, preventing evening fungal growth."
+    }
+  },
+  {
+    "id": 9,
+    "category": "soil",
+    "question": {
+      "th": "ข้อใดเป็นประโยชน์สำคัญที่สุดของการพรวนดินรอบโคนต้นพืช?",
+      "en": "What is the most important benefit of loosening soil (tilling) around plant bases?"
+    },
+    "choices": {
+      "th": [
+        "ช่วยให้รากพืชได้รับอากาศและน้ำซึมผ่านได้ง่ายขึ้น",
+        "ช่วยกระตุ้นการขยายตัวของวัชพืช",
+        "ช่วยเพิ่มความเป็นกรดให้กับหน้าดิน",
+        "ช่วยป้องกันแสงแดดไม่ให้ส่องถึงราก"
+      ],
+      "en": [
+        "Allows roots to get air and water to penetrate easily",
+        "Stimulates weed growth",
+        "Increases acidity of the topsoil",
+        "Protects roots from getting any sunlight"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "การพรวนดินช่วยทำลายหน้าดินที่จับตัวเป็นแผ่นแข็ง ช่วยเพิ่มช่องว่างให้อากาศและน้ำไหลลงสู่รากพืชได้สะดวก",
+      "en": "Tilling breaks up compacted soil crusts, increasing pore spaces for air and water to reach the roots."
+    }
+  },
+  {
+    "id": 10,
+    "category": "soil",
+    "question": {
+      "th": "พืชกินใบ เช่น ผักบุ้ง คะน้า ต้องการธาตุอาหารหลักชนิดใดเป็นพิเศษเพื่อบำรุงใบและลำต้นสีเขียว?",
+      "en": "Leafy vegetables like water spinach and kale require which primary nutrient for leaf and green stem growth?"
+    },
+    "choices": {
+      "th": [
+        "ไนโตรเจน (N)",
+        "ฟอสฟอรัส (P)",
+        "โพแทสเซียม (K)",
+        "แคลเซียม (Ca)"
+      ],
+      "en": [
+        "Nitrogen (N)",
+        "Phosphorus (P)",
+        "Potassium (K)",
+        "Calcium (Ca)"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "ไนโตรเจน (N) ช่วยกระตุ้นการเจริญเติบโตของใบและยอดสีเขียวของพืชผักสวนครัวกินใบ",
+      "en": "Nitrogen (N) promotes the growth of leaves and green stems in leafy vegetables."
+    }
+  },
+  {
+    "id": 11,
+    "category": "soil",
+    "question": {
+      "th": "ถ้าพืชผักมีอาการรากไม่แข็งแรง ต้นแคระแกร็น ดอกไม่สมบูรณ์ แสดงว่าขาดธาตุอาหารชนิดใด?",
+      "en": "If plants have weak roots, stunted growth, and poor flowers, which nutrient are they likely lacking?"
+    },
+    "choices": {
+      "th": [
+        "โพแทสเซียม (K)",
+        "ฟอสฟอรัส (P)",
+        "ไนโตรเจน (N)",
+        "เหล็ก (Fe)"
+      ],
+      "en": [
+        "Potassium (K)",
+        "Phosphorus (P)",
+        "Nitrogen (N)",
+        "Iron (Fe)"
+      ]
+    },
+    "answer": 1,
+    "explanation": {
+      "th": "ฟอสฟอรัส (P) ช่วยพัฒนาโครงสร้างราก การแตกดอกและการขยายตัวของผลอ่อนในพืช",
+      "en": "Phosphorus (P) is essential for root development, flower initiation, and early fruit formation."
+    }
+  },
+  {
+    "id": 12,
+    "category": "soil",
+    "question": {
+      "th": "การปลูก 'พืชตระกูลถั่ว' สลับกับการปลูกพืชหลัก มีประโยชน์อย่างไรต่อหน้าดิน?",
+      "en": "What is the benefit of planting 'legumes' (beans) in rotation with main crops?"
+    },
+    "choices": {
+      "th": [
+        "ช่วยสะสมไนโตรเจนในดินตามธรรมชาติ",
+        "ช่วยลดปริมาณน้ำสะสมใต้ดิน",
+        "ช่วยขจัดความเป็นกรดด่างออกไป",
+        "ช่วยให้ดินแน่นขึ้นเพื่อพยุงลำต้น"
+      ],
+      "en": [
+        "Helps accumulate nitrogen in the soil naturally",
+        "Reduces accumulated groundwater",
+        "Neutralizes all soil pH to exactly 7.0",
+        "Makes soil denser to support plant trunks"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "พืชตระกูลถั่วมีปมรากที่สามารถตรึงไนโตรเจนในอากาศลงสู่ดิน ทำให้ดินอุดมสมบูรณ์ขึ้น",
+      "en": "Legume root nodules fix atmospheric nitrogen into the soil, increasing natural soil fertility."
+    }
+  },
+  {
+    "id": 13,
+    "category": "soil",
+    "question": {
+      "th": "การนำหน้าดินเดิมไปตากแดดประมาณ 1-2 สัปดาห์ก่อนการเพาะปลูกใหม่มีประโยชน์อย่างไร?",
+      "en": "What is the benefit of sun-drying topsoil for 1-2 weeks before starting a new planting cycle?"
+    },
+    "choices": {
+      "th": [
+        "ฆ่าเชื้อโรค เชื้อรา และไข่แมลงศัตรูพืชที่ค้างอยู่ในดิน",
+        "ช่วยเพิ่มระดับน้ำในดิน",
+        "ช่วยเปลี่ยนสีของดินให้ดูสวยงาม",
+        "ทำให้ดินเหนียวกลายสภาพเป็นดินร่วนทราย"
+      ],
+      "en": [
+        "Sterilizes pathogens, fungi, and pest eggs residing in the soil",
+        "Helps increase the water table in the soil",
+        "Changes the soil color to make it look nicer",
+        "Turns heavy clay soil into sandy loam soil"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "ความร้อนและรังสี UV จากแสงแดดช่วยทำลายไข่แมลง เชื้อโรค และสปอร์เชื้อราค้างปีในหน้าดินได้ดี",
+      "en": "Heat and UV rays from sunlight destroy soil-borne pathogens, fungus spores, and pest eggs."
+    }
+  },
+  {
+    "id": 14,
+    "category": "soil",
+    "question": {
+      "th": "ดินชนิดใดแห้งตัวเร็วที่สุดและเก็บน้ำไม่อยู่เลย ทำให้ต้องรดน้ำบ่อยขึ้นแต่ปริมาณน้อย?",
+      "en": "Which soil type dries out fastest and cannot retain water at all, requiring frequent light watering?"
+    },
+    "choices": {
+      "th": [
+        "ดินเหนียวจัด",
+        "ดินร่วนผสมใบไม้",
+        "ดินทราย",
+        "ดินโคลน"
+      ],
+      "en": [
+        "Heavy clay",
+        "Loamy soil mixed with leaves",
+        "Sandy soil",
+        "Muddy soil"
+      ]
+    },
+    "answer": 2,
+    "explanation": {
+      "th": "ดินทรายมีช่องว่างขนาดใหญ่มาก น้ำไหลผ่านได้รวดเร็วทันที จึงแทบไม่เก็บบริหารน้ำเลย",
+      "en": "Sandy soil has large particles and pore spaces, letting water drain immediately without retention."
+    }
+  },
+  {
+    "id": 15,
+    "category": "soil",
+    "question": {
+      "th": "การรองก้นหลุมด้วย 'ปุ๋ยคอกผสมดินใบก้ามปู' มีวัตถุประสงค์เพื่ออะไร?",
+      "en": "What is the purpose of lining the planting hole with 'manure mixed with leaf compost'?"
+    },
+    "choices": {
+      "th": [
+        "เป็นแหล่งสารอาหารสำรองให้รากพืชในช่วงตั้งตัว",
+        "เพื่อลดไม่ให้รากชอนไชลึกลงไป",
+        "เพื่อให้รากพืชมีความร้อนอุ่นตลอดเวลา",
+        "ป้องการไม่ให้เกิดวัชพืชใต้ดิน"
+      ],
+      "en": [
+        "Acts as a starter nutrient reservoir for settling roots",
+        "Prevents roots from growing too deep",
+        "Keeps roots warm all the time",
+        "Prevents weeds from germinating underground"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "เป็นการเตรียมดินที่มีสารอาหารพร้อม เพื่อให้รากแรกเริ่มดูดซึมไปใช้กระตุ้นการเติบโตได้ทันที",
+      "en": "It provides readily available nutrients for young roots, accelerating early plant growth."
+    }
+  },
+  {
+    "id": 16,
+    "category": "soil",
+    "question": {
+      "th": "ระยะเวลาการเพาะเมล็ดพันธุ์ผักสวนครัวส่วนใหญ่ จนถึงจุดที่ย้ายลงแปลงปลูกได้คือช่วงใด?",
+      "en": "What is the typical seedling phase duration for vegetable seeds before transplanting?"
+    },
+    "choices": {
+      "th": [
+        "1 - 2 วัน",
+        "15 - 25 วัน (มีใบจริง 3-4 ใบ)",
+        "60 - 90 วัน",
+        "ทันทีหลังจากงอกรากแรก"
+      ],
+      "en": [
+        "1 - 2 days",
+        "15 - 25 days (when 3-4 true leaves appear)",
+        "60 - 90 days",
+        "Immediately after the first root sprouts"
+      ]
+    },
+    "answer": 1,
+    "explanation": {
+      "th": "กล้าผักส่วนใหญ่ต้องการเวลาสะสมอาหารประมาณ 2-3 สัปดาห์จนแข็งแรงพอที่จะทนความร้อนและการย้ายแปลง",
+      "en": "Most seedlings need 2-3 weeks to build reserves and grow strong enough to withstand transplant shock."
+    }
+  },
+  {
+    "id": 17,
+    "category": "soil",
+    "question": {
+      "th": "ทำไมดินเหนียวจัดจึงเหนี่ยวรั้งไม่ให้รากพืชเติบโตและแผ่ขยายออกไป?",
+      "en": "Why does extremely compact clay soil stunt root extension and spreading?"
+    },
+    "choices": {
+      "th": [
+        "เนื้อดินแข็งและทึบเกินไปเมื่อแห้ง ทำให้รากชอนไชยาก",
+        "ดินเหนียวดูดสารอาหารทั้งหมดไปล็อกไว้เอง",
+        "ดินเหนียวสะท้อนแสงแดดออกจากหน้าดิน",
+        "ดินเหนียวมีความหนาแน่นของออกซิเจนสูงเกินพืชทนไหว"
+      ],
+      "en": [
+        "Soil particles are too dense and hard when dry, restricting root penetration",
+        "Clay soil absorbs and locks up all nutrients permanently",
+        "Clay soil reflects too much sunlight away from the root zone",
+        "Clay soil has too high an oxygen density for plants to tolerate"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "เมื่อแห้ง ดินเหนียวจะจับตัวเป็นแผ่นแข็งที่รากพืชเล็ก ๆ ไม่สามารถแทรกผ่านไปหาแหล่งอาหารได้",
+      "en": "When dry, clay soil compacts into a brick-like texture that tender roots cannot easily penetrate."
+    }
+  },
+  {
+    "id": 18,
+    "category": "soil",
+    "question": {
+      "th": "วัสดุในข้อใดที่ช่วยบำรุงความเป็นกรดด่างและเติมแคลเซียมให้พืชได้อย่างปลอดภัย?",
+      "en": "Which of the following materials safely adds calcium and helps regulate soil acidity?"
+    },
+    "choices": {
+      "th": [
+        "เปลือกไข่บดละเอียด",
+        "น้ำส้มเกลือแร่",
+        "พลาสติกย่อยสลาย",
+        "ขี้เลื่อยไม้ดิบ"
+      ],
+      "en": [
+        "Crushed eggshells",
+        "Mineral drinking water",
+        "Biodegradable plastic",
+        "Raw wood sawdust"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "เปลือกไข่บดมีสารแคลเซียมคาร์บอเนต ช่วยปรับสภาพความเป็นกรดและเสริมแคลเซียมป้องกันผลเน่าในพืชตระกูลมะเขือ",
+      "en": "Crushed eggshells provide calcium carbonate, reducing soil acidity and preventing fruit rot in solanaceous crops."
+    }
+  },
+  {
+    "id": 19,
+    "category": "soil",
+    "question": {
+      "th": "การเติม 'ขุยมะพร้าว' ลงในวัสดุเพาะเมล็ดพืชมีประโยชน์หลักในข้อใด?",
+      "en": "What is the primary benefit of adding 'coco peat' (coconut coir) to seed starting mix?"
+    },
+    "choices": {
+      "th": [
+        "ช่วยเก็บกักความชื้นโดยไม่ทำให้ดินแฉะเกินไป",
+        "ช่วยให้เมล็ดงอกเร็วขึ้นภายใน 1 ชั่วโมง",
+        "เป็นสารไล่แมลงที่มาเจาะเมล็ดพืช",
+        "ช่วยเพิ่มธาตุเหล็กมหาศาล"
+      ],
+      "en": [
+        "Retains moisture well without making the soil waterlogged",
+        "Speeds up seed germination to within 1 hour",
+        "Acts as an insect repellent for seeds",
+        "Adds a massive amount of iron to the mix"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "ขุยมะพร้าวมีคุณสมบัติคล้ายฟองน้ำ อุ้มน้ำได้ดีแต่โครงสร้างโปร่งระบายน้ำส่วนเกินออกได้สะดวก",
+      "en": "Coco peat acts like a sponge, retaining essential moisture while maintaining a porous structure for drainage."
+    }
+  },
+  {
+    "id": 20,
+    "category": "soil",
+    "question": {
+      "th": "ธาตุอาหารรองชนิดใดที่มีส่วนช่วยให้ผลผลิต เช่น มะเขือเทศ หรือพริก ไม่เกิดอาการ 'ก้นผลเน่า'?",
+      "en": "Which secondary nutrient prevents blossom-end rot in crops like tomatoes and peppers?"
+    },
+    "choices": {
+      "th": [
+        "แคลเซียม (Ca)",
+        "ไนโตรเจน (N)",
+        "สังกะสี (Zn)",
+        "ฟลูออรีน (F)"
+      ],
+      "en": [
+        "Calcium (Ca)",
+        "Nitrogen (N)",
+        "Zinc (Zn)",
+        "Fluorine (F)"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "อาการก้นผลเน่าดำในมะเขือเทศเกิดจากการขาดแคลเซียมในช่วงขยายขนาดผล ทำให้ผนังเซลล์ไม่แข็งแรงและยุบตัว",
+      "en": "Blossom-end rot is caused by calcium deficiency, which weakens cell walls during rapid fruit expansion."
+    }
+  },
+  {
+    "id": 21,
+    "category": "seasons",
+    "question": {
+      "th": "พายุฝนบุกหนัก! พืชชนิดใดเหมาะจะปลูกใน 'ฤดูฝน' มากที่สุดเพราะทนน้ำท่วมขังและชอบน้ำมาก?",
+      "en": "Heavy storms are here! Which crop is best suited for the 'rainy season' as it tolerates waterlogging?"
+    },
+    "choices": {
+      "th": [
+        "ข้าว",
+        "กะหล่ำปลี",
+        "กระบองเพชร",
+        "มะเขือเทศ"
+      ],
+      "en": [
+        "Rice",
+        "Cabbage",
+        "Cactus",
+        "Tomato"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "'ข้าว' พัฒนามาเพื่อเติบโตในสภาพน้ำขัง มีช่องส่งอากาศจากใบลงสู่ราก จึงทนน้ำท่วมได้ดีที่สุด",
+      "en": "Rice is adapted to grow in standing water, transferring oxygen from leaves down to its roots."
+    }
+  },
+  {
+    "id": 22,
+    "category": "seasons",
+    "question": {
+      "th": "ใน 'ฤดูร้อน' แดดจัดและดินแห้งเร็ว พืชกลุ่มใดที่ปลูกแล้วรอดง่ายและต้องการน้ำน้อย?",
+      "en": "In the hot 'summer' with dry soil, which group of crops survives easily and needs minimal water?"
+    },
+    "choices": {
+      "th": [
+        "พืชตระกูลแตง มะเขือ และพืชหัว",
+        "ผักสลัดไฮโดรโปนิกส์ใบอ่อน",
+        "เห็ดฟางและมอสส์",
+        "ข้าวนาปี"
+      ],
+      "en": [
+        "Cucurbits (melons/cucumbers), eggplants, and root crops",
+        "Soft leafy hydroponic lettuce",
+        "Straw mushrooms and moss",
+        "Wetland rice"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "พืชกลุ่มมะเขือ แตง หรือพืชหัว มีรากแก้วที่ชอนไชได้ลึก และทนแดดจัดของฤดูร้อนได้ดีกว่าผักใบอ่อน",
+      "en": "Melons, eggplants, and root crops have deep root systems and tolerate harsh summer sun better than leafy greens."
+    }
+  },
+  {
+    "id": 23,
+    "category": "seasons",
+    "question": {
+      "th": "พืชผักสวนครัวชนิดใดที่มักเติบโตได้ดีเป็นพิเศษใน 'ฤดูหนาว' (อากาศเย็นและความชื้นต่ำ)?",
+      "en": "Which vegetable grows exceptionally well during the 'winter' season (cool air and low humidity)?"
+    },
+    "choices": {
+      "th": [
+        "ผักตระกูลกะหล่ำ เช่น กะหล่ำปลี บรอกโคลี",
+        "บัวหลวง",
+        "ข้าวโพดหวานเขตร้อนจัด",
+        "กล้วยน้ำว้า"
+      ],
+      "en": [
+        "Cruciferous vegetables like cabbage and broccoli",
+        "Lotus",
+        "Tropical sweet corn",
+        "Banana"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "กะหล่ำปลีและบรอกโคลีชอบอากาศเย็น ช่วยให้ห่อหัวแน่นและดอกมีรสชาติหวานกรอบ",
+      "en": "Cabbage and broccoli prefer cool weather, which promotes tight heads and sweet, crisp stems."
+    }
+  },
+  {
+    "id": 24,
+    "category": "seasons",
+    "question": {
+      "th": "การเพาะปลูกในฤดูฝน สิ่งใดที่เป็นอุปสรรคต่อโรคพืชมากที่สุด?",
+      "en": "What is the biggest driver of crop diseases during the rainy season?"
+    },
+    "choices": {
+      "th": [
+        "ความชื้นในอากาศสูงและเกิดเชื้อราได้ง่าย",
+        "การขาดธาตุอาหารไนโตรเจน",
+        "แดดแผดเผาจนใบแห้งเหี่ยว",
+        "ดินกลายเป็นทรายระบายน้ำเร็วเกินไป"
+      ],
+      "en": [
+        "High humidity promoting rapid fungal growth",
+        "Lack of nitrogen nutrient in the soil",
+        "Direct sun scorching and drying leaves",
+        "Soil turning into sand and draining too fast"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "ฝนและความชื้นสูงช่วยสปอร์ของเชื้อราในการแพร่กระจายตัวอย่างรวดเร็วและระบาดในแปลงพืช",
+      "en": "Persistent rainfall and high humidity create the perfect breeding ground for fungal spores."
+    }
+  },
+  {
+    "id": 25,
+    "category": "seasons",
+    "question": {
+      "th": "ทำไมเราจึงไม่นิยมหว่านเมล็ดพืชผักใบขนาดเล็กในวันที่มีฝนตกหนัก?",
+      "en": "Why is it not recommended to sow small vegetable seeds during a heavy rainstorm?"
+    },
+    "choices": {
+      "th": [
+        "เม็ดฝนจะชะล้างหรือฝังเมล็ดลึกเกินไปจนเน่าเสีย",
+        "เมล็ดจะงอกกลางอากาศทันที",
+        "ค่าความชื้นจะแห้งเกินไปสำหรับเมล็ด",
+        "ฝนจะทำให้เมล็ดเปลี่ยนสีเป็นสีดำ"
+      ],
+      "en": [
+        "Rain droplets wash away or bury seeds too deep, causing rot",
+        "Seeds will germinate in the air immediately",
+        "The moisture level becomes too dry for seeds",
+        "Rain will turn seeds black"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "ฝนตกหนักจะชะล้างเมล็ดที่ลอยอยู่บนหน้าดินไปรวมกันในที่ต่ำ หรือฝังดินแน่นจนรากและยอดงอกไม่พ้นดิน",
+      "en": "Heavy rain washes away shallow seeds or packs the soil too tight for sprouts to break through."
+    }
+  },
+  {
+    "id": 26,
+    "category": "seasons",
+    "question": {
+      "th": "การมุง 'สแลนพลางแสง' (Shading Net) เหนือแปลงผักมีประโยชน์สูงสุดในช่วงฤดูใด?",
+      "en": "Using a 'shading net' over vegetable beds is most beneficial during which season?"
+    },
+    "choices": {
+      "th": [
+        "ฤดูหนาวที่อากาศเย็นจัด",
+        "ฤดูร้อนที่แดดแผดเผารุนแรง",
+        "ฤดูฝนน้ำหลาก",
+        "ไม่จำเป็นต้องใช้เลยในทุกฤดู"
+      ],
+      "en": [
+        "Winter with cool weather",
+        "Summer with intense scorching sunlight",
+        "Rainy season floods",
+        "It is never necessary in any season"
+      ]
+    },
+    "answer": 1,
+    "explanation": {
+      "th": "ในฤดูร้อนแดดมีความเข้มรังสีกระทบใบพืชแรงเกินไป การพรางแสงช่วยป้องกันใบไหม้และลดอัตราการระเหยน้ำ",
+      "en": "In summer, solar intensity can burn tender crop leaves. Shading nets protect them and cut evaporation."
+    }
+  },
+  {
+    "id": 27,
+    "category": "seasons",
+    "question": {
+      "th": "ทำไมการปลูกพืชหมุนเวียน (Crop Rotation) หลังฤดูเก็บเกี่ยวหลักจึงสำคัญมากต่อการเพาะปลูกระยะยาว?",
+      "en": "Why is crop rotation after the main harvest season crucial for long-term farming?"
+    },
+    "choices": {
+      "th": [
+        "ช่วยตัดวงจรโรคพืชและแมลง และช่วยฟื้นฟูแร่ธาตุในดิน",
+        "เพื่อให้ปีศาจสับสนจำแปลงพืชไม่ได้",
+        "ช่วยทำให้พืชชนิดเดิมขยายพันธุ์ข้ามปี",
+        "ช่วยเพิ่มความมีกรดให้กับดินเหนียวจัด"
+      ],
+      "en": [
+        "Breaks pest and disease cycles and restores soil nutrients",
+        "Confuses the demon so it cannot locate the fields",
+        "Helps the original plant propagate across seasons",
+        "Increases soil acidity in compact clay soil"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "การปลูกพืชชนิดเดิมซ้ำ ๆ จะดึงแร่ธาตุเดิมออกจนดินเสื่อม และสะสมโรคพืชของสายพันธุ์นั้น ๆ ไว้ในดิน",
+      "en": "Monoculture depletes specific soil nutrients and builds up host-specific pathogens in the ground."
+    }
+  },
+  {
+    "id": 28,
+    "category": "seasons",
+    "question": {
+      "th": "พืชผักชนิดใดชอบแสงแดดจัดตลอดวัน (Full Sun) และทนสภาพอากาศร้อนชื้นได้ดี?",
+      "en": "Which crop loves full sunlight all day and handles hot, humid weather well?"
+    },
+    "choices": {
+      "th": [
+        "พริกขี้หนู",
+        "เห็ดเข็มทอง",
+        "ผักกาดหอมสลัด",
+        "ผักชีไทย"
+      ],
+      "en": [
+        "Chili pepper",
+        "Enoki mushroom",
+        "Lettuce",
+        "Coriander"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "พริกขี้หนูต้องการแดดจัดอย่างน้อย 6-8 ชั่วโมงต่อวัน เพื่อการติดดอกและทำให้ผลมีรสเผ็ดร้อน",
+      "en": "Chilis need at least 6-8 hours of direct sun to develop blossoms and high capsaicin content."
+    }
+  },
+  {
+    "id": 29,
+    "category": "seasons",
+    "question": {
+      "th": "ในฤดูหนาวที่อากาศเย็นจัดและมีลมแรง อุปสรรคสำคัญของการเพาะปลูกพืชบางชนิดคืออะไร?",
+      "en": "In windy and cold winter conditions, what is a key issue for certain sensitive crops?"
+    },
+    "choices": {
+      "th": [
+        "พืชเกิดอาการช็อกเย็น ชะงักการเติบโต หรือผลร่วงง่าย",
+        "พืชต้องการน้ำตลอด 24 ชั่วโมง",
+        "หน้าดินเกิดพายุโคลนพัดพาหน้าดินไปหมด",
+        "พืชสะสมไนโตรเจนมากเกินควร"
+      ],
+      "en": [
+        "Cold shock, stunted growth, or premature fruit drop",
+        "Crops needing continuous watering 24 hours a day",
+        "Severe mudslides blowing all soil layers away",
+        "Crops accumulating excess nitrogen in leaves"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "พืชเขตร้อนบางชนิดไม่ทนอากาศหนาวจัด อุณหภูมิต่ำจะทำให้อัตราดูดน้ำลดลงและผลผลิตร่วงเสียหาย",
+      "en": "Some tropical plants cannot tolerate freezing temperatures, causing poor water uptake and fruit drop."
+    }
+  },
+  {
+    "id": 30,
+    "category": "seasons",
+    "question": {
+      "th": "วิธีจัดหาทรัพยากรน้ำให้เหมาะสมสำหรับการทำเกษตรช่วง 'ฤดูแล้ง' (Dry Season) ที่ได้ผลลัพธ์ดีที่สุดคือข้อใด?",
+      "en": "What is the most effective water resource management technique for farming in the 'dry season'?"
+    },
+    "choices": {
+      "th": [
+        "การจัดตั้งระบบน้ำหยดเพื่อความประหยัด",
+        "การรดน้ำแปลงพืชแบบสปริงเกลอร์เปิดทิ้งไว้ตลอดวัน",
+        "ขุดสระลึกไว้รองรับพายุฝนที่จะมากลางวัน",
+        "รดน้ำด้วยน้ำกลั่นบริสุทธิ์สูง"
+      ],
+      "en": [
+        "Installing a drip irrigation system to save water",
+        "Running overhead sprinklers all day long",
+        "Digging deep ponds expecting rainstorms during the day",
+        "Watering with high-purity distilled water only"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "ระบบน้ำหยดปล่อยน้ำตรงสู่รากพืชทีละหยดอย่างช้า ๆ ช่วยประหยัดน้ำและลดการสูญเสียจากการระเหยกลางแจ้ง",
+      "en": "Drip irrigation delivers water directly to the plant base, minimizing waste from wind and evaporation."
+    }
+  },
+  {
+    "id": 31,
+    "category": "seasons",
+    "question": {
+      "th": "พืชสมุนไพรข้อใดต่อไปนี้มีฤทธิ์ทนแดดร้อนและปรับตัวเข้ากับสภาพดินแล้งได้ดี?",
+      "en": "Which of the following herbal plants is highly sun-tolerant and adapts well to dry soil conditions?"
+    },
+    "choices": {
+      "th": [
+        "ตะไคร้",
+        "ผักสลัดบัตเตอร์เฮด",
+        "เห็ดหูหนู",
+        "วอเตอร์เครส (สลัดน้ำ)"
+      ],
+      "en": [
+        "Lemongrass",
+        "Butterhead lettuce",
+        "Wood ear mushroom",
+        "Watercress"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "ตะไคร้มีระบบรากฝอยยึดเกาะหนาแน่น มีใบเรียวเล็กเพื่อลดคายน้ำ ทนทานต่ออากาศร้อนและแห้งแล้งสูง",
+      "en": "Lemongrass has dense fibrous roots and narrow leaves to reduce water loss, surviving high heat well."
+    }
+  },
+  {
+    "id": 32,
+    "category": "seasons",
+    "question": {
+      "th": "ทำไมในฤดูฝนชาวสวนมักพบปัญหาโรค 'รากเน่าโคนเน่า' (Root Rot) ระบาดมากที่สุด?",
+      "en": "Why is 'root rot' disease most prevalent during the rainy season?"
+    },
+    "choices": {
+      "th": [
+        "ดินมีความชื้นสะสมสูงเกินไปจนเกิดเชื้อราไฟทอปเทอรา",
+        "พืชได้รับน้ำจืดมากเกินไปจนเซลล์แตกตื่น",
+        "น้ำฝนชะสารอาหารออกไปจนหมดดินพยุงโคนไม่ได้",
+        "แมลงชอบขยายพันธุ์ในโคนพืชเฉพาะฤดูฝน"
+      ],
+      "en": [
+        "Excessive soil moisture promoting Phytophthora fungal pathogen",
+        "Plants getting too much freshwater causing cell shock",
+        "Rain stripping all minerals causing trunks to weaken",
+        "Insects breeding at plant bases only in the rain"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "เชื้อราก่อโรครากเน่าเจริญเติบโตและเคลื่อนไหวสปอร์ได้ดีมากในน้ำขังและสภาพดินเปียกชื้นยาวนาน",
+      "en": "Pathogenic water molds thrive and spread easily in waterlogged and saturated soil conditions."
+    }
+  },
+  {
+    "id": 33,
+    "category": "seasons",
+    "question": {
+      "th": "การคลุมแปลงดินด้วย 'ฟางข้าว' (Mulching) มีประโยชน์หลักในข้อใดช่วงฤดูร้อน?",
+      "en": "What is the primary benefit of 'straw mulching' over soil beds during summer?"
+    },
+    "choices": {
+      "th": [
+        "รักษาความชื้นในดินและลดความร้อนใต้หน้าดิน",
+        "เป็นอาหารบำรุงแมลงศัตรูพืช",
+        "ช่วยเพิ่มความสว่างให้กับรากพืช",
+        "ช่วยเร่งความร้อนของหน้าดินให้ระอุขึ้น"
+      ],
+      "en": [
+        "Retains soil moisture and cools down the root zone",
+        "Provides food for insect pests",
+        "Reflects light into the roots directly",
+        "Heats up the topsoil to extreme temperatures"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "ฟางทำหน้าที่เป็นฉนวนกันแดด ช่วยลดการระเหยของน้ำและรักษาอุณหภูมิดินไม่ให้ร้อนจนรากเสียหาย",
+      "en": "Straw acts as insulation, slowing water evaporation and protecting roots from excessive soil heat."
+    }
+  },
+  {
+    "id": 34,
+    "category": "seasons",
+    "question": {
+      "th": "หากต้องการผลผลิตที่ดกและหวานในผลไม้ช่วงฤดูแล้ง ธาตุอาหารตัวท้ายในสูตรปุ๋ย (K - โพแทสเซียม) ทำหน้าที่อะไร?",
+      "en": "To get high quality, sweet fruits during dry harvest seasons, what role does Potassium (K) play?"
+    },
+    "choices": {
+      "th": [
+        "ช่วยควบคุมการเปิดปิดปากใบควบคุมน้ำและสะสมแป้ง/น้ำตาล",
+        "ช่วยบำรุงสีใบให้เขียวเข้มบารมี",
+        "ช่วยเร่งการเจริญเติบโตของส่วนรากใหม่",
+        "ช่วยขับไล่แร่ธาตุที่ไม่จำเป็นออกจากราก"
+      ],
+      "en": [
+        "Regulates stomata opening for water conservation and accumulates starch/sugar",
+        "Darkens leaf pigmentation for aesthetics",
+        "Speeds up the division of young root cells",
+        "Expels unnecessary minerals from the root zone"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "โพแทสเซียมมีความสำคัญในการควบคุมสมดุลน้ำ พลังงานแรงดันเต่ง และสะสมน้ำตาลในผลไม้รสหวาน",
+      "en": "Potassium plays a key role in osmoregulation, stomata operation, and carbohydrate transport."
+    }
+  },
+  {
+    "id": 35,
+    "category": "seasons",
+    "question": {
+      "th": "สภาพอากาศ 'ร้อนชื้น' (High Temperature and High Humidity) ในช่วงปลายฝนต้นหนาว เหมาะแก่การเติบโตของศัตรูพืชชนิดใด?",
+      "en": "What kind of agricultural threat thrives in 'hot and humid' transitional periods?"
+    },
+    "choices": {
+      "th": [
+        "เชื้อราและสปอร์โรคพืชใบจุดใบไหม้",
+        "แมลงเต่าทองกินเพลี้ย",
+        "ไส้เดือนดิน",
+        "หญ้าแห้งทรายคลุม"
+      ],
+      "en": [
+        "Fungi and leaf spot disease spores",
+        "Beneficial predatory ladybugs",
+        "Earthworms",
+        "Dry weeds"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "อุณหภูมิอบอุ่นร่วมกับไอความชื้นสะสมสูง เหมาะอย่างยิ่งกับการงอกของสปอร์เชื้อราหลายชนิด",
+      "en": "Warm temperatures paired with high moisture provide ideal incubation for leaf fungal diseases."
+    }
+  },
+  {
+    "id": 36,
+    "category": "seasons",
+    "question": {
+      "th": "ข้อใดคือการปฏิบัติตนที่ถูกต้องหากมีข่าวน้ำหลากท่วมแปลงเกษตรในวันข้างหน้า?",
+      "en": "Which action should be taken if a flood warning is active for your farming region?"
+    },
+    "choices": {
+      "th": [
+        "ขุดลอกทางระบายน้ำรอบแปลง และเก็บเกี่ยวผลผลิตที่พร้อมไปก่อน",
+        "รดน้ำอัดลงไปให้ดินจมน้ำล่วงหน้า",
+        "ใส่ปุ๋ยเคมีบำรุงแปลงเพิ่มทันทีเพื่อต้านทานน้ำท่วม",
+        "ทำนั่งร้านปิดแสงแปลงผักถาวร"
+      ],
+      "en": [
+        "Clear drainage paths and harvest ready-to-reap produce immediately",
+        "Pre-saturate the soil with extra water",
+        "Apply heavy synthetic fertilizer to resist floods",
+        "Build complete light shields over crops"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "การขุดลอกทางระบายน้ำช่วยระบายน้ำส่วนเกินออกได้เร็ว และชิงเก็บเกี่ยวพืชป้องกันผลผลิตเน่าเสียจมน้ำ",
+      "en": "Clearing ditches speeds up water runoff, and harvesting ready crops prevents loss to rot."
+    }
+  },
+  {
+    "id": 37,
+    "category": "seasons",
+    "question": {
+      "th": "พืชชนิดใดทนทานต่อสภาพ 'ดินแห้งแล้ง' ขาดแคลนน้ำยาวนานในหน้าแล้งได้ดีที่สุด?",
+      "en": "Which plant is highly drought-tolerant and survives long dry spells without water?"
+    },
+    "choices": {
+      "th": [
+        "มันสำปะหลัง",
+        "ผักชีไทย",
+        "ผักกาดขาวปลี",
+        "ผักบุ้งจีน"
+      ],
+      "en": [
+        "Cassava",
+        "Coriander",
+        "Chinese cabbage",
+        "Water spinach"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "มันสำปะหลังมีระบบเก็บสะสมแป้งและน้ำในหัวใต้ดิน และสามารถทนสภาพแห้งแล้งได้นานหลายเดือน",
+      "en": "Cassava has root tubers to store starch and water, making it extremely resilient to prolonged droughts."
+    }
+  },
+  {
+    "id": 38,
+    "category": "seasons",
+    "question": {
+      "th": "พืชต้องการช่วงเวลากลางวันยาวนานในวันแดดจัด (Long-day plants) ต้องการสิ่งใดเป็นพิเศษในการกระตุ้นการออกดอก?",
+      "en": "What do long-day plants need to trigger flowering?"
+    },
+    "choices": {
+      "th": [
+        "ชั่วโมงรับแสงแดดในแต่ละวันที่ยาวนาน (เช่น 12-14 ชั่วโมง)",
+        "สภาพอากาศมืดสนิทเป็นเวลา 20 ชั่วโมง",
+        "การรดน้ำติดต่อกัน 5 ชั่วโมง",
+        "การฉีดสารทำลายคลอโรฟิลล์"
+      ],
+      "en": [
+        "Longer photoperiod (daily light exposure of 12-14 hours)",
+        "Complete darkness for 20 hours daily",
+        "Continuous watering for 5 hours",
+        "Applying chlorophyll destroying chemicals"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "พืชวันยาวต้องการความยาวของวัน (ชั่วโมงรับแสง) มากกว่าค่าวิกฤตเพื่อกระตุ้นฮอร์โมนชักนำการออกดอก",
+      "en": "Long-day plants require a photoperiod that exceeds a critical threshold to induce flowering hormones."
+    }
+  },
+  {
+    "id": 39,
+    "category": "seasons",
+    "question": {
+      "th": "ทำไมหน้าหนาวในเขตภูเขาสูง จึงมักเกิดปรากฏการณ์ 'น้ำค้างแข็ง' (Frost) ที่ทำลายเซลล์เนื้อเยื่อพืชเสียหาย?",
+      "en": "Why does winter 'frost' on high mountains damage plant tissues?"
+    },
+    "choices": {
+      "th": [
+        "น้ำค้างที่เกาะใบแข็งตัวเป็นผลึกน้ำแข็งเฉียบพลัน ทำให้เซลล์ใบขยายและแตก",
+        "น้ำแข็งสะท้อนแดดส่งความร้อนทำลายใบ",
+        "น้ำค้างแข็งมีปริมาณแคลเซียมสูงเกินไป",
+        "น้ำค้างแข็งดึงดูดแมลงปีกแข็งมาเจาะลำต้น"
+      ],
+      "en": [
+        "Dew drops freeze into ice crystals, expanding and rupturing plant cell walls",
+        "Frost reflects sunlight to scorch crop leaves",
+        "Frost contains toxic concentrations of calcium",
+        "Frost attracts wood-boring beetles to damage trunks"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "เมื่อน้ำในเซลล์พืชแข็งตัวเป็นผลึกน้ำแข็ง จะเกิดการขยายตัวและทิ่มแทงผนังเซลล์ ทำให้เซลล์พืชเหี่ยวเน่าแห้งตาย",
+      "en": "When water inside cells freezes, ice crystals expand and rupture the cell membranes, killing the tissue."
+    }
+  },
+  {
+    "id": 40,
+    "category": "seasons",
+    "question": {
+      "th": "ผักตระกูลสลัด เช่น สลัดกาดหอม บัตเตอร์เฮด มักพบปัญหาข้อใดเมื่อต้องปลูกในฤดูร้อนแดดจัด?",
+      "en": "What problem do lettuce varieties face when grown in high-temperature summer conditions?"
+    },
+    "choices": {
+      "th": [
+        "พืชออกดอกเร็วและมีรสชาติขมจัด (Bolting)",
+        "ใบผักจะเหนียวและมีสีเหลืองซีด",
+        "เมล็ดผักไม่สามารถฝังรากลงดินเหนียว",
+        "พืชต้องการดูดซึมปูนขาวเกินจำเป็น"
+      ],
+      "en": [
+        "Premature flowering and bitter taste (Bolting)",
+        "Leaves becoming extremely sticky and pale yellow",
+        "Seeds unable to plant roots in clay soil",
+        "Plants absorbing excessive lime from the soil"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "ความร้อนจัดกระตุ้นให้ผักสลัดหลั่งยางสีขาวที่มีสารแทนนินขม และเร่งกระบวนการยืดตัวออกดอกเพื่อสืบพันธุ์หนีร้อน",
+      "en": "High heat triggers premature flowering (bolting), which causes the plant to release bitter latex."
+    }
+  },
+  {
+    "id": 41,
+    "category": "pests",
+    "question": {
+      "th": "แย่แล้ว! ฝูง 'เพลี้ยแป้ง' กำลังรุมดูดน้ำเลี้ยงต้นไม้ วิธีกำจัดตามธรรมชาติที่เป็นชีววิธีปลอดภัยคือข้อใด?",
+      "en": "Mealybugs are attacking our plants! What is a safe, biological control method to get rid of them?"
+    },
+    "choices": {
+      "th": [
+        "ใช้ยาฆ่าหญ้าเข้มข้นฉีดพ่น",
+        "ปล่อย 'แมลงเต่าทอง' ซึ่งกินเพลี้ยแป้งเป็นอาหาร",
+        "รดน้ำด้วยน้ำเกลือเค็มจัด",
+        "เปิดเสียงเคาะจังหวะดนตรีขับไล่"
+      ],
+      "en": [
+        "Spraying concentrated weed killer",
+        "Releasing 'ladybugs', which feed on mealybugs",
+        "Watering with highly salty water",
+        "Playing loud rhythmic music to drive them away"
+      ]
+    },
+    "answer": 1,
+    "explanation": {
+      "th": "แมลงเต่าทองเป็นตัวห้ำ (Predator) ตามธรรมชาติที่กินเพลี้ยอ่อนและเพลี้ยแป้ง ช่วยรักษาสมดุลนิเวศวิทยาได้ดี",
+      "en": "Ladybugs are natural predators that consume aphids and mealybugs, protecting plants organically."
+    }
+  },
+  {
+    "id": 42,
+    "category": "pests",
+    "question": {
+      "th": "สัตว์ศัตรูพืชกลุ่มใดในแปลงพืชที่มักแอบมากัดกินลำต้นข้าวและผลผลิตหัวใต้ดินในเวลากลางคืน?",
+      "en": "Which animal pest typically nibbles crop stems and root tubers during the night?"
+    },
+    "choices": {
+      "th": [
+        "หนูนา",
+        "ผีเสื้อหนอนคืบ",
+        "แมงมุมแดง",
+        "นกกระจอก"
+      ],
+      "en": [
+        "Field mice (rats)",
+        "Geometer moth caterpillar",
+        "Red spider mite",
+        "Sparrow"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "หนูนาเป็นสัตว์ฟันแทะขนาดใหญ่ที่ออกหากินตอนกลางคืน กัดกินรากพืช หัวใต้ดิน และทำลายกอข้าวเสียหายเป็นบริเวณกว้าง",
+      "en": "Field rats are nocturnal rodents that gnaw crop roots, tubers, and rice stems."
+    }
+  },
+  {
+    "id": 43,
+    "category": "pests",
+    "question": {
+      "th": "หากพืชผักมีอาการใบด่างหงิกงอ ยอดหยิกไม่เจริญเติบโต สาเหตุมักเกิดจากศัตรูพืชชนิดใดพาหะพามา?",
+      "en": "If plant leaves become mottled, curled, and deformed, which vector likely transmitted the virus?"
+    },
+    "choices": {
+      "th": [
+        "เพลี้ยอ่อนหรือแมลงหวี่ขาว (พาหะไวรัสพืช)",
+        "หนอนเจาะสมอฝ้าย",
+        "หอยทากเจดีย์",
+        "นกพิราบ"
+      ],
+      "en": [
+        "Aphids or whiteflies (plant virus vectors)",
+        "Cotton bollworm",
+        "Snails",
+        "Pigeon"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "เพลี้ยอ่อนและแมลงหวี่ขาวจะเจาะดูดน้ำเลี้ยงใบพืชพร้อมปล่อยสารคัดหลั่งที่มีเชื้อไวรัสพืชติดมาด้วย ทำให้เกิดโรคใบหงิกงอ",
+      "en": "Sucking insects like aphids and whiteflies vector destructive viral diseases while feeding."
+    }
+  },
+  {
+    "id": 44,
+    "category": "pests",
+    "question": {
+      "th": "ข้อใดเป็นวิธีกำจัด 'วัชพืช' (Weeds) ในแปลงผักอินทรีย์ที่ดีและเป็นมิตรกับสิ่งแวดล้อมมากที่สุด?",
+      "en": "What is the most eco-friendly method to manage 'weeds' in an organic vegetable patch?"
+    },
+    "choices": {
+      "th": [
+        "การถอนด้วยมือหรือใช้เสียมดายหญ้าร่วมกับคลุมแปลง",
+        "พ่นสารเคมีไกลโฟเซตฆ่าหญ้า",
+        "ใช้น้ำมันก๊าดราดจุดไฟเผาหน้าแปลง",
+        "ปล่อยน้ำท่วมแปลงผักถาวรลึก 1 เมตร"
+      ],
+      "en": [
+        "Hand weeding or using hoes combined with organic mulching",
+        "Spraying glyphosate synthetic chemical weed killers",
+        "Pouring kerosene and burning the soil surface",
+        "Flooding the vegetable beds permanently with 1m of water"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "การดายหญ้าถอนรากด้วยมือและคลุมฟางหนาช่วยสกัดกั้นการสังเคราะห์แสงของเมล็ดวัชพืช ไม่ให้งอกมาแย่งปุ๋ยพืชหลัก",
+      "en": "Manual hand-pulling coupled with straw mulching blocks sunlight, preventing weed germination."
+    }
+  },
+  {
+    "id": 45,
+    "category": "pests",
+    "question": {
+      "th": "เมื่อพบพืชผักต้นหนึ่งเกิดโรคใบไหม้แห้งจากเชื้อรา (Fungal Leaf Blight) ควรรีบปฏิบัติอย่างไรเพื่อป้องแปลงเสียหาย?",
+      "en": "If one plant shows signs of fungal leaf blight, what should be done immediately to save the rest?"
+    },
+    "choices": {
+      "th": [
+        "เด็ดทิ้งและขุดแยกส่วนที่ติดโรคนำไปทำลายนอกแปลงทันที",
+        "ตัดชิ้นส่วนใบเป็นโรคมาทำปุ๋ยหมักโรยหน้าแปลงเดิม",
+        "รดน้ำอัดใส่ใบเป็นโรคแรง ๆ เพื่อล้างสปอร์เชื้อรา",
+        "ใส่ปุ๋ยเคมีไนโตรเจนสูตรสูง ๆ เพื่อรักษารอยไหม้"
+      ],
+      "en": [
+        "Prune and remove the infected plant parts and destroy them far from the field",
+        "Shred the infected leaves to use as compost on the same bed",
+        "Water the infected leaves heavily to wash away spores",
+        "Apply high nitrogen chemical fertilizer to heal the burnt spots"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "การคัดแยกนำส่วนที่เป็นโรคไปเผาทำลายหรือทิ้งห่างไกลแปลง จะช่วยหยุดการแพร่กระจายสปอร์ราไปสู่พืชข้างเคียง",
+      "en": "Isolating and destroying infected foliage prevents fungal spores from dispersing to neighboring crops."
+    }
+  },
+  {
+    "id": 46,
+    "category": "pests",
+    "question": {
+      "th": "สมุนไพรพื้นบ้านชนิดใดที่สามารถนำมาคั้นสกัดเป็นสาร 'ขับไล่แมลงศัตรูพืช' ตามธรรมชาติได้เป็นอย่างดี?",
+      "en": "Which traditional herb can be extracted to create a natural 'insect repellent'?"
+    },
+    "choices": {
+      "th": [
+        "สะเดาหรือตะไคร้หอม",
+        "ผักหวานป่า",
+        "กระเจี๊ยบแดง",
+        "มะเขือเทศเทศ"
+      ],
+      "en": [
+        "Neem seeds or citronella grass",
+        "Sweet leaf (Melientha)",
+        "Roselle",
+        "Tomato plants"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "สะเดามีสารอะซาดิแรกติน (Azadirachtin) ซึ่งมีฤทธิ์ยับยั้งการกินและการลอกคราบของแมลงศัตรูพืชได้ดีมาก",
+      "en": "Neem contains azadirachtin, which disrupts the feeding and growth hormones of many pest insects."
+    }
+  },
+  {
+    "id": 47,
+    "category": "pests",
+    "question": {
+      "th": "อาการใบจุดวงแหวนสีน้ำตาลขยายตัวซ้อนกันหลายชั้นบนใบพืช (Early Blight) มีสาเหตุหลักมาจากอะไร?",
+      "en": "What is the primary cause of concentric brown rings (early blight) on vegetable leaves?"
+    },
+    "choices": {
+      "th": [
+        "เชื้อรากลุ่มอัลเทอร์นาเรีย (Alternaria)",
+        "พืชได้รับเหล็กในน้ำมากเกินไป",
+        "หนอนใยผักชอนใบ",
+        "การแทะของหอยทากในเวลากลางวัน"
+      ],
+      "en": [
+        "Alternaria fungal pathogen",
+        "Crops absorbing too much iron from water",
+        "Diamondback moth larvae tunneling",
+        "Snail feeding during the day"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "โรคใบจุดวงแหวนเกิดจากสปอร์ราอัลเทอร์นาเรีย ซึ่งเจริญเติบโตได้ดีในอุณหภูมิอบอุ่นและความชื้นสูงบนใบพืช",
+      "en": "Early blight is caused by the fungus Alternaria, causing circular target-like spots."
+    }
+  },
+  {
+    "id": 48,
+    "category": "pests",
+    "question": {
+      "th": "วัชพืชชนิดใดทนน้ำ ทนแดด ขยายพันธุ์เร็วมากและปราบได้ยากที่สุดเพราะมีหัวใต้ดินสะสมอาหาร?",
+      "en": "Which weed is water and sun resistant, spreads extremely fast, and is hard to eradicate due to underground tubers?"
+    },
+    "choices": {
+      "th": [
+        "หญ้าแห้วหมู",
+        "ต้นมะรุม",
+        "ต้นตะไคร้น้ำ",
+        "มอสส์ดาดเขียว"
+      ],
+      "en": [
+        "Nut grass (Cyperus rotundus)",
+        "Moringa plant",
+        "Citronella grass",
+        "Green moss"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "หญ้าแห้วหมูมีไหลและหัวเล็ก ๆ สะสมอาหารใต้ดินลึกมาก การถอนหญ้าเพียงแต่ยอดจะกระตุ้นหัวงอกยอดใหม่ขึ้นมาแทน",
+      "en": "Nut grass propagates through tiny underground tubers, making simple surface pulling insufficient."
+    }
+  },
+  {
+    "id": 49,
+    "category": "pests",
+    "question": {
+      "th": "แมลงที่เป็นประโยชน์คู่แข่งกับศัตรูพืช ช่วยในการ 'ผสมเกสร' (Pollinator) ได้มีประสิทธิภาพมากที่สุดคือข้อใด?",
+      "en": "Which beneficial insect serves as the most effective crop pollinator?"
+    },
+    "choices": {
+      "th": [
+        "ผึ้ง",
+        "ตั๊กแตนตำข้าว",
+        "มดแดง",
+        "ยุงรำคาญ"
+      ],
+      "en": [
+        "Honeybees",
+        "Praying mantis",
+        "Red ants",
+        "House mosquitoes"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "ผึ้งบินหาน้ำหวานตามดอกไม้ ช่วยให้ละอองเรณูตัวผู้เกาะขาไปปฏิสนธิเกสรตัวเมีย ช่วยให้พืชติดผลดกขึ้น",
+      "en": "Honeybees collect nectar and pollen, transferring fertilizing dust between flowers efficiently."
+    }
+  },
+  {
+    "id": 50,
+    "category": "pests",
+    "question": {
+      "th": "วิธีกำจัด 'หอยทาก' (Snails/Slugs) ที่แอบมากัดกินผักสลัดออร์แกนิคโดยปลอดภัยคือการใช้สิ่งใดดักจับ?",
+      "en": "What is a safe, non-toxic organic trap to catch slugs and snails in lettuce beds?"
+    },
+    "choices": {
+      "th": [
+        "ถ้วยใส่เบียร์ฝังเสมอหน้าดิน",
+        "กระแสไฟฟ้าแรงดันสูง",
+        "การโรยน้ำตาลเข้มข้น",
+        "สเปรย์แอลกอฮอล์เข้มข้น"
+      ],
+      "en": [
+        "Cups of beer buried level with the soil",
+        "High-voltage electric grids",
+        "Sprinkling concentrated white sugar",
+        "Spraying high-concentration rubbing alcohol"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "หอยทากชื่นชอบกลิ่นหมักจากยีสต์ในเบียร์เป็นพิเศษ มันจะปีนลงไปในถ้วยดักเบียร์แล้วจมน้ำไปเองโดยไม่ต้องใช้สารเคมี",
+      "en": "Snails are attracted to the yeast odors in beer, crawling into the pitfall traps and drowning."
+    }
+  },
+  {
+    "id": 51,
+    "category": "pests",
+    "question": {
+      "th": "โรคใบไหม้หรือเน่าเละที่มีเมือกกลิ่นเหม็นรุนแรงในกะหล่ำปลี (Soft Rot) มีสาเหตุจากจุลชีพชนิดใด?",
+      "en": "Which micro-organism causes smelly soft rot disease in cabbage heads?"
+    },
+    "choices": {
+      "th": [
+        "แบคทีเรีย (Erwinia)",
+        "พยาธิรากตัวกลม",
+        "ไวรัสพืชทั่วไป",
+        "สปอร์เชื้อราก่อโรค"
+      ],
+      "en": [
+        "Bacteria (Erwinia)",
+        "Root-knot nematodes",
+        "Standard plant virus",
+        "Fungal pathogens"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "โรคเน่าเละเหม็นเกิดจากแบคทีเรียเออร์วิเนียที่ปล่อยเอนไซม์มาย่อยสลายผนังเซลล์พืช ทำให้เนื้อเยื่อเละเปียกน้ำ",
+      "en": "Bacterial soft rot is caused by Erwinia species, producing enzymes that liquefy plant tissue."
+    }
+  },
+  {
+    "id": 52,
+    "category": "pests",
+    "question": {
+      "th": "การฉีดพ่นสารสกัดเชื้อแบคทีเรียบีที (Bacillus thuringiensis - BT) มีประสิทธิภาพสูงสุดในการกำจัดศัตรูพืชชนิดใด?",
+      "en": "Applying Bacillus thuringiensis (BT) biological spray is most effective against which pest?"
+    },
+    "choices": {
+      "th": [
+        "หนอนผีเสื้อต่าง ๆ",
+        "หอยทากยักษ์",
+        "หนูนาแสนรู้",
+        "เพลี้ยไฟใบด่าง"
+      ],
+      "en": [
+        "Caterpillars (Lepidoptera larvae)",
+        "Giant African land snails",
+        "Field rodents",
+        "Thrips"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "แบคทีเรียบีทีผลิตผลึกโปรตีนที่เป็นพิษต่อระบบย่อยอาหารของหนอนผีเสื้อเมื่อมันกัดกินเข้าไป แต่ปลอดภัยต่อคนและสัตว์เลี้ยง",
+      "en": "BT produce crystalline proteins that are toxic to caterpillar digestive tracts when consumed."
+    }
+  },
+  {
+    "id": 53,
+    "category": "pests",
+    "question": {
+      "th": "ทำไมแปลงเกษตรที่ปล่อยรกรุงรังไปด้วยหญ้าหรือวัชพืช จึงทำให้แมลงศัตรูพืชระบาดได้ง่ายขึ้น?",
+      "en": "Why does leaving fields overrun with weeds increase insect pest infestations?"
+    },
+    "choices": {
+      "th": [
+        "วัชพืชเป็นแหล่งหลบซ่อนและเพาะพันธุ์ของแมลงศัตรูพืช",
+        "วัชพืชดูดกลืนแสงแดดทำให้แมลงมองทางสะดวก",
+        "หญ้ารกปล่อยกลิ่นกระตุ้นความหิวของตั๊กแตน",
+        "แมลงชอบขยายพันธุ์ใกล้รากหญ้าเพราะอากาศร้อน"
+      ],
+      "en": [
+        "Weeds serve as prime hiding, nesting, and breeding grounds for pests",
+        "Weeds block light, helping insects see their paths easier",
+        "Overgrown grass secretes hormones that stimulate insect hunger",
+        "Insects breed near grass roots because it is hotter"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "วัชพืชที่หนาทึบเป็นสวรรค์ในการกำบังภัยจากนกหรือนักล่า และพยุงความชื้นให้ไข่แมลงฟักตัวง่ายขึ้น",
+      "en": "Dense weed growth creates shelter from predators like birds and preserves humidity for pest egg survival."
+    }
+  },
+  {
+    "id": 54,
+    "category": "pests",
+    "question": {
+      "th": "การปลูก 'ดาวเรือง' (Marigold) รอบ ๆ แปลงมะเขือเทศช่วยควบคุมโรคชนิดใดในดินได้?",
+      "en": "Planting 'marigolds' around tomato beds helps control which soil-borne pest?"
+    },
+    "choices": {
+      "th": [
+        "ไส้เดือนฝอยศัตรูพืช (Nematodes)",
+        "เชื้อราใบด่าง",
+        "ตั๊กแตนใบข้าว",
+        "มดขนย้ายเพลี้ย"
+      ],
+      "en": [
+        "Root-knot nematodes",
+        "Leaf blight fungus",
+        "Grasshoppers",
+        "Ants transporting aphids"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "รากดาวเรืองหลั่งสารแอลฟา-เทอร์ธีนิล (Alpha-terthienyl) ช่วยยับยั้งไข่และการเจริญเติบโตของไส้เดือนฝอยรากปม",
+      "en": "Marigold roots exude alpha-terthienyl, a natural chemical that repels and kills parasitic nematodes."
+    }
+  },
+  {
+    "id": 55,
+    "category": "pests",
+    "question": {
+      "th": "หนอนชนิดใดที่สร้างเส้นใยสีขาวคลุมล้อมใบยอดผักและเจาะกินอยู่ด้านในอย่างปลอดภัยจากรังสี UV?",
+      "en": "Which insect pest constructs silken webs around crop shoots and feeds safely inside?"
+    },
+    "choices": {
+      "th": [
+        "หนอนใยผัก",
+        "หนอนพยาธิตัวกลม",
+        "ไส้เดือนแดง",
+        "ดักแด้ตัวหนอนไหม"
+      ],
+      "en": [
+        "Diamondback moth caterpillar",
+        "Nematode worms",
+        "Red wiggler worms",
+        "Silkworm cocoon"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "หนอนใยผักถักเส้นใยครอบก้านใบเพื่อยึดเกาะและชักใยพรางตัวกินใบ ทำให้หน้าใบแหว่งเป็นรูพรุน",
+      "en": "Diamondback moth larvae construct fine webs on brassica crops, skeletonizing leaves as they feed."
+    }
+  },
+  {
+    "id": 56,
+    "category": "pests",
+    "question": {
+      "th": "การป้องกันฝูง 'นก' (Birds) แอบลงมากินเมล็ดพันธุ์และพืชผลในแปลงขนาดใหญ่มีประสิทธิภาพสูงสุดอย่างไร?",
+      "en": "What is the most effective way to protect seeds and ripe grain from bird attacks in large fields?"
+    },
+    "choices": {
+      "th": [
+        "การขึงตาข่ายกันนกและปักหุ่นไล่กาที่ติดวัสดุสะท้อนแสง",
+        "การใช้ปืนกระสุนจริงไล่ยิงตลอดคืน",
+        "การปลูกแปลงต้นกล้วยล้อมแปลงทั้งหมด",
+        "การฉีดสีผสมอาหารสีแดงทับใบพืช"
+      ],
+      "en": [
+        "Erecting bird-netting barriers and using reflective scarecrows",
+        "Shooting birds with live ammunition all night",
+        "Planting banana trees around all boundaries",
+        "Coloring all leaves red with food dye"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "ตาข่ายกันนกช่วยกั้นไม่ให้นกเข้าถึงทางกายภาพ ส่วนแสงสะท้อนระยิบระยับทำให้นกตกใจและไม่กล้าเข้าใกล้หน้าแปลง",
+      "en": "Physical bird nets block access, while reflective items disrupt bird vision and scare them away."
+    }
+  },
+  {
+    "id": 57,
+    "category": "pests",
+    "question": {
+      "th": "หากใบพืชมีใยแมงมุมละเอียดบางคลุมอยู่ใต้ใบ พร้อมมีจุดสีแดง/น้ำตาลขนาดจิ๋วขยับได้ แสดงว่าถูกคุกคามด้วยสิ่งใด?",
+      "en": "If fine spider-like webs are under leaves along with tiny moving red/brown dots, what is the pest?"
+    },
+    "choices": {
+      "th": [
+        "ไรแดงหรือไรแมงมุม (Spider Mites)",
+        "แมลองสาบจุดขาว",
+        "ดักแด้หนอนชอนใบ",
+        "เพลี้ยกระโดดสีน้ำตาล"
+      ],
+      "en": [
+        "Red spider mites",
+        "White-spotted cockroaches",
+        "Leaf miner pupae",
+        "Brown planthoppers"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "ไรแดงหรือไรแมงมุมจะดูดกินน้ำเลี้ยงจนใบด่างแห้งกรอบ และสร้างใยป้องกันสปอร์และการโจมตีของลมพัดพา",
+      "en": "Spider mites construct fine protective webs while feeding on cell sap, causing yellow leaf stippling."
+    }
+  },
+  {
+    "id": 58,
+    "category": "pests",
+    "question": {
+      "th": "พฤติกรรมของ 'มด' (Ants) ข้อใดที่เป็นอุปสรรคในการช่วยแมลงศัตรูพืชขยายตัว?",
+      "en": "What ant behavior contributes directly to pest infestations in crop plants?"
+    },
+    "choices": {
+      "th": [
+        "มดปกป้องและนำทาง 'เพลี้ย' ไปยังยอดพืชเพื่อหวังแลกน้ำหวาน",
+        "มดกัดกินรากพืชเพื่อทำรังรองรับน้ำ",
+        "มดแย่งผสมเกสรพืชทำให้ดอกเน่าเสีย",
+        "มดทำความสะอาดใบพืชมากเกินไปจนแห้งตาย"
+      ],
+      "en": [
+        "Ants farm and defend 'aphids' from ladybugs to collect sugary honeydew",
+        "Ants chew large roots to build nest reservoirs",
+        "Ants block pollination, causing flowers to rot",
+        "Ants clean leaves too much, causing dry friction death"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "มดมีพฤติกรรม 'ทำฟาร์มเพลี้ย' คอยคุ้มครองเพลี้ยจากตัวห้ำเพื่อกินมูลหวาน (Honeydew) ที่เพลี้ยขับถ่ายออกมา",
+      "en": "Ants form symbiotic relationships with aphids, defending them from ladybugs to harvest honeydew."
+    }
+  },
+  {
+    "id": 59,
+    "category": "pests",
+    "question": {
+      "th": "การฉีดพ่นสาร 'น้ำส้มควันไม้' (Wood Vinegar) เจือจาง มีคุณสมบัติหลักเพื่ออะไร?",
+      "en": "What is the primary agricultural purpose of using diluted 'wood vinegar' spray?"
+    },
+    "choices": {
+      "th": [
+        "ขับไล่แมลงและป้องกันโรคราตามธรรมชาติ",
+        "ทำให้ใบพืชเปลี่ยนสีเรืองแสงดึงดูดผีเสื้อ",
+        "เป็นวัสดุปิดกั้นทางเดินของรากพืช",
+        "ช่วยเพิ่มระดับธาตุอาหารโพแทสเซียมแบบเข้มข้น"
+      ],
+      "en": [
+        "Natural insect repellent and prevention of fungal diseases",
+        "Making leaves glow to attract butterflies",
+        "Creating physical barriers to block root growth",
+        "Adding highly concentrated potassium nutrients"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "น้ำส้มควันไม้มีกลิ่นควันไฟไหม้ช่วยขับไล่แมลง และมีความเป็นกรดอ่อน ๆ ช่วยป้องกันการงอกสปอร์เชื้อรา",
+      "en": "Wood vinegar has a smoky odor that repels pests and mild acidity that inhibits fungal spore growth."
+    }
+  },
+  {
+    "id": 60,
+    "category": "pests",
+    "question": {
+      "th": "โรคเหี่ยวเขียว (Bacterial Wilt) ที่ทำให้มะเขือเทศเหี่ยวตายทั้งต้นในขณะที่ใบยังมีสีเขียวสด เกิดจากจุลชีพชนิดใด?",
+      "en": "Bacterial wilt, which causes tomato plants to wilt and die while leaves stay green, is caused by which pathogen?"
+    },
+    "choices": {
+      "th": [
+        "แบคทีเรีย (Ralstonia solanacearum)",
+        "ไวรัสยาสูบด่าง",
+        "เชื้อราไฟทอปเทอร่า",
+        "ไส้เดือนดินขุดรากขาด"
+      ],
+      "en": [
+        "Bacteria (Ralstonia solanacearum)",
+        "Tobacco mosaic virus",
+        "Phytophthora fungus",
+        "Earthworms cutting roots"
+      ]
+    },
+    "answer": 0,
+    "explanation": {
+      "th": "แบคทีเรียราลสโตเนียจะเข้าไปบล็อกท่อน้ำเลียง (Xylem) ของพืช ทำให้พืชไม่สามารถส่งน้ำขึ้นยอดได้จึงเหี่ยวตายเฉียบพลัน",
+      "en": "The bacterium Ralstonia solanacearum blocks water transport vessels, causing rapid wilting."
+    }
+  }
+]
