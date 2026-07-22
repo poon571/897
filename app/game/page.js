@@ -20,13 +20,35 @@ export default function GamePage() {
           </div>
         </div>
 
-        <div id="main-menu-ui" className="ui-layer">
-          <h1 id="game-title" className="game-title">HARVEST FRONTIER GAME</h1>
-          <p id="game-subtitle" className="subtitle">The Ignorance Devourer</p>
-          <div className="menu-buttons">
-            <button className="menu-btn arcade-btn" id="btn-start">START GAME</button>
-            <button className="menu-btn arcade-btn" id="btn-menu-settings">SETTINGS</button>
-            <button className="menu-btn arcade-btn" id="btn-credits">CREDITS</button>
+        <div id="main-menu-ui" className="ui-layer main-menu-bg">
+          {/* Background sky/sea layer */}
+          <div className="menu-bg-layer menu-bg-sky"></div>
+
+          {/* Top clouds layer - scrolling left */}
+          <div className="menu-bg-layer menu-bg-cloud-top">
+            <div className="cloud-scroll cloud-scroll-top">
+              <img src="/images/cloud-top.png" alt="" className="cloud-img" />
+              <img src="/images/cloud-top.png" alt="" className="cloud-img" />
+            </div>
+          </div>
+
+          {/* Bottom clouds layer - scrolling left (slower) */}
+          <div className="menu-bg-layer menu-bg-cloud-bottom">
+            <div className="cloud-scroll cloud-scroll-bottom">
+              <img src="/images/cloud-bottom.png" alt="" className="cloud-img" />
+              <img src="/images/cloud-bottom.png" alt="" className="cloud-img" />
+            </div>
+          </div>
+
+          {/* Menu content on top */}
+          <div className="menu-content">
+            <h1 id="game-title" className="game-title">Harvest Frontier Game</h1>
+            <p id="game-subtitle" className="subtitle">ไร่แดนขอบฟ้า — ผู้กลืนกินความเขลา</p>
+            <div className="menu-buttons">
+              <button className="menu-btn arcade-btn" id="btn-start">START GAME</button>
+              <button className="menu-btn arcade-btn" id="btn-menu-settings">SETTINGS</button>
+              <button className="menu-btn arcade-btn" id="btn-credits">CREDITS</button>
+            </div>
           </div>
         </div>
 
