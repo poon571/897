@@ -527,7 +527,7 @@ document.getElementById('btn-restart').addEventListener('click', () => {
 // ระบบจัดการภาพฉากหลัง (Image Loading)
 // ====================================================
 const bgImage = new Image();
-bgImage.src = 'assets/images/bg.jpg';
+bgImage.src = '/images/bg.jpg';
 
 bgImage.onload = () => {
     setupKnowledgeForIsland(); // วางจุดสำรวจความรู้เริ่มต้น
@@ -1009,9 +1009,9 @@ function update(dt) {
             isPlayingEscape = false;
 
             // สลับภาพพื้นหลังตามเกาะ
-            if (currentIsland === 2) bgImage.src = 'assets/images/bg_mountain.png';
-            else if (currentIsland === 3) bgImage.src = 'assets/images/bg_river.png';
-            else if (currentIsland === 4) bgImage.src = 'assets/images/bg_pest.png';
+            if (currentIsland === 2) bgImage.src = '/images/bg_mountain.png';
+            else if (currentIsland === 3) bgImage.src = '/images/bg_river.png';
+            else if (currentIsland === 4) bgImage.src = '/images/bg_pest.png';
 
             setupKnowledgeForIsland();
             document.getElementById('escape-overlay').classList.add('hidden');
