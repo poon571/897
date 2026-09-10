@@ -2,9 +2,31 @@
 
 เอกสารบันทึกประวัติเวอร์ชันและการแก้ไขปรับปรุงของโปรเจกต์ Harvest Frontier
 
+## [v1.4.2] - 2026-09-10 (Current Version)
+### 💎 แก้ไขตัวอักษรแตก/เบลอ ปรับใช้ฟอนต์ Prompt & Kanit พร้อมระบบ Smooth Anti-Aliasing และ Text Outline
+- **Crystal-Clear Typography (เปลี่ยนฟอนต์หลักให้อ่านง่าย คมกริบ ไม่แตก ไม่เบลอ):**
+  - นำเข้า Google Fonts **`Prompt`** และ **`Kanit`** เสริมทัพด้วย `Chakra Petch`
+  - แก้ปัญหาฟอนต์เดิมที่มีการตัดมุมแบบเหลี่ยม 45 องศา (Octagonal Matrix) ที่ทำให้ตัวหนังสือภาษาไทยดูเหมือนมีรอยหยัก/แตกเป็นเม็ดพิกเซล
+  - ฟอนต์ `Prompt` และ `Kanit` ให้เส้นโค้งและสระภาษาไทยที่กลมมน คมชัด สวยงามและอ่านง่ายในทุกขนาด
+- **High-Quality Vector & Canvas Anti-Aliasing:**
+  - เปลี่ยนจาก `image-rendering: pixelated` เป็น `image-rendering: auto` และ `-webkit-optimize-contrast` เพื่อให้การขยายภาพบนหน้าจอ Full HD / 2K มีความสมูท ไม่แตกเป็นก้อนพิกเซล
+  - เปิดใช้งาน `ctx.imageSmoothingEnabled = true` และ `ctx.imageSmoothingQuality = "high"` ใน Game Canvas
+  - เพิ่ม `-webkit-font-smoothing: antialiased` และ `text-rendering: optimizeLegibility` ใน CSS
+- **High-Contrast Text Outlines & Shadows (ขอบตัวหนังสือคมชัดทุกสภาพแวดล้อม):**
+  - เพิ่มเส้นขอบมืด `ctx.strokeText` ความหนา 3px ให้กับชื่อตัวละคร (`👑 ปุณณ์`), NPC (`พฤกษากร Vendetta`), แท่นบูชา, ไอเทม, ซุ้มประตูวาร์ป และป้ายบอกทาง
+  - ป้องกันปัญหาตัวหนังสือสีกลืนกับฉากหลังสว่างของเรือนกระจกหรือทุ่งหญ้า
+- **Scanline Softening:**
+  - ปรับความเข้มของเส้นสแกน CRT (`#scanline-overlay`) ให้อ่อนลง เพื่อไม่ให้มีแถบดำพาดตัดตัวหนังสือจนอ่านยาก
+- **Files Modified:**
+  - `app/game/page.js`
+  - `public/css/style.css`
+  - `public/css/undertale.css`
+  - `public/js/main.js`
+- **Backup Snapshot:** `_backup/versions/v1.4.2-crystal-clear-fonts/`
+
 ---
 
-## [v1.4.1] - 2026-09-02 (Current Version)
+## [v1.4.1] - 2026-09-02
 ### 🗺️ แก้ไข UI แผนที่โลก: เลื่อนแมพได้, เปิด-ปิดคำอธิบายได้, และแก้ชื่อแมพเกินช่อง (Pannable Map & Toggleable Detail Panel)
 - **Collapsible / Toggleable Inspection Sidebar:**
   - เพิ่มปุ่มเปิด-ปิดแผงคำอธิบายเกาะด้านขวา `[ 📖 ข้อมูลเกาะ [Tab] ]` / `[ ✕ ซ่อนข้อมูล [Tab] ]` ที่มุมขวาบนของแผนที่ และปุ่ม `[ ✕ ]` บนแถบหัวข้อแผงคำอธิบาย

@@ -6,7 +6,7 @@
   height: 100vh;
   background-color: #000;
   color: #fff;
-  font-family: "Prompt", "Kanit", "Chakra Petch", "Press Start 2P", sans-serif;
+  font-family: "Chakra Petch", "Press Start 2P", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@
 }
 
 .undertale-title {
-  font-family: "Prompt", "Kanit", "Chakra Petch", "Press Start 2P", sans-serif;
+  font-family: "Chakra Petch", "Press Start 2P", sans-serif;
   font-size: 32px;
   font-weight: 700;
   color: var(--gold-highlight, #ffdf6d);

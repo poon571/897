@@ -865,8 +865,7 @@ class TerraQuestSuperEngine {
   constructor() {
     this.canvas = document.getElementById("gameCanvas");
     this.ctx = this.canvas.getContext("2d");
-    this.ctx.imageSmoothingEnabled = true;
-    this.ctx.imageSmoothingQuality = "high";
+    this.ctx.imageSmoothingEnabled = false;
 
     this.sound = new RetroSoundEngine();
     
@@ -2996,17 +2995,11 @@ class TerraQuestSuperEngine {
        ctx.restore();
 
        if (isHero && this.gameState === "PLAYING") {
-          ctx.save();
-          ctx.font = "bold 13px 'Prompt', 'Kanit', sans-serif";
-          ctx.textAlign = "center";
-          const heroTag = "👑 " + (this.player.name || "ผู้กล้า");
-          ctx.strokeStyle = "rgba(0, 0, 0, 0.85)";
-          ctx.lineWidth = 3;
-          ctx.strokeText(heroTag, x + width / 2, y - 10);
-          ctx.fillStyle = "#fee440";
-          ctx.fillText(heroTag, x + width / 2, y - 10);
-          ctx.restore();
-        }
+         ctx.fillStyle = "#fee440";
+         ctx.font = "bold 12px 'Chakra Petch'";
+         ctx.textAlign = "center";
+         ctx.fillText("👑 " + (this.player.name || "ผู้กล้า"), x + width / 2, y - 10);
+       }
        return;
      }
 
@@ -3370,17 +3363,11 @@ class TerraQuestSuperEngine {
 
      // Hero floating name indicator (only in active gameplay)
      if (isHero && this.gameState === "PLAYING") {
-          ctx.save();
-          ctx.font = "bold 13px 'Prompt', 'Kanit', sans-serif";
-          ctx.textAlign = "center";
-          const heroTag = "👑 " + (this.player.name || "ผู้กล้า");
-          ctx.strokeStyle = "rgba(0, 0, 0, 0.85)";
-          ctx.lineWidth = 3;
-          ctx.strokeText(heroTag, x + width / 2, y - 10);
-          ctx.fillStyle = "#fee440";
-          ctx.fillText(heroTag, x + width / 2, y - 10);
-          ctx.restore();
-        }
+       ctx.fillStyle = "#fee440";
+       ctx.font = "bold 12px 'Chakra Petch'";
+       ctx.textAlign = "center";
+       ctx.fillText("👑 " + (this.player.name || "ผู้กล้า"), x + width / 2, y - 10);
+     }
   }
 
   /* ===== CHARACTER CUSTOMIZATION SCENE ===== */
@@ -4168,7 +4155,7 @@ class TerraQuestSuperEngine {
       ctx.save();
       const tagY = cs.heroY - 14;
       const nameStr = "👑 " + (this.player.name || "ผู้กล้า");
-      ctx.font = "bold 13px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+      ctx.font = "bold 13px 'Chakra Petch'";
       const textWidth = ctx.measureText(nameStr).width;
       
       // Badge background box
@@ -4552,7 +4539,7 @@ class TerraQuestSuperEngine {
 
     // === NAME TAG above demon ===
     ctx.fillStyle = "#c084fc";
-    ctx.font = "bold 10px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+    ctx.font = "bold 10px 'Chakra Petch'";
     ctx.textAlign = "center";
     const tagBob = Math.sin(frameCount * 0.1) * 2;
     ctx.fillText("\ud83d\udc80 \u0e1b\u0e35\u0e28\u0e32\u0e08\u0e41\u0e2b\u0e48\u0e07\u0e04\u0e27\u0e32\u0e21\u0e44\u0e21\u0e48\u0e23\u0e39\u0e49", x + width / 2, y - 10 + tagBob);
@@ -6234,7 +6221,7 @@ class TerraQuestSuperEngine {
           ent.custom
         );
         ctx.fillStyle = "#ffffff";
-        ctx.font = "bold 13px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+        ctx.font = "bold 13px 'Chakra Petch'";
         ctx.textAlign = "center";
         ctx.fillText(ent.name, rx + ent.width / 2, ent.y - 12);
 
@@ -6253,7 +6240,7 @@ class TerraQuestSuperEngine {
         ctx.fill();
 
         ctx.fillStyle = "#fee440";
-        ctx.font = "bold 12px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+        ctx.font = "bold 12px 'Chakra Petch'";
         ctx.textAlign = "center";
         ctx.fillText((ent.icon || "🌱") + " " + ent.name, rx + ent.width / 2, ent.y - 8);
 
@@ -6267,7 +6254,7 @@ class TerraQuestSuperEngine {
         ctx.strokeRect(rx, ent.y + itemBob, ent.width, ent.height);
 
         ctx.fillStyle = "#2ec4b6";
-        ctx.font = "bold 12px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+        ctx.font = "bold 12px 'Chakra Petch'";
         ctx.textAlign = "center";
         ctx.fillText(ent.icon + " " + ent.name, rx + ent.width / 2, ent.y - 8 + itemBob);
 
@@ -6289,7 +6276,7 @@ class TerraQuestSuperEngine {
         ctx.fill();
 
         ctx.fillStyle = isBoss ? "#ffd166" : "#e9d8a6";
-        ctx.font = "bold 13px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+        ctx.font = "bold 13px 'Chakra Petch'";
         ctx.textAlign = "center";
         ctx.fillText(ent.name, rx + ent.width / 2, ent.y - 12);
 
@@ -6300,7 +6287,7 @@ class TerraQuestSuperEngine {
         ctx.fillStyle = "#52b788";
         ctx.fillRect(rx, ent.y, ent.width, 6);
         ctx.fillStyle = "#fee440";
-        ctx.font = "bold 12px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+        ctx.font = "bold 12px 'Chakra Petch'";
         ctx.textAlign = "center";
         ctx.fillText((ent.icon || "🌱") + " " + ent.name, rx + ent.width / 2, ent.y - 10);
       }
@@ -6309,7 +6296,7 @@ class TerraQuestSuperEngine {
       const dist = Math.abs((this.player.x + this.player.width / 2) - (ent.x + ent.width / 2));
       if (dist < 65) {
         ctx.fillStyle = "#ffdf6d";
-        ctx.font = "bold 14px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+        ctx.font = "bold 14px 'Chakra Petch'";
         ctx.textAlign = "center";
         ctx.fillText("💬 กด [E]", rx + ent.width / 2, ent.y - 28);
       }
@@ -6327,7 +6314,7 @@ class TerraQuestSuperEngine {
     ctx.strokeRect(200, 20, 560, 42);
 
     ctx.fillStyle = this.notification.color || "#ffffff";
-    ctx.font = "bold 15px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+    ctx.font = "bold 15px 'Chakra Petch'";
     ctx.textAlign = "center";
     ctx.fillText(this.notification.text, 480, 46);
     ctx.restore();
@@ -6617,7 +6604,7 @@ class TerraQuestSuperEngine {
 
       // Line 1: Icon + Short Thai Name (Fits inside 94px)
       ctx.fillStyle = isDiscovered ? (isCurrent ? "#fee440" : "#ffffff") : "#64748b";
-      ctx.font = "bold 11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+      ctx.font = "bold 11px 'Chakra Petch'";
       ctx.textAlign = "center";
       const icon = room.icon || "🌱";
       const labelTh = isDiscovered ? (room.shortNameTh || room.nameTh) : "???";
@@ -6625,7 +6612,7 @@ class TerraQuestSuperEngine {
 
       // Line 2: Short English Name
       ctx.fillStyle = isDiscovered ? "#38bdf8" : "#3e4c5e";
-      ctx.font = "9px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+      ctx.font = "9px 'Chakra Petch'";
       const labelEn = isDiscovered ? (room.shortNameEn || room.name) : "???";
       ctx.fillText(labelEn, room.mapX + panX, ny + 29);
 
@@ -6636,14 +6623,14 @@ class TerraQuestSuperEngine {
         if (room.equipment && room.equipment.length) badgeStr += "⚔️";
         if (room.items && room.items.length) badgeStr += "📦";
         if (room.boss && room.boss !== "-") badgeStr += "💀";
-        ctx.font = "8px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+        ctx.font = "8px 'Chakra Petch'";
         ctx.fillText(badgeStr, room.mapX + panX, ny + 41);
       }
 
       // Player Location Pin
       if (isCurrent) {
         ctx.fillStyle = "#fee440";
-        ctx.font = "bold 11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+        ctx.font = "bold 11px 'Chakra Petch'";
         ctx.fillText("📍 YOU", room.mapX + panX, ny - 6);
       }
     }
@@ -6672,25 +6659,25 @@ class TerraQuestSuperEngine {
 
         // Header Title (Separate English & Thai lines to avoid any overflow)
         ctx.fillStyle = "#000000";
-        ctx.font = "bold 12px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+        ctx.font = "bold 12px 'Chakra Petch'";
         ctx.textAlign = "left";
         ctx.fillText(selRoom.name, px + 12, py + 18);
 
         ctx.fillStyle = "#1e293b";
-        ctx.font = "bold 11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+        ctx.font = "bold 11px 'Chakra Petch'";
         ctx.fillText(selRoom.nameTh, px + 12, py + 34);
 
         // Close [X] Button on Header
         ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
         ctx.fillRect(px + pw - 28, py + 8, 22, 22);
         ctx.fillStyle = "#ffffff";
-        ctx.font = "bold 13px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+        ctx.font = "bold 13px 'Chakra Petch'";
         ctx.textAlign = "center";
         ctx.fillText("✕", px + pw - 17, py + 23);
 
         if (isDiscovered) {
           ctx.fillStyle = "#94a3b8";
-          ctx.font = "10px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+          ctx.font = "10px 'Chakra Petch'";
           ctx.textAlign = "left";
           ctx.fillText(selRoom.subtitle, px + 12, py + 62);
 
@@ -6698,52 +6685,52 @@ class TerraQuestSuperEngine {
 
           // Section: Altars
           ctx.fillStyle = "#fee440";
-          ctx.font = "bold 11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+          ctx.font = "bold 11px 'Chakra Petch'";
           ctx.fillText("🕯️ จุดเซฟ / แท่นบูชา:", px + 12, curY);
           curY += 15;
           ctx.fillStyle = "#cbd5e1";
-          ctx.font = "10px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+          ctx.font = "10px 'Chakra Petch'";
           (selRoom.altars || []).forEach(a => { ctx.fillText("• " + a, px + 18, curY); curY += 13; });
 
           // Section: NPCs
           curY += 4;
           ctx.fillStyle = "#4facfe";
-          ctx.font = "bold 11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+          ctx.font = "bold 11px 'Chakra Petch'";
           ctx.fillText("👤 ผู้พำนัก / NPC:", px + 12, curY);
           curY += 15;
           ctx.fillStyle = "#cbd5e1";
-          ctx.font = "10px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+          ctx.font = "10px 'Chakra Petch'";
           (selRoom.npcs || []).forEach(n => { ctx.fillText("• " + n, px + 18, curY); curY += 13; });
 
           // Section: Equipment & Spells
           curY += 4;
           ctx.fillStyle = "#e71d36";
-          ctx.font = "bold 11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+          ctx.font = "bold 11px 'Chakra Petch'";
           ctx.fillText("⚔️ อุปกรณ์ & ทักษะ:", px + 12, curY);
           curY += 15;
           ctx.fillStyle = "#cbd5e1";
-          ctx.font = "10px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+          ctx.font = "10px 'Chakra Petch'";
           const allEquip = [...(selRoom.equipment || []), ...(selRoom.spells || [])];
           allEquip.slice(0, 3).forEach(e => { ctx.fillText("• " + e, px + 18, curY); curY += 13; });
 
           // Section: Key Items
           curY += 4;
           ctx.fillStyle = "#00f5d4";
-          ctx.font = "bold 11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+          ctx.font = "bold 11px 'Chakra Petch'";
           ctx.fillText("📦 ไอเทม & เมล็ดพันธุ์:", px + 12, curY);
           curY += 15;
           ctx.fillStyle = "#cbd5e1";
-          ctx.font = "10px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+          ctx.font = "10px 'Chakra Petch'";
           (selRoom.items || []).slice(0, 2).forEach(it => { ctx.fillText("• " + it, px + 18, curY); curY += 13; });
 
           // Section: Boss
           curY += 4;
           ctx.fillStyle = "#ff70a6";
-          ctx.font = "bold 11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+          ctx.font = "bold 11px 'Chakra Petch'";
           ctx.fillText("💀 บอสประจำโซน:", px + 12, curY);
           curY += 15;
           ctx.fillStyle = "#f87171";
-          ctx.font = "10px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+          ctx.font = "10px 'Chakra Petch'";
           ctx.fillText("• " + (selRoom.boss || "-"), px + 18, curY);
 
           // Fast Travel Button
@@ -6756,13 +6743,13 @@ class TerraQuestSuperEngine {
           ctx.strokeRect(px + 16, btnY, pw - 32, 32);
 
           ctx.fillStyle = "#ffffff";
-          ctx.font = "bold 12px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+          ctx.font = "bold 12px 'Chakra Petch'";
           ctx.textAlign = "center";
           ctx.fillText("⚡ วาร์ปด่วน [T / ดับเบิลคลิก]", px + pw / 2, btnY + 20);
 
         } else {
           ctx.fillStyle = "#64748b";
-          ctx.font = "14px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+          ctx.font = "14px 'Chakra Petch'";
           ctx.textAlign = "center";
           ctx.fillText("ยังไม่ได้สำรวจพื้นที่นี้", px + pw / 2, py + ph / 2);
         }
@@ -6772,12 +6759,12 @@ class TerraQuestSuperEngine {
     // TOP HEADER BAR & CONTROLS
     // Header Title
     ctx.fillStyle = "#ffffff";
-    ctx.font = "bold 18px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+    ctx.font = "bold 18px 'Chakra Petch'";
     ctx.textAlign = "left";
     ctx.fillText("🗺️ HARVEST FRONTIER WORLD MAP", 20, 28);
 
     ctx.fillStyle = "#52b788";
-    ctx.font = "11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+    ctx.font = "11px 'Chakra Petch'";
     ctx.fillText("Sustainable Agri-Network • 12 Sky Eco-Zones", 22, 42);
 
     // Top Right Buttons:
@@ -6788,7 +6775,7 @@ class TerraQuestSuperEngine {
     ctx.lineWidth = 1;
     ctx.strokeRect(cw - 320, 12, 105, 26);
     ctx.fillStyle = "#94a3b8";
-    ctx.font = "11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+    ctx.font = "11px 'Chakra Petch'";
     ctx.textAlign = "center";
     ctx.fillText("🔄 รีเซ็ตมุม [R]", cw - 268, 29);
 
@@ -6798,7 +6785,7 @@ class TerraQuestSuperEngine {
     ctx.strokeStyle = this.showMapSidebar ? "#fee440" : "#00f5d4";
     ctx.strokeRect(cw - 205, 12, 110, 26);
     ctx.fillStyle = this.showMapSidebar ? "#fee440" : "#00f5d4";
-    ctx.font = "bold 11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+    ctx.font = "bold 11px 'Chakra Petch'";
     ctx.fillText(this.showMapSidebar ? "✕ ซ่อนข้อมูล [Tab]" : "📖 ข้อมูลเกาะ [Tab]", cw - 150, 29);
 
     // 3. Close Map [Esc/M]
@@ -6807,7 +6794,7 @@ class TerraQuestSuperEngine {
     ctx.strokeStyle = "#e71d36";
     ctx.strokeRect(cw - 85, 12, 70, 26);
     ctx.fillStyle = "#ff8597";
-    ctx.font = "bold 11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+    ctx.font = "bold 11px 'Chakra Petch'";
     ctx.fillText("✕ ปิด [Esc]", cw - 50, 29);
 
     // BOTTOM LEGEND BAR
@@ -6817,7 +6804,7 @@ class TerraQuestSuperEngine {
     ctx.lineWidth = 1;
     ctx.strokeRect(16, ch - 36, cw - 32, 28);
 
-    ctx.font = "11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
+    ctx.font = "11px 'Chakra Petch'";
     ctx.textAlign = "left";
     ctx.fillStyle = "#94a3b8";
     ctx.fillText("📍 คุณอยู่ที่นี่ | 🖱️ ลากเมาส์เลื่อนแมพ | 🔍 หมุนล้อเลื่อนมุมมอง | [WASD/ลูกศร] เลือกเกาะ | [Tab] ซ่อน/แสดงข้อมูล | [T/ดับเบิลคลิก] วาร์ป | [M/Esc] ปิด", 24, ch - 18);
