@@ -2,7 +2,29 @@
 
 เอกสารบันทึกประวัติเวอร์ชันและการแก้ไขปรับปรุงของโปรเจกต์ Harvest Frontier
 
-## [v1.4.2] - 2026-09-10 (Current Version)
+## [v1.4.3] - 2026-09-10 (Current Version)
+### 🏷️ คืนชีพและอัปเกรดป้ายชื่อลอยเหนือหัวระดับ Vector คมชัด 100% (Ultra-Crisp HTML Overhead Badges & HUD Notification)
+- **100% Vector HTML Overhead Nametags (ป้ายชื่อและข้อความลอยเหนือหัวคมชัดเทียบเท่า UI):**
+  - ย้ายการแสดงผลชื่อผู้กล้า (`👑 ผู้กล้า`), ชื่อ NPC (`พฤกษากร Vendetta`), แท่นศักดิ์สิทธิ์ (`🌱 แท่นพฤกษาเวหา`), กล่องไอเทม, ซุ้มประตูมิติ, และข้อความปฏิสัมพันธ์ (`💬 กด [E]`) จาก 540p Canvas มาเป็น HTML DOM Element แบบ Vector
+  - แก้ไขจุดที่ทำให้ป้ายชื่อไม่ขึ้นในหน้าจอ (เชื่อมต่อ `updateFloatingTags()` ใน Game Render Loop พร้อมรองรับทั้งโหมด `PLAYING` และ `DIALOGUE`)
+  - ตรวจจับชื่อผู้กล้าพร้อม Fallback อัตโนมัติ (หากยังไม่ได้ตั้งชื่อจะแสดง "ผู้กล้า" อย่างสวยงาม ไม่เป็นค่าว่างหรือขีด)
+  - ดีไซน์กรอบป้ายชื่อแบบ Modern Fantasy RPG: ขอบมน โทนสีตามประเภทเอนทิตี เงาละมุน (Soft Shadow) และไม่เกิดอาการเบลอเมื่อขยายหน้าจอเป็น Full HD / 2K / 4K
+- **Crisp HUD Top Notification Banner:**
+  - อัปเกรดแถบแจ้งเตือนด้านบน (`✨ ได้รับไอเทม...`, `📍 เข้าสู่...`) เป็น Vector HTML Animation แบนเนอร์ลอยเด่นชัดสวยงาม
+  - ปรับตำแหน่งลงมาที่ `top: 60px` เพื่อไม่ให้ทับซ้อนกับ Top HUD Tracker และปุ่มเมนู
+- **Zero-Distortion 16:9 Viewport Sync:**
+  - ปรับสมดุล `#game-viewport-wrapper`, `#gameCanvas`, และ `#floating-tags-container` ให้ล็อกอัตราส่วน 16:9 ตรงกันอย่างสมบูรณ์แบบ
+- **Browser Cache Buster:**
+  - เพิ่มเวอร์ชันพารามิเตอร์ `?v=1.4.3` ใน Script Tag เพื่อให้เบราว์เซอร์โหลดไฟล์สคริปต์ตัวใหม่ทันที
+- **Files Modified:**
+  - `app/game/page.js`
+  - `public/css/style.css`
+  - `public/js/main.js`
+- **Backup Snapshot:** `_backup/versions/v1.4.3-crisp-html-overhead-nametags/`
+
+---
+
+## [v1.4.2] - 2026-09-10
 ### 💎 แก้ไขตัวอักษรแตก/เบลอ ปรับใช้ฟอนต์ Prompt & Kanit พร้อมระบบ Smooth Anti-Aliasing และ Text Outline
 - **Crystal-Clear Typography (เปลี่ยนฟอนต์หลักให้อ่านง่าย คมกริบ ไม่แตก ไม่เบลอ):**
   - นำเข้า Google Fonts **`Prompt`** และ **`Kanit`** เสริมทัพด้วย `Chakra Petch`
