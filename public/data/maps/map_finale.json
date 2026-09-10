@@ -1,0 +1,23 @@
+{
+  "id": "finale",
+  "name": {
+    "th": "เกาะแห่งการเกษตร (ลานพิธีเฉลิมฉลอง)",
+    "en": "Island of Agriculture (Restoration Ceremony)"
+  },
+  "background": "/images/bg.jpg",
+  "width": 1280,
+  "height": 540,
+  "spawn": { "x": 100, "y": 390 },
+  "npcs": [
+    {
+      "id": "elder_finale",
+      "nameId": "npc",
+      "name": { "th": "ผู้เฒ่าประจำหมู่บ้าน", "en": "Village Elder" },
+      "x": 500,
+      "y": 390,
+      "width": 50,
+      "height": 60,
+      "behavior": "IDLE"
+    }
+  ]
+}

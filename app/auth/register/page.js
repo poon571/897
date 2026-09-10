@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import styles from "../../../styles/auth.module.css";
+import BackHomeButton from "../../../components/ui/BackHomeButton";
 
 export default function RegisterPage() {
   const [formData, setFormData] = useState({ username: "", email: "", password: "", confirm_password: "" });
@@ -75,6 +76,7 @@ export default function RegisterPage() {
 
   return (
     <div className={styles.authContainer}>
+      <BackHomeButton />
       <div className={styles.bgOrbs}>
         <div className={`${styles.orb} ${styles.orb1}`}></div>
         <div className={`${styles.orb} ${styles.orb2}`}></div>

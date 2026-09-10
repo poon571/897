@@ -1,0 +1,42 @@
+{
+  "id": "island2",
+  "name": {
+    "th": "เกาะแห่งฤดูกาล (หอนาฬิกาแปรปรวน)",
+    "en": "Island of Seasons (Clock Tower)"
+  },
+  "background": "/images/bg_river.png",
+  "width": 1280,
+  "height": 540,
+  "spawn": { "x": 80, "y": 390 },
+  "npcs": [
+    {
+      "id": "season_keeper",
+      "nameId": "npc",
+      "name": { "th": "ผู้ดูแลฤดูกาล", "en": "Season Keeper" },
+      "x": 400,
+      "y": 390,
+      "width": 50,
+      "height": 60,
+      "behavior": "IDLE"
+    }
+  ],
+  "boss": {
+    "nameId": "boss",
+    "name": { "th": "ร่างแยกปีศาจแห่งปัญญา (พายุ)", "en": "Demon of Ignorance (Storm)" },
+    "x": 860,
+    "y": 370,
+    "width": 70,
+    "height": 80
+  },
+  "shrine": {
+    "x": 640,
+    "y": 390,
+    "key": "kp_island3"
+  },
+  "portal": {
+    "x": 1150,
+    "y": 390,
+    "targetMap": "island3",
+    "reqBossDefeated": true
+  }
+}

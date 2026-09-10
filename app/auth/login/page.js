@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import styles from "../../../styles/auth.module.css";
+import BackHomeButton from "../../../components/ui/BackHomeButton";
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({ username_email: "", password: "" });
@@ -38,6 +39,7 @@ export default function LoginPage() {
 
   return (
     <div className={styles.authContainer}>
+      <BackHomeButton />
       <div className={styles.bgOrbs}>
         <div className={`${styles.orb} ${styles.orb1}`}></div>
         <div className={`${styles.orb} ${styles.orb2}`}></div>

@@ -1,0 +1,43 @@
+{
+  "id": "island1",
+  "name": {
+    "th": "เกาะแห่งพืชพรรณและปฐพี (ดินเปรี้ยว)",
+    "en": "Island of Flora & Soil (Acidic Soil)"
+  },
+  "background": "/images/bg_mountain.png",
+  "width": 1280,
+  "height": 540,
+  "spawn": { "x": 80, "y": 390 },
+  "npcs": [
+    {
+      "id": "earth_spirit",
+      "nameId": "npc",
+      "name": { "th": "จิตวิญญาณแห่งดิน", "en": "Earth Spirit" },
+      "x": 380,
+      "y": 390,
+      "width": 50,
+      "height": 60,
+      "behavior": "PATROL",
+      "patrolRange": 120
+    }
+  ],
+  "boss": {
+    "nameId": "boss",
+    "name": { "th": "ร่างแยกปีศาจแห่งปัญญา (ปฐพี)", "en": "Demon of Ignorance (Soil)" },
+    "x": 880,
+    "y": 370,
+    "width": 70,
+    "height": 80
+  },
+  "shrine": {
+    "x": 620,
+    "y": 390,
+    "key": "kp_island2"
+  },
+  "portal": {
+    "x": 1150,
+    "y": 390,
+    "targetMap": "island2",
+    "reqBossDefeated": true
+  }
+}

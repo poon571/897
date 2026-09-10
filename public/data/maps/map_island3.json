@@ -1,0 +1,42 @@
+{
+  "id": "island3",
+  "name": {
+    "th": "เกาะแห่งศัตรูพืช (ป่าหมอกอสูร)",
+    "en": "Island of Pests & Diseases (Misty Forest)"
+  },
+  "background": "/images/bg_pest.png",
+  "width": 1280,
+  "height": 540,
+  "spawn": { "x": 80, "y": 390 },
+  "npcs": [
+    {
+      "id": "pest_guardian",
+      "nameId": "npc",
+      "name": { "th": "ผู้พิทักษ์พืชพรรณ", "en": "Plant Guardian" },
+      "x": 420,
+      "y": 390,
+      "width": 50,
+      "height": 60,
+      "behavior": "IDLE"
+    }
+  ],
+  "boss": {
+    "nameId": "boss",
+    "name": { "th": "ปีศาจแห่งปัญญา (ร่างจอมอสูร)", "en": "Demon of Ignorance (Final Form)" },
+    "x": 900,
+    "y": 370,
+    "width": 75,
+    "height": 85
+  },
+  "shrine": {
+    "x": 650,
+    "y": 390,
+    "key": "kp_island4"
+  },
+  "portal": {
+    "x": 1150,
+    "y": 390,
+    "targetMap": "finale",
+    "reqBossDefeated": true
+  }
+}

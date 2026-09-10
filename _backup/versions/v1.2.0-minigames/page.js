@@ -837,135 +837,57 @@ export default function GamePage() {
             </div>
           </div>
 
-          {/* MODAL: ALTAR KNOWLEDGE TRIAL */}
-          <div id="modal-altar-trial" className="modal-backdrop hidden">
-            <div className="retro-window altar-trial-window" style={{ maxWidth: "520px", width: "90%" }}>
-              <div className="window-header-ribbon">
-                <span className="ribbon-text" id="altar-trial-title">
-                  🌱 แท่นพฤกษาเวหา (Genesis Sky Altar)
-                </span>
-                <button id="btn-close-altar-trial" className="retro-btn-close">
-                  ✖
-                </button>
-              </div>
-              
-              <div className="altar-trial-content" style={{ padding: "12px 6px" }}>
-                <div className="altar-trial-header" style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "12px", background: "rgba(0,0,0,0.3)", padding: "10px 14px", borderRadius: "8px", border: "1px solid rgba(255,255,255,0.1)" }}>
-                  <span className="altar-trial-icon" id="altar-trial-icon" style={{ fontSize: "36px" }}>🌱</span>
-                  <div>
-                    <h3 id="altar-trial-name" style={{ color: "var(--gold-highlight)", margin: "0 0 4px 0", fontSize: "16px" }}>แท่นบูชาประจำเกาะ</h3>
-                    <div id="altar-trial-topic" style={{ fontSize: "12px", color: "var(--mana-cyan)" }}>หัวข้อ: การเพาะเมล็ดพันธุ์และต้นกล้าแอโรโปนิกส์</div>
-                  </div>
-                </div>
-
-                <div className="altar-trial-desc" id="altar-trial-desc" style={{ fontSize: "13px", color: "#e2e8f0", margin: "14px 0", lineHeight: "1.5", background: "rgba(15, 23, 42, 0.6)", padding: "12px", borderRadius: "6px", borderLeft: "3px solid var(--gold-highlight)" }}>
-                  แท่นศักดิ์สิทธิ์ประจำเกาะลอยฟ้าแห่งนี้ บันทึกภูมิปัญญาเกษตรกรรมอันล้ำค่าเอาไว้...
-                </div>
-
-                <div className="altar-trial-actions" style={{ display: "flex", gap: "10px", marginTop: "16px" }}>
-                  <button id="btn-altar-start-quiz" className="retro-btn-action" style={{ flex: 1.3, padding: "12px", fontSize: "13px" }}>
-                    📖 ทำบททดสอบปัญญา (3 ข้อ)
-                  </button>
-                  <button id="btn-altar-rest" className="retro-btn-sm" style={{ flex: 1, padding: "12px", background: "#334155", fontSize: "13px" }}>
-                    🕯️ พักผ่อนและเซฟจุดเกิด
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* MODAL 7: CODEX */}
           <div id="modal-codex" className="modal-backdrop hidden">
-            <div className="retro-window codex-window" style={{ maxWidth: "680px", width: "95%" }}>
+            <div className="retro-window codex-window">
               <div className="window-header-ribbon">
                 <span className="ribbon-text">
-                  📖 มหาบันทึกปัญญาเกษตร 12 เกาะลอยฟ้า (Sky Codex)
+                  📖 มหาบันทึกปัญญาเกษตร 4 เกาะ
                 </span>
                 <button id="btn-close-codex" className="retro-btn-close">
                   ✖
                 </button>
               </div>
-              <div id="codex-content-pane" className="codex-body-scrollable" style={{ maxHeight: "420px", overflowY: "auto", padding: "10px" }}>
+              <div id="codex-content-pane" className="codex-body-scrollable">
                 <h4 style={{ color: "var(--gold-highlight)" }}>
-                  🌱 1. เกาะเรือนเพาะชำลอยฟ้า (Sky Nursery Island)
+                  🌿 เกาะที่ 1: ดินและค่า pH
                 </h4>
-                <p>• การเพาะเมล็ดพันธุ์และระบบแอโรโปนิกส์ (Aeroponics) พ่นละอองหมอกสารอาหารตรงสู่ราก</p>
-                <p>• ปัจจัยการงอกของเมล็ด: ความชื้น อุณหภูมิพอเหมาะ และออกซิเจน</p>
+                <p>
+                  • ดินที่เหมาะกับการเพาะปลูกทั่วไปมีค่า pH 6.0 - 7.0 หากต่ำกว่า
+                  7 เป็นกรด (แก้ไขโดยใส่ปูนขาว/โดโลไมท์)
+                </p>
+                <p>
+                  • สัดส่วนดินสมบูรณ์: แร่ธาตุ 45%, น้ำ 25%, อากาศ 25%,
+                  อินทรียวัตถุ 5%
+                </p>
+                <p>
+                  • ดินเหนียวระบายน้ำยาก
+                  ให้ผสมแกลบดิบและทรายหยาบเพื่อเพิ่มช่องว่างอากาศ
+                </p>
                 <br />
-
                 <h4 style={{ color: "var(--gold-highlight)" }}>
-                  🧪 2. เกาะทุ่งกสิกรรมฟื้นฟูดิน (Restored Farmland Island)
+                  ☀️ เกาะที่ 2: ฤดูกาลและพืชพันธุ์
                 </h4>
-                <p>• ดินที่เหมาะกับการปลูกพืชทั่วไปมีค่า pH 6.0 - 7.0 หาก pH &lt; 5.5 เป็นดินกรด (แก้ไขด้วยปูนขาว/โดโลไมท์)</p>
-                <p>• สัดส่วนดินร่วนสมบูรณ์: แร่ธาตุ 45%, น้ำ 25%, อากาศ 25%, อินทรียวัตถุ (ฮิวมัส) 5%</p>
+                <p>
+                  • ฤดูร้อน: ปลูกพืชทนแล้งรากลึก (ข้าวโพด, มันสำปะหลัง)
+                  คลุมหน้าดินด้วยฟางข้าวเพื่อลดการระเหยน้ำ
+                </p>
+                <p>
+                  • ฤดูฝน: ยกร่องแปลงสูงระบายน้ำ ป้องกันโรครากเน่าโคนเน่า
+                  พืชตระกูลถั่วช่วยตรึงไนโตรเจนบำรุงดิน
+                </p>
                 <br />
-
                 <h4 style={{ color: "var(--gold-highlight)" }}>
-                  💧 3. เกาะสวนผลไม้และน้ำตกเวหา (Sky Orchard & Waterfalls)
+                  🐛 เกาะที่ 3: ศัตรูพืชและชีววิธี
                 </h4>
-                <p>• ฤดูร้อนแล้ง: ปลูกพืชทนแล้งรากลึก (ข้าวโพด, มันสำปะหลัง) คลุมหน้าดินด้วยฟางข้าวลดการระเหยน้ำ</p>
-                <p>• รดน้ำไม้ผลเช้าตรู่ (06:00 - 08:00 น.) เพื่อลดการสูญเสียน้ำและตัดวงจรโรครากเน่า</p>
-                <br />
-
-                <h4 style={{ color: "var(--gold-highlight)" }}>
-                  🌿 4. เกาะพฤกษศาสตร์สมุนไพรลอยฟ้า (Floating Botanical Sanctuary)
-                </h4>
-                <p>• การเตรียมดินมาตรฐาน: ไถดะตากดิน 7-14 วัน เพื่อฆ่าเชื้อโรคและไข่แมลง</p>
-                <p>• สารสกัดสะเดา (Azadirachtin) ยับยั้งหนอน และรากดาวเรืองช่วยไล่ไส้เดือนฝอยศัตรูพืช</p>
-                <br />
-
-                <h4 style={{ color: "var(--gold-highlight)" }}>
-                  🍄 5. เกาะห้องทดลองรากพืชใต้พิภพ (Sub-Island Rhizosphere)
-                </h4>
-                <p>• ชีววิธี (Biological Control): ใช้แมลงเต่าทอง (ตัวห้ำ) กินเพลี้ยอ่อน และแตนเบียนคุมหนอน</p>
-                <p>• เชื้อราไมคอร์ไรซา (Mycorrhizae) ช่วยรากพืชดูดซับฟอสฟอรัสและน้ำอย่างมีประสิทธิภาพ</p>
-                <br />
-
-                <h4 style={{ color: "var(--gold-highlight)" }}>
-                  ☀️ 6. เกาะนครเกษตรอัจฉริยะลอยฟ้า (Solar AgriTech Sky City)
-                </h4>
-                <p>• การปลูกพืชแนวตั้ง (Vertical Farming) เพิ่มผลผลิตต่อพื้นที่และควบคุมสภาพแวดล้อมได้ 100%</p>
-                <p>• เซนเซอร์ IoT วัดความชื้น ค่า pH และ EC เพื่อจ่ายปุ๋ยและน้ำแบบแม่นยำ (Precision Farming)</p>
-                <br />
-
-                <h4 style={{ color: "var(--gold-highlight)" }}>
-                  🪷 7. เกาะบึงน้ำลอยฟ้าอควาโปนิกส์ (Celestial Aquaponics Island)
-                </h4>
-                <p>• ระบบอควาโปนิกส์ (Aquaponics): จุลินทรีย์เปลี่ยนมูลปลาเป็นไนเตรตให้พืชดูดซึม ประหยัดน้ำ 90%</p>
-                <p>• พืชน้ำ (กก, บัว) ช่วยดูดซับของเสียและเพิ่มออกซิเจนบริสุทธิ์ในระบบนิเวศแหล่งน้ำ</p>
-                <br />
-
-                <h4 style={{ color: "var(--gold-highlight)" }}>
-                  🌾 8. เกาะนาขั้นบันไดเสียดฟ้า (Skyward Terrace Rice Island)
-                </h4>
-                <p>• นาขั้นบันไดช่วยชะลอการไหลบ่าของน้ำ ลดการชะล้างพังทลายของหน้าดินบนพื้นที่ลาดชัน</p>
-                <p>• ฝายชะลอน้ำช่วยกักเก็บความชุ่มชื้นและดักจับตะกอนดินหล่อเลี้ยงต้นข้าว</p>
-                <br />
-
-                <h4 style={{ color: "var(--gold-highlight)" }}>
-                  🌳 9. เกาะสะวันนาลอยฟ้าพืชทนแล้ง (Floating Savanna & Agroforestry)
-                </h4>
-                <p>• วนเกษตร (Agroforestry): ปลูกไม้ยืนต้นให้ร่มเงาควบคู่กับพืชเกษตรและปศุสัตว์</p>
-                <p>• หญ้าแฝกมีรากหยั่งลึกเป็นแนวกำแพงธรรมชาติ ป้องกันขอบหน้าผาดินพังทลาย</p>
-                <br />
-
-                <h4 style={{ color: "var(--gold-highlight)" }}>
-                  🧬 10. เกาะคลังพันธุกรรมเมล็ดพันธุ์เวหา (Global Sky Seed Vault)
-                </h4>
-                <p>• คลังเมล็ดพันธุ์ควบคุมอุณหภูมิติดลบและความชื้นต่ำเพื่อรักษาความหลากหลายทางพันธุกรรม</p>
-                <p>• การเพาะเลี้ยงเนื้อเยื่อ (Tissue Culture) ช่วยขยายพันธุ์พืชปลอดโรคได้ปริมาณมหาศาล</p>
-                <br />
-
-                <h4 style={{ color: "var(--gold-highlight)" }}>
-                  👑 11. เกาะทุ่งรวงทองแห่งสวรรค์ (Golden Harvest Sky Sanctuary)
-                </h4>
-                <p>• การประมวลองค์ความรู้เกษตรกรรมครบวงจร สู่การเก็บเกี่ยวผลผลิตที่มั่งคั่งและยั่งยืน</p>
-                <br />
-
-                <h4 style={{ color: "var(--gold-highlight)" }}>
-                  🌙 12. เกาะพฤกษาจันทราลอยฟ้า (Celestial Tree of Life Island)
-                </h4>
-                <p>• ความสมดุลแห่งธรรมชาติและการเกษตรอินทรีย์ที่สืบทอดสู่อนาคตนิรันดร์</p>
+                <p>
+                  • แมลงเต่าทอง (ตัวห้ำ) ช่วยกินเพลี้ยอ่อน
+                  ส่วนสารสกัดสะเดาและน้ำส้มควันไม้ช่วยขับไล่หนอน
+                </p>
+                <p>
+                  •
+                  รากต้นดาวเรืองหลั่งสารยับยั้งไส้เดือนฝอยศัตรูพืชในดินอย่างปลอดภัย
+                </p>
               </div>
             </div>
           </div>

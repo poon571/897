@@ -17,8 +17,10 @@ async function init() {
     await client.query(`
       CREATE TABLE IF NOT EXISTS player_scores (
         id SERIAL PRIMARY KEY,
+        user_id INTEGER REFERENCES users(id) ON DELETE SET NULL,
         player_name VARCHAR(255) NOT NULL,
         score INTEGER NOT NULL,
+        island_completed VARCHAR(255),
         trophy VARCHAR(255) NOT NULL,
         created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
       );

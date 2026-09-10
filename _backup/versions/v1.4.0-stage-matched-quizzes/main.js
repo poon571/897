@@ -917,14 +917,6 @@ class TerraQuestSuperEngine {
     this.currentRoomId = "holy_chapel";
     this.roomsDiscovered = { "holy_chapel": true };
     this.selectedMapRoomId = "holy_chapel";
-    this.showMapSidebar = false; // Toggleable side inspection card
-    this.mapPanX = 0;
-    this.mapPanY = 0;
-    this.isDraggingMap = false;
-    this.mapDragStartX = 0;
-    this.mapDragStartY = 0;
-    this.lastMapClickTime = 0;
-    this.lastMapClickNode = null;
     this.inventory = [];
     this.npcAppearances = {};
     this.notification = null;
@@ -1106,14 +1098,11 @@ class TerraQuestSuperEngine {
         id: "holy_chapel",
         name: "Sky Nursery Island",
         nameTh: "เกาะเรือนเพาะชำลอยฟ้า",
-        shortNameTh: "เรือนเพาะชำ",
-        shortNameEn: "Sky Nursery",
-        icon: "🌱",
         subtitle: "Floating Genesis Sanctuary & Seed Aeroponics",
         theme: "sanctum",
         color: "#52b788",
         width: 1800,
-        mapX: 80, mapY: 270,
+        mapX: 65, mapY: 280,
         altars: ["แท่นพฤกษาเวหา (Genesis Sky Altar)"],
         npcs: ["พฤกษากร Vendetta (ผู้ดูแลเรือนเพาะชำเวหา)", "หุ่นฟางซ้อมการเกษตร"],
         poi: ["โต๊ะปรุงสูตรสารอาหารพืชไร้ดิน (Aeroponic Table)"],
@@ -1152,14 +1141,11 @@ class TerraQuestSuperEngine {
         id: "abandoned_village",
         name: "Restored Farmland Island",
         nameTh: "เกาะทุ่งกสิกรรมฟื้นฟูดิน",
-        shortNameTh: "ทุ่งฟื้นฟูดิน",
-        shortNameEn: "Farmland",
-        icon: "🧪",
         subtitle: "Floating Organic Farm & Soil Remediation Lab",
         theme: "ruins",
         color: "#2ec4b6",
         width: 2600,
-        mapX: 200, mapY: 270,
+        mapX: 160, mapY: 280,
         altars: ["แท่นปุ๋ยหมักชีวภาพเวหา", "ทางเดินแปลงเกษตรลอยฟ้า"],
         npcs: ["ชาวบ้านผู้ฟื้นฟูดินบนเกาะ", "ซากกังหันลมลอยฟ้า"],
         poi: ["บ่อหมักปุ๋ยอินทรีย์", "แปลงเพาะทดลอง", "บ่อน้ำกักเก็บเมฆ"],
@@ -1205,14 +1191,11 @@ class TerraQuestSuperEngine {
         id: "drawbridge",
         name: "Sky Orchard & Waterfalls",
         nameTh: "เกาะสวนผลไม้และน้ำตกเวหา",
-        shortNameTh: "สวนผลไม้น้ำตก",
-        shortNameEn: "Sky Orchard",
-        icon: "💧",
         subtitle: "Cascading Waterfalls & Fruit Orchard Island",
         theme: "storm",
         color: "#f77f00",
         width: 2600,
-        mapX: 200, mapY: 130,
+        mapX: 160, mapY: 130,
         altars: ["แท่นน้ำตกเวหา", "ศาลาพักร่มเงาสวนส้มลอยฟ้า"],
         npcs: ["วิศวกรชลประทานเวหา"],
         poi: ["กังหันผันน้ำตกเวหา", "ประตูระบายน้ำฝนเกาะลอยฟ้า"],
@@ -1258,14 +1241,11 @@ class TerraQuestSuperEngine {
         id: "rodenia_chapel",
         name: "Floating Botanical Sanctuary",
         nameTh: "เกาะพฤกษศาสตร์สมุนไพรลอยฟ้า",
-        shortNameTh: "พฤกษาสมุนไพร",
-        shortNameEn: "Botanical",
-        icon: "🌿",
         subtitle: "Sky Herbal Conservatory & Organic Pest Protection",
         theme: "chapel",
         color: "#9b5de5",
         width: 2200,
-        mapX: 330, mapY: 130,
+        mapX: 265, mapY: 155,
         altars: ["แท่นสกัดสมุนไพรเวหา", "ห้องอบแห้งใบสะเดาลอยฟ้า"],
         npcs: ["Sister Beatrice (นักพฤกษศาสตร์สมุนไพร)"],
         poi: ["แปลงลาเวนเดอร์และสะเดาลอยฟ้า", "หม้อต้มสารสกัดชีวภาพ"],
@@ -1311,14 +1291,11 @@ class TerraQuestSuperEngine {
         id: "buried_church",
         name: "Sub-Island Rhizosphere",
         nameTh: "เกาะห้องทดลองรากพืชใต้พิภพ",
-        shortNameTh: "รากพืชใต้พิภพ",
-        shortNameEn: "Rhizosphere",
-        icon: "🍄",
         subtitle: "Floating Island Caverns & Bio-Compost Research",
         theme: "catacombs",
         color: "#8338ec",
         width: 2800,
-        mapX: 330, mapY: 390,
+        mapX: 370, mapY: 200,
         altars: ["แท่นจุลินทรีย์ใต้เกาะ", "อุโมงค์รากพืชห้อยเวหา"],
         npcs: ["นักจุลชีววิทยาการเกษตร (Captured Witch)", "นักวิจัยรากพืช"],
         poi: ["รังตัวห้ำแมลงเต่าทอง", "ชั้นหินรากพืชห้อยกลางเวหา"],
@@ -1364,14 +1341,11 @@ class TerraQuestSuperEngine {
         id: "ghost_town",
         name: "Solar AgriTech Sky City",
         nameTh: "เกาะนครเกษตรอัจฉริยะลอยฟ้า",
-        shortNameTh: "เกษตรอัจฉริยะ",
-        shortNameEn: "AgriTech City",
-        icon: "☀️",
         subtitle: "Vertical Aeroponics & Solar Drone Sky Metropolis",
         theme: "city",
         color: "#00bbf9",
         width: 2500,
-        mapX: 470, mapY: 130,
+        mapX: 475, mapY: 150,
         altars: ["แท่นโซลาร์เซลล์เวหา", "หอควบคุมโดรนเกษตรอัจฉริยะ"],
         npcs: ["พ่อค้าเทคโนโลยีเกษตร (Illusive Merchant)", "วิศวกรโดรนการเกษตร"],
         poi: ["หอคอยปลูกพืชแนวตั้งลอยฟ้า", "สถานีตรวจวัดสภาพอากาศเวหา"],
@@ -1417,14 +1391,11 @@ class TerraQuestSuperEngine {
         id: "sewers",
         name: "Celestial Aquaponics Island",
         nameTh: "เกาะบึงน้ำลอยฟ้าอควาโปนิกส์",
-        shortNameTh: "บึงอควาโปนิกส์",
-        shortNameEn: "Aquaponics",
-        icon: "🪷",
         subtitle: "Floating Wetland Reserve & Freshwater Symbiosis",
         theme: "sewer",
         color: "#00f5d4",
         width: 2500,
-        mapX: 470, mapY: 270,
+        mapX: 475, mapY: 280,
         altars: ["แท่นบึงบัวลอยฟ้าบำบัดน้ำ", "กังหันเติมออกซิเจนเวหา"],
         npcs: ["ผู้พิทักษ์ระบบนิเวศน้ำ (Outcast Ratkin)"],
         poi: ["แปลงผักน้ำอควาโปนิกส์ลอยฟ้า", "บ่อเลี้ยงปลานิลชีวภาพ"],
@@ -1466,66 +1437,15 @@ class TerraQuestSuperEngine {
         ]
       },
 
-      "canyon": {
-        id: "canyon",
-        name: "Floating Savanna & Agroforestry",
-        nameTh: "เกาะสะวันนาลอยฟ้าพืชทนแล้ง",
-        shortNameTh: "สะวันนาวนเกษตร",
-        shortNameEn: "Agroforestry",
-        icon: "🌳",
-        subtitle: "Drought-Resistant Floating Plateau & Agroforestry",
-        theme: "canyon",
-        color: "#fb5607",
-        width: 2400,
-        mapX: 470, mapY: 410,
-        altars: ["แท่นใต้ต้นเบาบับเวหา", "โอเอซิสกลางเกาะลอยฟ้า"],
-        npcs: ["ปราชญ์วนเกษตร (Hermit of the Forest)"],
-        poi: ["ดงกระบองเพชรกินผลลอยฟ้า", "แปลงทดลองแก้วมังกร"],
-        equipment: ["เคียวด้ามไม้เบาบับ", "แหวนกักเก็บน้ำในดิน"],
-        spells: ["คลื่นรากหญ้าแฝกยึดดิน"],
-        items: ["เมล็ดพันธุ์พืชทนแล้งยอดเยี่ยม", "ผลึกธาตุอาหาร x4"],
-        boss: "โกเลมศิลาดินดานแตกระแหง (Cracked Earth Golem)",
-        connections: ["sewers", "laboratory", "pilgrimage"],
-        entities: [
-          {
-            type: "portal", id: "portal_to_sewers", targetRoom: "sewers", spawnX: 1750,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เกาะบึงน้ำอควาโปนิกส์", icon: "🚪"
-          },
-          {
-            type: "npc", id: "hermit", x: 600, y: 392, width: 32, height: 48,
-            name: "ปราชญ์วนเกษตร", icon: "🧘‍♂️",
-            dialogue: [
-              "บนเกาะสะวันนาลอยฟ้าที่แห้งแล้ง วนเกษตร (Agroforestry) คือคำตอบ! ปลูกไม้ยืนต้นให้ร่มเงาควบคู่กับพืชทนแล้ง",
-              "หญ้าแฝกช่วยยึดขอบหน้าผาของเกาะลอยฟ้าไม่ให้พังทลาย และรากไม้ใหญ่ช่วยดึงความชื้นจากเมฆขึ้นมาสู่พืชผิวดิน!"
-            ]
-          },
-          {
-            type: "altar", id: "altar_canyon", x: 1200, y: 380, width: 44, height: 60,
-            name: "แท่นใต้ต้นเบาบับเวหา", icon: "🌳"
-          },
-          {
-            type: "item", id: "item_lightning_edge", x: 1650, y: 405, width: 28, height: 28,
-            name: "เคียวตัดแต่งกิ่งวนเกษตร", icon: "🌿", desc: "เคียวตัดแต่งกิ่งไม้ให้แสงส่องถึงแปลงพืชชั้นล่าง"
-          },
-          {
-            type: "portal", id: "portal_to_lab", targetRoom: "laboratory", spawnX: 80,
-            x: 2250, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะคลังเมล็ดพันธุ์เวหา", icon: "🚪"
-          }
-        ]
-      },
-
       "pilgrimage": {
         id: "pilgrimage",
         name: "Skyward Terrace Rice Island",
         nameTh: "เกาะนาขั้นบันไดเสียดฟ้า",
-        shortNameTh: "นาขั้นบันได",
-        shortNameEn: "Rice Terraces",
-        icon: "🌾",
         subtitle: "Highland Floating Paddys & Cloud Water Harvesting",
         theme: "skywalk",
         color: "#fee440",
         width: 3000,
-        mapX: 610, mapY: 200,
+        mapX: 590, mapY: 215,
         altars: ["แท่นบูชาพระแม่โพสพเวหา", "ศาลาชมทุ่งรวงทองลอยฟ้า"],
         npcs: ["อัศวินชาวนาเวหา (Fallen Farmer Paladin)"],
         poi: ["หุ่นไล่กากลางเมฆ", "ระบบฝายชะลอน้ำฝนบนยอดเกาะ"],
@@ -1566,18 +1486,60 @@ class TerraQuestSuperEngine {
         ]
       },
 
+      "canyon": {
+        id: "canyon",
+        name: "Floating Savanna & Agroforestry",
+        nameTh: "เกาะสะวันนาลอยฟ้าพืชทนแล้ง",
+        subtitle: "Drought-Resistant Floating Plateau & Agroforestry",
+        theme: "canyon",
+        color: "#fb5607",
+        width: 2400,
+        mapX: 590, mapY: 370,
+        altars: ["แท่นใต้ต้นเบาบับเวหา", "โอเอซิสกลางเกาะลอยฟ้า"],
+        npcs: ["ปราชญ์วนเกษตร (Hermit of the Forest)"],
+        poi: ["ดงกระบองเพชรกินผลลอยฟ้า", "แปลงทดลองแก้วมังกร"],
+        equipment: ["เคียวด้ามไม้เบาบับ", "แหวนกักเก็บน้ำในดิน"],
+        spells: ["คลื่นรากหญ้าแฝกยึดดิน"],
+        items: ["เมล็ดพันธุ์พืชทนแล้งยอดเยี่ยม", "ผลึกธาตุอาหาร x4"],
+        boss: "โกเลมศิลาดินดานแตกระแหง (Cracked Earth Golem)",
+        connections: ["sewers", "laboratory", "pilgrimage"],
+        entities: [
+          {
+            type: "portal", id: "portal_to_sewers", targetRoom: "sewers", spawnX: 1750,
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เกาะบึงน้ำอควาโปนิกส์", icon: "🚪"
+          },
+          {
+            type: "npc", id: "hermit", x: 600, y: 392, width: 32, height: 48,
+            name: "ปราชญ์วนเกษตร", icon: "🧘‍♂️",
+            dialogue: [
+              "บนเกาะสะวันนาลอยฟ้าที่แห้งแล้ง วนเกษตร (Agroforestry) คือคำตอบ! ปลูกไม้ยืนต้นให้ร่มเงาควบคู่กับพืชทนแล้ง",
+              "หญ้าแฝกช่วยยึดขอบหน้าผาของเกาะลอยฟ้าไม่ให้พังทลาย และรากไม้ใหญ่ช่วยดึงความชื้นจากเมฆขึ้นมาสู่พืชผิวดิน!"
+            ]
+          },
+          {
+            type: "altar", id: "altar_canyon", x: 1200, y: 380, width: 44, height: 60,
+            name: "แท่นใต้ต้นเบาบับเวหา", icon: "🌳"
+          },
+          {
+            type: "item", id: "item_lightning_edge", x: 1650, y: 405, width: 28, height: 28,
+            name: "เคียวตัดแต่งกิ่งวนเกษตร", icon: "🌿", desc: "เคียวตัดแต่งกิ่งไม้ให้แสงส่องถึงแปลงพืชชั้นล่าง"
+          },
+          {
+            type: "portal", id: "portal_to_lab", targetRoom: "laboratory", spawnX: 80,
+            x: 2250, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะคลังเมล็ดพันธุ์เวหา", icon: "🚪"
+          }
+        ]
+      },
+
       "laboratory": {
         id: "laboratory",
         name: "Global Sky Seed Vault",
         nameTh: "เกาะคลังพันธุกรรมเมล็ดพันธุ์เวหา",
-        shortNameTh: "คลังเมล็ดพันธุ์",
-        shortNameEn: "Seed Vault",
-        icon: "🧬",
         subtitle: "Crop Genetics & Floating Cryogenic Ark",
         theme: "lab",
         color: "#38b000",
         width: 2400,
-        mapX: 610, mapY: 370,
+        mapX: 690, mapY: 370,
         altars: ["แท่นอนุรักษ์พันธุกรรมพืชเวหา", "ห้องเพาะเลี้ยงเนื้อเยื่อลอยฟ้า"],
         npcs: ["ดร. อัลเคมิสต์ นักปรับปรุงพันธุ์พืช"],
         poi: ["ตู้แช่แข็งเมล็ดพันธุ์ไครโอเจนิก", "แปลงขยายพันธุ์ปลอดโรค"],
@@ -1618,14 +1580,11 @@ class TerraQuestSuperEngine {
         id: "white_cathedral",
         name: "Golden Harvest Sky Sanctuary",
         nameTh: "เกาะทุ่งรวงทองแห่งสวรรค์",
-        shortNameTh: "ทุ่งรวงทอง",
-        shortNameEn: "Golden Harvest",
-        icon: "👑",
         subtitle: "Summit of Golden Wheat Fields & Grand Sky Mill",
         theme: "cathedral",
         color: "#ffd166",
         width: 2800,
-        mapX: 750, mapY: 150,
+        mapX: 690, mapY: 110,
         altars: ["แท่นมหากสิกรรมแห่งแสง", "หอกังหันลมยักษ์เสียดฟ้า"],
         npcs: ["High Priestess (ผู้พิทักษ์ฤดูกาลเก็บเกี่ยว)"],
         poi: ["ทุ่งข้าวสาลีสีทองลอยฟ้ากว้างใหญ่", "ลานเฉลิมฉลองเทศกาลเก็บเกี่ยวเวหา"],
@@ -1667,14 +1626,11 @@ class TerraQuestSuperEngine {
         id: "lunar_gallery",
         name: "Celestial Tree of Life Island",
         nameTh: "เกาะพฤกษาจันทราลอยฟ้า",
-        shortNameTh: "พฤกษาจันทรา",
-        shortNameEn: "Tree of Life",
-        icon: "🌙",
         subtitle: "Mystical Arboretum of the Cosmic World Tree",
         theme: "lunar",
         color: "#c77dff",
         width: 2500,
-        mapX: 860, mapY: 270,
+        mapX: 790, mapY: 245,
         altars: ["แท่นพฤกษาใต้แสงจันทร์", "ริมสระน้ำประกายดาวลอยฟ้า"],
         npcs: ["The Moon Witch (เทพีผู้พิทักษ์ความอุดมสมบูรณ์)"],
         poi: ["ต้นไม้แห่งชีวิตเรืองแสงลอยฟ้า", "ระเบียงพืชพรรณดวงดาว"],
@@ -1769,20 +1725,8 @@ class TerraQuestSuperEngine {
       }
 
       if (this.gameState === "MAP") {
-        if (e.code === "KeyM" || e.code === "Escape") {
+        if (e.code === "KeyM") {
           this.toggleMapUI();
-          return;
-        }
-        if (e.code === "Tab" || e.code === "KeyI") {
-          e.preventDefault();
-          this.showMapSidebar = !this.showMapSidebar;
-          if (this.sound) this.sound.playJump();
-          return;
-        }
-        if (e.code === "KeyR") {
-          this.mapPanX = 0;
-          this.mapPanY = 0;
-          if (this.sound) this.sound.playCoin();
           return;
         }
         if (e.code === "KeyT" || e.code === "Enter" || e.code === "Space") {
@@ -1821,29 +1765,11 @@ class TerraQuestSuperEngine {
       this.keys[e.code] = false;
     });
 
-    this.canvas.addEventListener("mousedown", (e) => {
-      if (this.gameState === "MAP") {
-        this.handleMapMouseDown(e);
-      }
-    });
-
-    window.addEventListener("mouseup", (e) => {
-      if (this.gameState === "MAP") {
-        this.handleMapMouseUp(e);
-      }
-    });
-
     this.canvas.addEventListener("mousemove", (e) => {
       if (this.gameState === "MAP") {
         this.handleMapMouseMove(e);
       }
     });
-
-    this.canvas.addEventListener("wheel", (e) => {
-      if (this.gameState === "MAP") {
-        this.handleMapWheel(e);
-      }
-    }, { passive: false });
 
     this.canvas.addEventListener("click", (e) => {
       if (this.gameState === "MAP") {
@@ -3997,11 +3923,6 @@ class TerraQuestSuperEngine {
     }
   }
 
-  saveGameSlot(slotId = null) {
-    if (slotId) this.currentSaveSlot = slotId;
-    this.saveCurrentSlot();
-  }
-
   deleteSaveSlot(slotId) {
     try {
       localStorage.removeItem("harvest_frontier_save_slot_" + slotId);
@@ -5123,7 +5044,7 @@ class TerraQuestSuperEngine {
     this.sound.playCorrect();
     this.spawnParticles(this.player.x + 16 - this.cameraX, this.player.y + 20, "#fee440");
     this.showToastFeedback(`🕯️ พักผ่อนที่ ${this.activeAltar?.name || "แท่นศักดิ์สิทธิ์"} - เซฟจุดเกิดเรียบร้อย!`, "success");
-    this.saveCurrentSlot();
+    this.saveGameSlot(0);
   }
 
   startAltarQuiz() {
@@ -6332,13 +6253,9 @@ class TerraQuestSuperEngine {
   toggleMapUI() {
     if (this.gameState === "MAP") {
       this.gameState = "PLAYING";
-      const hudTop = document.getElementById("hud-top");
-      if (hudTop) hudTop.classList.remove("hidden");
     } else if (this.gameState === "PLAYING") {
       this.gameState = "MAP";
       this.selectedMapRoomId = this.currentRoomId;
-      const hudTop = document.getElementById("hud-top");
-      if (hudTop) hudTop.classList.add("hidden");
       if (this.sound) this.sound.playCoin();
     }
   }
@@ -6354,100 +6271,7 @@ class TerraQuestSuperEngine {
       const prevIdx = (currIdx - 1 + roomKeys.length) % roomKeys.length;
       this.selectedMapRoomId = roomKeys[prevIdx];
       if (this.sound) this.sound.playJump();
-    } else if (e.code === "ArrowUp" || e.code === "KeyW") {
-      const prevIdx = (currIdx - 2 + roomKeys.length) % roomKeys.length;
-      this.selectedMapRoomId = roomKeys[prevIdx];
-      if (this.sound) this.sound.playJump();
-    } else if (e.code === "ArrowDown" || e.code === "KeyS") {
-      const nextIdx = (currIdx + 2) % roomKeys.length;
-      this.selectedMapRoomId = roomKeys[nextIdx];
-      if (this.sound) this.sound.playJump();
     }
-  }
-
-  handleMapMouseDown(e) {
-    const rect = this.canvas.getBoundingClientRect();
-    const scaleX = this.canvas.width / rect.width;
-    const scaleY = this.canvas.height / rect.height;
-    const mouseX = (e.clientX - rect.left) * scaleX;
-    const mouseY = (e.clientY - rect.top) * scaleY;
-    const cw = this.canvas.width;
-
-    // Top Header Buttons
-    // 1. Reset View [Key R]
-    if (mouseX >= cw - 320 && mouseX <= cw - 210 && mouseY >= 12 && mouseY <= 38) {
-      this.mapPanX = 0;
-      this.mapPanY = 0;
-      if (this.sound) this.sound.playCoin();
-      return;
-    }
-    // 2. Toggle Sidebar [Tab]
-    if (mouseX >= cw - 200 && mouseX <= cw - 90 && mouseY >= 12 && mouseY <= 38) {
-      this.showMapSidebar = !this.showMapSidebar;
-      if (this.sound) this.sound.playJump();
-      return;
-    }
-    // 3. Close Map [Esc/M]
-    if (mouseX >= cw - 80 && mouseX <= cw - 12 && mouseY >= 12 && mouseY <= 38) {
-      this.toggleMapUI();
-      return;
-    }
-
-    // If Sidebar is open, check interactions on the Sidebar
-    if (this.showMapSidebar) {
-      const pw = 280;
-      const ph = 460;
-      const px = cw - pw - 16;
-      const py = 46;
-
-      // Sidebar Close Button [X]
-      if (mouseX >= px + pw - 32 && mouseX <= px + pw - 6 && mouseY >= py + 6 && mouseY <= py + 32) {
-        this.showMapSidebar = false;
-        if (this.sound) this.sound.playShoot();
-        return;
-      }
-
-      // Fast Travel button inside sidebar
-      if (mouseX >= px + 16 && mouseX <= px + pw - 16 && mouseY >= py + ph - 48 && mouseY <= py + ph - 12) {
-        this.fastTravelToSelectedRoom();
-        return;
-      }
-
-      // If clicked inside sidebar body (not buttons), consume click without dragging
-      if (mouseX >= px && mouseX <= px + pw && mouseY >= py && mouseY <= py + ph) {
-        return;
-      }
-    }
-
-    // Check click on Map Nodes
-    const panX = this.mapPanX || 0;
-    const panY = this.mapPanY || 0;
-    for (let key in this.WORLD_MAP) {
-      const room = this.WORLD_MAP[key];
-      const nodeX = room.mapX + panX;
-      const nodeY = room.mapY + panY;
-      if (
-        mouseX >= nodeX - 47 && mouseX <= nodeX + 47 &&
-        mouseY >= nodeY - 24 && mouseY <= nodeY + 24
-      ) {
-        const now = Date.now();
-        if (this.selectedMapRoomId === key && (now - this.lastMapClickTime) < 450) {
-          this.fastTravelToSelectedRoom();
-        } else {
-          this.selectedMapRoomId = key;
-          this.showMapSidebar = true;
-          if (this.sound) this.sound.playJump();
-        }
-        this.lastMapClickTime = now;
-        this.lastMapClickNode = key;
-        return;
-      }
-    }
-
-    // Otherwise, start dragging the map
-    this.isDraggingMap = true;
-    this.mapDragStartX = mouseX - (this.mapPanX || 0);
-    this.mapDragStartY = mouseY - (this.mapPanY || 0);
   }
 
   handleMapMouseMove(e) {
@@ -6457,22 +6281,11 @@ class TerraQuestSuperEngine {
     const mouseX = (e.clientX - rect.left) * scaleX;
     const mouseY = (e.clientY - rect.top) * scaleY;
 
-    if (this.isDraggingMap) {
-      this.mapPanX = Math.max(-280, Math.min(280, mouseX - this.mapDragStartX));
-      this.mapPanY = Math.max(-160, Math.min(160, mouseY - this.mapDragStartY));
-      return;
-    }
-
-    // Check node hover
-    const panX = this.mapPanX || 0;
-    const panY = this.mapPanY || 0;
     for (let key in this.WORLD_MAP) {
       const room = this.WORLD_MAP[key];
-      const nodeX = room.mapX + panX;
-      const nodeY = room.mapY + panY;
       if (
-        mouseX >= nodeX - 47 && mouseX <= nodeX + 47 &&
-        mouseY >= nodeY - 24 && mouseY <= nodeY + 24
+        mouseX >= room.mapX - 42 && mouseX <= room.mapX + 42 &&
+        mouseY >= room.mapY - 22 && mouseY <= room.mapY + 22
       ) {
         if (this.selectedMapRoomId !== key) {
           this.selectedMapRoomId = key;
@@ -6482,24 +6295,35 @@ class TerraQuestSuperEngine {
     }
   }
 
-  handleMapMouseUp(e) {
-    this.isDraggingMap = false;
-  }
-
-  handleMapWheel(e) {
-    if (this.gameState !== "MAP") return;
-    e.preventDefault();
-    this.mapPanX = Math.max(-280, Math.min(280, (this.mapPanX || 0) - e.deltaX * 0.4));
-    this.mapPanY = Math.max(-160, Math.min(160, (this.mapPanY || 0) - e.deltaY * 0.4));
-  }
-
   handleMapClick(e) {
-    // Handled in handleMapMouseDown for responsiveness
+    const rect = this.canvas.getBoundingClientRect();
+    const scaleX = this.canvas.width / rect.width;
+    const scaleY = this.canvas.height / rect.height;
+    const mouseX = (e.clientX - rect.left) * scaleX;
+    const mouseY = (e.clientY - rect.top) * scaleY;
+
+    // Check fast travel button click on sidebar
+    if (mouseX >= 650 && mouseX <= 930 && mouseY >= 440 && mouseY <= 480) {
+      this.fastTravelToSelectedRoom();
+      return;
+    }
+
+    // Check node clicks
+    for (let key in this.WORLD_MAP) {
+      const room = this.WORLD_MAP[key];
+      if (
+        mouseX >= room.mapX - 42 && mouseX <= room.mapX + 42 &&
+        mouseY >= room.mapY - 22 && mouseY <= room.mapY + 22
+      ) {
+        this.selectedMapRoomId = key;
+        if (this.sound) this.sound.playJump();
+        break;
+      }
+    }
   }
 
   fastTravelToSelectedRoom() {
     const targetRoomId = this.selectedMapRoomId || this.currentRoomId;
-    const room = this.WORLD_MAP[targetRoomId];
     if (!this.roomsDiscovered[targetRoomId]) {
       this.showNotification("⚠️ ไม่สามารถวาร์ปได้: ยังไม่ได้สำรวจพื้นที่นี้!", "#ff5555");
       return;
@@ -6507,33 +6331,39 @@ class TerraQuestSuperEngine {
     this.sound.playCorrect();
     this.loadRoom(targetRoomId, 120);
     this.toggleMapUI();
-    this.showNotification(`⚡ วาร์ปมายัง: ${room ? (room.nameTh || room.name) : "เกาะลอยฟ้า"}!`, "#00f5d4");
+    this.showNotification(`⚡ วาร์ปมายัง: ${this.WORLD_MAP[targetRoomId].name}!`, "#00f5d4");
   }
 
   drawMapUI() {
     const ctx = this.ctx;
     const cw = this.canvas.width;
     const ch = this.canvas.height;
-    const panX = this.mapPanX || 0;
-    const panY = this.mapPanY || 0;
 
-    // Dark high-tech blueprint / starry sky backdrop
-    ctx.fillStyle = "rgba(7, 12, 24, 0.96)";
+    // Dark high-tech / gothic blueprint backdrop
+    ctx.fillStyle = "rgba(7, 11, 22, 0.94)";
     ctx.fillRect(0, 0, cw, ch);
 
-    // Subtle coordinate grid with panning
-    ctx.strokeStyle = "rgba(35, 55, 95, 0.35)";
+    // Subtle coordinate grid
+    ctx.strokeStyle = "rgba(30, 50, 85, 0.35)";
     ctx.lineWidth = 1;
-    const startX = ((panX % 40) + 40) % 40;
-    for (let x = startX; x < cw; x += 40) {
+    for (let x = 0; x < cw; x += 40) {
       ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, ch); ctx.stroke();
     }
-    const startY = ((panY % 40) + 40) % 40;
-    for (let y = startY; y < ch; y += 40) {
+    for (let y = 0; y < ch; y += 40) {
       ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(cw, y); ctx.stroke();
     }
 
-    // Circuit Pathways between nodes (drawn with pan offset)
+    // Main Title Header
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "bold 20px 'Chakra Petch'";
+    ctx.textAlign = "left";
+    ctx.fillText("🗺️ HARVEST FRONTIER WORLD MAP / แผนที่โลกแห่งกสิกรรม", 24, 34);
+
+    ctx.fillStyle = "#52b788";
+    ctx.font = "12px 'Chakra Petch'";
+    ctx.fillText("Interconnected Sustainable Agri-Network • 12 Agricultural Eco-Zones", 26, 52);
+
+    // Connecting Circuit Pathways between nodes
     for (let key in this.WORLD_MAP) {
       const room = this.WORLD_MAP[key];
       if (room.connections) {
@@ -6542,27 +6372,23 @@ class TerraQuestSuperEngine {
           if (!target) continue;
 
           const isDisc = this.roomsDiscovered[key] && this.roomsDiscovered[targetKey];
-          const rx = room.mapX + panX;
-          const ry = room.mapY + panY;
-          const tx = target.mapX + panX;
-          const ty = target.mapY + panY;
-
           ctx.beginPath();
-          ctx.strokeStyle = isDisc ? "rgba(79, 172, 254, 0.75)" : "rgba(60, 75, 100, 0.35)";
+          ctx.strokeStyle = isDisc ? "rgba(79, 172, 254, 0.75)" : "rgba(60, 75, 100, 0.4)";
           ctx.lineWidth = isDisc ? 3 : 1.5;
-          ctx.moveTo(rx, ry);
+          ctx.moveTo(room.mapX, room.mapY);
           
-          const midX = (rx + tx) / 2;
-          ctx.lineTo(midX, ry);
-          ctx.lineTo(midX, ty);
-          ctx.lineTo(tx, ty);
+          // Orthogonal/smooth path
+          const midX = (room.mapX + target.mapX) / 2;
+          ctx.lineTo(midX, room.mapY);
+          ctx.lineTo(midX, target.mapY);
+          ctx.lineTo(target.mapX, target.mapY);
           ctx.stroke();
 
-          // Junction energy dot
+          // Junction dot
           ctx.fillStyle = isDisc ? "#00f5d4" : "#4a5568";
           ctx.beginPath();
-          ctx.arc(midX, ry, 3, 0, Math.PI * 2);
-          ctx.arc(midX, ty, 3, 0, Math.PI * 2);
+          ctx.arc(midX, room.mapY, 3, 0, Math.PI * 2);
+          ctx.arc(midX, target.mapY, 3, 0, Math.PI * 2);
           ctx.fill();
         }
       }
@@ -6575,48 +6401,45 @@ class TerraQuestSuperEngine {
       const isSelected = (key === this.selectedMapRoomId);
       const isDiscovered = this.roomsDiscovered[key];
 
-      const nw = 94;
-      const nh = 48;
-      const nx = room.mapX + panX - nw / 2;
-      const ny = room.mapY + panY - nh / 2;
+      const nw = 84;
+      const nh = 46;
+      const nx = room.mapX - nw / 2;
+      const ny = room.mapY - nh / 2;
 
-      // Node Box Backdrop
-      ctx.fillStyle = isDiscovered ? (isCurrent ? "#16325c" : "#0f1c33") : "#0a111e";
+      // Node Box
+      ctx.fillStyle = isDiscovered ? (isCurrent ? "#162f4f" : "#111d33") : "#0b121e";
       ctx.fillRect(nx, ny, nw, nh);
 
       // Node Border
       if (isCurrent) {
         const pulse = (Math.sin(this.mapAnimTimer * 4) + 1) * 0.5;
-        ctx.strokeStyle = `rgba(254, 228, 64, ${0.8 + pulse * 0.2})`;
+        ctx.strokeStyle = `rgba(254, 228, 64, ${0.7 + pulse * 0.3})`;
         ctx.lineWidth = 3;
       } else if (isSelected) {
         ctx.strokeStyle = "#00f5d4";
         ctx.lineWidth = 2.5;
       } else {
-        ctx.strokeStyle = isDiscovered ? (room.color || "#4facfe") : "#253348";
+        ctx.strokeStyle = isDiscovered ? (room.color || "#4facfe") : "#2a3b53";
         ctx.lineWidth = 1.5;
       }
       ctx.strokeRect(nx, ny, nw, nh);
 
-      // Node Header Accent Bar
-      ctx.fillStyle = isDiscovered ? (room.color || "#4facfe") : "#253348";
-      ctx.fillRect(nx, ny, nw, 4);
+      // Node Header Bar
+      ctx.fillStyle = isDiscovered ? (room.color || "#4facfe") : "#2a3b53";
+      ctx.fillRect(nx, ny, nw, 5);
 
-      // Line 1: Icon + Short Thai Name (Fits inside 94px)
-      ctx.fillStyle = isDiscovered ? (isCurrent ? "#fee440" : "#ffffff") : "#64748b";
-      ctx.font = "bold 11px 'Chakra Petch'";
+      // Room Title
+      ctx.fillStyle = isDiscovered ? (isCurrent ? "#fee440" : "#ffffff") : "#5a6b82";
+      ctx.font = "bold 10px 'Chakra Petch'";
       ctx.textAlign = "center";
-      const icon = room.icon || "🌱";
-      const labelTh = isDiscovered ? (room.shortNameTh || room.nameTh) : "???";
-      ctx.fillText(`${icon} ${labelTh}`, room.mapX + panX, ny + 17);
+      ctx.fillText(isDiscovered ? room.name : "???", room.mapX, room.mapY - 2);
 
-      // Line 2: Short English Name
-      ctx.fillStyle = isDiscovered ? "#38bdf8" : "#3e4c5e";
+      // Room Thai Title
+      ctx.fillStyle = isDiscovered ? "#94a3b8" : "#3e4c5e";
       ctx.font = "9px 'Chakra Petch'";
-      const labelEn = isDiscovered ? (room.shortNameEn || room.name) : "???";
-      ctx.fillText(labelEn, room.mapX + panX, ny + 29);
+      ctx.fillText(isDiscovered ? room.nameTh : "???", room.mapX, room.mapY + 10);
 
-      // Line 3: Feature Badges (Altars, Items, Boss)
+      // Badges (Altar, Equip, Items, Boss)
       if (isDiscovered) {
         let badgeStr = "";
         if (room.altars && room.altars.length) badgeStr += "🕯️";
@@ -6624,190 +6447,130 @@ class TerraQuestSuperEngine {
         if (room.items && room.items.length) badgeStr += "📦";
         if (room.boss && room.boss !== "-") badgeStr += "💀";
         ctx.font = "8px 'Chakra Petch'";
-        ctx.fillText(badgeStr, room.mapX + panX, ny + 41);
+        ctx.fillText(badgeStr, room.mapX, room.mapY + 19);
       }
 
       // Player Location Pin
       if (isCurrent) {
         ctx.fillStyle = "#fee440";
         ctx.font = "bold 11px 'Chakra Petch'";
-        ctx.fillText("📍 YOU", room.mapX + panX, ny - 6);
+        ctx.fillText("📍 YOU", room.mapX, ny - 6);
       }
     }
 
     // RIGHT PANEL: AREA INSPECTION CARD (แผงตรวจสอบข้อมูลพื้นที่)
-    // Only rendered if this.showMapSidebar is true!
-    if (this.showMapSidebar) {
-      const selRoom = this.WORLD_MAP[this.selectedMapRoomId || this.currentRoomId];
-      if (selRoom) {
-        const isDiscovered = this.roomsDiscovered[selRoom.id];
-        const pw = 280;
-        const ph = 460;
-        const px = cw - pw - 16;
-        const py = 46;
+    const selRoom = this.WORLD_MAP[this.selectedMapRoomId || this.currentRoomId];
+    if (selRoom) {
+      const isDiscovered = this.roomsDiscovered[selRoom.id];
+      const px = 640;
+      const py = 20;
+      const pw = 300;
+      const ph = 500;
 
-        // Frosted glass card backdrop
-        ctx.fillStyle = "rgba(11, 19, 36, 0.94)";
-        ctx.strokeStyle = selRoom.color || "#00f5d4";
-        ctx.lineWidth = 2;
-        ctx.fillRect(px, py, pw, ph);
-        ctx.strokeRect(px, py, pw, ph);
+      ctx.fillStyle = "rgba(13, 20, 36, 0.95)";
+      ctx.strokeStyle = selRoom.color || "#4facfe";
+      ctx.lineWidth = 2;
+      ctx.fillRect(px, py, pw, ph);
+      ctx.strokeRect(px, py, pw, ph);
 
-        // Header Bar
-        ctx.fillStyle = selRoom.color || "#4facfe";
-        ctx.fillRect(px, py, pw, 44);
+      // Header Bar
+      ctx.fillStyle = selRoom.color || "#4facfe";
+      ctx.fillRect(px, py, pw, 32);
 
-        // Header Title (Separate English & Thai lines to avoid any overflow)
-        ctx.fillStyle = "#000000";
+      ctx.fillStyle = "#000000";
+      ctx.font = "bold 15px 'Chakra Petch'";
+      ctx.textAlign = "left";
+      ctx.fillText(selRoom.name + " (" + selRoom.nameTh + ")", px + 12, py + 22);
+
+      if (isDiscovered) {
+        ctx.fillStyle = "#94a3b8";
+        ctx.font = "11px 'Chakra Petch'";
+        ctx.fillText(selRoom.subtitle, px + 12, py + 52);
+
+        let curY = py + 74;
+
+        // Section: Altars
+        ctx.fillStyle = "#fee440";
         ctx.font = "bold 12px 'Chakra Petch'";
-        ctx.textAlign = "left";
-        ctx.fillText(selRoom.name, px + 12, py + 18);
+        ctx.fillText("🕯️ Altars / จุดเซฟ:", px + 12, curY);
+        curY += 16;
+        ctx.fillStyle = "#cbd5e1";
+        ctx.font = "11px 'Chakra Petch'";
+        selRoom.altars.forEach(a => { ctx.fillText("• " + a, px + 20, curY); curY += 14; });
 
-        ctx.fillStyle = "#1e293b";
-        ctx.font = "bold 11px 'Chakra Petch'";
-        ctx.fillText(selRoom.nameTh, px + 12, py + 34);
+        // Section: NPCs
+        curY += 4;
+        ctx.fillStyle = "#4facfe";
+        ctx.font = "bold 12px 'Chakra Petch'";
+        ctx.fillText("👤 Inhabitants / ผู้พำนัก:", px + 12, curY);
+        curY += 16;
+        ctx.fillStyle = "#cbd5e1";
+        ctx.font = "11px 'Chakra Petch'";
+        selRoom.npcs.forEach(n => { ctx.fillText("• " + n, px + 20, curY); curY += 14; });
 
-        // Close [X] Button on Header
-        ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
-        ctx.fillRect(px + pw - 28, py + 8, 22, 22);
+        // Section: Equipment & Spells
+        curY += 4;
+        ctx.fillStyle = "#e71d36";
+        ctx.font = "bold 12px 'Chakra Petch'";
+        ctx.fillText("⚔️ Equipment & Spells:", px + 12, curY);
+        curY += 16;
+        ctx.fillStyle = "#cbd5e1";
+        ctx.font = "11px 'Chakra Petch'";
+        const allEquip = [...(selRoom.equipment || []), ...(selRoom.spells || [])];
+        allEquip.slice(0, 4).forEach(e => { ctx.fillText("• " + e, px + 20, curY); curY += 14; });
+
+        // Section: Key Items
+        curY += 4;
+        ctx.fillStyle = "#00f5d4";
+        ctx.font = "bold 12px 'Chakra Petch'";
+        ctx.fillText("📦 Relics & Key Items:", px + 12, curY);
+        curY += 16;
+        ctx.fillStyle = "#cbd5e1";
+        ctx.font = "11px 'Chakra Petch'";
+        selRoom.items.slice(0, 3).forEach(it => { ctx.fillText("• " + it, px + 20, curY); curY += 14; });
+
+        // Section: Boss
+        curY += 4;
+        ctx.fillStyle = "#ff70a6";
+        ctx.font = "bold 12px 'Chakra Petch'";
+        ctx.fillText("💀 Boss / บอสประจำโซน:", px + 12, curY);
+        curY += 16;
+        ctx.fillStyle = "#f87171";
+        ctx.font = "11px 'Chakra Petch'";
+        ctx.fillText("• " + selRoom.boss, px + 20, curY);
+
+        // Fast Travel Button
+        const btnY = py + ph - 48;
+        ctx.fillStyle = "linear-gradient(180deg, #1e3c72, #2a5298)";
+        ctx.fillStyle = "#2a5298";
+        ctx.fillRect(px + 16, btnY, pw - 32, 34);
+        ctx.strokeStyle = "#00f5d4";
+        ctx.lineWidth = 1.5;
+        ctx.strokeRect(px + 16, btnY, pw - 32, 34);
+
         ctx.fillStyle = "#ffffff";
         ctx.font = "bold 13px 'Chakra Petch'";
         ctx.textAlign = "center";
-        ctx.fillText("✕", px + pw - 17, py + 23);
+        ctx.fillText("⚡ วาร์ปด่วน [T / คลิกที่นี่]", px + pw / 2, btnY + 22);
 
-        if (isDiscovered) {
-          ctx.fillStyle = "#94a3b8";
-          ctx.font = "10px 'Chakra Petch'";
-          ctx.textAlign = "left";
-          ctx.fillText(selRoom.subtitle, px + 12, py + 62);
-
-          let curY = py + 84;
-
-          // Section: Altars
-          ctx.fillStyle = "#fee440";
-          ctx.font = "bold 11px 'Chakra Petch'";
-          ctx.fillText("🕯️ จุดเซฟ / แท่นบูชา:", px + 12, curY);
-          curY += 15;
-          ctx.fillStyle = "#cbd5e1";
-          ctx.font = "10px 'Chakra Petch'";
-          (selRoom.altars || []).forEach(a => { ctx.fillText("• " + a, px + 18, curY); curY += 13; });
-
-          // Section: NPCs
-          curY += 4;
-          ctx.fillStyle = "#4facfe";
-          ctx.font = "bold 11px 'Chakra Petch'";
-          ctx.fillText("👤 ผู้พำนัก / NPC:", px + 12, curY);
-          curY += 15;
-          ctx.fillStyle = "#cbd5e1";
-          ctx.font = "10px 'Chakra Petch'";
-          (selRoom.npcs || []).forEach(n => { ctx.fillText("• " + n, px + 18, curY); curY += 13; });
-
-          // Section: Equipment & Spells
-          curY += 4;
-          ctx.fillStyle = "#e71d36";
-          ctx.font = "bold 11px 'Chakra Petch'";
-          ctx.fillText("⚔️ อุปกรณ์ & ทักษะ:", px + 12, curY);
-          curY += 15;
-          ctx.fillStyle = "#cbd5e1";
-          ctx.font = "10px 'Chakra Petch'";
-          const allEquip = [...(selRoom.equipment || []), ...(selRoom.spells || [])];
-          allEquip.slice(0, 3).forEach(e => { ctx.fillText("• " + e, px + 18, curY); curY += 13; });
-
-          // Section: Key Items
-          curY += 4;
-          ctx.fillStyle = "#00f5d4";
-          ctx.font = "bold 11px 'Chakra Petch'";
-          ctx.fillText("📦 ไอเทม & เมล็ดพันธุ์:", px + 12, curY);
-          curY += 15;
-          ctx.fillStyle = "#cbd5e1";
-          ctx.font = "10px 'Chakra Petch'";
-          (selRoom.items || []).slice(0, 2).forEach(it => { ctx.fillText("• " + it, px + 18, curY); curY += 13; });
-
-          // Section: Boss
-          curY += 4;
-          ctx.fillStyle = "#ff70a6";
-          ctx.font = "bold 11px 'Chakra Petch'";
-          ctx.fillText("💀 บอสประจำโซน:", px + 12, curY);
-          curY += 15;
-          ctx.fillStyle = "#f87171";
-          ctx.font = "10px 'Chakra Petch'";
-          ctx.fillText("• " + (selRoom.boss || "-"), px + 18, curY);
-
-          // Fast Travel Button
-          const btnY = py + ph - 44;
-          ctx.fillStyle = "linear-gradient(180deg, #1e3c72, #2a5298)";
-          ctx.fillStyle = "#2a5298";
-          ctx.fillRect(px + 16, btnY, pw - 32, 32);
-          ctx.strokeStyle = "#00f5d4";
-          ctx.lineWidth = 1.5;
-          ctx.strokeRect(px + 16, btnY, pw - 32, 32);
-
-          ctx.fillStyle = "#ffffff";
-          ctx.font = "bold 12px 'Chakra Petch'";
-          ctx.textAlign = "center";
-          ctx.fillText("⚡ วาร์ปด่วน [T / ดับเบิลคลิก]", px + pw / 2, btnY + 20);
-
-        } else {
-          ctx.fillStyle = "#64748b";
-          ctx.font = "14px 'Chakra Petch'";
-          ctx.textAlign = "center";
-          ctx.fillText("ยังไม่ได้สำรวจพื้นที่นี้", px + pw / 2, py + ph / 2);
-        }
+      } else {
+        ctx.fillStyle = "#64748b";
+        ctx.font = "14px 'Chakra Petch'";
+        ctx.textAlign = "center";
+        ctx.fillText("ยังไม่ได้สำรวจพื้นที่นี้", px + pw / 2, py + ph / 2);
       }
     }
 
-    // TOP HEADER BAR & CONTROLS
-    // Header Title
-    ctx.fillStyle = "#ffffff";
-    ctx.font = "bold 18px 'Chakra Petch'";
-    ctx.textAlign = "left";
-    ctx.fillText("🗺️ HARVEST FRONTIER WORLD MAP", 20, 28);
-
-    ctx.fillStyle = "#52b788";
-    ctx.font = "11px 'Chakra Petch'";
-    ctx.fillText("Sustainable Agri-Network • 12 Sky Eco-Zones", 22, 42);
-
-    // Top Right Buttons:
-    // 1. Reset View [Key R]
-    ctx.fillStyle = "rgba(20, 32, 55, 0.85)";
-    ctx.fillRect(cw - 320, 12, 105, 26);
-    ctx.strokeStyle = "#4facfe";
-    ctx.lineWidth = 1;
-    ctx.strokeRect(cw - 320, 12, 105, 26);
-    ctx.fillStyle = "#94a3b8";
-    ctx.font = "11px 'Chakra Petch'";
-    ctx.textAlign = "center";
-    ctx.fillText("🔄 รีเซ็ตมุม [R]", cw - 268, 29);
-
-    // 2. Toggle Sidebar [Tab]
-    ctx.fillStyle = this.showMapSidebar ? "rgba(42, 82, 152, 0.9)" : "rgba(20, 32, 55, 0.85)";
-    ctx.fillRect(cw - 205, 12, 110, 26);
-    ctx.strokeStyle = this.showMapSidebar ? "#fee440" : "#00f5d4";
-    ctx.strokeRect(cw - 205, 12, 110, 26);
-    ctx.fillStyle = this.showMapSidebar ? "#fee440" : "#00f5d4";
-    ctx.font = "bold 11px 'Chakra Petch'";
-    ctx.fillText(this.showMapSidebar ? "✕ ซ่อนข้อมูล [Tab]" : "📖 ข้อมูลเกาะ [Tab]", cw - 150, 29);
-
-    // 3. Close Map [Esc/M]
-    ctx.fillStyle = "rgba(60, 20, 30, 0.85)";
-    ctx.fillRect(cw - 85, 12, 70, 26);
-    ctx.strokeStyle = "#e71d36";
-    ctx.strokeRect(cw - 85, 12, 70, 26);
-    ctx.fillStyle = "#ff8597";
-    ctx.font = "bold 11px 'Chakra Petch'";
-    ctx.fillText("✕ ปิด [Esc]", cw - 50, 29);
-
     // BOTTOM LEGEND BAR
-    ctx.fillStyle = "rgba(9, 15, 28, 0.92)";
-    ctx.fillRect(16, ch - 36, cw - 32, 28);
+    ctx.fillStyle = "rgba(10, 15, 30, 0.88)";
+    ctx.fillRect(16, ch - 38, 608, 30);
     ctx.strokeStyle = "#2d6a4f";
-    ctx.lineWidth = 1;
-    ctx.strokeRect(16, ch - 36, cw - 32, 28);
+    ctx.strokeRect(16, ch - 38, 608, 30);
 
     ctx.font = "11px 'Chakra Petch'";
     ctx.textAlign = "left";
     ctx.fillStyle = "#94a3b8";
-    ctx.fillText("📍 คุณอยู่ที่นี่ | 🖱️ ลากเมาส์เลื่อนแมพ | 🔍 หมุนล้อเลื่อนมุมมอง | [WASD/ลูกศร] เลือกเกาะ | [Tab] ซ่อน/แสดงข้อมูล | [T/ดับเบิลคลิก] วาร์ป | [M/Esc] ปิด", 24, ch - 18);
+    ctx.fillText("📍 ตำแหน่งคุณ | 🌱 แท่นเซฟกสิกรรม | 🌾 อุปกรณ์ | 📦 เมล็ดพันธุ์ | 💀 ศัตรูพืช | [M/Esc] ปิด | [T/Enter] วาร์ป", 26, ch - 19);
   }
 }
 

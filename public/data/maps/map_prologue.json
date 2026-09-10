@@ -1,0 +1,34 @@
+{
+  "id": "prologue",
+  "name": {
+    "th": "เกาะแห่งการเกษตร (ลานพิธีโบราณ)",
+    "en": "Island of Agriculture (Ceremony Grounds)"
+  },
+  "background": "/images/bg.jpg",
+  "width": 1280,
+  "height": 540,
+  "spawn": { "x": 100, "y": 390 },
+  "npcs": [
+    {
+      "id": "elder",
+      "nameId": "npc",
+      "name": { "th": "ผู้เฒ่าประจำหมู่บ้าน", "en": "Village Elder" },
+      "x": 450,
+      "y": 390,
+      "width": 50,
+      "height": 60,
+      "behavior": "IDLE"
+    }
+  ],
+  "shrine": {
+    "x": 750,
+    "y": 390,
+    "key": "kp_island1"
+  },
+  "portal": {
+    "x": 1150,
+    "y": 390,
+    "targetMap": "island1",
+    "reqKnowledge": true
+  }
+}

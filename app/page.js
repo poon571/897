@@ -4,6 +4,7 @@ import styles from "../styles/landing.module.css";
 import Navbar from "../components/landing/Navbar";
 import ParticlesCanvas from "../components/landing/ParticlesCanvas";
 import { AnimatedCounter, Reveal } from "../components/landing/Animations";
+import HeroButtons from "../components/landing/HeroButtons";
 
 export default function Home() {
   return (
@@ -33,14 +34,7 @@ export default function Home() {
             เรียนรู้ความรู้ด้านเกษตรกรรมผ่านการผจญภัยอันน่าตื่นเต้น
             ต่อสู้กับบอสแห่งความไม่รู้ พิชิต 3 เกาะ เก็บสะสมความรู้ไปด้วยกัน!
           </p>
-          <div className={styles.heroButtons}>
-            <Link href="/auth/register" className={styles.btnPrimary}>
-              🚀 เริ่มต้นผจญภัย
-            </Link>
-            <a href="#about" className={styles.btnSecondary}>
-              📖 เรียนรู้เพิ่มเติม
-            </a>
-          </div>
+          <HeroButtons />
         </div>
 
         <div className={styles.scrollIndicator}>
