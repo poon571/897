@@ -1108,8 +1108,8 @@ class TerraQuestSuperEngine {
     this.WORLD_MAP = {
       "holy_chapel": {
         id: "holy_chapel",
-        name: "Sky Nursery Island",
-        nameTh: "เกาะเรือนเพาะชำลอยฟ้า",
+        name: "Sky Nursery Zone",
+        nameTh: "เขตเรือนเพาะชำลอยฟ้า",
         shortNameTh: "เรือนเพาะชำ",
         shortNameEn: "Sky Nursery",
         icon: "🌱",
@@ -1151,15 +1151,15 @@ class TerraQuestSuperEngine {
           },
           {
             type: "portal", id: "portal_to_village", targetRoom: "abandoned_village", spawnX: 80,
-            x: 1650, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะทุ่งกสิกรรมฟื้นฟู", icon: "🚪"
+            x: 1650, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตทุ่งกสิกรรมฟื้นฟู", icon: "🚪"
           }
         ]
       },
 
       "abandoned_village": {
         id: "abandoned_village",
-        name: "Restored Farmland Island",
-        nameTh: "เกาะทุ่งกสิกรรมฟื้นฟูดิน",
+        name: "Restored Farmland Zone",
+        nameTh: "เขตทุ่งกสิกรรมฟื้นฟูดิน",
         shortNameTh: "ทุ่งฟื้นฟูดิน",
         shortNameEn: "Farmland",
         icon: "🧪",
@@ -1179,7 +1179,7 @@ class TerraQuestSuperEngine {
         entities: [
           {
             type: "portal", id: "portal_to_chapel", targetRoom: "holy_chapel", spawnX: 1550,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เกาะเรือนเพาะชำ", icon: "🚪"
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตเรือนเพาะชำ", icon: "🚪"
           },
           {
             type: "npc", id: "villager", x: 500, y: 392, width: 32, height: 48,
@@ -1204,7 +1204,7 @@ class TerraQuestSuperEngine {
           },
           {
             type: "portal", id: "portal_to_drawbridge", targetRoom: "drawbridge", spawnX: 80,
-            x: 2450, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะสวนผลไม้และน้ำตกเวหา", icon: "🚪"
+            x: 2450, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตสวนผลไม้และน้ำตกเวหา", icon: "🚪"
           }
         ]
       },
@@ -1212,11 +1212,11 @@ class TerraQuestSuperEngine {
       "drawbridge": {
         id: "drawbridge",
         name: "Sky Orchard & Waterfalls",
-        nameTh: "เกาะสวนผลไม้และน้ำตกเวหา",
+        nameTh: "เขตสวนผลไม้และน้ำตก",
         shortNameTh: "สวนผลไม้น้ำตก",
         shortNameEn: "Sky Orchard",
         icon: "💧",
-        subtitle: "Cascading Waterfalls & Fruit Orchard Island",
+        subtitle: "Cascading Waterfalls & Fruit Orchard",
         theme: "storm",
         color: "#f77f00",
         width: 2600,
@@ -1232,7 +1232,7 @@ class TerraQuestSuperEngine {
         entities: [
           {
             type: "portal", id: "portal_to_village", targetRoom: "abandoned_village", spawnX: 2350,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เกาะทุ่งกสิกรรมฟื้นฟู", icon: "🚪"
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตทุ่งกสิกรรมฟื้นฟู", icon: "🚪"
           },
           {
             type: "npc", id: "watchman", x: 600, y: 392, width: 32, height: 48,
@@ -1253,11 +1253,11 @@ class TerraQuestSuperEngine {
           },
           {
             type: "portal", id: "portal_to_rodenia", targetRoom: "rodenia_chapel", spawnX: 80,
-            x: 1800, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะสมุนไพรลอยฟ้า", icon: "🚪"
+            x: 1800, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตสมุนไพรลอยฟ้า", icon: "🚪"
           },
           {
             type: "portal", id: "portal_to_buried", targetRoom: "buried_church", spawnX: 80,
-            x: 2450, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะรากพืชใต้พิภพ", icon: "🚪"
+            x: 2450, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตรากพืชใต้พิภพ", icon: "🚪"
           }
         ]
       },
@@ -1265,7 +1265,7 @@ class TerraQuestSuperEngine {
       "rodenia_chapel": {
         id: "rodenia_chapel",
         name: "Floating Botanical Sanctuary",
-        nameTh: "เกาะพฤกษศาสตร์สมุนไพรลอยฟ้า",
+        nameTh: "เขตพฤกษศาสตร์สมุนไพร",
         shortNameTh: "พฤกษาสมุนไพร",
         shortNameEn: "Botanical",
         icon: "🌿",
@@ -1285,7 +1285,7 @@ class TerraQuestSuperEngine {
         entities: [
           {
             type: "portal", id: "portal_to_drawbridge", targetRoom: "drawbridge", spawnX: 1700,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เกาะสวนผลไม้", icon: "🚪"
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตสวนผลไม้", icon: "🚪"
           },
           {
             type: "npc", id: "sister_beatrice", x: 600, y: 392, width: 32, height: 48,
@@ -1310,15 +1310,15 @@ class TerraQuestSuperEngine {
           },
           {
             type: "portal", id: "portal_to_buried", targetRoom: "buried_church", spawnX: 100,
-            x: 2050, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะรากพืชใต้พิภพ", icon: "🚪"
+            x: 2050, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตรากพืชใต้พิภพ", icon: "🚪"
           }
         ]
       },
 
       "buried_church": {
         id: "buried_church",
-        name: "Sub-Island Rhizosphere",
-        nameTh: "เกาะห้องทดลองรากพืชใต้พิภพ",
+        name: "Sub-Rhizosphere Caverns",
+        nameTh: "เขตห้องทดลองรากพืช",
         shortNameTh: "รากพืชใต้พิภพ",
         shortNameEn: "Rhizosphere",
         icon: "🍄",
@@ -1338,7 +1338,7 @@ class TerraQuestSuperEngine {
         entities: [
           {
             type: "portal", id: "portal_to_rodenia", targetRoom: "rodenia_chapel", spawnX: 1950,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะสมุนไพร", icon: "🚪"
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตสมุนไพร", icon: "🚪"
           },
           {
             type: "npc", id: "captured_witch", x: 600, y: 392, width: 32, height: 48,
@@ -1359,11 +1359,11 @@ class TerraQuestSuperEngine {
           },
           {
             type: "portal", id: "portal_to_ghost_town", targetRoom: "ghost_town", spawnX: 80,
-            x: 2000, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เกาะเกษตรอัจฉริยะ", icon: "🚪"
+            x: 2000, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เขตเกษตรอัจฉริยะ", icon: "🚪"
           },
           {
             type: "portal", id: "portal_to_sewers", targetRoom: "sewers", spawnX: 80,
-            x: 2650, y: 350, width: 50, height: 90, name: "🚪 ลงสู่ เกาะบึงน้ำอควาโปนิกส์", icon: "🚪"
+            x: 2650, y: 350, width: 50, height: 90, name: "🚪 ลงสู่ เขตบึงน้ำอควาโปนิกส์", icon: "🚪"
           }
         ]
       },
@@ -1371,7 +1371,7 @@ class TerraQuestSuperEngine {
       "ghost_town": {
         id: "ghost_town",
         name: "Solar AgriTech Sky City",
-        nameTh: "เกาะนครเกษตรอัจฉริยะลอยฟ้า",
+        nameTh: "เขตนครเกษตรอัจฉริยะ",
         shortNameTh: "เกษตรอัจฉริยะ",
         shortNameEn: "AgriTech City",
         icon: "☀️",
@@ -1391,7 +1391,7 @@ class TerraQuestSuperEngine {
         entities: [
           {
             type: "portal", id: "portal_to_buried", targetRoom: "buried_church", spawnX: 1900,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เกาะรากพืช", icon: "🚪"
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตรากพืช", icon: "🚪"
           },
           {
             type: "npc", id: "merchant", x: 700, y: 392, width: 32, height: 48,
@@ -1416,15 +1416,15 @@ class TerraQuestSuperEngine {
           },
           {
             type: "portal", id: "portal_to_pilgrimage", targetRoom: "pilgrimage", spawnX: 80,
-            x: 2350, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะนาขั้นบันไดเสียดฟ้า", icon: "🚪"
+            x: 2350, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตนาขั้นบันไดเสียดฟ้า", icon: "🚪"
           }
         ]
       },
 
       "sewers": {
         id: "sewers",
-        name: "Celestial Aquaponics Island",
-        nameTh: "เกาะบึงน้ำลอยฟ้าอควาโปนิกส์",
+        name: "Celestial Aquaponics Wetland",
+        nameTh: "เขตบึงน้ำอควาโปนิกส์",
         shortNameTh: "บึงอควาโปนิกส์",
         shortNameEn: "Aquaponics",
         icon: "🪷",
@@ -1444,7 +1444,7 @@ class TerraQuestSuperEngine {
         entities: [
           {
             type: "portal", id: "portal_to_buried", targetRoom: "buried_church", spawnX: 2550,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เกาะรากพืช", icon: "🚪"
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตรากพืช", icon: "🚪"
           },
           {
             type: "npc", id: "ratkin", x: 650, y: 392, width: 32, height: 48,
@@ -1465,11 +1465,11 @@ class TerraQuestSuperEngine {
           },
           {
             type: "portal", id: "portal_to_canyon", targetRoom: "canyon", spawnX: 80,
-            x: 1850, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะสะวันนาลอยฟ้า", icon: "🚪"
+            x: 1850, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตสะวันนาลอยฟ้า", icon: "🚪"
           },
           {
             type: "portal", id: "portal_to_pilgrimage", targetRoom: "pilgrimage", spawnX: 100,
-            x: 2350, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เกาะนาขั้นบันได", icon: "🚪"
+            x: 2350, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เขตนาขั้นบันได", icon: "🚪"
           }
         ]
       },
@@ -1477,7 +1477,7 @@ class TerraQuestSuperEngine {
       "canyon": {
         id: "canyon",
         name: "Floating Savanna & Agroforestry",
-        nameTh: "เกาะสะวันนาลอยฟ้าพืชทนแล้ง",
+        nameTh: "เขตสะวันนาพืชทนแล้ง",
         shortNameTh: "สะวันนาวนเกษตร",
         shortNameEn: "Agroforestry",
         icon: "🌳",
@@ -1497,7 +1497,7 @@ class TerraQuestSuperEngine {
         entities: [
           {
             type: "portal", id: "portal_to_sewers", targetRoom: "sewers", spawnX: 1750,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เกาะบึงน้ำอควาโปนิกส์", icon: "🚪"
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตบึงน้ำอควาโปนิกส์", icon: "🚪"
           },
           {
             type: "npc", id: "hermit", x: 600, y: 392, width: 32, height: 48,
@@ -1517,15 +1517,15 @@ class TerraQuestSuperEngine {
           },
           {
             type: "portal", id: "portal_to_lab", targetRoom: "laboratory", spawnX: 80,
-            x: 2250, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะคลังเมล็ดพันธุ์เวหา", icon: "🚪"
+            x: 2250, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตคลังเมล็ดพันธุ์เวหา", icon: "🚪"
           }
         ]
       },
 
       "pilgrimage": {
         id: "pilgrimage",
-        name: "Skyward Terrace Rice Island",
-        nameTh: "เกาะนาขั้นบันไดเสียดฟ้า",
+        name: "Skyward Rice Terrace",
+        nameTh: "เขตนาขั้นบันไดเสียดฟ้า",
         shortNameTh: "นาขั้นบันได",
         shortNameEn: "Rice Terraces",
         icon: "🌾",
@@ -1545,7 +1545,7 @@ class TerraQuestSuperEngine {
         entities: [
           {
             type: "portal", id: "portal_to_ghost", targetRoom: "ghost_town", spawnX: 2250,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะเกษตรอัจฉริยะ", icon: "🚪"
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตเกษตรอัจฉริยะ", icon: "🚪"
           },
           {
             type: "npc", id: "paladin", x: 700, y: 392, width: 32, height: 48,
@@ -1561,15 +1561,15 @@ class TerraQuestSuperEngine {
           },
           {
             type: "portal", id: "portal_to_cathedral", targetRoom: "white_cathedral", spawnX: 80,
-            x: 1900, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เกาะทุ่งรวงทองแห่งสวรรค์", icon: "🚪"
+            x: 1900, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เขตทุ่งรวงทองแห่งสวรรค์", icon: "🚪"
           },
           {
             type: "portal", id: "portal_to_lab", targetRoom: "laboratory", spawnX: 80,
-            x: 2400, y: 350, width: 50, height: 90, name: "🚪 ลงสู่ เกาะคลังเมล็ดพันธุ์เวหา", icon: "🚪"
+            x: 2400, y: 350, width: 50, height: 90, name: "🚪 ลงสู่ เขตคลังเมล็ดพันธุ์เวหา", icon: "🚪"
           },
           {
             type: "portal", id: "portal_to_lunar", targetRoom: "lunar_gallery", spawnX: 80,
-            x: 2850, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะพฤกษาจันทราลอยฟ้า", icon: "🚪"
+            x: 2850, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตพฤกษาจันทราลอยฟ้า", icon: "🚪"
           }
         ]
       },
@@ -1577,7 +1577,7 @@ class TerraQuestSuperEngine {
       "laboratory": {
         id: "laboratory",
         name: "Global Sky Seed Vault",
-        nameTh: "เกาะคลังพันธุกรรมเมล็ดพันธุ์เวหา",
+        nameTh: "เขตคลังเมล็ดพันธุ์เวหา",
         shortNameTh: "คลังเมล็ดพันธุ์",
         shortNameEn: "Seed Vault",
         icon: "🧬",
@@ -1597,7 +1597,7 @@ class TerraQuestSuperEngine {
         entities: [
           {
             type: "portal", id: "portal_to_canyon", targetRoom: "canyon", spawnX: 2150,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะสะวันนาลอยฟ้า", icon: "🚪"
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตสะวันนาลอยฟ้า", icon: "🚪"
           },
           {
             type: "npc", id: "alchemist", x: 650, y: 392, width: 32, height: 48,
@@ -1617,7 +1617,7 @@ class TerraQuestSuperEngine {
           },
           {
             type: "portal", id: "portal_to_pilgrimage", targetRoom: "pilgrimage", spawnX: 2300,
-            x: 2250, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เกาะนาขั้นบันได", icon: "🚪"
+            x: 2250, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เขตนาขั้นบันได", icon: "🚪"
           }
         ]
       },
@@ -1625,7 +1625,7 @@ class TerraQuestSuperEngine {
       "white_cathedral": {
         id: "white_cathedral",
         name: "Golden Harvest Sky Sanctuary",
-        nameTh: "เกาะทุ่งรวงทองแห่งสวรรค์",
+        nameTh: "เขตทุ่งรวงทองแห่งสวรรค์",
         shortNameTh: "ทุ่งรวงทอง",
         shortNameEn: "Golden Harvest",
         icon: "👑",
@@ -1645,7 +1645,7 @@ class TerraQuestSuperEngine {
         entities: [
           {
             type: "portal", id: "portal_to_pilgrimage", targetRoom: "pilgrimage", spawnX: 1800,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เกาะนาขั้นบันได", icon: "🚪"
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตนาขั้นบันได", icon: "🚪"
           },
           {
             type: "npc", id: "priestess", x: 600, y: 392, width: 32, height: 48,
@@ -1666,15 +1666,15 @@ class TerraQuestSuperEngine {
           },
           {
             type: "portal", id: "portal_to_lunar", targetRoom: "lunar_gallery", spawnX: 80,
-            x: 2650, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะพฤกษาจันทราลอยฟ้า", icon: "🚪"
+            x: 2650, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตพฤกษาจันทราลอยฟ้า", icon: "🚪"
           }
         ]
       },
 
       "lunar_gallery": {
         id: "lunar_gallery",
-        name: "Celestial Tree of Life Island",
-        nameTh: "เกาะพฤกษาจันทราลอยฟ้า",
+        name: "Celestial Tree of Life",
+        nameTh: "เขตพฤกษาจันทรานิรันดร์",
         shortNameTh: "พฤกษาจันทรา",
         shortNameEn: "Tree of Life",
         icon: "🌙",
@@ -1694,7 +1694,7 @@ class TerraQuestSuperEngine {
         entities: [
           {
             type: "portal", id: "portal_to_pilgrimage", targetRoom: "pilgrimage", spawnX: 2750,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะนาขั้นบันได", icon: "🚪"
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตนาขั้นบันได", icon: "🚪"
           },
           {
             type: "npc", id: "moon_witch", x: 650, y: 392, width: 32, height: 48,
@@ -1715,7 +1715,7 @@ class TerraQuestSuperEngine {
           },
           {
             type: "portal", id: "portal_to_cathedral", targetRoom: "white_cathedral", spawnX: 2550,
-            x: 2350, y: 350, width: 50, height: 90, name: "🚪 สู่ เกาะทุ่งรวงทอง", icon: "🚪"
+            x: 2350, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตทุ่งรวงทอง", icon: "🚪"
           }
         ]
       }
