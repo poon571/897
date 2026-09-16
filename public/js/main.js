@@ -1168,6 +1168,9 @@ class TerraQuestSuperEngine {
         boss: "-",
         connections: ["abandoned_village"],
         entities: [
+          { type: "cropplot", id: "plot1", x: 120, y: 432, width: 24, height: 8, soilState: "Grass" },
+          { type: "cropplot", id: "plot2", x: 144, y: 432, width: 24, height: 8, soilState: "Grass" },
+          { type: "cropplot", id: "plot3", x: 168, y: 432, width: 24, height: 8, soilState: "Grass" },
           {
             type: "npc", id: "vendetta", x: 350, y: 392, width: 32, height: 48,
             name: "พฤกษากร Vendetta", icon: "👩‍🌾", gender: "farmer_f",
@@ -1882,6 +1885,14 @@ class TerraQuestSuperEngine {
       }
       if (e.code === "KeyB") this.toggleCodex();
       if (e.code === "KeyM") this.toggleMapUI();
+      
+      // In-World Farming Tool Switching
+      if (this.gameState === "PLAYING") {
+          if (e.code === "Digit1") this.player.currentTool = "hoe";
+          if (e.code === "Digit2") this.player.currentTool = "water";
+          if (e.code === "Digit3") this.player.currentTool = "seed";
+          if (e.code === "Digit4") this.player.currentTool = "none";
+      }
     });
     window.addEventListener("keyup", (e) => {
       this.keys[e.code] = false;
@@ -2549,6 +2560,15 @@ class TerraQuestSuperEngine {
 
     this.player.frameCount = (this.player.frameCount || 0) + 1;
     
+    // Crop Plot Growth
+    for (let ent of this.entities) {
+       if (ent.type === "cropplot" && ent.hasSeed && ent.soilState === "Watered") {
+          if ((ent.growth || 0) < 100) {
+             ent.growth = (ent.growth || 0) + 0.05; // Growth speed
+          }
+       }
+    }
+
     // NPC Wandering AI
     for (let ent of this.entities) {
       if (ent.type === "npc") {
@@ -4654,7 +4674,30 @@ class TerraQuestSuperEngine {
           }
         } else if (ent.type === "altar") {
           this.openAltarTrial(ent);
-        } else if (ent.type === "item") {
+        } else if (ent.type === "cropplot") {
+        // Pixel-art In-World Farming Plot
+        if (ent.soilState === "Grass") ctx.fillStyle = "#2ed573";
+        else if (ent.soilState === "Tilled") ctx.fillStyle = "#8b5a2b";
+        else if (ent.soilState === "Watered") ctx.fillStyle = "#4a2f15";
+        else ctx.fillStyle = "#2ed573";
+        
+        ctx.fillRect(rx, ent.y, ent.width, 8); // Base soil layer
+        
+        if (ent.hasSeed) {
+           const growth = ent.growth || 0;
+           ctx.fillStyle = "#70e000";
+           if (growth < 30) {
+              ctx.fillRect(rx + ent.width/2 - 2, ent.y - 4, 4, 4); // Sprout
+           } else if (growth < 70) {
+              ctx.fillRect(rx + ent.width/2 - 3, ent.y - 8, 6, 8); // Plant
+           } else {
+              ctx.fillRect(rx + ent.width/2 - 4, ent.y - 14, 8, 14); // Harvestable
+              ctx.fillStyle = "#ff006e";
+              ctx.fillRect(rx + ent.width/2 - 2, ent.y - 12, 4, 4); // Fruit
+           }
+        }
+        
+      } else if (ent.type === "item") {
           this.sound.playCoin();
           this.inventory.push({ id: ent.id, name: ent.name, icon: ent.icon, desc: ent.desc });
           this.spawnParticles(ent.x + 14 - this.cameraX, ent.y + 14, "#00f5d4");
@@ -5910,6 +5953,9 @@ class TerraQuestSuperEngine {
       this.ctx.fillRect(p.x, p.y, 4, 4);
     }
 
+    // Draw Current Tool HUD
+    this.drawToolHUD();
+
     // On-screen notification banner
     this.drawNotificationBanner();
 
@@ -6849,6 +6895,34 @@ class TerraQuestSuperEngine {
         // Prompt rendered crisp in HTML DOM by updateFloatingTags()
       }
     }
+  }
+
+  drawToolHUD() {
+    if (!this.player || this.gameState !== "PLAYING") return;
+    const ctx = this.ctx;
+    ctx.save();
+    
+    // HUD Background
+    ctx.fillStyle = "rgba(0, 0, 0, 0.6)";
+    ctx.fillRect(20, 480, 200, 40);
+    ctx.strokeStyle = "#f0c040";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(20, 480, 200, 40);
+    
+    // Text
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "14px 'Prompt', sans-serif";
+    ctx.textAlign = "left";
+    ctx.textBaseline = "middle";
+    
+    let toolName = "มือเปล่า (ไม่มีเครื่องมือ)";
+    if (this.player.currentTool === "hoe") toolName = "[1] จอบ (Hoe)";
+    else if (this.player.currentTool === "water") toolName = "[2] บัวรดน้ำ (Water)";
+    else if (this.player.currentTool === "seed") toolName = "[3] เมล็ดพันธุ์ (Seed)";
+    
+    ctx.fillText("อุปกรณ์: " + toolName, 30, 500);
+    
+    ctx.restore();
   }
 
   drawNotificationBanner() {

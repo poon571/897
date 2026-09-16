@@ -76,3 +76,11 @@ body {
 .cinematic-subtitle.hidden { opacity: 0; }
 .cinematic-speaker { color: #f0c040; font-size: 1.2rem; font-weight: bold; margin-bottom: 8px; letter-spacing: 2px; }
 .cinematic-text { color: #ffffff; font-size: 1.6rem; line-height: 1.4; }
+
+/* Retro Pixel Art Canvas Styling */
+canvas {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
