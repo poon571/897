@@ -9,7 +9,7 @@ export async function POST(req) {
       return NextResponse.json({ error: "กรุณาเข้าสู่ระบบก่อน" }, { status: 401 });
     }
 
-    const { username, email } = await req.json();
+    const { username, email, display_name } = await req.json();
 
     if (!username || !email) {
       return NextResponse.json({ error: "กรุณากรอกชื่อผู้ใช้และอีเมลให้ครบถ้วน" }, { status: 400 });
@@ -33,8 +33,8 @@ export async function POST(req) {
 
     // Update user in DB
     await query(
-      "UPDATE users SET username = ?, email = ? WHERE id = ?",
-      [username, email, session.user.id]
+      "UPDATE users SET username = ?, email = ?, display_name = ? WHERE id = ?",
+      [username, email, display_name, session.user.id]
     );
 
     // Update session object
@@ -42,6 +42,7 @@ export async function POST(req) {
       ...session.user,
       username,
       email,
+      display_name,
     };
     await setSession(updatedUser);
 

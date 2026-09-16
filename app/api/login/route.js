@@ -16,7 +16,7 @@ export async function POST(req) {
 
     // Find user by username or email
     const users = await query(
-      "SELECT id, username, email, password_hash, role FROM users WHERE username = ? OR email = ? LIMIT 1",
+      "SELECT id, username, email, display_name, password_hash, role FROM users WHERE username = ? OR email = ? LIMIT 1",
       [username_email, username_email]
     );
 
@@ -42,12 +42,13 @@ export async function POST(req) {
     await setSession({
       id: user.id,
       username: user.username,
+      display_name: user.display_name,
       email: user.email,
       role: user.role || 'user',
     });
 
     return NextResponse.json(
-      { message: "เข้าสู่ระบบสำเร็จ", user: { id: user.id, username: user.username, role: user.role || 'user' } },
+      { message: "เข้าสู่ระบบสำเร็จ", user: { id: user.id, username: user.username, display_name: user.display_name, role: user.role || 'user' } },
       { status: 200 }
     );
   } catch (error) {

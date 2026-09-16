@@ -15,7 +15,7 @@ export default function ProfilePage() {
   const [pwdSuccess, setPwdSuccess] = useState("");
   const [showPwd, setShowPwd] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
-  const [profileForm, setProfileForm] = useState({ username: "", email: "" });
+  const [profileForm, setProfileForm] = useState({ username: "", email: "", display_name: "" });
   const [profileLoading, setProfileLoading] = useState(false);
   const [profileError, setProfileError] = useState("");
   const [profileSuccess, setProfileSuccess] = useState("");
@@ -36,7 +36,7 @@ export default function ProfilePage() {
   }, []);
 
   const startEditProfile = () => {
-    setProfileForm({ username: user.username, email: user.email || "" });
+    setProfileForm({ username: user.username, email: user.email || "", display_name: user.display_name || "" });
     setProfileError("");
     setProfileSuccess("");
     setIsEditing(true);
@@ -143,9 +143,21 @@ export default function ProfilePage() {
             </div>
             {isAdmin && <div className={styles.adminGlow} />}
           </div>
-          <div className={styles.sidebarName}>{user.username}</div>
+          <div className={styles.sidebarName}>{user.display_name || user.username}</div>
           {isAdmin && <div className={styles.adminBadge}>👑 Admin</div>}
           <div className={styles.sidebarEmail}>{user.email}</div>
+
+          {/* Player stats box */}
+          <div className={styles.statsBox}>
+            <div className={styles.statItem}>
+              <span className={styles.statLabel}>เกาะที่ผ่าน</span>
+              <span className={styles.statValue}>{user.stats?.islandsCompleted || 0}</span>
+            </div>
+            <div className={styles.statItem}>
+              <span className={styles.statLabel}>คะแนนสูงสุด</span>
+              <span className={styles.statValue}>{user.stats?.highestScore || 0}</span>
+            </div>
+          </div>
 
           <nav className={styles.sidebarNav}>
             <button
@@ -192,6 +204,20 @@ export default function ProfilePage() {
               {isEditing ? (
                 <form onSubmit={handleUpdateProfile} className={styles.pwdForm} style={{ marginBottom: "28px" }}>
                   <div className={styles.formGroup}>
+                    <label className={styles.formLabel}>ชื่อที่แสดง (Display Name)</label>
+                    <div className={styles.inputWrapper}>
+                      <span className={styles.inputIcon}>🎮</span>
+                      <input
+                        type="text"
+                        className={styles.formInput}
+                        value={profileForm.display_name}
+                        onChange={(e) => setProfileForm({ ...profileForm, display_name: e.target.value })}
+                        placeholder="ชื่อตัวละครที่ใช้แสดงผล"
+                      />
+                    </div>
+                  </div>
+
+                  <div className={styles.formGroup}>
                     <label className={styles.formLabel}>ชื่อผู้ใช้ (Username)</label>
                     <div className={styles.inputWrapper}>
                       <span className={styles.inputIcon}>👤</span>
@@ -235,6 +261,14 @@ export default function ProfilePage() {
                 </form>
               ) : (
                 <div className={styles.infoGrid}>
+                  <div className={styles.infoItem}>
+                    <label className={styles.infoLabel}>ชื่อที่แสดง</label>
+                    <div className={styles.infoValue}>
+                      <span className={styles.infoIcon}>🎮</span>
+                      {user.display_name || "—"}
+                    </div>
+                  </div>
+
                   <div className={styles.infoItem}>
                     <label className={styles.infoLabel}>ชื่อผู้ใช้</label>
                     <div className={styles.infoValue}>
