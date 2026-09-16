@@ -947,10 +947,7 @@ export default function GamePage() {
                 </div>
 
                 <div className="altar-trial-actions" style={{ display: "flex", gap: "10px", marginTop: "16px" }}>
-                  <button id="btn-altar-start-quiz" className="retro-btn-action" style={{ flex: 1.3, padding: "12px", fontSize: "13px" }}>
-                    📖 ทำบททดสอบปัญญา (3 ข้อ)
-                  </button>
-                  <button id="btn-altar-rest" className="retro-btn-sm" style={{ flex: 1, padding: "12px", background: "#334155", fontSize: "13px" }}>
+                  <button id="btn-altar-rest" className="retro-btn-action" style={{ flex: 1, padding: "12px", fontSize: "14px" }}>
                     🕯️ พักผ่อนและเซฟจุดเกิด
                   </button>
                 </div>

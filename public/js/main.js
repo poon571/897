@@ -5352,20 +5352,14 @@ class TerraQuestSuperEngine {
   openAltarTrial(altar) {
     this.activeAltar = altar;
     const room = this.WORLD_MAP[this.currentRoomId] || {};
-    const qData = MASTER_DATABASE.roomTrials[this.currentRoomId] || {
-      title: altar.name,
-      topic: room.subtitle || "บททดสอบปัญญาเกษตร",
-      desc: `แท่นศักดิ์สิทธิ์ประจำ ${room.nameTh || "เกาะลอยฟ้า"} บันทึกภูมิปัญญาเกษตรกรรมอันล้ำค่าเอาไว้...`,
-      questions: MASTER_DATABASE.bossQuestions.slice(0, 3)
-    };
 
     const modal = document.getElementById("modal-altar-trial");
     if (modal) {
       document.getElementById("altar-trial-title").innerText = `🌱 ${altar.name}`;
       document.getElementById("altar-trial-icon").innerText = altar.icon || "🌱";
       document.getElementById("altar-trial-name").innerText = altar.name;
-      document.getElementById("altar-trial-topic").innerText = `หัวข้อ: ${qData.topic}`;
-      document.getElementById("altar-trial-desc").innerHTML = qData.desc;
+      document.getElementById("altar-trial-topic").innerText = `สถานที่ศักดิ์สิทธิ์ประจำโซน`;
+      document.getElementById("altar-trial-desc").innerHTML = `แท่นศักดิ์สิทธิ์ประจำ ${room.nameTh || "เขตลอยฟ้า"} บันทึกภูมิปัญญาเกษตรกรรมอันล้ำค่าเอาไว้...<br><br>คุณสามารถพักผ่อนที่นี่เพื่อฟื้นฟูพลังและบันทึกความก้าวหน้าของคุณได้`;
       modal.classList.remove("hidden");
       this.sound.playCorrect();
     }
