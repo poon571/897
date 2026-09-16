@@ -2145,3 +2145,224 @@ input:checked+.switch-slider:before {
 .toast-icon { font-size: 28px; margin-bottom: 6px; }
 .toast-msg { font-size: 14px; font-weight: 600; color: #fff; line-height: 1.4; }
 .toast-detail { font-size: 12px; color: #94a3b8; margin-top: 6px; }
+
+/* ==========================================
+   NURSERY SEEDLING LAB (เรือนเพาะชำ) MINIGAME
+   ========================================== */
+.nursery-lab-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 6px;
+}
+
+.nursery-seedling-preview {
+  text-align: center;
+  padding: 14px 8px;
+  background: linear-gradient(180deg, rgba(82, 183, 136, 0.1), rgba(82, 183, 136, 0.05));
+  border: 1px solid rgba(82, 183, 136, 0.3);
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+
+.seedling-pot {
+  font-size: 48px;
+  line-height: 1.2;
+  transition: all 0.4s ease;
+}
+
+.seedling-pot.seedling-grow {
+  animation: seedlingGrow 0.6s ease forwards;
+}
+
+.seedling-pot.seedling-wilt {
+  animation: seedlingWilt 0.5s ease forwards;
+}
+
+@keyframes seedlingGrow {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1.1); }
+}
+
+@keyframes seedlingWilt {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  100% { transform: rotate(5deg) scale(0.9); }
+}
+
+.nursery-sim-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+}
+
+.nursery-hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(20, 20, 30, 0.8);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nursery-timer {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.nursery-growth-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  margin-left: 16px;
+}
+
+.nursery-growth-bar {
+  flex: 1;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.nursery-growth-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #2ec4b6, #00f5d4);
+  transition: width 0.3s ease;
+}
+
+.nursery-play-area {
+  position: relative;
+  height: 140px;
+  background: linear-gradient(180deg, rgba(10, 15, 25, 0.9) 0%, rgba(30, 40, 50, 0.9) 100%);
+  border-radius: 8px;
+  border: 2px solid rgba(82, 183, 136, 0.3);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+}
+
+.nursery-warning-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(231, 29, 54, 0.2);
+  border: 2px solid #e71d36;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-shadow: 1px 1px 2px #000;
+  z-index: 10;
+  animation: pulseWarning 1s infinite;
+}
+
+@keyframes pulseWarning {
+  0% { background: rgba(231, 29, 54, 0.1); }
+  50% { background: rgba(231, 29, 54, 0.3); }
+  100% { background: rgba(231, 29, 54, 0.1); }
+}
+
+.mist-bubble {
+  position: absolute;
+  bottom: 0;
+  font-size: 20px;
+  cursor: pointer;
+  animation: floatUp 3s linear forwards;
+  z-index: 5;
+  transition: transform 0.1s;
+}
+.mist-bubble:hover {
+  transform: scale(1.2);
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(0.5); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-130px) scale(1.2); opacity: 0; }
+}
+
+.nursery-control-panel {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.nursery-control-group {
+  flex: 1;
+  background: rgba(20, 20, 30, 0.8);
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.nursery-gauge-label {
+  font-size: 12px;
+  color: #e2e8f0;
+  font-weight: bold;
+}
+
+.nursery-gauge-container {
+  width: 100%;
+  height: 20px;
+  background: #111;
+  border-radius: 4px;
+  position: relative;
+  border: 1px solid #333;
+}
+
+.nursery-gauge-target {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 40%;
+  left: 30%;
+  background: rgba(46, 196, 182, 0.3);
+  border-left: 2px dashed #00f5d4;
+  border-right: 2px dashed #00f5d4;
+  z-index: 1;
+}
+
+.nursery-gauge-fill {
+  position: absolute;
+  top: 0; left: 0; height: 100%;
+  background: #5390d9;
+  width: 50%;
+  z-index: 2;
+  transition: width 0.2s linear, background-color 0.3s;
+}
+
+.nursery-action-btn {
+  width: 100%;
+  padding: 6px 0;
+  background: #2a2a35;
+  border: 1px solid #555;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nursery-action-btn:hover {
+  background: #3f3f5a;
+}
+.nursery-action-btn:active {
+  transform: scale(0.95);
+}

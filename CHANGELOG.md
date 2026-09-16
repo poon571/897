@@ -2,7 +2,26 @@
 
 เอกสารบันทึกประวัติเวอร์ชันและการแก้ไขปรับปรุงของโปรเจกต์ Harvest Frontier
 
-## [v1.4.4] - 2026-09-10 (Current Version)
+## [v1.5.0] - 2026-09-16 (Current Version)
+### 🌱 เพิ่มมินิเกม "ห้องเพาะกล้าลอยฟ้า" — เรือนเพาะชำ (เกาะ 1 ด่าน 1) ให้ความรู้ควบคู่การเล่น
+- **Nursery Seedling Lab Minigame (ห้องเพาะกล้า):**
+  - ผู้เล่นเลือกสภาวะ 3 ด้าน (ความชื้น, อุณหภูมิ, แสง) เพื่อเพาะเมล็ดพันธุ์ให้งอกสำเร็จ
+  - คำตอบที่ถูกต้อง: ชุ่มชื้นพอดี + อบอุ่น 25-30°C + แสงเพียงพอ
+  - แสดง Visual Feedback แบบ Real-time: เมล็ดงอก ✨ หรือเหี่ยว 🥀 ตามสภาวะ
+  - ตอบผิดจะบอกสภาวะที่ไม่ถูกต้อง + ให้ลองใหม่ ตอบถูกจะสรุปความรู้ 3 ปัจจัย + Aeroponics
+- **Knowledge Card ก่อนเข้ามินิเกม:**
+  - แสดงเนื้อหาเรื่อง Germination, Etiolation, Aeroponics ให้ผู้เล่นอ่านก่อนเริ่มเล่น
+- **อัปเดต NPC Vendetta:** ปรับ dialogue ให้แนะนำผู้เล่นไปเล่นมินิเกมก่อนออกเกาะ
+- **Entity Layout:** เพิ่ม minigame_nursery entity ที่ x:550, ขยับ altar ไป x:900 และ item ไป x:1250
+- **Files Modified:**
+  - `public/js/main.js` — เพิ่ม nursery state, entity, handleInteraction handler, startNurseryLab, submitNurseryLab
+  - `app/game/page.js` — เพิ่ม modal HTML ห้องเพาะกล้า
+  - `public/css/style.css` — เพิ่ม nursery minigame CSS styles + animations
+- **Backup Snapshot:** `_backup/versions/v_nursery_minigame/`
+
+---
+
+## [v1.4.4] - 2026-09-10
 ### 🎭 ปรับระบบคอสตูม NPC: สุ่มเพียง 1 ชุดพิเศษให้กับ NPC เพียง 1 ตัวในทั้งเกม (Single Lucky NPC Costume Easter Egg)
 - **Single Lucky NPC Costume System (1 เกม มี NPC ใส่ชุดคอสตูมพิเศษเพียง 1 ตัวเท่านั้น):**
   - ปรับตรรกะ `randomizeAllNpcAppearances` จากเดิมที่กระจายคอสตูมทั้ง 7 ชุดให้กับ 7 NPC เป็นการสุ่มคอสตูม 1 ชุด (จาก กล้วย, คิริโตะ, นารูโตะ, ลูฟี่, โกคู, ไดโนเสาร์, ไซเบอร์) ให้กับ NPC ผู้โชคดีเพียง **1 ตัวเดียวในทั้งเกม** จากบรรดา NPC ทุกเกาะ

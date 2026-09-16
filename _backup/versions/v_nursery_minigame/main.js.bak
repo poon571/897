@@ -945,9 +945,6 @@ class TerraQuestSuperEngine {
     // pH Mixer Lab state
     this.mixerPh = 4.2;
 
-    // Nursery Seedling Lab Simulator state
-    this.nurserySim = { active: false, timer: 30, growth: 0, moisture: 50, temp: 50, light: 50, loop: null, mistLoop: null };
-
     // Crop Planting Grid state
     this.cropSlots = [null, null];
     this.selectedCropItem = null;
@@ -1133,20 +1130,16 @@ class TerraQuestSuperEngine {
             dialogue: [
               "ยินดีต้อนรับสู่ 'เกาะเรือนเพาะชำลอยฟ้า'... แหล่งกำเนิดเมล็ดพันธุ์อินทรีย์แห่งหมู่เกาะเวหา!",
               "หมู่เกาะลอยฟ้าการเกษตรแห่งนี้กำลังเผชิญวิกฤตดินเสื่อมโทรม ศัตรูพืชระบาด และภัยแล้ง",
-              "ก่อนออกเดินทางข้ามสะพาน ลองแวะไปที่ 'ห้องเพาะกล้าลอยฟ้า' ทางขวามือดูสิ",
-              "การฝึกเพาะกล้าแบบระบบปิดที่นั่น จะทำให้เจ้าเข้าใจความลับของการกำเนิดต้นไม้!"
+              "หากเจ้าพร้อม จงก้าวผ่านสะพานเชื่อมขวา สู่ 'เกาะทุ่งกสิกรรมฟื้นฟูดิน' เพื่อเริ่มต้นภารกิจกอบกู้ผืนแผ่นดินลอยฟ้า!",
+              "อย่าลืมกด [M] เพื่อเปิดดูแผนที่ 12 หมู่เกาะลอยฟ้าการเกษตรได้ตลอดเวลา"
             ]
           },
           {
-            type: "minigame_nursery", id: "nursery_lab", x: 550, y: 400, width: 48, height: 40,
-            name: "ห้องเพาะกล้าลอยฟ้า", icon: "🌱"
-          },
-          {
-            type: "altar", id: "altar_holy", x: 900, y: 380, width: 44, height: 60,
+            type: "altar", id: "altar_holy", x: 750, y: 380, width: 44, height: 60,
             name: "แท่นพฤกษาเวหา", icon: "🌱"
           },
           {
-            type: "item", id: "item_witch_blade", x: 1250, y: 405, width: 28, height: 28,
+            type: "item", id: "item_witch_blade", x: 1100, y: 405, width: 28, height: 28,
             name: "เคียวเก็บเกี่ยวอินทรีย์เวหา", icon: "🌾", desc: "เคียวโบราณ เพิ่มประสิทธิภาพการเก็บเกี่ยวบนเกาะลอยฟ้า"
           },
           {
@@ -4593,19 +4586,6 @@ class TerraQuestSuperEngine {
           this.spawnParticles(ent.x + 14 - this.cameraX, ent.y + 14, "#00f5d4");
           this.showNotification(`✨ ได้รับไอเทม: ${ent.name} (${ent.desc || ""})!`, "#00f5d4");
           this.entities = this.entities.filter(e => e !== ent);
-        } else if (ent.type === "minigame_nursery") {
-          this.showKnowledgeCard({
-            icon: "🌱",
-            title: "ศาสตร์แห่งการเพาะเมล็ดพันธุ์และต้นกล้า",
-            category: "การเพาะเมล็ดและเรือนเพาะชำ",
-            facts: [
-              "เมล็ดพันธุ์ต้องการ <b>ความชื้น (น้ำ)</b> เพื่อกระตุ้นเอนไซม์ภายในให้เริ่มกระบวนการงอก",
-              "<b>อุณหภูมิ</b> ที่พอเหมาะ (25-30°C) ช่วยให้เซลล์เมล็ดแบ่งตัวเจริญเติบโตเร็ว ร้อนจัดหรือหนาวจัดเกินจะหยุดงอก",
-              "ระยะต้นกล้า ต้องมี <b>แสงเพียงพอ</b> เพื่อป้องกัน Etiolation (ต้นกล้ายืดตัวผอมสูงอ่อนแอ)",
-              "ระบบ <b>แอโรโปนิกส์ (Aeroponics)</b> เพาะกล้าโดยพ่นละอองสารอาหารตรงสู่ราก ทำให้ได้รับออกซิเจนสูงสุด"
-            ],
-            onStart: () => this.startNurseryLab()
-          });
         } else if (ent.type === "minigame_soil") {
           this.showKnowledgeCard({
             icon: "🧪",
@@ -4771,208 +4751,6 @@ class TerraQuestSuperEngine {
 
     modal.classList.remove("hidden");
     this.sound.playVictory();
-  }
-
-  /* ===== MINIGAME 0: NURSERY SEEDLING LAB (Simulator) ===== */
-  startNurseryLab() {
-    this.nurserySim = {
-      active: true,
-      timer: 30,
-      growth: 0,
-      moisture: 50,
-      temp: 50,
-      light: 50,
-      loop: null,
-      mistLoop: null
-    };
-    
-    // Bind buttons
-    const btnWater = document.getElementById("btn-nursery-water");
-    const btnHeat = document.getElementById("btn-nursery-heat");
-    const btnLight = document.getElementById("btn-nursery-light");
-    
-    // Clear old listeners if any
-    if (btnWater) {
-      const newBtnWater = btnWater.cloneNode(true);
-      btnWater.parentNode.replaceChild(newBtnWater, btnWater);
-      newBtnWater.addEventListener("click", () => {
-        if(!this.nurserySim.active) return;
-        this.nurserySim.moisture = Math.min(100, this.nurserySim.moisture + 15);
-        this.sound.playCoin();
-        this.updateNurserySimVisual();
-      });
-    }
-    if (btnHeat) {
-      const newBtnHeat = btnHeat.cloneNode(true);
-      btnHeat.parentNode.replaceChild(newBtnHeat, btnHeat);
-      newBtnHeat.addEventListener("click", () => {
-        if(!this.nurserySim.active) return;
-        this.nurserySim.temp = Math.min(100, this.nurserySim.temp + 15);
-        this.sound.playCoin();
-        this.updateNurserySimVisual();
-      });
-    }
-    if (btnLight) {
-      const newBtnLight = btnLight.cloneNode(true);
-      btnLight.parentNode.replaceChild(newBtnLight, btnLight);
-      newBtnLight.addEventListener("click", () => {
-        if(!this.nurserySim.active) return;
-        this.nurserySim.light = Math.min(100, this.nurserySim.light + 15);
-        this.sound.playCoin();
-        this.updateNurserySimVisual();
-      });
-    }
-
-    // Clear old mist bubbles
-    document.querySelectorAll(".mist-bubble").forEach(el => el.remove());
-
-    const modal = document.getElementById("modal-minigame-nursery");
-    if (modal) modal.classList.remove("hidden");
-
-    this.updateNurserySimVisual();
-
-    // Start loops
-    this.nurserySim.loop = setInterval(() => this.nurserySimTick(), 1000);
-    this.nurserySim.mistLoop = setInterval(() => this.spawnNurseryMist(), 2000);
-  }
-
-  nurserySimTick() {
-    if (!this.nurserySim.active) return;
-
-    this.nurserySim.timer--;
-    
-    // Decrease gauges naturally
-    this.nurserySim.moisture = Math.max(0, this.nurserySim.moisture - 6);
-    this.nurserySim.temp = Math.max(0, this.nurserySim.temp - 5);
-    this.nurserySim.light = Math.max(0, this.nurserySim.light - 8);
-
-    // Check if in optimal zone (30 to 70)
-    const mOk = this.nurserySim.moisture >= 30 && this.nurserySim.moisture <= 70;
-    const tOk = this.nurserySim.temp >= 30 && this.nurserySim.temp <= 70;
-    const lOk = this.nurserySim.light >= 30 && this.nurserySim.light <= 70;
-
-    const warningEl = document.getElementById("nursery-sim-warning");
-    if (warningEl) {
-      if (!lOk && this.nurserySim.light < 30) {
-        warningEl.innerText = "⚠️ ระวัง: ขาดแสงทำให้ต้นกล้ายืดตัว (Etiolation)!";
-        warningEl.classList.remove("hidden");
-      } else if (!mOk) {
-        warningEl.innerText = this.nurserySim.moisture < 30 ? "⚠️ ระวัง: ดินแห้ง เอนไซม์หยุดทำงาน!" : "⚠️ ระวัง: น้ำท่วมขัง รากเน่า!";
-        warningEl.classList.remove("hidden");
-      } else if (!tOk) {
-        warningEl.innerText = this.nurserySim.temp < 30 ? "⚠️ ระวัง: อุณหภูมิต่ำ เซลล์ไม่แบ่งตัว!" : "⚠️ ระวัง: ร้อนเกินไป โปรตีนเสียสภาพ!";
-        warningEl.classList.remove("hidden");
-      } else {
-        warningEl.classList.add("hidden");
-      }
-    }
-
-    if (this.nurserySim.timer <= 0) {
-      // Time up
-      if (this.nurserySim.growth >= 100) {
-        this.endNurserySim(true);
-      } else {
-        this.endNurserySim(false);
-      }
-    }
-
-    this.updateNurserySimVisual();
-  }
-
-  spawnNurseryMist() {
-    if (!this.nurserySim.active) return;
-    const playArea = document.getElementById("nursery-play-area");
-    if (!playArea) return;
-
-    const mist = document.createElement("div");
-    mist.className = "mist-bubble";
-    mist.innerText = "🫧";
-    mist.style.left = Math.floor(Math.random() * 80) + 10 + "%"; // 10% to 90%
-    
-    // Add hover event to catch
-    mist.addEventListener("mouseenter", () => {
-      if (!this.nurserySim.active) return;
-      mist.remove();
-      this.sound.playCoin();
-      // Only grow if conditions are somewhat ok
-      const mOk = this.nurserySim.moisture >= 30 && this.nurserySim.moisture <= 70;
-      const tOk = this.nurserySim.temp >= 30 && this.nurserySim.temp <= 70;
-      const lOk = this.nurserySim.light >= 30 && this.nurserySim.light <= 70;
-      
-      if (mOk && tOk && lOk) {
-        this.nurserySim.growth = Math.min(100, this.nurserySim.growth + 10);
-      } else {
-        this.nurserySim.growth = Math.min(100, this.nurserySim.growth + 3);
-      }
-      this.updateNurserySimVisual();
-
-      if (this.nurserySim.growth >= 100) {
-        this.endNurserySim(true);
-      }
-    });
-
-    playArea.appendChild(mist);
-    
-    // Remove after animation (3s)
-    setTimeout(() => {
-      if (mist.parentNode) mist.remove();
-    }, 3000);
-  }
-
-  updateNurserySimVisual() {
-    if(!this.nurserySim) return;
-    const sim = this.nurserySim;
-    
-    const timerEl = document.getElementById("nursery-sim-timer");
-    if(timerEl) timerEl.innerText = `⏳ ${sim.timer}s`;
-    
-    const growthEl = document.getElementById("nursery-sim-growth");
-    if(growthEl) growthEl.style.width = `${sim.growth}%`;
-    
-    const setGauge = (id, val) => {
-      const el = document.getElementById(id);
-      if (el) {
-        el.style.width = `${val}%`;
-        el.style.backgroundColor = (val >= 30 && val <= 70) ? "#2ec4b6" : "#e71d36";
-      }
-    };
-    
-    setGauge("nursery-gauge-moisture", sim.moisture);
-    setGauge("nursery-gauge-temp", sim.temp);
-    setGauge("nursery-gauge-light", sim.light);
-
-    const sprite = document.querySelector(".seedling-sprite");
-    if (sprite) {
-      if (sim.growth < 30) sprite.innerText = "🫘";
-      else if (sim.growth < 70) sprite.innerText = "🌱";
-      else sprite.innerText = "🪴";
-    }
-  }
-
-  endNurserySim(win) {
-    this.nurserySim.active = false;
-    clearInterval(this.nurserySim.loop);
-    clearInterval(this.nurserySim.mistLoop);
-
-    document.getElementById("modal-minigame-nursery").classList.add("hidden");
-
-    if (win) {
-      this.showMinigameResult({
-        title: "🎉 เพาะกล้าสำเร็จ!",
-        subtitle: "เมล็ดพันธุ์งอกออกมาเป็นต้นกล้าแข็งแรงด้วย Aeroponics",
-        stars: 3,
-        knowledgeText: "เยี่ยมมาก! เจ้าสามารถรักษาสมดุลความชื้น อุณหภูมิ และแสงได้พอดี \n\nป้องกันปัญหา Etiolation (ต้นยืด) ได้สำเร็จ และการเก็บละอองหมอก (Aeroponics Mist) ช่วยให้รากได้รับสารอาหารพร้อมออกซิเจนอย่างเต็มที่!",
-        onContinue: () => {
-          document.getElementById("hud-quest-text").innerText = "สำรวจเกาะเรือนเพาะชำ ทดสอบที่แท่นพฤกษาเวหา";
-          this.showToastFeedback("🌱 เพาะกล้าอัจฉริยะสำเร็จ!", "success");
-          this.gameState = "PLAYING";
-        }
-      });
-    } else {
-      this.sound.playWrong();
-      this.showToastFeedback("🥀 ต้นกล้าอ่อนแอเกินไป... หมดเวลาแล้ว ลองใหม่อีกครั้ง", "danger");
-      this.gameState = "PLAYING";
-    }
   }
 
   /* ===== MINIGAME 1: pH MIXER LAB ===== */
