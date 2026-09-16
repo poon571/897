@@ -3845,6 +3845,7 @@ class TerraQuestSuperEngine {
     this.roomsDiscovered = slotData.roomsDiscovered || { holy_chapel: true };
     this.currentRoomId = slotData.currentRoomId || "holy_chapel";
     if (slotData.bossHp !== undefined) this.bossHp = slotData.bossHp;
+    this.minigamesCompleted = slotData.minigamesCompleted || {};
 
     // Update HUD
     const hudName = document.getElementById("hud-player-name");
@@ -4005,6 +4006,7 @@ class TerraQuestSuperEngine {
       inventory: this.inventory || [],
       bossHp: this.bossHp,
       npcAppearances: this.npcAppearances || {},
+      minigamesCompleted: this.minigamesCompleted || {},
       player: {
         name: this.player.name,
         gender: this.player.gender,
@@ -4610,18 +4612,33 @@ class TerraQuestSuperEngine {
           this.showNotification(`✨ ได้รับไอเทม: ${ent.name} (${ent.desc || ""})!`, "#00f5d4");
           this.entities = this.entities.filter(e => e !== ent);
         } else if (ent.type === "minigame_nursery") {
-          this.showKnowledgeCard({
-            icon: "🌱",
-            title: "ศาสตร์แห่งการเพาะเมล็ดพันธุ์และต้นกล้า",
-            category: "การเพาะเมล็ดและเรือนเพาะชำ",
-            facts: [
-              "เมล็ดพันธุ์ต้องการ <b>ความชื้น (น้ำ)</b> เพื่อกระตุ้นเอนไซม์ภายในให้เริ่มกระบวนการงอก",
-              "<b>อุณหภูมิ</b> ที่พอเหมาะ (25-30°C) ช่วยให้เซลล์เมล็ดแบ่งตัวเจริญเติบโตเร็ว ร้อนจัดหรือหนาวจัดเกินจะหยุดงอก",
-              "ระยะต้นกล้า ต้องมี <b>แสงเพียงพอ</b> เพื่อป้องกัน Etiolation (ต้นกล้ายืดตัวผอมสูงอ่อนแอ)",
-              "ระบบ <b>แอโรโปนิกส์ (Aeroponics)</b> เพาะกล้าโดยพ่นละอองสารอาหารตรงสู่ราก ทำให้ได้รับออกซิเจนสูงสุด"
-            ],
-            onStart: () => this.startNurseryLab()
-          });
+          if (this.minigamesCompleted && this.minigamesCompleted.nursery) {
+            this.showKnowledgeCard({
+              icon: "🌳",
+              title: "ศาสตร์แห่งการเพาะเมล็ดพันธุ์และต้นกล้า (สมบูรณ์แล้ว)",
+              category: "ความรู้พื้นฐานเกษตรกรรม",
+              facts: [
+                "ต้นไม้ต้นนี้เติบโตได้เพราะได้รับ <b>ความชื้น</b> ที่เหมาะสมอย่างสม่ำเสมอ",
+                "<b>อุณหภูมิ</b> ที่พอดีช่วยให้เซลล์ของพืชทำงานและแบ่งตัวได้อย่างเต็มประสิทธิภาพ",
+                "<b>แสงสว่าง</b> เป็นปัจจัยสำคัญในการสังเคราะห์แสง สร้างอาหารให้ต้นไม้ยืนต้นได้แข็งแรง",
+                "เมื่อพืชพ้นระยะต้นกล้าและมีรากที่แข็งแรง จะสามารถหาอาหารและน้ำจากดินได้ดีขึ้น"
+              ],
+              onStart: null
+            });
+          } else {
+            this.showKnowledgeCard({
+              icon: "🌱",
+              title: "ศาสตร์แห่งการเพาะเมล็ดพันธุ์และต้นกล้า",
+              category: "การเพาะเมล็ดและเรือนเพาะชำ",
+              facts: [
+                "เมล็ดพันธุ์ต้องการ <b>ความชื้น (น้ำ)</b> เพื่อกระตุ้นเอนไซม์ภายในให้เริ่มกระบวนการงอก",
+                "<b>อุณหภูมิ</b> ที่พอเหมาะ (25-30°C) ช่วยให้เซลล์เมล็ดแบ่งตัวเจริญเติบโตเร็ว ร้อนจัดหรือหนาวจัดเกินจะหยุดงอก",
+                "ระยะต้นกล้า ต้องมี <b>แสงเพียงพอ</b> เพื่อป้องกัน Etiolation (ต้นกล้ายืดตัวผอมสูงอ่อนแอ)",
+                "ระบบ <b>แอโรโปนิกส์ (Aeroponics)</b> เพาะกล้าโดยพ่นละอองสารอาหารตรงสู่ราก ทำให้ได้รับออกซิเจนสูงสุด"
+              ],
+              onStart: () => this.startNurseryLab()
+            });
+          }
         } else if (ent.type === "minigame_soil") {
           this.showKnowledgeCard({
             icon: "🧪",
@@ -4883,19 +4900,22 @@ class TerraQuestSuperEngine {
       }
     }
 
-    // Auto-grow if conditions are perfect!
+    // Auto-grow if conditions are perfect, otherwise penalize if very bad
     if (mOk && tOk && lOk) {
       this.nurserySim.growth = Math.min(100, this.nurserySim.growth + 8);
-      // Play a tiny subtle sound or particle? We can just let the visual update show it.
+    } else {
+      // Decrease growth if any gauge is in the red zone
+      this.nurserySim.growth = Math.max(0, this.nurserySim.growth - 2);
+    }
+
+    if (this.nurserySim.growth >= 100) {
+      this.endNurserySim(true);
+      return;
     }
 
     if (this.nurserySim.timer <= 0) {
       // Time up
-      if (this.nurserySim.growth >= 100) {
-        this.endNurserySim(true);
-      } else {
-        this.endNurserySim(false);
-      }
+      this.endNurserySim(false);
     }
 
     this.updateNurserySimVisual();
@@ -4991,6 +5011,11 @@ class TerraQuestSuperEngine {
         onContinue: () => {
           document.getElementById("hud-quest-text").innerText = "สำรวจเกาะเรือนเพาะชำ ทดสอบที่แท่นพฤกษาเวหา";
           this.showToastFeedback("🌱 เพาะกล้าอัจฉริยะสำเร็จ!", "success");
+          
+          this.minigamesCompleted = this.minigamesCompleted || {};
+          this.minigamesCompleted.nursery = true;
+          this.saveCurrentSlot();
+          
           this.gameState = "PLAYING";
         }
       });
@@ -6592,7 +6617,13 @@ class TerraQuestSuperEngine {
         ctx.fillRect(rx, ent.y, ent.width, ent.height);
         ctx.fillStyle = "#52b788";
         ctx.fillRect(rx, ent.y, ent.width, 6);
-        // Minigame nametag rendered crisp in HTML DOM by updateFloatingTags()
+        
+        // Draw Big Tree if Nursery is completed
+        if (ent.type === "minigame_nursery" && this.minigamesCompleted && this.minigamesCompleted.nursery) {
+          ctx.font = "60px Arial";
+          ctx.textAlign = "center";
+          ctx.fillText("🌳", rx + ent.width / 2, ent.y + 10);
+        }
       }
 
       // Interaction prompt
