@@ -845,7 +845,46 @@ const MASTER_DATABASE = {
         correct: 2,
         exp: "ของเสียจากปลา (แอมโมเนีย) จะถูกแบคทีเรียในระบบกรองชีวภาพเปลี่ยนเป็นไนเตรต ซึ่งเป็นปุ๋ยชั้นดีสำหรับพืช"
       }
-    ]
+    ],
+
+    storyQuests: [
+      {
+        id: "prologue",
+        title: "ผู้ถักทอเมล็ดพันธุ์คนสุดท้าย",
+        desc: "พูดคุยกับปราชญ์อาวุโสเพื่อรับฟังเสียงสะท้อนจากอดีต"
+      },
+      {
+        id: "first_seed",
+        title: "ฟื้นฟูแท่นพฤกษาเวหา",
+        desc: "เดินทางไปยังเกาะเรือนเพาะชำเพื่อซ่อมแซมแท่นพฤกษาเวหา"
+      },
+      {
+        id: "save_world",
+        title: "ปะทะอสูรภัยแล้งเผาผลาญ",
+        desc: "เผชิญหน้ากับบอสใหญ่ที่วิหารสีขาว"
+      }
+    ],
+
+    cutscenes: {
+      "prologue": [
+        { type: "music", track: "sad" },
+        { type: "wait", duration: 1000 },
+        { type: "pan", x: 800, duration: 2000 },
+        { type: "dialogue", speaker: "ปราชญ์อาวุโส", text: "...รากแห่งชีวิตกำลังร้องไห้ โลกใบนี้ใกล้ถึงคราวดับสูญ..." },
+        { type: "wait", duration: 500 },
+        { type: "dialogue", speaker: "ปราชญ์อาวุโส", text: "...สายเลือดผู้ถักทอเอ๋ย จงใช้ความรู้แห่งแผ่นดิน ปลุกต้นกล้าแห่งความหวังขึ้นมาอีกครั้งเถิด..." },
+        { type: "pan", x: "player", duration: 1500 },
+        { type: "dialogue", speaker: "ตัวเอก", text: "ข้าพร้อมแล้ว ท่านปราชญ์..." },
+        { type: "music", track: "main" }
+      ],
+      "win_nursery": [
+        { type: "pan", x: "entity:minigame_nursery", duration: 1000 },
+        { type: "dialogue", speaker: "เสียงแห่งแผ่นดิน", text: "พลังแห่งความชื้น อุณหภูมิ และแสงสว่าง ได้หลอมรวมกัน..." },
+        { type: "wait", duration: 500 },
+        { type: "dialogue", speaker: "ตัวเอก", text: "ต้นไม้ใหญ่เติบโตขึ้นแล้ว!" },
+        { type: "pan", x: "player", duration: 1000 }
+      ]
+    }
 };
 
 /* ==============================================================================
@@ -903,11 +942,19 @@ class TerraQuestSuperEngine {
     this.gridCol = 0;
 
     this.gravity = 0.65;
+  
+  
+
     this.groundY = 440;
     this.currentIslandIndex = 0;
     this.gameState = "MAIN_MENU";
     this.currentSaveSlot = 1;
     this.cameraX = 0;
+    this.cameraTargetX = null;
+    this.cutsceneActive = false;
+    this.cutsceneSequence = [];
+    this.cutsceneTimer = 0;
+    this.cutsceneIndex = 0;
     this.worldWidth = 2400;
     this.currentRoomId = "holy_chapel";
     this.roomsDiscovered = { "holy_chapel": true };
@@ -5636,7 +5683,7 @@ class TerraQuestSuperEngine {
       return;
     }
 
-    if (this.gameState !== "PLAYING") return;
+    if (this.gameState !== "PLAYING" && this.gameState !== "CUTSCENE") return;
 
     this.updateMovement(); // call the new movement & AI logic
     this.player.vx = this.player.dx; // map dx to vx for the physics engine
@@ -5670,6 +5717,103 @@ class TerraQuestSuperEngine {
       this.cameraX = this.worldWidth - 960;
   }
 
+
+  
+  /* ===== CUTSCENE ENGINE ===== */
+  playCutscene(id) {
+    if (!MASTER_DATABASE.cutscenes || !MASTER_DATABASE.cutscenes[id]) return;
+    this.gameState = "CUTSCENE";
+    this.cutsceneActive = true;
+    this.cutsceneSequence = MASTER_DATABASE.cutscenes[id];
+    this.cutsceneIndex = 0;
+    this.cutsceneTimer = 0;
+    this.cameraTargetX = null;
+    this.processCutsceneAction();
+  }
+
+  processCutsceneAction() {
+    if (this.cutsceneIndex >= this.cutsceneSequence.length) {
+      this.endCutscene();
+      return;
+    }
+    const action = this.cutsceneSequence[this.cutsceneIndex];
+    
+    if (action.type === "wait") {
+      this.cutsceneTimer = action.duration / (1000/60);
+    } else if (action.type === "pan") {
+      if (action.x === "player") {
+        this.cameraTargetX = null;
+      } else if (typeof action.x === "string" && action.x.startsWith("entity:")) {
+        const entType = action.x.split(":")[1];
+        const ent = this.entities.find(e => e.type === entType);
+        if (ent) this.cameraTargetX = Math.max(0, Math.min(ent.x - 480, this.worldWidth - 960));
+      } else {
+        this.cameraTargetX = Math.max(0, Math.min(action.x - 480, this.worldWidth - 960));
+      }
+      this.cutsceneTimer = (action.duration || 1000) / (1000/60);
+    } else if (action.type === "dialogue") {
+      this.showCinematicSubtitle(action.speaker, action.text);
+      this.cutsceneTimer = 0; // wait for input
+    } else if (action.type === "music") {
+      // placeholder for music
+      this.cutsceneIndex++;
+      this.processCutsceneAction();
+    }
+  }
+
+  updateCutscene() {
+    if (!this.cutsceneActive) return;
+    
+    const action = this.cutsceneSequence[this.cutsceneIndex];
+    if (action && action.type === "dialogue") return; // waiting for input
+
+    if (this.cutsceneTimer > 0) {
+      this.cutsceneTimer--;
+      if (this.cutsceneTimer <= 0) {
+        this.cutsceneIndex++;
+        this.processCutsceneAction();
+      }
+    }
+  }
+
+  endCutscene() {
+    this.gameState = "PLAYING";
+    this.cutsceneActive = false;
+    this.cameraTargetX = null;
+    this.hideCinematicSubtitle();
+    
+    if (this.player.questStep === 0) {
+      this.player.questStep = 1;
+      this.updateQuestHUD();
+      this.saveCurrentSlot();
+    }
+  }
+
+  showCinematicSubtitle(speaker, text) {
+    const container = document.getElementById("cinematic-subtitle-container");
+    const speakerEl = document.getElementById("cinematic-speaker");
+    const textEl = document.getElementById("cinematic-text");
+    if (container && speakerEl && textEl) {
+      speakerEl.innerText = speaker;
+      textEl.innerText = text;
+      container.classList.remove("hidden");
+    }
+  }
+
+  hideCinematicSubtitle() {
+    const container = document.getElementById("cinematic-subtitle-container");
+    if (container) container.classList.add("hidden");
+  }
+
+  updateQuestHUD() {
+     const step = (this.player && this.player.questStep) || 0;
+     const q = MASTER_DATABASE.storyQuests && MASTER_DATABASE.storyQuests[step];
+     const textEl = document.getElementById("hud-quest-text");
+     if (textEl) {
+        if (q) textEl.innerText = q.title + " - " + q.desc;
+        else textEl.innerText = "สำรวจโลกแห่ง Harvest Frontier";
+     }
+  }
 
   updateFloatingTags() {
     const container = document.getElementById("floating-tags-container");
@@ -5768,6 +5912,21 @@ class TerraQuestSuperEngine {
 
     // On-screen notification banner
     this.drawNotificationBanner();
+
+    // Cinematic Letterbox (Black Bars)
+    if (this.gameState === "CUTSCENE" || this.cutsceneLetterboxHeight > 0) {
+      if (this.gameState === "CUTSCENE") {
+         this.cutsceneLetterboxHeight = Math.min((this.cutsceneLetterboxHeight || 0) + 2, 60);
+      } else {
+         this.cutsceneLetterboxHeight = Math.max((this.cutsceneLetterboxHeight || 0) - 2, 0);
+      }
+      
+      if (this.cutsceneLetterboxHeight > 0) {
+         this.ctx.fillStyle = "#000000";
+         this.ctx.fillRect(0, 0, 960, this.cutsceneLetterboxHeight); // Top Bar
+         this.ctx.fillRect(0, 540 - this.cutsceneLetterboxHeight, 960, this.cutsceneLetterboxHeight); // Bottom Bar
+      }
+    }
   }
 
   drawFloatingIsland(ctx, x, y, width, height, opts = {}) {

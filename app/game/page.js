@@ -509,6 +509,12 @@ export default function GamePage() {
             </div>
           </div>
 
+          {/* CINEMATIC SUBTITLES */}
+          <div id="cinematic-subtitle-container" className="cinematic-subtitle hidden">
+            <div className="cinematic-speaker" id="cinematic-speaker"></div>
+            <div className="cinematic-text" id="cinematic-text"></div>
+          </div>
+
           {/* MODAL 2: DIALOGUE BOX */}
           <div
             id="dialogue-box"
