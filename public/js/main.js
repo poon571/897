@@ -5910,15 +5910,20 @@ class TerraQuestSuperEngine {
       ctx.moveTo(100, 0); ctx.lineTo(260, 0); ctx.lineTo(480, gy); ctx.lineTo(220, gy);
       ctx.fill();
 
-      // Nursery Planter Benches along the back horizon (Anchored directly to groundY)
-      for (let i = 0; i < 6; i++) {
-        const px = i * 220 + 30 - (this.cameraX * 0.25) % 220;
+      // Nursery Planter Benches along the back horizon (Organic, no pop-in)
+      const startP = Math.floor(this.cameraX * 0.25 / 300) - 1;
+      const endP = startP + 6;
+      for (let i = startP; i <= endP; i++) {
+        // Pseudo-randomly skip some for a broken/ruined or organic look
+        if (i % 4 === 1) continue;
+        const px = i * 300 + Math.sin(i * 99) * 40 - this.cameraX * 0.25;
         ctx.fillStyle = "#6c584c";
         ctx.fillRect(px, gy - 26, 120, 26);
         ctx.fillStyle = "#52b788";
+        // Plants in planter
         for (let s = 0; s < 5; s++) {
           ctx.beginPath();
-          ctx.arc(px + 15 + s * 22, gy - 28, 8, 0, Math.PI * 2);
+          ctx.arc(px + 15 + s * 22, gy - 28 - Math.sin(s*45+i)*5, 10 + Math.sin(s*12)*3, 0, Math.PI * 2);
           ctx.fill();
         }
       }
@@ -5978,13 +5983,17 @@ class TerraQuestSuperEngine {
       ctx.fillStyle = "#ced4da";
       ctx.fillRect(barnX + 80, gy - 95, 22, 75);
 
-      // Wooden Farm Fences (Firmly planted directly in groundY)
-      for (let i = 0; i < 14; i++) {
-        const fx = i * 90 - (this.cameraX * 0.3) % 90;
+      // Wooden Farm Fences (Organic, no pop-in)
+      const startF = Math.floor(this.cameraX * 0.3 / 110) - 1;
+      const endF = startF + 12;
+      for (let i = startF; i <= endF; i++) {
+        // Leave gaps organically every few fences
+        if (i % 7 === 0 || i % 5 === 2) continue;
+        const fx = i * 110 + Math.sin(i * 42) * 15 - this.cameraX * 0.3;
         ctx.fillStyle = "#9c6644";
         ctx.fillRect(fx, gy - 32, 6, 32);
-        ctx.fillRect(fx - 10, gy - 26, 100, 5);
-        ctx.fillRect(fx - 10, gy - 12, 100, 5);
+        ctx.fillRect(fx, gy - 26, 110, 5); // Connect to next fence roughly
+        ctx.fillRect(fx, gy - 12, 110, 5);
       }
 
     } else if (theme === "storm") {
@@ -6019,22 +6028,52 @@ class TerraQuestSuperEngine {
       ctx.lineTo(w, gy);
       ctx.fill();
 
-      // Orchard Fruit Trees (Rooted directly in groundY)
-      for (let i = 0; i < 7; i++) {
-        const tx = i * 160 + 50 - (this.cameraX * 0.25) % 160;
-        ctx.fillStyle = "#5c4033";
-        ctx.fillRect(tx + 22, gy - 65, 12, 65);
+      // Majestic Background Waterfalls in the hills
+      for (let i = 0; i < 4; i++) {
+        const wx = (i * 380 + 120 - this.cameraX * 0.1) % (w + 400) - 200;
+        ctx.fillStyle = "rgba(72, 202, 228, 0.4)";
+        ctx.fillRect(wx, gy - 80, 45, 80);
+        ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
+        ctx.fillRect(wx + 8 + Math.sin(frame*0.1+i)*5, gy - 80, 4, 80);
+        ctx.fillRect(wx + 25 + Math.cos(frame*0.1+i)*5, gy - 80, 5, 80);
+      }
+
+      // Orchard Fruit Trees (Organic placement with Fluffy crowns)
+      const startI = Math.floor(this.cameraX * 0.25 / 230) - 1;
+      const endI = startI + 6;
+      for (let i = startI; i <= endI; i++) {
+        const tx = i * 230 + Math.sin(i * 123) * 60 - this.cameraX * 0.25;
+        const scale = 0.85 + Math.abs(Math.sin(i * 33)) * 0.35;
+        const th = 65 * scale;
+        const tw = 14 * scale;
+        const crownR = 36 * scale;
+        
+        ctx.fillStyle = "#5c4033"; // Trunk
+        ctx.fillRect(tx - tw/2, gy - th, tw, th);
+        
+        // Leaves - fluffy overlapping circles
         ctx.fillStyle = "#2d6a4f";
         ctx.beginPath();
-        ctx.arc(tx + 28, gy - 75, 34, 0, Math.PI * 2);
+        ctx.arc(tx, gy - th - crownR*0.3, crownR, 0, Math.PI * 2);
+        ctx.arc(tx - crownR*0.6, gy - th + crownR*0.3, crownR*0.8, 0, Math.PI * 2);
+        ctx.arc(tx + crownR*0.6, gy - th + crownR*0.3, crownR*0.8, 0, Math.PI * 2);
         ctx.fill();
-        // Red Apples on tree
-        ctx.fillStyle = "#e63946";
-        ctx.beginPath();
-        ctx.arc(tx + 18, gy - 85, 4.5, 0, Math.PI * 2);
-        ctx.arc(tx + 40, gy - 78, 4.5, 0, Math.PI * 2);
-        ctx.arc(tx + 26, gy - 65, 4.5, 0, Math.PI * 2);
-        ctx.fill();
+
+        // Fruits (Apples & Oranges alternating organically)
+        const isOrange = i % 3 === 0;
+        ctx.fillStyle = isOrange ? "#f77f00" : "#e63946";
+        const fruitPositions = [
+           [-crownR*0.5, 0],
+           [crownR*0.5, -crownR*0.1],
+           [0, -crownR*0.6],
+           [-crownR*0.2, crownR*0.5],
+           [crownR*0.3, crownR*0.4]
+        ];
+        for(let fp of fruitPositions) {
+           ctx.beginPath();
+           ctx.arc(tx + fp[0], gy - th - crownR*0.3 + fp[1], 5 * scale, 0, Math.PI * 2);
+           ctx.fill();
+        }
       }
 
       // Flowing Irrigation Canal Stream along the backdrop (Seated right at groundY)
@@ -6078,13 +6117,25 @@ class TerraQuestSuperEngine {
       ctx.lineTo(w, gy);
       ctx.fill();
 
-      // Blooming Lavender Beds & Trellises (Rooted firmly in groundY)
-      for (let i = 0; i < 16; i++) {
-        const lx = i * 75 - (this.cameraX * 0.26) % 75;
+      // Blooming Lavender Beds & Trellises (Organic, no pop-in)
+      const startL = Math.floor(this.cameraX * 0.26 / 95) - 1;
+      const endL = startL + 14;
+      for (let i = startL; i <= endL; i++) {
+        if (i % 6 === 2) continue; // organic gaps
+        const lx = i * 95 + Math.sin(i * 55) * 20 - this.cameraX * 0.26;
+        const heightScale = 0.8 + Math.abs(Math.sin(i*12)) * 0.4;
+        const lh = 38 * heightScale;
+        
+        // Trellis
         ctx.fillStyle = "#5a189a";
-        ctx.fillRect(lx, gy - 38, 22, 38);
+        ctx.fillRect(lx, gy - lh, 22, lh);
+        // Lavender Bloom
         ctx.fillStyle = "#c77dff";
-        ctx.fillRect(lx + 3, gy - 48, 16, 14);
+        ctx.beginPath();
+        ctx.arc(lx + 11, gy - lh - 5, 12, 0, Math.PI * 2);
+        ctx.arc(lx + 11, gy - lh - 15, 10, 0, Math.PI * 2);
+        ctx.arc(lx + 11, gy - lh - 23, 6, 0, Math.PI * 2);
+        ctx.fill();
       }
 
     } else if (theme === "catacombs") {
