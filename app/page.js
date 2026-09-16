@@ -85,7 +85,7 @@ export default function Home() {
                     <span className={styles.statLabel}>เกาะผจญภัย</span>
                   </div>
                   <div className={styles.statItem}>
-                    <AnimatedCounter target={60} suffix="+" />
+                    <AnimatedCounter target={35} suffix="+" />
                     <span className={styles.statLabel}>คำถามท้าทาย</span>
                   </div>
                   <div className={styles.statItem}>

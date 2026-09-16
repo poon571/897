@@ -2120,11 +2120,11 @@ class TerraQuestSuperEngine {
         const pest = btn.dataset.pest;
         if (this.selectedPests.includes(pest)) {
           this.selectedPests = this.selectedPests.filter((p) => p !== pest);
-          btn.classList.remove("selected");
+          btn.classList.remove("active");
         } else {
           if (this.selectedPests.length < 2) {
             this.selectedPests.push(pest);
-            btn.classList.add("selected");
+            btn.classList.add("active");
           }
         }
         this.sound.playCoin();
@@ -5042,7 +5042,7 @@ class TerraQuestSuperEngine {
   /* ===== MINIGAME 3: BUG DEFENDER ===== */
   startBugDefender() {
     this.selectedPests = [];
-    document.querySelectorAll(".bug-weapon-btn").forEach((btn) => btn.classList.remove("selected"));
+    document.querySelectorAll(".bug-weapon-btn").forEach((btn) => btn.classList.remove("active"));
     const modal = document.getElementById("modal-minigame-pest");
     if (modal) modal.classList.remove("hidden");
   }
