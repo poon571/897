@@ -609,7 +609,7 @@ export default function GamePage() {
                   
                   {/* Moisture */}
                   <div className="nursery-control-group">
-                    <div className="nursery-gauge-label">💧 ความชื้น</div>
+                    <div className="nursery-gauge-label" id="nursery-label-moisture">💧 ความชื้น</div>
                     <div className="nursery-gauge-container">
                       <div className="nursery-gauge-target"></div>
                       <div className="nursery-gauge-fill" id="nursery-gauge-moisture"></div>
@@ -619,7 +619,7 @@ export default function GamePage() {
 
                   {/* Temperature */}
                   <div className="nursery-control-group">
-                    <div className="nursery-gauge-label">🌡️ อุณหภูมิ</div>
+                    <div className="nursery-gauge-label" id="nursery-label-temp">🌡️ อุณหภูมิ</div>
                     <div className="nursery-gauge-container">
                       <div className="nursery-gauge-target"></div>
                       <div className="nursery-gauge-fill" id="nursery-gauge-temp"></div>
@@ -629,7 +629,7 @@ export default function GamePage() {
 
                   {/* Light */}
                   <div className="nursery-control-group">
-                    <div className="nursery-gauge-label">💡 แสงสว่าง</div>
+                    <div className="nursery-gauge-label" id="nursery-label-light">💡 แสงสว่าง</div>
                     <div className="nursery-gauge-container">
                       <div className="nursery-gauge-target"></div>
                       <div className="nursery-gauge-fill" id="nursery-gauge-light"></div>
