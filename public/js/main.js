@@ -864,7 +864,13 @@ const MASTER_DATABASE = {
 class TerraQuestSuperEngine {
   constructor() {
     this.canvas = document.getElementById("gameCanvas");
+    const dpr = window.devicePixelRatio || 1;
+    this.canvas.width = 960 * dpr;
+    this.canvas.height = 540 * dpr;
+    this.canvas.style.width = "960px";
+    this.canvas.style.height = "540px";
     this.ctx = this.canvas.getContext("2d");
+    this.ctx.scale(dpr, dpr);
     this.ctx.imageSmoothingEnabled = true;
     this.ctx.imageSmoothingQuality = "high";
 
@@ -5682,7 +5688,7 @@ class TerraQuestSuperEngine {
   }
 
   draw() {
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.ctx.clearRect(0, 0, 960, 540);
     this.updateFloatingTags();
 
     if (this.gameState === "MAIN_MENU") {
@@ -5825,8 +5831,8 @@ class TerraQuestSuperEngine {
 
   drawThematicBackground(theme) {
     const ctx = this.ctx;
-    const w = this.canvas.width;
-    const h = this.canvas.height;
+    const w = 960;
+    const h = 540;
     const gy = this.groundY; // 440 (exact anchor for ground continuity)
     const frame = this.player ? (this.player.frameCount || 0) : 0;
 
@@ -6647,11 +6653,11 @@ class TerraQuestSuperEngine {
 
   handleMapMouseDown(e) {
     const rect = this.canvas.getBoundingClientRect();
-    const scaleX = this.canvas.width / rect.width;
-    const scaleY = this.canvas.height / rect.height;
+    const scaleX = 960 / rect.width;
+    const scaleY = 540 / rect.height;
     const mouseX = (e.clientX - rect.left) * scaleX;
     const mouseY = (e.clientY - rect.top) * scaleY;
-    const cw = this.canvas.width;
+    const cw = 960;
 
     // Top Header Buttons
     // 1. Reset View [Key R]
@@ -6732,8 +6738,8 @@ class TerraQuestSuperEngine {
 
   handleMapMouseMove(e) {
     const rect = this.canvas.getBoundingClientRect();
-    const scaleX = this.canvas.width / rect.width;
-    const scaleY = this.canvas.height / rect.height;
+    const scaleX = 960 / rect.width;
+    const scaleY = 540 / rect.height;
     const mouseX = (e.clientX - rect.left) * scaleX;
     const mouseY = (e.clientY - rect.top) * scaleY;
 
@@ -6792,8 +6798,8 @@ class TerraQuestSuperEngine {
 
   drawMapUI() {
     const ctx = this.ctx;
-    const cw = this.canvas.width;
-    const ch = this.canvas.height;
+    const cw = 960;
+    const ch = 540;
     const panX = this.mapPanX || 0;
     const panY = this.mapPanY || 0;
 
