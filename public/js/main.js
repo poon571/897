@@ -867,8 +867,6 @@ class TerraQuestSuperEngine {
     const dpr = window.devicePixelRatio || 1;
     this.canvas.width = 960 * dpr;
     this.canvas.height = 540 * dpr;
-    this.canvas.style.width = "960px";
-    this.canvas.style.height = "540px";
     this.ctx = this.canvas.getContext("2d");
     this.ctx.scale(dpr, dpr);
     this.ctx.imageSmoothingEnabled = true;
