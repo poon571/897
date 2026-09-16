@@ -2012,6 +2012,8 @@ class TerraQuestSuperEngine {
           const cb = this.knowledgeCardCallback;
           this.knowledgeCardCallback = null;
           cb();
+        } else {
+          this.gameState = "PLAYING";
         }
       });
     }
@@ -4769,6 +4771,11 @@ class TerraQuestSuperEngine {
         .join("");
     }
 
+    const btnOk = document.getElementById("btn-kc-ok");
+    if (btnOk) {
+      btnOk.innerText = opts.onStart ? "เข้าใจแล้ว! ✨ ไปเล่นมินิเกมกัน" : "เข้าใจแล้ว! ✨ ปิดหน้าต่าง";
+    }
+
     modal.classList.remove("hidden");
     this.sound.playCoin();
   }
@@ -6622,7 +6629,7 @@ class TerraQuestSuperEngine {
         if (ent.type === "minigame_nursery" && this.minigamesCompleted && this.minigamesCompleted.nursery) {
           ctx.font = "60px Arial";
           ctx.textAlign = "center";
-          ctx.fillText("🌳", rx + ent.width / 2, ent.y + 10);
+          ctx.fillText("🌳", rx + ent.width / 2, ent.y - 15);
         }
       }
 
