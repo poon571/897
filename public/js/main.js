@@ -1749,6 +1749,8 @@ class TerraQuestSuperEngine {
     if (this.gameState === "PLAYING") {
       const hudTop = document.getElementById("hud-top");
       if (hudTop) hudTop.classList.remove("hidden");
+      const hudBottom = document.getElementById("hud-bottom-right");
+      if (hudBottom) hudBottom.classList.remove("hidden");
       const modalChar = document.getElementById("modal-char-creation");
       if (modalChar) modalChar.classList.add("hidden");
       this.showNotification(`📍 เข้าสู่: ${room.name} - ${room.nameTh}`, "#4facfe");
@@ -3860,7 +3862,9 @@ class TerraQuestSuperEngine {
     if (menuOverlay) menuOverlay.classList.add("hidden");
 
     const hudTop = document.getElementById("hud-top");
-    if (hudTop) hudTop.classList.remove("hidden");
+      if (hudTop) hudTop.classList.remove("hidden");
+      const hudBottom = document.getElementById("hud-bottom-right");
+      if (hudBottom) hudBottom.classList.remove("hidden");
 
     this.sound.playCoin();
     this.sound.startBGM();
@@ -4050,7 +4054,9 @@ class TerraQuestSuperEngine {
 
     // Hide all game overlays and modals
     const hudTop = document.getElementById("hud-top");
-    if (hudTop) hudTop.classList.add("hidden");
+      if (hudTop) hudTop.classList.add("hidden");
+      const hudBottom = document.getElementById("hud-bottom-right");
+      if (hudBottom) hudBottom.classList.add("hidden");
 
     const charModal = document.getElementById("modal-char-creation");
     if (charModal) charModal.classList.add("hidden");
@@ -4213,6 +4219,8 @@ class TerraQuestSuperEngine {
     if (overlay) overlay.classList.add("hidden");
 
     document.getElementById("hud-top").classList.remove("hidden");
+    const hudBottom = document.getElementById("hud-bottom-right");
+    if (hudBottom) hudBottom.classList.remove("hidden");
     this.gameState = "PLAYING";
     this.loadRoom("holy_chapel");
 
@@ -6602,11 +6610,15 @@ class TerraQuestSuperEngine {
       this.gameState = "PLAYING";
       const hudTop = document.getElementById("hud-top");
       if (hudTop) hudTop.classList.remove("hidden");
+      const hudBottom = document.getElementById("hud-bottom-right");
+      if (hudBottom) hudBottom.classList.remove("hidden");
     } else if (this.gameState === "PLAYING") {
       this.gameState = "MAP";
       this.selectedMapRoomId = this.currentRoomId;
       const hudTop = document.getElementById("hud-top");
       if (hudTop) hudTop.classList.add("hidden");
+      const hudBottom = document.getElementById("hud-bottom-right");
+      if (hudBottom) hudBottom.classList.add("hidden");
       if (this.sound) this.sound.playCoin();
     }
   }

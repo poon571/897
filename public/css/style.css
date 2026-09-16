@@ -387,21 +387,43 @@ button {
   border: 2px solid var(--gold-primary);
   box-shadow: 0 4px 0 #000;
   pointer-events: auto;
-  max-width: 45%;
+  max-width: 55%;
 }
 
 #hud-player-name {
   color: var(--gold-highlight);
   font-weight: 700;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 200px;
+  vertical-align: middle;
+}
+
+#hud-bottom-right {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  pointer-events: none;
+  z-index: 100;
+  transition: opacity 0.2s ease;
+}
+
+.hud-island-box {
+  background: var(--ui-slate-trans);
+  border: 2px solid var(--mana-cyan);
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.8);
+  pointer-events: auto;
 }
 
 #hud-island-name {
   color: var(--mana-cyan);
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 700;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .hud-quest-tracker {

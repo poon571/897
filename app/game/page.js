@@ -78,12 +78,6 @@ export default function GamePage() {
               >
                 ผู้กล้า
               </span>
-              <span
-                id="hud-island-name"
-                style={{ color: "var(--mana-cyan)", marginLeft: "10px" }}
-              >
-                เกาะแห่งพืชพรรณและปฐพี
-              </span>
             </div>
             <div className="hud-quest-tracker">
               <span>📜 เควสต์: </span>
@@ -102,6 +96,15 @@ export default function GamePage() {
               <button id="btn-hud-menu" className="retro-btn-sm" style={{ background: "linear-gradient(180deg, #3d1c24, #240d13)", borderColor: "#e71d36", color: "#ff8597" }} title="บันทึกและกลับสู่หน้าเมนูหลัก">
                 🏠 เมนูหลัก
               </button>
+            </div>
+          </div>
+
+          {/* BOTTOM RIGHT HUD */}
+          <div id="hud-bottom-right" className="hidden">
+            <div className="hud-island-box">
+              <span id="hud-island-name">
+                เกาะแห่งพืชพรรณและปฐพี
+              </span>
             </div>
           </div>
 
