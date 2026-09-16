@@ -6601,6 +6601,29 @@ class TerraQuestSuperEngine {
   }
 
   gameLoop() {
+    // Dynamic Anti-Blur High-DPI Resizing
+    const dpr = window.devicePixelRatio || 1;
+    const rect = this.canvas.getBoundingClientRect();
+    const displayWidth = Math.floor(rect.width * dpr);
+    const displayHeight = Math.floor(rect.height * dpr);
+
+    if (this.canvas.width !== displayWidth || this.canvas.height !== displayHeight) {
+      this.canvas.width = displayWidth;
+      this.canvas.height = displayHeight;
+      // Re-apply smooth scaling settings whenever canvas size changes
+      this.ctx.imageSmoothingEnabled = true;
+      this.ctx.imageSmoothingQuality = "high";
+      this.ctx.font = "14px 'Prompt', sans-serif"; // fallback
+    }
+
+    // Reset transform to identity before clearing and scaling
+    this.ctx.setTransform(1, 0, 0, 1, 0, 0);
+    
+    // Calculate scale from logical (960x540) to physical display resolution
+    const scaleX = displayWidth / 960;
+    const scaleY = displayHeight / 540;
+    this.ctx.scale(scaleX, scaleY);
+
     this.update();
     this.draw();
     if (this.gameState === "MAP") {
