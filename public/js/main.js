@@ -6887,13 +6887,13 @@ class TerraQuestSuperEngine {
       ctx.font = "bold 11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
       ctx.textAlign = "center";
       const icon = room.icon || "🌱";
-      const labelTh = isDiscovered ? (room.shortNameTh || room.nameTh) : "???";
+      const labelTh = room.shortNameTh || room.nameTh || "เขตลึกลับ";
       ctx.fillText(`${icon} ${labelTh}`, room.mapX + panX, ny + 17);
 
       // Line 2: Short English Name
       ctx.fillStyle = isDiscovered ? "#38bdf8" : "#3e4c5e";
       ctx.font = "9px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
-      const labelEn = isDiscovered ? (room.shortNameEn || room.name) : "???";
+      const labelEn = room.shortNameEn || room.name || "Unknown Zone";
       ctx.fillText(labelEn, room.mapX + panX, ny + 29);
 
       // Line 3: Feature Badges (Altars, Items, Boss)
@@ -7041,11 +7041,11 @@ class TerraQuestSuperEngine {
     ctx.fillStyle = "#ffffff";
     ctx.font = "bold 18px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
     ctx.textAlign = "left";
-    ctx.fillText("🗺️ HARVEST FRONTIER WORLD MAP", 20, 28);
+    ctx.fillText("🗺️ เกาะที่ 1: เกาะแห่งพืชพรรณ (ISLAND 1: FLORA)", 20, 28);
 
     ctx.fillStyle = "#52b788";
     ctx.font = "11px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
-    ctx.fillText("Sustainable Agri-Network • 12 Sky Eco-Zones", 22, 42);
+    ctx.fillText("แผนที่ด่าน (Sub-Map) • 12 เขตพื้นที่กสิกรรม (12 Eco-Zones)", 22, 42);
 
     // Top Right Buttons:
     // 1. Reset View [Key R]
