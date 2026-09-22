@@ -4,11 +4,8 @@ export async function GET(req) {
   const clientId = process.env.GOOGLE_CLIENT_ID;
   const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
 
-  const host = req.headers.get("x-forwarded-host") || req.headers.get("host") || req.nextUrl.host;
-  const isLocal = host.includes("localhost") || host.includes("127.0.0.1");
-  const redirectUri = isLocal
-    ? `http://${host}/api/auth/callback/google`
-    : `https://897-three.vercel.app/api/auth/callback/google`;
+  const origin = req.nextUrl.origin;
+  const redirectUri = `${origin}/api/auth/callback/google`;
 
   // If Google OAuth credentials are not configured yet, show helpful instructions
   if (!clientId || !clientSecret || clientId === "your-google-client-id") {

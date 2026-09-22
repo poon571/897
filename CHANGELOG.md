@@ -2,7 +2,26 @@
 
 เอกสารบันทึกประวัติเวอร์ชันและการแก้ไขปรับปรุงของโปรเจกต์ Harvest Frontier
 
-## [v1.6.1] - 2026-09-22 (Current Version)
+## [v1.6.3] - 2026-09-22
+### 🔒 ป้องกันบั๊ก redirect_uri_mismatch ด้วย Canonical Domain บน Cloud
+- **Root Cause:** เมื่อกดเปิดเว็บจากปุ่ม Deployment บน Vercel Dashboard บัญชีเบราว์เซอร์จะเปิดผ่านโดเมนพรีวิวชั่วคราว (`https://897-njp59jvih-harvestfrontiergame.vercel.app`) ทำให้ Redirect URI ที่ส่งไป Google ไม่ตรงกับที่ลงทะเบียนไว้ใน Google Cloud Console
+- **Fix Applied:**
+  - ปรับปรุง [app/api/auth/google/route.js](file:///c:/Users/MILD2/Documents/%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%87%E0%B8%B2%E0%B8%99/Project%20harvest%20frontier/app/api/auth/google/route.js) และ [app/api/auth/callback/google/route.js](file:///c:/Users/MILD2/Documents/%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%87%E0%B8%B2%E0%B8%99/Project%20harvest%20frontier/app/api/auth/callback/google/route.js) ให้ล็อกใช้ Canonical Domain `https://897-three.vercel.app/api/auth/callback/google` เสมอเมื่อรันบน Cloud
+  - ส่งผลให้ไม่ว่าจะเปิดเว็บผ่านโดเมนใด หรือพรีวิวตัวไหนของ Vercel ระบบจะวิ่งเข้า Google OAuth ได้อย่างถูกต้อง 100% เสมอ
+- **Backup Snapshot:** `_backup/versions/v1.6.3-fix-oauth-canonical-redirect/`
+
+---
+
+## [v1.6.2] - 2026-09-22
+### 🧹 รีเซ็ตข้อมูลผู้ใช้ทั้งหมดในฐานข้อมูล (Database User Clean Reset)
+- **Data Backup:** สำรองข้อมูลผู้ใช้เดิมทั้งหมด (6 บัญชี) ลงใน `_backup/users_backup_1790047821809.json` เพื่อความปลอดภัย
+- **Truncate & Identity Restart:** ทำการ Truncate ตาราง `users` และ `player_scores` พร้อม Restart Auto-Increment Sequence (เริ่มนับ ID ใหม่จาก 1)
+- **Verification:** ตรวจสอบยอดคงเหลือ `users = 0`, `player_scores = 0` พร้อมสำหรับการทดสอบสมัครสมาชิกใหม่ทั้งแบบปกติและผ่าน Google
+- **Utility Script:** เพิ่มสคริปต์ [clean-users.js](file:///c:/Users/MILD2/Documents/%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%87%E0%B8%B2%E0%B8%99/Project%20harvest%20frontier/clean-users.js) สำหรับการบำรุงรักษาในอนาคต
+
+---
+
+## [v1.6.1] - 2026-09-22
 ### 🛠️ แก้ไขข้อผิดพลาด Turbopack Font Rewrite ตอน Build บน Vercel
 - **Root Cause:** แท็ก `<link href="https://fonts.googleapis.com/css2?...">` ในหน้า HTML สำรองของ `/api/auth/google` ถูกระบบ Turbopack ของ Next.js พยายามแปลงเป็น Font Asset ทำให้ติดเงื่อนไข Assertion `next/font/google queries have exactly one entry`
 - **Fix Applied:**

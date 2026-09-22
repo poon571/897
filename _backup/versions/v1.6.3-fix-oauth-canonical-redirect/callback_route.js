@@ -8,17 +8,13 @@ export async function GET(req) {
     const code = searchParams.get("code");
     const error = searchParams.get("error");
 
-    const host = req.headers.get("x-forwarded-host") || req.headers.get("host") || req.nextUrl.host;
-    const isLocal = host.includes("localhost") || host.includes("127.0.0.1");
-    const appBaseUrl = isLocal ? `http://${host}` : `https://897-three.vercel.app`;
-
     if (error || !code) {
-      return NextResponse.redirect(new URL("/auth/login?error=google_cancelled", appBaseUrl));
+      return NextResponse.redirect(new URL("/auth/login?error=google_cancelled", req.nextUrl.origin));
     }
 
     const clientId = process.env.GOOGLE_CLIENT_ID;
     const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
-    const redirectUri = `${appBaseUrl}/api/auth/callback/google`;
+    const redirectUri = `${req.nextUrl.origin}/api/auth/callback/google`;
 
     // 1. Exchange authorization code for access token
     const tokenRes = await fetch("https://oauth2.googleapis.com/token", {
@@ -36,7 +32,7 @@ export async function GET(req) {
     const tokenData = await tokenRes.json();
     if (!tokenRes.ok || !tokenData.access_token) {
       console.error("Google Token Exchange Failed:", tokenData);
-      return NextResponse.redirect(new URL("/auth/login?error=google_auth_failed", appBaseUrl));
+      return NextResponse.redirect(new URL("/auth/login?error=google_auth_failed", req.nextUrl.origin));
     }
 
     // 2. Fetch Google User Profile
@@ -46,7 +42,7 @@ export async function GET(req) {
     const googleUser = await profileRes.json();
 
     if (!googleUser || !googleUser.email) {
-      return NextResponse.redirect(new URL("/auth/login?error=google_profile_failed", appBaseUrl));
+      return NextResponse.redirect(new URL("/auth/login?error=google_profile_failed", req.nextUrl.origin));
     }
 
     // 3. Find or Create User in PostgreSQL
@@ -96,9 +92,9 @@ export async function GET(req) {
     });
 
     // 5. Redirect straight into the game!
-    return NextResponse.redirect(new URL("/game", appBaseUrl));
+    return NextResponse.redirect(new URL("/game", req.nextUrl.origin));
   } catch (err) {
     console.error("Google Auth Callback Error:", err);
-    return NextResponse.redirect(new URL("/auth/login?error=server_error", appBaseUrl));
+    return NextResponse.redirect(new URL("/auth/login?error=server_error", req.nextUrl.origin));
   }
 }
