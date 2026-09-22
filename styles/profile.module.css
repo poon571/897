@@ -490,3 +490,96 @@
     padding: 24px 20px;
   }
 }
+
+/* ─── ISLAND PROGRESS SECTION ─── */
+.islandSection {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.sectionTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f0fdf4;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.islandGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.islandCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.islandCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(74, 222, 128, 0.25);
+}
+.islandCardCleared {
+  background: rgba(46, 196, 182, 0.06);
+  border-color: rgba(46, 196, 182, 0.3);
+  box-shadow: 0 4px 20px rgba(46, 196, 182, 0.1);
+}
+.islandCardLocked {
+  opacity: 0.6;
+  background: rgba(0, 0, 0, 0.2);
+}
+.islandHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.islandIcon {
+  font-size: 1.6rem;
+}
+.islandBadge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+.badgePassed {
+  background: rgba(74, 222, 128, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+}
+.badgeLocked {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.islandTitle {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.islandTheme {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 12px;
+}
+.islandDetailRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  padding: 4px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.islandDetailLabel {
+  color: rgba(255, 255, 255, 0.5);
+}
+.islandDetailVal {
+  color: #f0c040;
+  font-weight: 700;
+}

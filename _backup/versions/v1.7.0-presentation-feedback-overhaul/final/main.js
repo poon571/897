@@ -1803,61 +1803,6 @@ class TerraQuestSuperEngine {
       }
 
       if (e.code === "Escape") {
-        const modalConfirmDelete = document.getElementById("modal-confirm-delete-slot");
-        if (modalConfirmDelete && !modalConfirmDelete.classList.contains("hidden")) {
-          this.closeConfirmDeleteModal();
-          return;
-        }
-        const modalSort = document.getElementById("modal-minigame-sort");
-        if (modalSort && !modalSort.classList.contains("hidden")) {
-          this.closeSortItRight();
-          return;
-        }
-        const modalSoil = document.getElementById("modal-minigame-soil");
-        if (modalSoil && !modalSoil.classList.contains("hidden")) {
-          this.closeMixerLab();
-          return;
-        }
-        const modalNursery = document.getElementById("modal-minigame-nursery");
-        if (modalNursery && !modalNursery.classList.contains("hidden")) {
-          this.closeNurseryLab();
-          return;
-        }
-        const modalSeason = document.getElementById("modal-minigame-season");
-        if (modalSeason && !modalSeason.classList.contains("hidden")) {
-          this.closeSeasonCrop();
-          return;
-        }
-        const modalPest = document.getElementById("modal-minigame-pest");
-        if (modalPest && !modalPest.classList.contains("hidden")) {
-          this.closePestMinigame();
-          return;
-        }
-        const modalJigsaw = document.getElementById("modal-minigame-jigsaw");
-        if (modalJigsaw && !modalJigsaw.classList.contains("hidden")) {
-          this.closeJigsawMinigame();
-          return;
-        }
-        const modalSpeed = document.getElementById("modal-minigame-speed");
-        if (modalSpeed && !modalSpeed.classList.contains("hidden")) {
-          this.closeSpeedQuiz();
-          return;
-        }
-        const modalKc = document.getElementById("modal-knowledge-card");
-        if (modalKc && !modalKc.classList.contains("hidden")) {
-          this.closeKnowledgeCard();
-          return;
-        }
-        const modalAltar = document.getElementById("modal-altar-trial");
-        if (modalAltar && !modalAltar.classList.contains("hidden")) {
-          modalAltar.classList.add("hidden");
-          return;
-        }
-        const modalCodex = document.getElementById("modal-codex");
-        if (modalCodex && !modalCodex.classList.contains("hidden")) {
-          this.toggleCodex();
-          return;
-        }
         const modalSet = document.getElementById("modal-settings");
         if (modalSet && !modalSet.classList.contains("hidden")) {
           this.toggleSettings();
@@ -1957,21 +1902,6 @@ class TerraQuestSuperEngine {
     if (btnBackFromSaveSlots) {
       btnBackFromSaveSlots.addEventListener("click", () => this.closeSaveSlotsModal());
     }
-
-    // CONFIRM DELETE SAVE SLOT MODAL CONTROLS
-    const btnCloseConfirmDeleteX = document.getElementById("btn-close-confirm-delete-x");
-    if (btnCloseConfirmDeleteX) {
-      btnCloseConfirmDeleteX.addEventListener("click", () => this.closeConfirmDeleteModal());
-    }
-    const btnConfirmDeleteCancel = document.getElementById("btn-confirm-delete-cancel");
-    if (btnConfirmDeleteCancel) {
-      btnConfirmDeleteCancel.addEventListener("click", () => this.closeConfirmDeleteModal());
-    }
-    const btnConfirmDeleteExecute = document.getElementById("btn-confirm-delete-execute");
-    if (btnConfirmDeleteExecute) {
-      btnConfirmDeleteExecute.addEventListener("click", () => this.executeDeleteSlot());
-    }
-
     const btnMenuExit = document.getElementById("btn-menu-exit");
     if (btnMenuExit) {
       btnMenuExit.addEventListener("click", () => {
@@ -2252,47 +2182,6 @@ class TerraQuestSuperEngine {
         this.checkSortItRight();
       });
     }
-
-    // Minigame Exit & Close Buttons
-    const btnExitSort = document.getElementById("btn-exit-sort");
-    if (btnExitSort) btnExitSort.addEventListener("click", () => this.closeSortItRight());
-    const btnCloseSortX = document.getElementById("btn-close-sort-x");
-    if (btnCloseSortX) btnCloseSortX.addEventListener("click", () => this.closeSortItRight());
-
-    const btnExitSoil = document.getElementById("btn-exit-soil");
-    if (btnExitSoil) btnExitSoil.addEventListener("click", () => this.closeMixerLab());
-    const btnCloseSoilX = document.getElementById("btn-close-soil-x");
-    if (btnCloseSoilX) btnCloseSoilX.addEventListener("click", () => this.closeMixerLab());
-
-    const btnExitNursery = document.getElementById("btn-exit-nursery");
-    if (btnExitNursery) btnExitNursery.addEventListener("click", () => this.closeNurseryLab());
-    const btnCloseNurseryX = document.getElementById("btn-close-nursery-x");
-    if (btnCloseNurseryX) btnCloseNurseryX.addEventListener("click", () => this.closeNurseryLab());
-
-    const btnExitSeason = document.getElementById("btn-exit-season");
-    if (btnExitSeason) btnExitSeason.addEventListener("click", () => this.closeSeasonCrop());
-    const btnCloseSeasonX = document.getElementById("btn-close-season-x");
-    if (btnCloseSeasonX) btnCloseSeasonX.addEventListener("click", () => this.closeSeasonCrop());
-
-    const btnExitPest = document.getElementById("btn-exit-pest");
-    if (btnExitPest) btnExitPest.addEventListener("click", () => this.closePestMinigame());
-    const btnClosePestX = document.getElementById("btn-close-pest-x");
-    if (btnClosePestX) btnClosePestX.addEventListener("click", () => this.closePestMinigame());
-
-    const btnExitJigsaw = document.getElementById("btn-exit-jigsaw");
-    if (btnExitJigsaw) btnExitJigsaw.addEventListener("click", () => this.closeJigsawMinigame());
-    const btnCloseJigsawX = document.getElementById("btn-close-jigsaw-x");
-    if (btnCloseJigsawX) btnCloseJigsawX.addEventListener("click", () => this.closeJigsawMinigame());
-
-    const btnExitSpeed = document.getElementById("btn-exit-speed");
-    if (btnExitSpeed) btnExitSpeed.addEventListener("click", () => this.closeSpeedQuiz());
-    const btnCloseSpeedX = document.getElementById("btn-close-speed-x");
-    if (btnCloseSpeedX) btnCloseSpeedX.addEventListener("click", () => this.closeSpeedQuiz());
-
-    const btnCloseKcX = document.getElementById("btn-close-kc-x");
-    if (btnCloseKcX) btnCloseKcX.addEventListener("click", () => this.closeKnowledgeCard());
-    const btnKcCancel = document.getElementById("btn-kc-cancel");
-    if (btnKcCancel) btnKcCancel.addEventListener("click", () => this.closeKnowledgeCard());
 
     // Minigame 6: Speed Quiz Blitz Buttons
     const btnSpeedTrue = document.getElementById("btn-speed-true");
@@ -3904,60 +3793,11 @@ class TerraQuestSuperEngine {
     container.querySelectorAll(".btn-slot-delete").forEach((btn) => {
       btn.addEventListener("click", () => {
         const slotId = parseInt(btn.dataset.slot);
-        this.openConfirmDeleteModal(slotId);
+        if (confirm(`คุณต้องการลบข้อมูลการผจญภัยใน "ช่องเซฟที่ ${slotId}" ใช่หรือไม่?`)) {
+          this.deleteSaveSlot(slotId);
+        }
       });
     });
-  }
-
-  /* ===== CUSTOM CONFIRM DELETE SAVE SLOT MODAL ===== */
-  openConfirmDeleteModal(slotId) {
-    this.pendingDeleteSlotId = slotId;
-    let slotData = null;
-    try {
-      const raw = localStorage.getItem("harvest_frontier_save_slot_" + slotId);
-      if (raw) slotData = JSON.parse(raw);
-    } catch (e) {}
-
-    const modal = document.getElementById("modal-confirm-delete-slot");
-    const nameEl = document.getElementById("confirm-delete-slot-name");
-
-    if (nameEl) {
-      const charName = slotData?.player?.name || "ผู้กล้า";
-      const score = slotData?.totalScore || 0;
-      const room = slotData?.currentRoomId
-        ? (this.WORLD_MAP[slotData.currentRoomId]?.nameTh || slotData.currentRoomId)
-        : "จุดเริ่มต้น";
-      const timestamp = slotData?.timestamp ? new Date(slotData.timestamp).toLocaleString("th-TH") : "—";
-
-      nameEl.innerHTML = `
-        <div style="font-weight: 700; font-size: 15px; color: #fbbf24; margin-bottom: 6px;">
-          📁 ช่องเซฟที่ ${slotId} : 👑 ${charName}
-        </div>
-        <div style="font-size: 12px; color: #94a3b8; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-          <span>📍 ${room}</span>
-          <span>⭐ ${score} แต้ม</span>
-          <span>🕒 ${timestamp}</span>
-        </div>
-      `;
-    }
-
-    this.sound.playWrong();
-    if (modal) modal.classList.remove("hidden");
-  }
-
-  closeConfirmDeleteModal() {
-    this.pendingDeleteSlotId = null;
-    const modal = document.getElementById("modal-confirm-delete-slot");
-    if (modal) modal.classList.add("hidden");
-    this.sound.playCoin();
-  }
-
-  executeDeleteSlot() {
-    if (this.pendingDeleteSlotId) {
-      const slotId = this.pendingDeleteSlotId;
-      this.closeConfirmDeleteModal();
-      this.deleteSaveSlot(slotId);
-    }
   }
 
   startNewGameInSlot(slotId) {
@@ -5452,78 +5292,6 @@ class TerraQuestSuperEngine {
       this.sound.playWrong();
       this.showToastFeedback("❌ ลำดับยังไม่ถูกต้อง! ลองทบทวนขั้นตอนแล้วจัดใหม่", "danger");
     }
-  }
-
-  /* ===== MINIGAME EXIT & CLOSE HANDLERS ===== */
-  closeSortItRight() {
-    const modal = document.getElementById("modal-minigame-sort");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากมินิเกมแล้ว — ทบทวนความรู้กับ NPC แล้วกลับมาลองใหม่ได้เสมอ", "info");
-  }
-
-  closeMixerLab() {
-    const modal = document.getElementById("modal-minigame-soil");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากห้องทดลองแล้ว — สามารถกลับมาปรับค่า pH ใหม่ได้เสมอ", "info");
-  }
-
-  closeNurseryLab() {
-    if (this.nurserySim) {
-      this.nurserySim.active = false;
-      if (this.nurserySim.loop) clearInterval(this.nurserySim.loop);
-      if (this.nurserySim.mistLoop) clearInterval(this.nurserySim.mistLoop);
-    }
-    const modal = document.getElementById("modal-minigame-nursery");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากมินิเกมเพาะกล้าแล้ว — สามารถกลับมาฝึกใหม่ได้เสมอ", "info");
-  }
-
-  closeSeasonCrop() {
-    const modal = document.getElementById("modal-minigame-season");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากมินิเกมจัดสรรพืชแล้ว — สามารถกลับมาจัดสรรใหม่ได้เสมอ", "info");
-  }
-
-  closePestMinigame() {
-    const modal = document.getElementById("modal-minigame-pest");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากมินิเกมชีววิธีแล้ว — สามารถกลับมาเลือกใหม่ได้เสมอ", "info");
-  }
-
-  closeJigsawMinigame() {
-    if (this.jigsawInterval) clearInterval(this.jigsawInterval);
-    const modal = document.getElementById("modal-minigame-jigsaw");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากมินิเกมจับคู่แล้ว", "info");
-  }
-
-  closeSpeedQuiz() {
-    if (this.speedInterval) clearInterval(this.speedInterval);
-    const modal = document.getElementById("modal-minigame-speed");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจาก Speed Quiz แล้ว", "info");
-  }
-
-  closeKnowledgeCard() {
-    const modal = document.getElementById("modal-knowledge-card");
-    if (modal) modal.classList.add("hidden");
-    this.knowledgeCardCallback = null;
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
   }
 
   /* ===== MINIGAME 6: SPEED QUIZ BLITZ ===== */

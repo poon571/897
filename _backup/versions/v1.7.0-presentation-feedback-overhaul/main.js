@@ -736,96 +736,117 @@ const MASTER_DATABASE = {
   // 10 Comprehensive Master Questions for the Grand Boss Battle in White Cathedral
   bossQuestions: [
       {
-        q: "ปัจจัยสำคัญที่สุด 3 ประการในการกระตุ้นให้เมล็ดพันธุ์พืชเริ่มงอก (Germination) คืออะไร?",
+        q: "หากดินในแปลงเพาะปลูกมีค่า pH ต่ำเกินไป (ดินกรด) เราควรใช้วัสดุใดในการปรับปรุงดิน?",
         options: [
-          "A) ปุ๋ยเคมีเข้มข้น แดดจัด และยาฆ่าหญ้า",
-          "B) ความชื้น (น้ำ) อุณหภูมิพอเหมาะ และออกซิเจน",
-          "C) สารเร่งราก ฮอร์โมนสังเคราะห์ และดินเหนียว",
-          "D) ความมืดสนิท ความร้อนสูง และน้ำขัง"
-        ],
-        correct: 1,
-        exp: "เมล็ดพันธุ์ต้องการน้ำเพื่อกระตุ้นเอนไซม์ อุณหภูมิที่พอดีช่วยให้เซลล์แบ่งตัว และออกซิเจนเพื่อการหายใจสร้างพลังงาน"
-      },
-      {
-        q: "หากต้นกล้าในเรือนเพาะชำได้รับแสงสว่างไม่เพียงพอ จะเกิดอาการผิดปกติอย่างไร?",
-        options: [
-          "A) ลำต้นยืดตัวผอมสูง ล้มง่าย และอ่อนแอ (Etiolation)",
-          "B) ใบเปลี่ยนเป็นสีเข้มและหนาขึ้น",
-          "C) รากหยั่งลึกและแตกแขนงรวดเร็วผิดปกติ",
-          "D) ดอกและผลบานเร็วกว่ากำหนด"
+          "A) ปูนขาว (Lime) หรือโดโลไมท์",
+          "B) กำมะถันผง (Sulfur)",
+          "C) ปุ๋ยเคมีสูตร 46-0-0",
+          "D) ยาฆ่าแมลงเคมี"
         ],
         correct: 0,
-        exp: "เมื่อขาดแสง พืชจะเร่งยืดลำต้นขึ้นหาแสง ทำให้เซลล์ยืดตัวผิดปกติ ลำต้นผอมสูง อ่อนแอ และล้มง่าย (Etiolation)"
+        exp: "ปูนขาวและโดโลไมท์มีฤทธิ์เป็นด่าง ช่วยเพิ่มค่า pH ในดินให้สมดุล ทำให้พืชดูดซึมธาตุอาหารได้ดีขึ้น"
       },
       {
-        q: "การปลูกพืชในระบบแอโรโปนิกส์ (Aeroponics) รากพืชได้รับธาตุอาหารอย่างไร?",
+        q: "ระบบการปลูกพืชแบบ 'วนเกษตร' (Agroforestry) มีจุดเด่นคืออะไร?",
         options: [
-          "A) แช่รากไว้ในน้ำนิ่งตลอดเวลา",
-          "B) ฉีดพ่นละอองหมอกสารละลายธาตุอาหารตรงสู่รากที่แขวนลอยในอากาศ",
-          "C) ฝังรากลงในดินเหนียวผสมปุ๋ย",
-          "D) รดน้ำและปุ๋ยทางใบเท่านั้น"
+          "A) ปลูกพืชเชิงเดี่ยวขนาดใหญ่เพื่อการค้า",
+          "B) ปลูกต้นไม้ใหญ่ร่วมกับพืชเกษตรแบบเลียนแบบป่าธรรมชาติ",
+          "C) การใช้สารเคมีกำจัดวัชพืชให้หมด",
+          "D) การถางป่าเพื่อปลูกพืชไร่"
         ],
         correct: 1,
-        exp: "แอโรโปนิกส์ใช้หัวพ่นละอองหมอกสารอาหารสู่รากที่แขวนลอยในอากาศ รากจึงได้รับออกซิเจนสูงสุดและเติบโตรวดเร็ว"
+        exp: "วนเกษตรคือการผสมผสานต้นไม้ใหญ่ พืชชั้นกลาง และพืชคลุมดิน ช่วยรักษาระบบนิเวศและป้องกันหน้าดินพังทลาย"
       },
       {
-        q: "ดินที่มีสภาพเป็นกรดจัด (ดินเปรี้ยว pH ต่ำกว่า 5.5) ส่งผลกระทบต่อพืชอย่างไร?",
+        q: "ข้อใดคือหลักการทำงานของระบบแอโรโปนิกส์ (Aeroponics)?",
         options: [
-          "A) พืชจะเจริญเติบโตรวดเร็วผิดปกติ",
-          "B) ธาตุอาหารพืชตกตะกอนละลายยาก และรากพืชดูดซึมอาหารไม่ได้",
-          "C) ทำให้ดินร่วนซุยระบายน้ำดีเยี่ยม",
-          "D) เพิ่มจุลินทรีย์ดีในดินเป็น 2 เท่า"
+          "A) แช่รากพืชไว้ในน้ำนิ่งตลอดเวลา",
+          "B) ปลูกพืชในดินเหนียว",
+          "C) ฉีดพ่นละอองสารอาหารตรงสู่รากพืชในอากาศ",
+          "D) ปลูกพืชโดยไม่ใช้น้ำเลย"
+        ],
+        correct: 2,
+        exp: "แอโรโปนิกส์ใช้การพ่นละอองสารอาหารให้รากพืชที่แขวนในอากาศ ทำให้รากได้รับออกซิเจนสูงสุด"
+      },
+      {
+        q: "แมลงเต่าทอง (Ladybug) มีประโยชน์อย่างไรในแปลงเกษตรอินทรีย์?",
+        options: [
+          "A) กัดกินใบพืชให้แหว่ง",
+          "B) ทำหน้าที่เป็นตัวห้ำ คอยกินเพลี้ยอ่อนและแมลงศัตรูพืช",
+          "C) ปล่อยสารพิษลงในดิน",
+          "D) ทำให้พืชเป็นโรคราน้ำค้าง"
         ],
         correct: 1,
-        exp: "ในดินกรดจัด ธาตุอาหารสำคัญเช่นฟอสฟอรัสจะทำปฏิกิริยาจนพืชดูดไม่ได้ และอาจเกิดพิษจากอะลูมิเนียมทำลายรากพืช"
+        exp: "แมลงเต่าทองเป็น 'ตัวห้ำ' (Predator) ตามธรรมชาติที่กินเพลี้ยและแมลงศัตรูพืช ช่วยลดการใช้ยาฆ่าแมลง"
       },
       {
-        q: "วัสดุธรรมชาติชนิดใดเหมาะสมที่สุดในการนำมาโรยเพื่อปรับปรุงดินกรดให้กลับมาสมดุล (pH 6.0 - 7.0)?",
+        q: "เมื่อเกิดภาวะภัยแล้งจัด พืชชนิดใดต่อไปนี้เหมาะสมที่จะนำมาปลูกมากที่สุด?",
         options: [
-          "A) ผงกำมะถัน (Sulfur)",
-          "B) ปูนขาว (Lime) หรือ โดโลไมท์ (Dolomite)",
-          "C) น้ำส้มสายชูหรือกรดอินทรีย์",
-          "D) เกลือแกงบดละเอียด"
+          "A) ข้าวนาปรัง",
+          "B) แตงโมและพืชน้ำ",
+          "C) มันสำปะหลัง หรือ ข้าวฟ่าง",
+          "D) บัวหลวง"
+        ],
+        correct: 2,
+        exp: "มันสำปะหลังและข้าวฟ่างเป็นพืชทนแล้งที่มีระบบรากลึกและต้องการน้ำน้อย เหมาะสำหรับสภาพอากาศแห้งแล้ง"
+      },
+      {
+        q: "การเก็บรักษาเมล็ดพันธุ์ในระยะยาว ควรควบคุมปัจจัยแวดล้อมใดให้ต่ำ?",
+        options: [
+          "A) อุณหภูมิและความชื้น",
+          "B) แสงสว่างและก๊าซคาร์บอน",
+          "C) ความดันและลม",
+          "D) เสียงและแรงสั่นสะเทือน"
+        ],
+        correct: 0,
+        exp: "การเก็บเมล็ดพันธุ์ต้องทำในที่เย็นและแห้ง (ความชื้นต่ำ) เพื่อชะลอการทำงานของเอนไซม์และป้องกันเชื้อรา"
+      },
+      {
+        q: "โดรนการเกษตร (Agricultural Drone) นิยมนำมาใช้ทำอะไรเพื่อเพิ่มความแม่นยำ?",
+        options: [
+          "A) ใช้ขนส่งผลผลิตทางการเกษตรไปตลาด",
+          "B) ใช้ฉายภาพรังสีฆ่าเชื้อโรคในดิน",
+          "C) บินสำรวจสุขภาพพืช และพ่นสารชีวภาพเฉพาะจุด",
+          "D) ใช้ไล่นกทุกชนิดในรัศมี 10 กิโลเมตร"
+        ],
+        correct: 2,
+        exp: "โดรนช่วยวิเคราะห์ภาพรวมของแปลง และพ่นสารบำรุงเฉพาะจุดที่พืชมีปัญหา ช่วยลดต้นทุนได้อย่างแม่นยำ"
+      },
+      {
+        q: "การหมุนเวียนของเสียในแปลงเกษตร (Zero Waste) เช่น การนำมูลสัตว์และเศษพืชมาทำปุ๋ยหมัก สอดคล้องกับแนวคิดใด?",
+        options: [
+          "A) เศรษฐกิจแบบทำลายล้าง",
+          "B) เศรษฐกิจหมุนเวียน (Circular Economy)",
+          "C) การปลูกพืชแบบทำลายหน้าดิน",
+          "D) การพึ่งพาสารเคมี 100%"
         ],
         correct: 1,
-        exp: "ปูนขาวและโดโลไมท์มีคุณสมบัติเป็นด่าง ช่วยยกระดับค่า pH และเติมธาตุแคลเซียม-แมกนีเซียมที่มีประโยชน์ให้ดิน"
+        exp: "การหมุนเวียนของเสียมาใช้ใหม่ช่วยลดต้นทุน ไม่ก่อมลภาวะ และสร้างความยั่งยืนในระบบเกษตร (Circular Economy)"
       },
       {
-        q: "ขั้นตอนแรกสุดที่ถูกต้องตามหลักวิชาการในการเตรียมแปลงดินก่อนปลูกพืชคืออะไร?",
+        q: "จุลินทรีย์ที่มีประโยชน์ในดิน ทำหน้าที่หลักอย่างไร?",
         options: [
-          "A) กำจัดวัชพืชและไถดะพลิกหน้าดินตากแดด 7-14 วัน",
-          "B) หว่านเมล็ดพันธุ์ทันที",
-          "C) รดน้ำให้ท่วมแปลงจนดินแฉะ",
-          "D) ฉีดสารเคมีฆ่าแมลงทุกวัน"
+          "A) แย่งธาตุอาหารพืชทั้งหมด",
+          "B) ทำให้รากพืชเน่าเสีย",
+          "C) สร้างฮอร์โมน ย่อยซากพืชเป็นฮิวมัส และยับยั้งเชื้อราก่อโรค",
+          "D) ทำลายแร่ธาตุในดิน"
         ],
-        correct: 0,
-        exp: "การไถดะพลิกหน้าดินตากแดดช่วยให้ความร้อนจากแสงแดดฆ่าเชื้อรา แบคทีเรียก่อโรค และไข่แมลงศัตรูพืชที่ฝังตัวในดิน"
+        correct: 2,
+        exp: "จุลินทรีย์ดีในดินเปรียบเสมือนโรงงานผลิตอาหาร ช่วยย่อยซากพืชเป็นฮิวมัสที่พืชนำไปใช้ได้ทันที"
       },
       {
-        q: "เหตุใดหลังจากไถดะตากดินแล้ว จึงต้องทำการ 'ไถแปร' และใส่ปุ๋ยคอก/ปุ๋ยหมัก?",
+        q: "ระบบอควาโปนิกส์ (Aquaponics) เป็นการผสมผสานระหว่างการเลี้ยงสัตว์น้ำกับการปลูกพืช โดยพืชได้รับสารอาหารจากสิ่งใด?",
         options: [
-          "A) เพื่อย่อยก้อนดินใหญ่ให้โปร่งร่วน และเพิ่มฮิวมัสกักเก็บน้ำกับอากาศ",
-          "B) เพื่อบดดินให้แน่นแข็งจนน้ำซึมไม่ได้",
-          "C) เพื่อทำให้ดินกลายเป็นกรดรุนแรง",
-          "D) เพื่อป้องกันไม่ให้มีอากาศถ่ายเทในดิน"
+          "A) ปุ๋ยเคมีที่เติมลงไปในน้ำ",
+          "B) ดินเหนียวที่ก้นบ่อ",
+          "C) ของเสียจากปลาที่ถูกแบคทีเรียย่อยสลายเป็นไนเตรต",
+          "D) แสงแดดที่ส่องลงไปในน้ำโดยตรง"
         ],
-        correct: 0,
-        exp: "การไถแปรช่วยย่อยก้อนดิน และปุ๋ยอินทรีย์ช่วยสร้างอนุภาคดินร่วนซุย (Soil Structure) มีช่องว่างให้อากาศและรากชอนไช"
-      },
-      {
-        q: "ธาตุอาหารหลักของพืช (N - P - K) ทำหน้าที่บำรุงส่วนใดของพืชตามลำดับ?",
-        options: [
-          "A) N บำรุงใบและลำต้น, P บำรุงรากและดอก, K บำรุงผล หัว และความแข็งแรง",
-          "B) N บำรุงดอก, P บำรุงใบ, K บำรุงราก",
-          "C) N บำรุงผล, P บำรุงหนาม, K บำรุงใบ",
-          "D) N P K ทุกตัวบำรุงเฉพาะรากเท่านั้น"
-        ],
-        correct: 0,
-        exp: "ท่องจำง่ายๆ: N (ไนโตรเจน) เร่งใบเขียวลำต้น, P (ฟอสฟอรัส) เร่งรากแข็งแรงและดอก, K (โพแทสเซียม) เร่งผล แป้ง และภูมิต้านทาน"
+        correct: 2,
+        exp: "ของเสียจากปลา (แอมโมเนีย) จะถูกแบคทีเรียในระบบกรองชีวภาพเปลี่ยนเป็นไนเตรต ซึ่งเป็นปุ๋ยชั้นดีสำหรับพืช"
       }
     ]
 };
-
 
 /* ==============================================================================
        SUPER MEGA ENGINE CONTROLLER (STATE, MINIGAMES & RENDERING)
@@ -910,7 +931,6 @@ class TerraQuestSuperEngine {
     this.quizInterval = null;
     this.totalScore = 0;
     this.bossHp = 100;
-    this.minigamesCompleted = { nursery: false, soil: false, sort: false };
 
     this.particles = [];
     this.selectedCrops = [];
@@ -983,8 +1003,7 @@ class TerraQuestSuperEngine {
       sfxVol: 80,
       scanlines: true,
       particles: true,
-      vignette: true,
-      fontScale: "normal"
+      vignette: true
     };
     this.loadSettings();
     this.applySettings();
@@ -1031,21 +1050,6 @@ class TerraQuestSuperEngine {
     const scanlineEl = document.getElementById("scanline-overlay");
     if (scanlineEl) {
       scanlineEl.style.display = this.settings.scanlines ? "block" : "none";
-    }
-
-    // Font Scale Application
-    const fontScale = this.settings.fontScale || "normal";
-    if (document.body) {
-      document.body.classList.remove("font-scale-normal", "font-scale-large", "font-scale-xlarge");
-      document.body.classList.add(`font-scale-${fontScale}`);
-    }
-
-    const groupFontScale = document.getElementById("group-font-scale");
-    if (groupFontScale) {
-      const btns = groupFontScale.querySelectorAll(".settings-btn-choice");
-      btns.forEach((btn) => {
-        btn.classList.toggle("active", btn.getAttribute("data-scale") === fontScale);
-      });
     }
 
     const sMaster = document.getElementById("slider-vol-master");
@@ -1141,8 +1145,7 @@ class TerraQuestSuperEngine {
           },
           {
             type: "portal", id: "portal_to_village", targetRoom: "abandoned_village", spawnX: 80,
-            x: 1650, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตทุ่งกสิกรรมฟื้นฟูดิน", icon: "🚪",
-            reqMinigame: "nursery"
+            x: 1650, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตทุ่งกสิกรรมฟื้นฟู", icon: "🚪"
           }
         ]
       },
@@ -1159,13 +1162,13 @@ class TerraQuestSuperEngine {
         color: "#2ec4b6",
         width: 2600,
         mapX: 200, mapY: 270,
-        altars: ["แท่นปุ๋ยหมักชีวภาพเวหา"],
-        npcs: ["ชาวบ้านผู้ฟื้นฟูดินบนเกาะ"],
-        poi: ["บ่อหมักปุ๋ยอินทรีย์", "แปลงทดสอบดินกรด"],
-        equipment: ["จอบพรวนดินด้ามเหล็ก"],
+        altars: ["แท่นปุ๋ยหมักชีวภาพเวหา", "ทางเดินแปลงเกษตรลอยฟ้า"],
+        npcs: ["ชาวบ้านผู้ฟื้นฟูดินบนเกาะ", "ซากกังหันลมลอยฟ้า"],
+        poi: ["บ่อหมักปุ๋ยอินทรีย์", "แปลงเพาะทดลอง", "บ่อน้ำกักเก็บเมฆ"],
+        equipment: ["จอบพรวนดินด้ามเหล็ก", "เคียวใหญ่ตัดหญ้าคลุมดิน"],
         spells: ["หนามรากพืชตรึงไนโตรเจน"],
-        items: ["ฮิวมัสบำรุงดินเข้มข้น"],
-        boss: "-",
+        items: ["ฮิวมัสบำรุงดินเข้มข้น", "ผลึกธาตุอาหาร x2"],
+        boss: "ปีศาจดินกรดเน่าเปื่อย (Acid Soil Fiend)",
         connections: ["holy_chapel", "drawbridge"],
         entities: [
           {
@@ -1178,7 +1181,7 @@ class TerraQuestSuperEngine {
             dialogue: [
               "เกาะลอยฟ้าแห่งนี้เคยอุดมสมบูรณ์มาก่อน แต่ดินกลายเป็นกรดจัดจนพืชผลรากเน่าเสียหาย...",
               "หากต้องการฟื้นฟูดินบนเกาะ ต้องปรับค่า pH ให้อยู่ในช่วง 6.0 - 7.0 ด้วยปูนขาวหรือโดโลไมท์!",
-              "ข้างหน้านี้มีแปลงทดลองฟื้นฟูดินอยู่ จงช่วยใช้ห้องทดลองปรับดินให้อยู่ในช่วง 6.0 - 7.0 เพื่อเปิดประตูทางไปต่อ!"
+              "ข้างหน้านี้มีแปลงทดลองฟื้นฟูดินอยู่ ลองช่วยใช้ห้องทดลองปรับดินทีนะ"
             ]
           },
           {
@@ -1195,61 +1198,61 @@ class TerraQuestSuperEngine {
           },
           {
             type: "portal", id: "portal_to_drawbridge", targetRoom: "drawbridge", spawnX: 80,
-            x: 2450, y: 350, width: 50, height: 90, name: "🚪 สู่ แปลงวิจัยการเตรียมแปลงปลูก", icon: "🚪",
-            reqMinigame: "soil"
+            x: 2450, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตสวนผลไม้และน้ำตกเวหา", icon: "🚪"
           }
         ]
       },
 
       "drawbridge": {
         id: "drawbridge",
-        name: "Land Preparation Field",
-        nameTh: "เขตแปลงวิจัยการเตรียมแปลงปลูก",
-        shortNameTh: "เตรียมแปลงปลูก",
-        shortNameEn: "Land Prep",
-        icon: "🚜",
-        subtitle: "Soil Tillage, Solarization & Bed Formation",
-        theme: "ruins",
-        color: "#52b788",
+        name: "Sky Orchard & Waterfalls",
+        nameTh: "เขตสวนผลไม้และน้ำตก",
+        shortNameTh: "สวนผลไม้น้ำตก",
+        shortNameEn: "Sky Orchard",
+        icon: "💧",
+        subtitle: "Cascading Waterfalls & Fruit Orchard",
+        theme: "storm",
+        color: "#f77f00",
         width: 2600,
         mapX: 200, mapY: 130,
-        altars: ["แท่นมหาปฐพีพืชพันธุ์"],
-        npcs: ["ปราชญ์เตรียมแปลงเกษตร"],
-        poi: ["ลานไถดะตากดิน", "แปลงยกร่องคลุมหน้าดิน"],
-        equipment: ["จอบพรวนและเกรียงปาดดิน"],
-        spells: ["มนต์เร่งย่อยอินทรียวัตถุ"],
-        items: ["ปุ๋ยหมักใบไม้แห้งเข้มข้น"],
-        boss: "-",
-        connections: ["abandoned_village", "white_cathedral"],
+        altars: ["แท่นน้ำตกเวหา", "ศาลาพักร่มเงาสวนส้มลอยฟ้า"],
+        npcs: ["วิศวกรชลประทานเวหา"],
+        poi: ["กังหันผันน้ำตกเวหา", "ประตูระบายน้ำฝนเกาะลอยฟ้า"],
+        equipment: ["มีดตัดแต่งกิ่งผลไม้", "กระบอกสเปรย์น้ำแร่"],
+        spells: ["ละอองฝนเทียม", "เกราะป้องกันลมพายุเวหา"],
+        items: ["น้ำแร่บริสุทธิ์บำรุงพืช", "ผลึกธาตุอาหาร x1"],
+        boss: "อสูรภัยแล้งเผาผลาญ (Drought Behemoth)",
+        connections: ["abandoned_village", "rodenia_chapel", "buried_church"],
         entities: [
           {
             type: "portal", id: "portal_to_village", targetRoom: "abandoned_village", spawnX: 2350,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตทุ่งกสิกรรมฟื้นฟูดิน", icon: "🚪"
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตทุ่งกสิกรรมฟื้นฟู", icon: "🚪"
           },
           {
             type: "npc", id: "watchman", x: 600, y: 392, width: 32, height: 48,
-            name: "ปราชญ์เตรียมแปลงเกษตร", icon: "👨‍🌾",
+            name: "วิศวกรชลประทานเวหา", icon: "👷‍♂️",
             dialogue: [
-              "ยินดีต้อนรับสู่แปลงวิจัยเตรียมแปลงปลูก... ขั้นตอนที่สำคัญที่สุดก่อนจะลงเมล็ดหรือต้นกล้า!",
-              "การเตรียมดินที่ดี ต้องเริ่มจากการกำจัดวัชพืช ไถดะตากดิน 7-14 วันเพื่อฆ่าเชื้อโรคและไข่แมลงศัตรูในดิน",
-              "จากนั้นจึงไถแปรย่อยก้อนดินให้ละเอียด ใส่ปุ๋ยคอกปรับโครงสร้างดิน และยกร่องเพื่อให้น้ำระบายดี รากไม่เน่า!",
-              "ข้างหน้านี้มีแบบจำลองขั้นตอนเตรียมแปลงอยู่ จงเรียงลำดับให้ถูกต้องเพื่อเปิดประตูสู่มหาวิหารพิทักษ์พืชพันธุ์!"
+              "เกาะสวนผลไม้ลอยฟ้าแห่งนี้เผชิญภัยแล้งจัด น้ำตกเวหาเริ่มเหือดแห้ง...",
+              "สะพานเวหาแยกออกเป็น 2 สาย: ทางบนไป 'เกาะพฤกษศาสตร์สมุนไพร' และทางขวาไป 'เกาะห้องทดลองรากพืชใต้เกาะ'!",
+              "อย่าลืมช่วยเลือกปลูกพืชทนแล้งรากลึก เช่น ข้าวโพดและมันสำปะหลังที่แปลงข้างหน้านะ!"
             ]
           },
           {
             type: "altar", id: "altar_bridge", x: 1200, y: 380, width: 44, height: 60,
-            name: "แท่นมหาปฐพีพืชพันธุ์", icon: "🌱"
+            name: "แท่นน้ำตกเวหา", icon: "💧"
           },
           {
-            type: "minigame_sort", id: "sort_patch", x: 1500, y: 400, width: 48, height: 40,
-            name: "📋 แท่นจัดเรียงขั้นตอนเตรียมแปลงดิน", icon: "📋"
+            type: "minigame_season", id: "season_patch", x: 1500, y: 400, width: 48, height: 40,
+            name: "🌾 แปลงทดลองรับมือภัยแล้ง", icon: "🌾"
           },
           {
-            type: "portal", id: "portal_to_cathedral", targetRoom: "white_cathedral", spawnX: 80,
-            x: 2450, y: 350, width: 50, height: 90, name: "🚪 สู่ มหาวิหารพิทักษ์พืชพันธุ์ (ห้องบอส)", icon: "🚪",
-            reqMinigame: "sort"
+            type: "portal", id: "portal_to_rodenia", targetRoom: "rodenia_chapel", spawnX: 80,
+            x: 1800, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตสมุนไพรลอยฟ้า", icon: "🚪"
+          },
+          {
+            type: "portal", id: "portal_to_buried", targetRoom: "buried_church", spawnX: 80,
+            x: 2450, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตรากพืชใต้พิภพ", icon: "🚪"
           }
-
         ]
       },
 
@@ -1619,20 +1622,20 @@ class TerraQuestSuperEngine {
         equipment: ["แหวนสติปัญญาเกษตรกร", "เคียวทองคำแห่งแสงสว่าง"],
         spells: ["ลำแสงแดดอบอุ่นบำรุงรวงข้าว", "ออร่าพืชผลบริสุทธิ์"],
         items: ["3 x ผลึกธาตุอาหารสูงสุด", "กุญแจสวนรุกขชาติจันทรา"],
-        boss: "ร่างจำแลง : ปีศาจปฐพีและพืชพันธุ์แปรปรวน (Disrupted Flora & Soil Demon)",
-        connections: ["drawbridge", "lunar_gallery"],
+        boss: "ร่างจำแลง : ปีศาจปฐพีแปรปรวน (Disrupted Soil Demon)",
+        connections: ["pilgrimage", "lunar_gallery"],
         entities: [
           {
-            type: "portal", id: "portal_to_drawbridge", targetRoom: "drawbridge", spawnX: 2350,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ แปลงวิจัยการเตรียมแปลงปลูก", icon: "🚪"
+            type: "portal", id: "portal_to_pilgrimage", targetRoom: "pilgrimage", spawnX: 1800,
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตนาขั้นบันได", icon: "🚪"
           },
           {
             type: "npc", id: "priestess", x: 600, y: 392, width: 32, height: 48,
-            name: "ผู้พิทักษ์วิหารพืชพันธุ์", icon: "👑", gender: "farmer_f",
+            name: "High Priestess", icon: "👑", gender: "farmer_f",
             dialogue: [
-              "ผู้กล้าแห่งพืชพันธุ์... เจ้าได้ผ่านบททดสอบทั้ง 3 ด้านมาแล้ว ทั้งการเพาะกล้า การปรับดินกรด และการเตรียมแปลงปลูก!",
-              "บอส 'ปีศาจปฐพีและพืชพันธุ์แปรปรวน' รอเจ้าอยู่ในประตูบอสข้างหน้านี้!",
-              "จงก้าวเข้าสู่ประตูบอสเพื่อนำความรู้ทั้งหมดมาพิทักษ์เกาะแห่งพืชพันธุ์ให้กลับมาเขียวขจีอีกครั้ง!"
+              "ผู้กล้า... เจ้าได้เดินทางข้าม 12 เกาะลอยฟ้าและเรียนรู้ศาสตร์แห่งการปรับปรุงดิน การจัดการน้ำ ชีววิธี และวนเกษตรมาจนครบถ้วนแล้ว",
+              "ประตูบอสข้างหน้านี้ คือบททดสอบประลองปัญญาครั้งสุดท้าย เพื่อฟื้นคืนความอุดมสมบูรณ์ให้แก่หมู่เกาะลอยฟ้าทั้งหมด!",
+              "หากเจ้าพร้อม จงก้าวเข้าสู่ประตูบอสเพื่อนำความรู้ทั้งหมดมาพิทักษ์ผืนดินลอยฟ้า!"
             ]
           },
           {
@@ -1803,61 +1806,6 @@ class TerraQuestSuperEngine {
       }
 
       if (e.code === "Escape") {
-        const modalConfirmDelete = document.getElementById("modal-confirm-delete-slot");
-        if (modalConfirmDelete && !modalConfirmDelete.classList.contains("hidden")) {
-          this.closeConfirmDeleteModal();
-          return;
-        }
-        const modalSort = document.getElementById("modal-minigame-sort");
-        if (modalSort && !modalSort.classList.contains("hidden")) {
-          this.closeSortItRight();
-          return;
-        }
-        const modalSoil = document.getElementById("modal-minigame-soil");
-        if (modalSoil && !modalSoil.classList.contains("hidden")) {
-          this.closeMixerLab();
-          return;
-        }
-        const modalNursery = document.getElementById("modal-minigame-nursery");
-        if (modalNursery && !modalNursery.classList.contains("hidden")) {
-          this.closeNurseryLab();
-          return;
-        }
-        const modalSeason = document.getElementById("modal-minigame-season");
-        if (modalSeason && !modalSeason.classList.contains("hidden")) {
-          this.closeSeasonCrop();
-          return;
-        }
-        const modalPest = document.getElementById("modal-minigame-pest");
-        if (modalPest && !modalPest.classList.contains("hidden")) {
-          this.closePestMinigame();
-          return;
-        }
-        const modalJigsaw = document.getElementById("modal-minigame-jigsaw");
-        if (modalJigsaw && !modalJigsaw.classList.contains("hidden")) {
-          this.closeJigsawMinigame();
-          return;
-        }
-        const modalSpeed = document.getElementById("modal-minigame-speed");
-        if (modalSpeed && !modalSpeed.classList.contains("hidden")) {
-          this.closeSpeedQuiz();
-          return;
-        }
-        const modalKc = document.getElementById("modal-knowledge-card");
-        if (modalKc && !modalKc.classList.contains("hidden")) {
-          this.closeKnowledgeCard();
-          return;
-        }
-        const modalAltar = document.getElementById("modal-altar-trial");
-        if (modalAltar && !modalAltar.classList.contains("hidden")) {
-          modalAltar.classList.add("hidden");
-          return;
-        }
-        const modalCodex = document.getElementById("modal-codex");
-        if (modalCodex && !modalCodex.classList.contains("hidden")) {
-          this.toggleCodex();
-          return;
-        }
         const modalSet = document.getElementById("modal-settings");
         if (modalSet && !modalSet.classList.contains("hidden")) {
           this.toggleSettings();
@@ -1957,21 +1905,6 @@ class TerraQuestSuperEngine {
     if (btnBackFromSaveSlots) {
       btnBackFromSaveSlots.addEventListener("click", () => this.closeSaveSlotsModal());
     }
-
-    // CONFIRM DELETE SAVE SLOT MODAL CONTROLS
-    const btnCloseConfirmDeleteX = document.getElementById("btn-close-confirm-delete-x");
-    if (btnCloseConfirmDeleteX) {
-      btnCloseConfirmDeleteX.addEventListener("click", () => this.closeConfirmDeleteModal());
-    }
-    const btnConfirmDeleteCancel = document.getElementById("btn-confirm-delete-cancel");
-    if (btnConfirmDeleteCancel) {
-      btnConfirmDeleteCancel.addEventListener("click", () => this.closeConfirmDeleteModal());
-    }
-    const btnConfirmDeleteExecute = document.getElementById("btn-confirm-delete-execute");
-    if (btnConfirmDeleteExecute) {
-      btnConfirmDeleteExecute.addEventListener("click", () => this.executeDeleteSlot());
-    }
-
     const btnMenuExit = document.getElementById("btn-menu-exit");
     if (btnMenuExit) {
       btnMenuExit.addEventListener("click", () => {
@@ -2000,28 +1933,13 @@ class TerraQuestSuperEngine {
           sfxVol: 80,
           scanlines: true,
           particles: true,
-          vignette: true,
-          fontScale: "normal"
+          vignette: true
         };
         this.applySettings();
         this.saveSettings();
         this.sound.playCorrect();
       });
     }
-
-    // Font Scale Buttons
-    const groupFontScale = document.getElementById("group-font-scale");
-    if (groupFontScale) {
-      groupFontScale.querySelectorAll(".settings-btn-choice").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          this.sound.playCoin();
-          this.settings.fontScale = btn.getAttribute("data-scale") || "normal";
-          this.applySettings();
-          this.saveSettings();
-        });
-      });
-    }
-
     const btnTestSfx = document.getElementById("btn-test-sfx");
     if (btnTestSfx) {
       btnTestSfx.addEventListener("click", () => this.sound.playCoin());
@@ -2134,11 +2052,8 @@ class TerraQuestSuperEngine {
             stars: stars,
             knowledgeText: "ปูนขาว (Lime) และโดโลไมท์ ช่วยลดความเป็นกรดในดิน เพิ่มแคลเซียมและแมกนีเซียม ทำให้ดินกลับมามีค่า pH 6.0 - 7.0 เหมาะแก่การเพาะปลูกพืชทุกชนิด!",
             onContinue: () => {
-              this.minigamesCompleted = this.minigamesCompleted || {};
-              this.minigamesCompleted.soil = true;
-              this.saveCurrentSlot();
-              document.getElementById("hud-quest-text").innerText = "มุ่งหน้าสู่แปลงวิจัยการเตรียมแปลงปลูก";
-              this.showToastFeedback("✨ สำเร็จ! ค่า pH ดินสมบูรณ์แล้ว ประตูเปิดออกแล้ว!", "success");
+              document.getElementById("hud-quest-text").innerText = "มุ่งหน้าสู่วิหารปีศาจปฐพี";
+              this.showToastFeedback("✨ สำเร็จ! ค่า pH ดินสมบูรณ์แล้ว", "success");
               this.gameState = "PLAYING";
             }
           });
@@ -2252,47 +2167,6 @@ class TerraQuestSuperEngine {
         this.checkSortItRight();
       });
     }
-
-    // Minigame Exit & Close Buttons
-    const btnExitSort = document.getElementById("btn-exit-sort");
-    if (btnExitSort) btnExitSort.addEventListener("click", () => this.closeSortItRight());
-    const btnCloseSortX = document.getElementById("btn-close-sort-x");
-    if (btnCloseSortX) btnCloseSortX.addEventListener("click", () => this.closeSortItRight());
-
-    const btnExitSoil = document.getElementById("btn-exit-soil");
-    if (btnExitSoil) btnExitSoil.addEventListener("click", () => this.closeMixerLab());
-    const btnCloseSoilX = document.getElementById("btn-close-soil-x");
-    if (btnCloseSoilX) btnCloseSoilX.addEventListener("click", () => this.closeMixerLab());
-
-    const btnExitNursery = document.getElementById("btn-exit-nursery");
-    if (btnExitNursery) btnExitNursery.addEventListener("click", () => this.closeNurseryLab());
-    const btnCloseNurseryX = document.getElementById("btn-close-nursery-x");
-    if (btnCloseNurseryX) btnCloseNurseryX.addEventListener("click", () => this.closeNurseryLab());
-
-    const btnExitSeason = document.getElementById("btn-exit-season");
-    if (btnExitSeason) btnExitSeason.addEventListener("click", () => this.closeSeasonCrop());
-    const btnCloseSeasonX = document.getElementById("btn-close-season-x");
-    if (btnCloseSeasonX) btnCloseSeasonX.addEventListener("click", () => this.closeSeasonCrop());
-
-    const btnExitPest = document.getElementById("btn-exit-pest");
-    if (btnExitPest) btnExitPest.addEventListener("click", () => this.closePestMinigame());
-    const btnClosePestX = document.getElementById("btn-close-pest-x");
-    if (btnClosePestX) btnClosePestX.addEventListener("click", () => this.closePestMinigame());
-
-    const btnExitJigsaw = document.getElementById("btn-exit-jigsaw");
-    if (btnExitJigsaw) btnExitJigsaw.addEventListener("click", () => this.closeJigsawMinigame());
-    const btnCloseJigsawX = document.getElementById("btn-close-jigsaw-x");
-    if (btnCloseJigsawX) btnCloseJigsawX.addEventListener("click", () => this.closeJigsawMinigame());
-
-    const btnExitSpeed = document.getElementById("btn-exit-speed");
-    if (btnExitSpeed) btnExitSpeed.addEventListener("click", () => this.closeSpeedQuiz());
-    const btnCloseSpeedX = document.getElementById("btn-close-speed-x");
-    if (btnCloseSpeedX) btnCloseSpeedX.addEventListener("click", () => this.closeSpeedQuiz());
-
-    const btnCloseKcX = document.getElementById("btn-close-kc-x");
-    if (btnCloseKcX) btnCloseKcX.addEventListener("click", () => this.closeKnowledgeCard());
-    const btnKcCancel = document.getElementById("btn-kc-cancel");
-    if (btnKcCancel) btnKcCancel.addEventListener("click", () => this.closeKnowledgeCard());
 
     // Minigame 6: Speed Quiz Blitz Buttons
     const btnSpeedTrue = document.getElementById("btn-speed-true");
@@ -3904,60 +3778,11 @@ class TerraQuestSuperEngine {
     container.querySelectorAll(".btn-slot-delete").forEach((btn) => {
       btn.addEventListener("click", () => {
         const slotId = parseInt(btn.dataset.slot);
-        this.openConfirmDeleteModal(slotId);
+        if (confirm(`คุณต้องการลบข้อมูลการผจญภัยใน "ช่องเซฟที่ ${slotId}" ใช่หรือไม่?`)) {
+          this.deleteSaveSlot(slotId);
+        }
       });
     });
-  }
-
-  /* ===== CUSTOM CONFIRM DELETE SAVE SLOT MODAL ===== */
-  openConfirmDeleteModal(slotId) {
-    this.pendingDeleteSlotId = slotId;
-    let slotData = null;
-    try {
-      const raw = localStorage.getItem("harvest_frontier_save_slot_" + slotId);
-      if (raw) slotData = JSON.parse(raw);
-    } catch (e) {}
-
-    const modal = document.getElementById("modal-confirm-delete-slot");
-    const nameEl = document.getElementById("confirm-delete-slot-name");
-
-    if (nameEl) {
-      const charName = slotData?.player?.name || "ผู้กล้า";
-      const score = slotData?.totalScore || 0;
-      const room = slotData?.currentRoomId
-        ? (this.WORLD_MAP[slotData.currentRoomId]?.nameTh || slotData.currentRoomId)
-        : "จุดเริ่มต้น";
-      const timestamp = slotData?.timestamp ? new Date(slotData.timestamp).toLocaleString("th-TH") : "—";
-
-      nameEl.innerHTML = `
-        <div style="font-weight: 700; font-size: 15px; color: #fbbf24; margin-bottom: 6px;">
-          📁 ช่องเซฟที่ ${slotId} : 👑 ${charName}
-        </div>
-        <div style="font-size: 12px; color: #94a3b8; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-          <span>📍 ${room}</span>
-          <span>⭐ ${score} แต้ม</span>
-          <span>🕒 ${timestamp}</span>
-        </div>
-      `;
-    }
-
-    this.sound.playWrong();
-    if (modal) modal.classList.remove("hidden");
-  }
-
-  closeConfirmDeleteModal() {
-    this.pendingDeleteSlotId = null;
-    const modal = document.getElementById("modal-confirm-delete-slot");
-    if (modal) modal.classList.add("hidden");
-    this.sound.playCoin();
-  }
-
-  executeDeleteSlot() {
-    if (this.pendingDeleteSlotId) {
-      const slotId = this.pendingDeleteSlotId;
-      this.closeConfirmDeleteModal();
-      this.deleteSaveSlot(slotId);
-    }
   }
 
   startNewGameInSlot(slotId) {
@@ -4764,47 +4589,10 @@ class TerraQuestSuperEngine {
       );
       if (dist < 65) {
         if (ent.type === "portal") {
-          const isBoss = (ent.id === "portal_boss");
-          if (ent.reqMinigame && (!this.minigamesCompleted || !this.minigamesCompleted[ent.reqMinigame])) {
-            this.sound.playWrong();
-            let msg = "🔒 ประตูถูกผนึก! คุณต้องผ่านมินิเกมประจำด่านนี้ก่อน";
-            if (ent.reqMinigame === "nursery") msg = "🔒 ประตูถูกผนึกด้วยรากไม้เวทมนตร์! ต้องผ่านการทดลองเพาะต้นกล้าในเรือนเพาะชำก่อน";
-            else if (ent.reqMinigame === "soil") msg = "🔒 ม่านพลังศิลากรดสะกดประตูไว้! ต้องปรับสภาพค่า pH ของดิน (6.0 - 7.0) ให้สำเร็จก่อน";
-            else if (ent.reqMinigame === "sort") msg = "🔒 ประตูสะพานศิลาถูกล็อค! ต้องจัดเรียงขั้นตอนการเตรียมแปลงดินให้ถูกต้องก่อน";
-            this.showToastFeedback(msg, "danger");
-            return;
-          }
-          if (isBoss) {
-            const hasNursery = this.minigamesCompleted && this.minigamesCompleted.nursery;
-            const hasSoil = this.minigamesCompleted && this.minigamesCompleted.soil;
-            const hasSort = this.minigamesCompleted && this.minigamesCompleted.sort;
-            if (!hasNursery || !hasSoil || !hasSort) {
-              this.sound.playWrong();
-              this.showToastFeedback("🔒 มหาประตูบอสถูกสะกด! ต้องผ่านมินิเกมทั้ง 3 ด่าน (เพาะกล้า, ปรับดิน, จัดเตรียมแปลง) ให้ครบก่อน", "danger");
-              return;
-            }
-            this.sound.playCorrect();
-            this.startBossBattle();
-            return;
-          }
           if (ent.targetRoom) {
             this.sound.playCoin();
             this.loadRoom(ent.targetRoom, ent.spawnX);
           }
-        } else if (ent.type === "minigame_sort") {
-          this.showKnowledgeCard({
-            icon: "📋",
-            title: "ศาสตร์แห่งการเตรียมแปลงปลูก (Land Preparation)",
-            category: "การเตรียมแปลงปลูกพืช",
-            facts: [
-              "1. <b>กำจัดวัชพืช</b> เพื่อไม่ให้แย่งธาตุอาหาร แสงแดด และเป็นที่สะสมของโรคแมลง",
-              "2. <b>ไถดะ (ไถเปิดหน้าดิน)</b> ตากดินไว้ 7-14 วัน ให้แสงแดดฆ่าเชื้อราและไข่แมลงในดิน",
-              "3. <b>ไถแปร (ไถย่อยดิน)</b> ก้อนดินให้ละเอียด ร่วนซุย ช่วยให้อากาศและน้ำแทรกซึมดี",
-              "4. <b>ใส่ปุ๋ยคอก/ปุ๋ยหมัก</b> เพื่อปรับโครงสร้างดิน เพิ่มอินทรียวัตถุและช่องว่างในดิน",
-              "5. <b>ยกร่องหรือทำแปลงปลูก</b> เพื่อการระบายน้ำที่ดี ป้องกันน้ำขังรากพืชเน่าตาย"
-            ],
-            onStart: () => this.startSortItRight()
-          });
         } else if (ent.type === "altar") {
           this.openAltarTrial(ent);
         } else if (ent.type === "item") {
@@ -5440,11 +5228,7 @@ class TerraQuestSuperEngine {
         stars: 3,
         knowledgeText: "การตากดิน -> วัด pH -> ใส่ปุ๋ย/ปูนขาว -> ยกร่องคลุมดิน เป็นขั้นตอนมาตรฐานที่จะช่วยให้พืชโตไวและไร้โรคระบาดรบกวน!",
         onContinue: () => {
-          this.minigamesCompleted = this.minigamesCompleted || {};
-          this.minigamesCompleted.sort = true;
-          this.saveCurrentSlot();
-          document.getElementById("hud-quest-text").innerText = "มุ่งหน้าสู่มหาวิหารพิทักษ์พืชพันธุ์";
-          this.showToastFeedback("✨ สำเร็จ! ประตูสู่มหาวิหารพิทักษ์พืชพันธุ์เปิดออกแล้ว!", "success");
+          this.showToastFeedback("✨ สำเร็จ! แปลงพร้อมปลูกแล้ว", "success");
           this.gameState = "PLAYING";
         }
       });
@@ -5452,78 +5236,6 @@ class TerraQuestSuperEngine {
       this.sound.playWrong();
       this.showToastFeedback("❌ ลำดับยังไม่ถูกต้อง! ลองทบทวนขั้นตอนแล้วจัดใหม่", "danger");
     }
-  }
-
-  /* ===== MINIGAME EXIT & CLOSE HANDLERS ===== */
-  closeSortItRight() {
-    const modal = document.getElementById("modal-minigame-sort");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากมินิเกมแล้ว — ทบทวนความรู้กับ NPC แล้วกลับมาลองใหม่ได้เสมอ", "info");
-  }
-
-  closeMixerLab() {
-    const modal = document.getElementById("modal-minigame-soil");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากห้องทดลองแล้ว — สามารถกลับมาปรับค่า pH ใหม่ได้เสมอ", "info");
-  }
-
-  closeNurseryLab() {
-    if (this.nurserySim) {
-      this.nurserySim.active = false;
-      if (this.nurserySim.loop) clearInterval(this.nurserySim.loop);
-      if (this.nurserySim.mistLoop) clearInterval(this.nurserySim.mistLoop);
-    }
-    const modal = document.getElementById("modal-minigame-nursery");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากมินิเกมเพาะกล้าแล้ว — สามารถกลับมาฝึกใหม่ได้เสมอ", "info");
-  }
-
-  closeSeasonCrop() {
-    const modal = document.getElementById("modal-minigame-season");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากมินิเกมจัดสรรพืชแล้ว — สามารถกลับมาจัดสรรใหม่ได้เสมอ", "info");
-  }
-
-  closePestMinigame() {
-    const modal = document.getElementById("modal-minigame-pest");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากมินิเกมชีววิธีแล้ว — สามารถกลับมาเลือกใหม่ได้เสมอ", "info");
-  }
-
-  closeJigsawMinigame() {
-    if (this.jigsawInterval) clearInterval(this.jigsawInterval);
-    const modal = document.getElementById("modal-minigame-jigsaw");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากมินิเกมจับคู่แล้ว", "info");
-  }
-
-  closeSpeedQuiz() {
-    if (this.speedInterval) clearInterval(this.speedInterval);
-    const modal = document.getElementById("modal-minigame-speed");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจาก Speed Quiz แล้ว", "info");
-  }
-
-  closeKnowledgeCard() {
-    const modal = document.getElementById("modal-knowledge-card");
-    if (modal) modal.classList.add("hidden");
-    this.knowledgeCardCallback = null;
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
   }
 
   /* ===== MINIGAME 6: SPEED QUIZ BLITZ ===== */
@@ -5748,15 +5460,10 @@ class TerraQuestSuperEngine {
     if (choiceIdx === q.correct) {
       this.sound.playCorrect();
       this.bossCombo++;
-      if (this.isBossBattleMode) {
-        const questionScore = 100 * this.bossCombo;
-        this.totalScore += questionScore;
-        this.bossQuizScore = (this.bossQuizScore || 0) + 1;
-      } else {
-        this.altarQuizScore = (this.altarQuizScore || 0) + 1;
-      }
+      if (this.isBossBattleMode) this.totalScore += this.bossCombo;
+      else this.altarQuizScore = (this.altarQuizScore || 0) + 1;
 
-      const comboBonus = this.bossCombo > 1 ? ` (🔥 Combo x${this.bossCombo}! +${100 * this.bossCombo} แต้ม)` : " (+100 แต้ม)";
+      const comboBonus = this.bossCombo > 1 ? ` (🔥 Combo x${this.bossCombo}!)` : "";
       if (buttons[choiceIdx]) buttons[choiceIdx].classList.add("correct-glow");
       fb.style.borderColor = "var(--hp-green)";
       exp.innerHTML = `<b style="color:var(--hp-green)">ถูกต้อง!${comboBonus}</b> ${q.exp}`;
@@ -5819,35 +5526,19 @@ class TerraQuestSuperEngine {
     if (creditsOverlay) {
       creditsOverlay.classList.remove("hidden");
     }
-
-    const content = document.getElementById("credits-content");
-    if (content) {
-      setTimeout(() => {
-        content.style.opacity = "1";
-        content.style.transform = "translateY(0)";
-      }, 100);
-    }
-
-    const finalPlayerName = (this.player && this.player.name) ? this.player.name : "ผู้กล้าแห่งพืชพันธุ์";
-    const finalScore = this.totalScore || 800;
-
+    
     // Save completion & final score to database
     fetch("/api/scores", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        player_name: finalPlayerName,
-        score: finalScore,
-        trophy: "พิทักษ์พืชพันธุ์",
-        island_completed: "island_1",
-        total_questions: 8,
-        time_spent_seconds: Math.floor((Date.now() - (this.gameStartTime || Date.now())) / 1000)
+        score: this.totalScore || 35,
+        island_completed: 1,
+        island_id: 1
       })
     }).then(res => res.json()).then(data => {
-      document.getElementById("credits-saving-text").innerText = `🎉 บันทึกความสำเร็จเกาะที่ 1 เรียบร้อย! คะแนน: ${finalScore} แต้ม`;
+      document.getElementById("credits-saving-text").innerText = "บันทึกข้อมูลการผจญภัยลงฐานข้อมูลเรียบร้อยแล้ว!";
       document.getElementById("btn-return-home").classList.remove("hidden");
-      const btnAdmin = document.getElementById("btn-return-admin");
-      if (btnAdmin) btnAdmin.classList.remove("hidden");
     }).catch(err => {
       console.error("Failed to record endgame score:", err);
       document.getElementById("credits-saving-text").innerText = "เกิดข้อผิดพลาดในการบันทึกคะแนน";
@@ -5966,18 +5657,8 @@ class TerraQuestSuperEngine {
         html += `<div class="floating-nametag tag-item" style="left:${screenX.toFixed(2)}%;top:${screenY.toFixed(2)}%;">${ent.icon || "📦"} ${ent.name}</div>`;
       } else if (ent.type === "portal") {
         const isBoss = (ent.id === "portal_boss");
-        let isLocked = false;
-        let lockReason = "";
-        if (ent.reqMinigame && (!this.minigamesCompleted || !this.minigamesCompleted[ent.reqMinigame])) {
-          isLocked = true;
-          lockReason = " 🔒 [ต้องผ่านมินิเกม]";
-        } else if (isBoss && (!this.minigamesCompleted?.nursery || !this.minigamesCompleted?.soil || !this.minigamesCompleted?.sort)) {
-          isLocked = true;
-          lockReason = " 🔒 [บอสถูกสะกด]";
-        }
         const screenY = ((ent.y - 8) / 540) * 100;
-        const tagClass = isLocked ? "tag-portal-locked" : (isBoss ? "tag-boss-portal" : "tag-portal");
-        html += `<div class="floating-nametag ${tagClass}" style="left:${screenX.toFixed(2)}%;top:${screenY.toFixed(2)}%;">${ent.name}${lockReason}</div>`;
+        html += `<div class="floating-nametag ${isBoss ? 'tag-boss-portal' : 'tag-portal'}" style="left:${screenX.toFixed(2)}%;top:${screenY.toFixed(2)}%;">${ent.name}</div>`;
       } else if (ent.type.startsWith("minigame")) {
         const screenY = ((ent.y - 6) / 540) * 100;
         html += `<div class="floating-nametag tag-minigame" style="left:${screenX.toFixed(2)}%;top:${screenY.toFixed(2)}%;">${ent.icon || "🌱"} ${ent.name}</div>`;
@@ -6869,37 +6550,23 @@ class TerraQuestSuperEngine {
         // Item nametag rendered crisp in HTML DOM by updateFloatingTags()
 
       } else if (ent.type === "portal") {
-        // Rustic Farm Archway / Farm Gate with vines & seal
+        // Rustic Farm Archway / Farm Gate with vines
         const isBoss = (ent.id === "portal_boss");
-        let isLocked = false;
-        if (ent.reqMinigame && (!this.minigamesCompleted || !this.minigamesCompleted[ent.reqMinigame])) {
-          isLocked = true;
-        } else if (isBoss && (!this.minigamesCompleted?.nursery || !this.minigamesCompleted?.soil || !this.minigamesCompleted?.sort)) {
-          isLocked = true;
-        }
-
-        ctx.fillStyle = isLocked ? "#2d0e14" : (isBoss ? "#b93c3c" : "#386641");
+        ctx.fillStyle = isBoss ? "#b93c3c" : "#386641";
         ctx.fillRect(rx, ent.y, ent.width, ent.height);
-        ctx.strokeStyle = isLocked ? "#e71d36" : (isBoss ? "#ffd166" : "#a7c957");
+        ctx.strokeStyle = isBoss ? "#ffd166" : "#a7c957";
         ctx.lineWidth = 3;
         ctx.strokeRect(rx, ent.y, ent.width, ent.height);
 
         // Vine leaves decoration on arch
-        ctx.fillStyle = isLocked ? "#7f1d1d" : "#52b788";
+        ctx.fillStyle = "#52b788";
         ctx.beginPath();
         ctx.arc(rx + 6, ent.y + 10, 6, 0, Math.PI * 2);
         ctx.arc(rx + ent.width - 6, ent.y + 10, 6, 0, Math.PI * 2);
         ctx.arc(rx + ent.width / 2, ent.y + 4, 7, 0, Math.PI * 2);
         ctx.fill();
 
-        // Render padlock on locked portal
-        if (isLocked) {
-          ctx.fillStyle = "rgba(231, 29, 54, 0.25)";
-          ctx.fillRect(rx, ent.y, ent.width, ent.height);
-          ctx.font = "22px Arial";
-          ctx.textAlign = "center";
-          ctx.fillText("🔒", rx + ent.width / 2, ent.y + ent.height / 2 + 8);
-        }
+        // Portal nametag rendered crisp in HTML DOM by updateFloatingTags()
 
       } else if (ent.type.startsWith("minigame")) {
         // Agricultural interactive soil/crop testing plot

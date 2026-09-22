@@ -10,12 +10,7 @@
   --danger-crimson: #e71d36;
   --font-pixel: "Press Start 2P", monospace;
   --font-thai: "Prompt", "Kanit", "Chakra Petch", sans-serif;
-  --game-font-scale: 1.0;
 }
-
-body.font-scale-normal { --game-font-scale: 1.0; }
-body.font-scale-large { --game-font-scale: 1.2; }
-body.font-scale-xlarge { --game-font-scale: 1.38; }
 
 * {
   box-sizing: border-box;
@@ -151,32 +146,6 @@ html {
   border: 1.5px solid #ffd166;
   color: #ffd166;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
-}
-
-.tag-portal-locked {
-  background: rgba(36, 12, 18, 0.96);
-  border: 1.5px solid #e71d36;
-  color: #ff9aa8;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
-  animation: pulseLocked 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes pulseLocked {
-  from { box-shadow: 0 0 4px rgba(231, 29, 54, 0.4); }
-  to { box-shadow: 0 0 14px rgba(231, 29, 54, 0.9); }
-}
-
-.tag-portal-unlocked {
-  background: rgba(10, 34, 24, 0.96);
-  border: 1.5px solid #2ec4b6;
-  color: #a7f3d0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
-  animation: pulseUnlocked 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes pulseUnlocked {
-  from { box-shadow: 0 0 4px rgba(46, 196, 182, 0.4); }
-  to { box-shadow: 0 0 14px rgba(46, 196, 182, 0.9); }
 }
 
 .tag-boss-portal {
@@ -330,63 +299,14 @@ button {
   pointer-events: auto;
 }
 
-.retro-btn-secondary {
-  background: linear-gradient(180deg, #334155 0%, #1e293b 100%);
-  color: #f1f5f9;
-  border: 2px solid #64748b;
-  border-radius: 4px;
-  font-family: var(--font-thai);
-  font-size: 14px;
-  font-weight: 700;
-  padding: 10px 18px;
-  box-shadow: 0 4px 0 #0f172a, 0 4px 8px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  transition: all 0.15s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-}
-
-.retro-btn-secondary:hover {
-  background: linear-gradient(180deg, #475569 0%, #334155 100%);
-  border-color: #94a3b8;
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 0 #0f172a, 0 6px 12px rgba(0, 0, 0, 0.5);
-}
-
-.retro-btn-secondary:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 0 #0f172a;
-}
-
 .retro-btn-close {
   background: var(--danger-crimson);
   color: #fff;
   border: 2px solid #fff;
-  font-size: 13px;
-  font-weight: bold;
-  padding: 2px 9px;
+  font-size: 12px;
+  padding: 2px 8px;
   box-shadow: 0 2px 0 #000;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.15s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
-
-.retro-btn-close:hover {
-  background: #ff4757;
-  transform: scale(1.08);
-  box-shadow: 0 2px 5px rgba(255, 71, 87, 0.5);
-}
-
-.retro-btn-close:active {
-  transform: scale(0.95);
-}
-
 
 /* Modal Naming */
 .modal-box-naming {
@@ -1168,182 +1088,6 @@ button {
   color: #fff;
 }
 
-/* =====================================================
-   CONFIRM DELETE SAVE SLOT MODAL
-   ===================================================== */
-.confirm-delete-window {
-  width: 460px;
-  max-width: 92vw;
-  padding: 0 !important;
-  overflow: hidden;
-  border: 2px solid #ef4444 !important;
-  border-radius: 8px;
-  background: #0d0608 !important;
-  box-shadow: 0 0 35px rgba(239, 68, 68, 0.45), inset 0 0 20px rgba(239, 68, 68, 0.15) !important;
-  animation: modalPopIn 0.22s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@keyframes modalPopIn {
-  0% { transform: scale(0.85); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.header-ribbon-danger {
-  margin: 0 !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  background: linear-gradient(90deg, #5b1016 0%, #991b1b 50%, #5b1016 100%) !important;
-  border: none !important;
-  border-bottom: 2px solid #ef4444 !important;
-  color: #fff1f2 !important;
-  padding: 10px 16px !important;
-  height: 46px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  box-shadow: 0 2px 10px rgba(239, 68, 68, 0.3) !important;
-}
-
-.header-ribbon-danger .ribbon-text {
-  font-family: var(--font-thai);
-  font-size: 13px !important;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #fff1f2 !important;
-  text-shadow: none !important;
-}
-
-.confirm-delete-body {
-  padding: 24px 24px 22px 24px;
-  text-align: center;
-  color: #f8fafc;
-}
-
-.confirm-delete-icon-wrapper {
-  position: relative;
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 14px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.confirm-delete-icon {
-  font-size: 42px;
-  position: relative;
-  z-index: 2;
-  filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.6));
-  animation: shakeTrash 2s infinite ease-in-out;
-}
-
-@keyframes shakeTrash {
-  0%, 100% { transform: rotate(0deg); }
-  15% { transform: rotate(-8deg); }
-  30% { transform: rotate(8deg); }
-  45% { transform: rotate(-4deg); }
-  60% { transform: rotate(4deg); }
-  75% { transform: rotate(0deg); }
-}
-
-.confirm-delete-pulse {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(239, 68, 68, 0.3) 0%, rgba(239, 68, 68, 0) 70%);
-  animation: pulseGlow 1.8s infinite ease-in-out;
-}
-
-@keyframes pulseGlow {
-  0%, 100% { transform: scale(0.9); opacity: 0.5; }
-  50% { transform: scale(1.3); opacity: 0.9; }
-}
-
-.confirm-delete-title {
-  font-family: var(--font-thai);
-  font-size: 17px;
-  font-weight: 700;
-  color: #fca5a5;
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
-}
-
-.confirm-delete-slot-card {
-  background: #19090d;
-  border: 1px solid rgba(239, 68, 68, 0.35);
-  border-radius: 8px;
-  padding: 12px 16px;
-  margin-bottom: 16px;
-  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.6);
-}
-
-.confirm-delete-warning-box {
-  background: rgba(239, 68, 68, 0.08);
-  border-left: 3px solid #ef4444;
-  border-radius: 0 6px 6px 0;
-  padding: 10px 14px;
-  margin-bottom: 22px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-align: left;
-}
-
-.confirm-delete-warning-box .warning-icon {
-  font-size: 20px;
-  flex-shrink: 0;
-}
-
-.confirm-delete-warning-box .warning-text {
-  font-size: 12px;
-  color: #cbd5e1;
-  line-height: 1.5;
-}
-
-.confirm-delete-warning-box .warning-text strong {
-  color: #ef4444;
-}
-
-.confirm-delete-actions {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-}
-
-.btn-delete-cancel {
-  flex: 1;
-  padding: 11px 16px !important;
-  font-size: 13px !important;
-  font-weight: 700;
-  border-radius: 6px !important;
-  cursor: pointer;
-}
-
-.btn-delete-danger {
-  flex: 1.2;
-  padding: 11px 16px !important;
-  font-size: 13px !important;
-  font-weight: 700;
-  border-radius: 6px !important;
-  background: linear-gradient(180deg, #dc2626 0%, #991b1b 100%) !important;
-  border: 1px solid #f87171 !important;
-  color: #ffffff !important;
-  box-shadow: 0 0 15px rgba(220, 38, 38, 0.4) !important;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.btn-delete-danger:hover {
-  background: linear-gradient(180deg, #ef4444 0%, #b91c1c 100%) !important;
-  box-shadow: 0 0 22px rgba(239, 68, 68, 0.7) !important;
-  transform: translateY(-1px);
-}
-
 .settings-section {
   background: #080c16;
   border: 2px solid #1e2840;
@@ -1474,87 +1218,6 @@ input:checked+.switch-slider:before {
   display: flex;
   gap: 10px;
   margin-top: 18px;
-}
-
-/* Settings Font Scale Segmented Buttons */
-.settings-btn-group {
-  display: flex;
-  gap: 6px;
-  background: #0d1525;
-  padding: 4px;
-  border-radius: 8px;
-  border: 1px solid #23314d;
-}
-
-.settings-btn-choice {
-  background: transparent;
-  border: none;
-  color: #94a3b8;
-  font-family: var(--font-thai);
-  font-size: 12px;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
-
-.settings-btn-choice:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.settings-btn-choice.active {
-  background: var(--gold-highlight);
-  color: #101522;
-  font-weight: 700;
-  box-shadow: 0 2px 8px rgba(255, 223, 109, 0.4);
-}
-
-/* Responsive Font Scaling Engine for UI */
-body.font-scale-large .dialogue-text,
-body.font-scale-xlarge .dialogue-text {
-  font-size: calc(15px * var(--game-font-scale)) !important;
-  line-height: 1.6 !important;
-}
-
-body.font-scale-large .dialogue-speaker-tag,
-body.font-scale-xlarge .dialogue-speaker-tag {
-  font-size: calc(14px * var(--game-font-scale)) !important;
-}
-
-body.font-scale-large .floating-nametag,
-body.font-scale-xlarge .floating-nametag {
-  font-size: calc(13px * var(--game-font-scale)) !important;
-  padding: calc(3px * var(--game-font-scale)) calc(10px * var(--game-font-scale)) !important;
-}
-
-body.font-scale-large .choice-btn,
-body.font-scale-xlarge .choice-btn {
-  padding: calc(12px * var(--game-font-scale)) !important;
-}
-
-body.font-scale-large .choice-label,
-body.font-scale-xlarge .choice-label {
-  font-size: calc(15px * var(--game-font-scale)) !important;
-}
-
-body.font-scale-large #quiz-question-text,
-body.font-scale-xlarge #quiz-question-text {
-  font-size: calc(17px * var(--game-font-scale)) !important;
-  line-height: 1.5 !important;
-}
-
-body.font-scale-large .hud-notification-banner,
-body.font-scale-xlarge .hud-notification-banner {
-  font-size: calc(15px * var(--game-font-scale)) !important;
-}
-
-body.font-scale-large .knowledge-card-body,
-body.font-scale-xlarge .knowledge-card-body {
-  font-size: calc(14px * var(--game-font-scale)) !important;
-  line-height: 1.6 !important;
 }
 
 .btn-test-sfx {

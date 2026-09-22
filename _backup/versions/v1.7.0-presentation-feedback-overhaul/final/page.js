@@ -32,7 +32,7 @@ export default function GamePage() {
         href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Kanit:wght@400;500;600;700&family=Press+Start+2P&family=Prompt:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
-      <link rel="stylesheet" href="/css/style.css?v=1.7.2" />
+      <link rel="stylesheet" href="/css/style.css" />
       <link rel="stylesheet" href="/css/undertale.css" />
 
       <div id="game-viewport-wrapper">
@@ -124,48 +124,6 @@ export default function GamePage() {
                 <button id="btn-back-from-save-slots" className="retro-btn-sm" style={{ padding: "8px 24px", fontSize: "12px" }}>
                   ⬅️ กลับสู่หน้าเมนูหลัก
                 </button>
-              </div>
-            </div>
-          </div>
-
-          {/* MODAL: CONFIRM DELETE SAVE SLOT */}
-          <div id="modal-confirm-delete-slot" className="modal-backdrop hidden" style={{ zIndex: 600 }}>
-            <div className="retro-window confirm-delete-window">
-              <div className="window-header-ribbon header-ribbon-danger" style={{ position: "relative", width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", boxSizing: "border-box" }}>
-                <span className="ribbon-text">⚠️ ยืนยันการลบข้อมูล (DELETE SAVE SLOT)</span>
-                <button id="btn-close-confirm-delete-x" className="retro-btn-close" title="ยกเลิก">✕</button>
-              </div>
-
-              <div className="confirm-delete-body">
-                <div className="confirm-delete-icon-wrapper">
-                  <div className="confirm-delete-icon">🗑️</div>
-                  <div className="confirm-delete-pulse"></div>
-                </div>
-
-                <h3 className="confirm-delete-title">
-                  คุณต้องการลบข้อมูลช่องเซฟนี้หรือไม่?
-                </h3>
-
-                <div id="confirm-delete-slot-name" className="confirm-delete-slot-card">
-                  {/* Populated dynamically */}
-                </div>
-
-                <div className="confirm-delete-warning-box">
-                  <span className="warning-icon">⚠️</span>
-                  <div className="warning-text">
-                    ข้อมูลการผจญภัย เลเวล ไอเทม และความคืบหน้าทั้งหมด<br />
-                    ในช่องเซฟนี้จะ<strong>สูญหายถาวร</strong> และไม่สามารถกู้คืนได้!
-                  </div>
-                </div>
-
-                <div className="confirm-delete-actions">
-                  <button id="btn-confirm-delete-cancel" className="retro-btn-secondary btn-delete-cancel">
-                    ❌ ยกเลิก
-                  </button>
-                  <button id="btn-confirm-delete-execute" className="retro-btn btn-delete-danger">
-                    🗑️ ยืนยันการลบข้อมูล
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -601,24 +559,18 @@ export default function GamePage() {
           {/* KNOWLEDGE CARD OVERLAY */}
           <div id="modal-knowledge-card" className="knowledge-card-backdrop hidden">
             <div className="knowledge-card">
-              <div className="kc-header" style={{ display: "flex", alignItems: "center" }}>
+              <div className="kc-header">
                 <span className="kc-icon" id="kc-icon">📖</span>
                 <div className="kc-header-text">
                   <h3 id="kc-title">ความรู้ใหม่!</h3>
                   <div className="kc-category" id="kc-category">เกษตรกรรม</div>
                 </div>
-                <button id="btn-close-kc-x" className="retro-btn-close" title="ปิดหน้าต่าง" style={{ marginLeft: "auto" }}>✕</button>
               </div>
               <div className="kc-body" id="kc-body">
                 <div className="kc-fact">กำลังโหลดข้อมูล...</div>
               </div>
-              <div className="kc-footer" style={{ display: "flex", gap: "10px", justifyContent: "flex-end" }}>
-                <button id="btn-kc-cancel" className="retro-btn-secondary" style={{ padding: "8px 16px", fontSize: "13px" }}>
-                  ยกเลิก
-                </button>
-                <button id="btn-kc-ok" className="kc-btn-ok" style={{ margin: 0 }}>
-                  เข้าใจแล้ว! ✨ ไปเล่นมินิเกมกัน
-                </button>
+              <div className="kc-footer">
+                <button id="btn-kc-ok" className="kc-btn-ok">เข้าใจแล้ว! ✨ ไปเล่นมินิเกมกัน</button>
               </div>
             </div>
           </div>
@@ -650,7 +602,6 @@ export default function GamePage() {
                 <span className="ribbon-text">
                   🌱 ระบบจำลองการเพาะกล้า Aeroponics อัจฉริยะ
                 </span>
-                <button id="btn-close-nursery-x" className="retro-btn-close" title="ออกจากมินิเกม">✕</button>
               </div>
               <p style={{ fontSize: "14px", marginBottom: "6px" }}>
                 ดูแลต้นกล้าให้รอดภายใน <b style={{ color: "var(--hp-green)" }}>30 วินาที</b>! 
@@ -715,11 +666,6 @@ export default function GamePage() {
 
                 </div>
               </div>
-              <div style={{ display: "flex", justifyContent: "center", marginTop: "12px", width: "100%" }}>
-                <button id="btn-exit-nursery" className="retro-btn-secondary" style={{ minWidth: "180px" }}>
-                  🚪 ออกจากมินิเกม
-                </button>
-              </div>
             </div>
           </div>
 
@@ -730,7 +676,6 @@ export default function GamePage() {
                 <span className="ribbon-text">
                   🧪 ห้องทดลอง : ผสมสารปรับสมดุล pH ดิน
                 </span>
-                <button id="btn-close-soil-x" className="retro-btn-close" title="ออกจากห้องทดลอง">✕</button>
               </div>
               <p style={{ fontSize: "14px", marginBottom: "6px" }}>
                 แปลงดินนี้มีความเป็นกรดจัด (pH 4.2) — จงเลือกวัสดุปรับดินที่เหมาะสม แล้วค่อยๆ เติมให้ค่า pH อยู่ในช่วง <b style={{ color: "var(--hp-green)" }}>6.0 - 7.0</b>
@@ -767,14 +712,9 @@ export default function GamePage() {
                   <span className="mixer-ph-value" id="ph-val-display" style={{ color: "#ff5555" }}>4.2</span>
                 </div>
               </div>
-              <div style={{ display: "flex", gap: "10px", marginTop: "12px", width: "100%" }}>
-                <button id="btn-exit-soil" className="retro-btn-secondary" style={{ flex: "0 0 160px" }}>
-                  🚪 ออกจากห้องทดลอง
-                </button>
-                <button id="btn-submit-soil" className="retro-btn-action" style={{ flex: 1, marginTop: 0 }}>
-                  ✨ ยืนยันผลการปรับดิน
-                </button>
-              </div>
+              <button id="btn-submit-soil" className="retro-btn-action" style={{ marginTop: "12px" }}>
+                ✨ ยืนยันผลการปรับดิน
+              </button>
             </div>
           </div>
 
@@ -785,7 +725,6 @@ export default function GamePage() {
                 <span className="ribbon-text">
                   🌾 มินิเกม : จัดสรรพืชให้ตรงกับฤดูร้อนแล้ง
                 </span>
-                <button id="btn-close-season-x" className="retro-btn-close" title="ออกจากมินิเกม">✕</button>
               </div>
               <p style={{ fontSize: "14px", marginBottom: "6px" }}>
                 แปลงแห่งนี้เผชิญภัยแล้งจัด! เลือกพืชจากชั้นวาง แล้ว<b style={{ color: "var(--gold-highlight)" }}>กดเพื่อปลูกลงแปลง</b> ให้ครบ 2 ช่อง
@@ -820,14 +759,9 @@ export default function GamePage() {
                   </div>
                 </div>
               </div>
-              <div style={{ display: "flex", gap: "10px", marginTop: "12px", width: "100%" }}>
-                <button id="btn-exit-season" className="retro-btn-secondary" style={{ flex: "0 0 160px" }}>
-                  🚪 ออกจากมินิเกม
-                </button>
-                <button id="btn-submit-season" className="retro-btn-action" style={{ flex: 1, marginTop: 0 }}>
-                  ✨ ยืนยันการปลูก
-                </button>
-              </div>
+              <button id="btn-submit-season" className="retro-btn-action" style={{ marginTop: "10px" }}>
+                ✨ ยืนยันการปลูก
+              </button>
             </div>
           </div>
 
@@ -838,7 +772,6 @@ export default function GamePage() {
                 <span className="ribbon-text">
                   🐛 มินิเกม : ปกป้องแปลงจากศัตรูพืช
                 </span>
-                <button id="btn-close-pest-x" className="retro-btn-close" title="ออกจากมินิเกม">✕</button>
               </div>
               <p style={{ fontSize: "14px", marginBottom: "6px" }}>
                 แปลงมะเขือเทศถูกเพลี้ยอ่อนและหนอนบุก! จงเลือก<b style={{ color: "var(--hp-green)" }}>วิธีชีววิธี 2 อย่าง</b>ที่ปลอดภัยและถูกต้อง
@@ -877,14 +810,9 @@ export default function GamePage() {
                   </div>
                 </div>
               </div>
-              <div style={{ display: "flex", gap: "10px", marginTop: "12px", width: "100%" }}>
-                <button id="btn-exit-pest" className="retro-btn-secondary" style={{ flex: "0 0 160px" }}>
-                  🚪 ออกจากมินิเกม
-                </button>
-                <button id="btn-submit-pest" className="retro-btn-action" style={{ flex: 1, marginTop: 0 }}>
-                  ✨ ใช้งานชีววิธีพิทักษ์แปลง
-                </button>
-              </div>
+              <button id="btn-submit-pest" className="retro-btn-action" style={{ marginTop: "10px" }}>
+                ✨ ใช้งานชีววิธีพิทักษ์แปลง
+              </button>
             </div>
           </div>
 
@@ -895,7 +823,6 @@ export default function GamePage() {
                 <span className="ribbon-text">
                   🧩 มินิเกม : จับคู่ปัญหากับวิธีแก้
                 </span>
-                <button id="btn-close-jigsaw-x" className="retro-btn-close" title="ออกจากมินิเกม">✕</button>
               </div>
               <p style={{ fontSize: "14px", marginBottom: "6px" }}>
                 เลือก<b style={{ color: "var(--gold-highlight)" }}>ปัญหาด้านซ้าย</b>แล้วเลือก<b style={{ color: "var(--hp-green)" }}>วิธีแก้ด้านขวา</b>ที่ตรงกัน จับคู่ให้ครบ!
@@ -911,11 +838,6 @@ export default function GamePage() {
                   <span className="jigsaw-timer" id="jigsaw-timer">⏳ 30</span>
                 </div>
               </div>
-              <div style={{ display: "flex", justifyContent: "center", marginTop: "12px", width: "100%" }}>
-                <button id="btn-exit-jigsaw" className="retro-btn-secondary" style={{ minWidth: "180px" }}>
-                  🚪 ออกจากมินิเกม
-                </button>
-              </div>
             </div>
           </div>
 
@@ -926,7 +848,6 @@ export default function GamePage() {
                 <span className="ribbon-text">
                   🔀 มินิเกม : เรียงลำดับขั้นตอนให้ถูกต้อง
                 </span>
-                <button id="btn-close-sort-x" className="retro-btn-close" title="ออกจากมินิเกม">✕</button>
               </div>
               <p style={{ fontSize: "14px", marginBottom: "6px" }}>
                 จัดเรียงขั้นตอนการเตรียมแปลงปลูกให้ถูกต้อง โดย<b style={{ color: "var(--gold-highlight)" }}>กดปุ่มลูกศรเพื่อย้ายตำแหน่ง</b>
@@ -934,14 +855,9 @@ export default function GamePage() {
               <div className="minigame-box sort-area">
                 <div className="sort-list" id="sort-list"></div>
               </div>
-              <div style={{ display: "flex", gap: "10px", marginTop: "12px", width: "100%" }}>
-                <button id="btn-exit-sort" className="retro-btn-secondary" style={{ flex: "0 0 160px" }}>
-                  🚪 ออกจากมินิเกม
-                </button>
-                <button id="btn-submit-sort" className="retro-btn-action" style={{ flex: 1, marginTop: 0 }}>
-                  ✨ ยืนยันลำดับ
-                </button>
-              </div>
+              <button id="btn-submit-sort" className="retro-btn-action" style={{ marginTop: "10px" }}>
+                ✨ ยืนยันลำดับ
+              </button>
             </div>
           </div>
 
@@ -952,7 +868,6 @@ export default function GamePage() {
                 <span className="ribbon-text">
                   ⚡ Speed Quiz Blitz: ถูกหรือผิด?
                 </span>
-                <button id="btn-close-speed-x" className="retro-btn-close" title="ออกจากมินิเกม">✕</button>
               </div>
               <div className="minigame-box speed-quiz-area">
                 <div className="speed-quiz-hud">
@@ -971,11 +886,6 @@ export default function GamePage() {
                   </button>
                 </div>
                 <div className="speed-quiz-progress" id="speed-progress"></div>
-              </div>
-              <div style={{ display: "flex", justifyContent: "center", marginTop: "12px", width: "100%" }}>
-                <button id="btn-exit-speed" className="retro-btn-secondary" style={{ minWidth: "180px" }}>
-                  🚪 ออกจากมินิเกม
-                </button>
               </div>
             </div>
           </div>
@@ -1263,7 +1173,7 @@ export default function GamePage() {
         </div>
       </div>
 
-      <Script src="/js/main.js?v=1.7.2" strategy="afterInteractive" />
+      <Script src="/js/main.js?v=1.7.0" strategy="afterInteractive" />
     </>
   );
 }

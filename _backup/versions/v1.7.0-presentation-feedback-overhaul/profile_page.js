@@ -314,77 +314,13 @@ export default function ProfilePage() {
                 </div>
                 <div className={styles.statCard}>
                   <div className={styles.statIcon}>⚔️</div>
-                  <div className={styles.statValue}>{user.stats?.bossesDefeated || 0}</div>
+                  <div className={styles.statValue}>—</div>
                   <div className={styles.statLabel}>บอสที่ผ่าน</div>
                 </div>
                 <div className={styles.statCard}>
                   <div className={styles.statIcon}>🏆</div>
-                  <div className={styles.statValue}>{user.stats?.highestScore ? `${user.stats.highestScore} แต้ม` : "—"}</div>
+                  <div className={styles.statValue}>—</div>
                   <div className={styles.statLabel}>คะแนนสูงสุด</div>
-                </div>
-              </div>
-
-              {/* Island Adventure Progress */}
-              <div className={styles.islandSection}>
-                <h2 className={styles.sectionTitle}>
-                  <span>🗺️</span> ความคืบหน้าการผจญภัยรายเกาะ
-                </h2>
-                <div className={styles.islandGrid}>
-                  {/* Island 1 */}
-                  <div className={`${styles.islandCard} ${user.stats?.island1Score !== null && user.stats?.island1Score !== undefined ? styles.islandCardCleared : ""}`}>
-                    <div className={styles.islandHeader}>
-                      <span className={styles.islandIcon}>🌱</span>
-                      {user.stats?.island1Score !== null && user.stats?.island1Score !== undefined ? (
-                        <span className={`${styles.islandBadge} ${styles.badgePassed}`}>ผ่านแล้ว 🎉</span>
-                      ) : (
-                        <span className={`${styles.islandBadge} ${styles.badgeLocked}`}>ยังไม่ผ่าน</span>
-                      )}
-                    </div>
-                    <div className={styles.islandTitle}>เกาะที่ 1: พืชพันธุ์และดิน</div>
-                    <div className={styles.islandTheme}>ศาสตร์การเพาะกล้า ปรับดินกรด และเตรียมแปลง</div>
-                    <div className={styles.islandDetailRow}>
-                      <span className={styles.islandDetailLabel}>คะแนนบอส</span>
-                      <span className={styles.islandDetailVal}>
-                        {user.stats?.island1Score !== null && user.stats?.island1Score !== undefined
-                          ? `${user.stats.island1Score} แต้ม`
-                          : "—"}
-                      </span>
-                    </div>
-                    <div className={styles.islandDetailRow}>
-                      <span className={styles.islandDetailLabel}>ถ้วยรางวัล</span>
-                      <span className={styles.islandDetailVal}>
-                        {user.stats?.island1Trophy ? `🏆 ${user.stats.island1Trophy}` : "—"}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Island 2 */}
-                  <div className={`${styles.islandCard} ${styles.islandCardLocked}`}>
-                    <div className={styles.islandHeader}>
-                      <span className={styles.islandIcon}>☀️</span>
-                      <span className={`${styles.islandBadge} ${styles.badgeLocked}`}>เร็วๆ นี้</span>
-                    </div>
-                    <div className={styles.islandTitle}>เกาะที่ 2: ฤดูกาลและสภาพอากาศ</div>
-                    <div className={styles.islandTheme}>การรับมือภัยแล้ง พืชทนแล้ง และการจัดการน้ำ</div>
-                    <div className={styles.islandDetailRow}>
-                      <span className={styles.islandDetailLabel}>สถานะ</span>
-                      <span className={styles.islandDetailVal}>🔒 รอการเปิดตัว</span>
-                    </div>
-                  </div>
-
-                  {/* Island 3 */}
-                  <div className={`${styles.islandCard} ${styles.islandCardLocked}`}>
-                    <div className={styles.islandHeader}>
-                      <span className={styles.islandIcon}>🐛</span>
-                      <span className={`${styles.islandBadge} ${styles.badgeLocked}`}>เร็วๆ นี้</span>
-                    </div>
-                    <div className={styles.islandTitle}>เกาะที่ 3: ศัตรูพืชและชีววิธี</div>
-                    <div className={styles.islandTheme}>การอารักขาพืช แมลงตัวห้ำ และสมุนไพรขับไล่</div>
-                    <div className={styles.islandDetailRow}>
-                      <span className={styles.islandDetailLabel}>สถานะ</span>
-                      <span className={styles.islandDetailVal}>🔒 รอการเปิดตัว</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
