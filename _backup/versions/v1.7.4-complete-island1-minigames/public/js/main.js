@@ -733,119 +733,97 @@ const MASTER_DATABASE = {
     }
   },
 
-  // 10 Comprehensive Master Questions for the Grand Boss Battle in Lunar Gallery (Tree of Life)
+  // 10 Comprehensive Master Questions for the Grand Boss Battle in White Cathedral
   bossQuestions: [
-    {
-      q: "1. ปัจจัยสำคัญที่สุด 3 ประการในการกระตุ้นให้เมล็ดพันธุ์พืชเริ่มงอก (Germination) คืออะไร?",
-      options: [
-        "A) ปุ๋ยเคมีเข้มข้น แดดจัด และยาฆ่าหญ้า",
-        "B) ความชื้น (น้ำ) อุณหภูมิพอเหมาะ และออกซิเจน",
-        "C) สารเร่งราก ฮอร์โมนสังเคราะห์ และดินเหนียว",
-        "D) ความมืดสนิท ความร้อนสูง และน้ำขัง"
-      ],
-      correct: 1,
-      exp: "เมล็ดต้องการน้ำกระตุ้นเอนไซม์ อุณหภูมิพอเหมาะให้เซลล์แบ่งตัว และออกซิเจนในการหายใจสร้างพลังงาน (ความรู้จากเขตเรือนเพาะชำ)"
-    },
-    {
-      q: "2. หากดินในแปลงเกษตรมีสภาพเป็นกรดจัด (pH ต่ำกว่า 5.5) ควรแก้ไขด้วยวัสดุธรรมชาติใด?",
-      options: [
-        "A) ผงกำมะถัน (Sulfur)",
-        "B) ปูนขาว (Lime) หรือ โดโลไมท์ (Dolomite)",
-        "C) น้ำส้มสายชูและเกลือแกง",
-        "D) ปุ๋ยเคมีไนโตรเจนเข้มข้น"
-      ],
-      correct: 1,
-      exp: "ปูนขาวและโดโลไมท์มีคุณสมบัติเป็นด่าง ช่วยเพิ่มค่า pH ดินให้อยู่ในช่วง 6.0 - 7.0 พร้อมเติมแคลเซียมและแมกนีเซียม (ความรู้จากเขตทุ่งฟื้นฟูดิน)"
-    },
-    {
-      q: "3. ขั้นตอนแรกสุดตามหลักวิชาการในการเตรียมแปลงปลูกพืชเพื่อตัดวงจรโรคแมลงคือข้อใด?",
-      options: [
-        "A) หว่านเมล็ดพันธุ์ทันที",
-        "B) ไถดะพลิกหน้าดินตากแดด 7-14 วัน เพื่อกำจัดเชื้อโรคและวัชพืช",
-        "C) ฉีดพ่นสารเคมีกำจัดแมลงทุกวัน",
-        "D) รดน้ำให้ท่วมขังแปลง"
-      ],
-      correct: 1,
-      exp: "การไถดะตากแดด 7-14 วัน ใช้ความร้อนและรังสี UV ฆ่าสปอร์เชื้อรา ไข่แมลง และเมล็ดวัชพืชในดิน (ความรู้จากเขตเตรียมแปลงปลูก)"
-    },
-    {
-      q: "4. สารสกัดจากพืชสมุนไพร 'สะเดา' (Neem) มีสารสำคัญใดที่ช่วยยับยั้งการเจริญเติบโตของหนอนศัตรูพืช?",
-      options: [
-        "A) สารคาเฟอีน (Caffeine)",
-        "B) สารอะซาดิแรคติน (Azadirachtin)",
-        "C) สารแทนนิน (Tannin)",
-        "D) กรดซิตริก (Citric Acid)"
-      ],
-      correct: 1,
-      exp: "สาร Azadirachtin ในสะเดาออกฤทธิ์ยับยั้งการลอกคราบของหนอน ทำให้หนอนเบื่ออาหาร ไม่ขยายพันธุ์ และปลอดภัยต่อคน (ความรู้จากเขตพฤกษาสมุนไพร)"
-    },
-    {
-      q: "5. เชื้อราดี 'ไมคอร์ไรซา' (Mycorrhizae) ในระบบรากพืชใต้ดิน ทำหน้าที่ช่วยเหลือพืชอย่างไร?",
-      options: [
-        "A) กัดกินรากพืชจนเน่าเปื่อย",
-        "B) ขยายโครงข่ายเส้นใยช่วยดูดซึมฟอสฟอรัส (P) และน้ำ แลกเปลี่ยนกับน้ำตาลจากพืช",
-        "C) แย่งธาตุอาหารของพืชไปจนหมด",
-        "D) ทำให้พืชใบเหลืองและใบร่วง"
-      ],
-      correct: 1,
-      exp: "ไมคอร์ไรซาอยู่ร่วมกับรากพืชแบบพึ่งพา ช่วยขยายพื้นที่ดูดซึมฟอสฟอรัสและน้ำได้ไกลกว่ารากปกติหลายเท่า (ความรู้จากเขตรากพืชใต้พิภพ)"
-    },
-    {
-      q: "6. เซนเซอร์ IoT ในโรงเรือนเกษตรอัจฉริยะ (Smart AgriTech) นิยมใช้วัดค่าใดเพื่อสั่งการให้น้ำและปุ๋ยอัตโนมัติ?",
-      options: [
-        "A) ความชื้นในดิน อุณหภูมิอากาศ และค่าการนำไฟฟ้าของปุ๋ย (EC)",
-        "B) ความเร็วของลมพัดในห้องนอน",
-        "C) จำนวนคนเดินผ่านหน้าฟาร์ม",
-        "D) สีของกระถางปลูกต้นไม้"
-      ],
-      correct: 0,
-      exp: "เซนเซอร์วัดความชื้น อุณหภูมิ และค่า EC ช่วยให้ระบบสั่งจ่ายน้ำและสารอาหารได้แม่นยำตามความต้องการจริงของพืช (ความรู้จากเขตนครเกษตรอัจฉริยะ)"
-    },
-    {
-      q: "7. ในระบบเกษตรอควาโปนิกส์ (Aquaponics) พืชได้รับธาตุอาหารไนโตรเจนจากกระบวนการใด?",
-      options: [
-        "A) แบคทีเรียย่อยสลายแอมโมเนียจากมูลปลาให้กลายเป็นไนเตรต ซึ่งเป็นปุ๋ยพืช",
-        "B) เทปุ๋ยเคมีลงในบ่อเลี้ยงปลา",
-        "C) ปลากระโดดขึ้นมากัดกินใบพืชโดยตรง",
-        "D) กรดจากน้ำฝนในอากาศ"
-      ],
-      correct: 0,
-      exp: "แบคทีเรียไนตริฟายอิ้งทำหน้าที่เปลี่ยนของเสียแอมโมเนียในมูลปลาเป็นไนไตรต์และไนเตรต พืชดูดไปใช้และทำให้น้ำสะอาดวนกลับไปหาปลา (ความรู้จากเขตบึงอควาโปนิกส์)"
-    },
-    {
-      q: "8. คุณสมบัติเด่นที่สุดของ 'หญ้าแฝก' ในศาสตร์วนเกษตรและการอนุรักษ์ดินคืออะไร?",
-      options: [
-        "A) รากหยั่งลึกในแนวดิ่ง 3-5 เมตร สานแน่นเป็นแนวกำแพงใต้ดินยึดดินและอุ้มน้ำ",
-        "B) ใบมีพิษร้ายแรงกำจัดสัตว์ทุกชนิด",
-        "C) เป็นวัชพืชที่แย่งอาหารของต้นไม้ใหญ่",
-        "D) รากตื้นแผ่กระจายผิวดินเพียง 5 เซนติเมตร"
-      ],
-      correct: 0,
-      exp: "รากหญ้าแฝกหยั่งลึกแนวดิ่ง 3-5 เมตร สานแน่นเป็นกำแพงใต้ดิน ป้องกันการพังทลายของดินและช่วยชะลอน้ำให้ซึมลงใต้ดิน (ความรู้จากเขตสะวันนาวนเกษตร)"
-    },
-    {
-      q: "9. วัตถุประสงค์หลักของการทำแปลงเกษตรแบบ 'นาขั้นบันได' และการสร้าง 'ฝายชะลอน้ำ' (Check Dam) บนพื้นที่สูงคืออะไร?",
-      options: [
-        "A) ชะลอความเร็วของน้ำหลาก ดักตะกอนดิน และลดการชะล้างพังทลายของหน้าดิน",
-        "B) เพื่อให้เดินขึ้นเขาได้ยากขึ้น",
-        "C) เร่งให้น้ำไหลบ่าลงท่วมเมืองด้านล่างเร็วขึ้น",
-        "D) เพื่อความสวยงามในการถ่ายภาพเพียงอย่างเดียว"
-      ],
-      correct: 0,
-      exp: "นาขั้นบันไดและฝายชะลอน้ำช่วยกระจายน้ำ กักเก็บน้ำฝน และลดแรงกระแทกของน้ำป่าไหลหลาก ป้องกันการสูญเสียหน้าดินอุดมสมบูรณ์ (ความรู้จากเขตนาขั้นบันไดเสียดฟ้า)"
-    },
-    {
-      q: "10. การเก็บรักษาในคลังเมล็ดพันธุ์ (Seed Vault) และการให้ธาตุอาหารหลัก (N-P-K) ในระยะติดเมล็ดรวงข้าวทองคำควรมีหลักการอย่างไร?",
-      options: [
-        "A) คลังเมล็ดต้องเย็นจัด (-18°C) ชื้นต่ำ (4-6%) และระยะรวงข้าวต้องเน้นโพแทสเซียม (K) เพื่อสะสมแป้งเมล็ดเต่ง",
-        "B) คลังเมล็ดต้องร้อนชื้น และพืชรวงข้าวต้องใส่แต่ไนโตรเจน (N) อย่างเดียว",
-        "C) แช่เมล็ดในน้ำเดือด และห้ามใส่ปุ๋ยใดๆ",
-        "D) ใส่เฉพาะกำมะถันและเกลือแกง"
-      ],
-      correct: 0,
-      exp: "คลังเมล็ดพันธุ์อาศัยความเย็น -18°C และความชื้น 4-6% ชะลอเมตาบอลิซึม ส่วนในระยะติดเมล็ดต้องการ K สูงเพื่อเปลี่ยนน้ำตาลเป็นแป้งในรวงข้าว (ความรู้จากเขตคลังเมล็ดพันธุ์และทุ่งรวงทอง)"
-    }
-  ]
+      {
+        q: "ปัจจัยสำคัญที่สุด 3 ประการในการกระตุ้นให้เมล็ดพันธุ์พืชเริ่มงอก (Germination) คืออะไร?",
+        options: [
+          "A) ปุ๋ยเคมีเข้มข้น แดดจัด และยาฆ่าหญ้า",
+          "B) ความชื้น (น้ำ) อุณหภูมิพอเหมาะ และออกซิเจน",
+          "C) สารเร่งราก ฮอร์โมนสังเคราะห์ และดินเหนียว",
+          "D) ความมืดสนิท ความร้อนสูง และน้ำขัง"
+        ],
+        correct: 1,
+        exp: "เมล็ดพันธุ์ต้องการน้ำเพื่อกระตุ้นเอนไซม์ อุณหภูมิที่พอดีช่วยให้เซลล์แบ่งตัว และออกซิเจนเพื่อการหายใจสร้างพลังงาน"
+      },
+      {
+        q: "หากต้นกล้าในเรือนเพาะชำได้รับแสงสว่างไม่เพียงพอ จะเกิดอาการผิดปกติอย่างไร?",
+        options: [
+          "A) ลำต้นยืดตัวผอมสูง ล้มง่าย และอ่อนแอ (Etiolation)",
+          "B) ใบเปลี่ยนเป็นสีเข้มและหนาขึ้น",
+          "C) รากหยั่งลึกและแตกแขนงรวดเร็วผิดปกติ",
+          "D) ดอกและผลบานเร็วกว่ากำหนด"
+        ],
+        correct: 0,
+        exp: "เมื่อขาดแสง พืชจะเร่งยืดลำต้นขึ้นหาแสง ทำให้เซลล์ยืดตัวผิดปกติ ลำต้นผอมสูง อ่อนแอ และล้มง่าย (Etiolation)"
+      },
+      {
+        q: "การปลูกพืชในระบบแอโรโปนิกส์ (Aeroponics) รากพืชได้รับธาตุอาหารอย่างไร?",
+        options: [
+          "A) แช่รากไว้ในน้ำนิ่งตลอดเวลา",
+          "B) ฉีดพ่นละอองหมอกสารละลายธาตุอาหารตรงสู่รากที่แขวนลอยในอากาศ",
+          "C) ฝังรากลงในดินเหนียวผสมปุ๋ย",
+          "D) รดน้ำและปุ๋ยทางใบเท่านั้น"
+        ],
+        correct: 1,
+        exp: "แอโรโปนิกส์ใช้หัวพ่นละอองหมอกสารอาหารสู่รากที่แขวนลอยในอากาศ รากจึงได้รับออกซิเจนสูงสุดและเติบโตรวดเร็ว"
+      },
+      {
+        q: "ดินที่มีสภาพเป็นกรดจัด (ดินเปรี้ยว pH ต่ำกว่า 5.5) ส่งผลกระทบต่อพืชอย่างไร?",
+        options: [
+          "A) พืชจะเจริญเติบโตรวดเร็วผิดปกติ",
+          "B) ธาตุอาหารพืชตกตะกอนละลายยาก และรากพืชดูดซึมอาหารไม่ได้",
+          "C) ทำให้ดินร่วนซุยระบายน้ำดีเยี่ยม",
+          "D) เพิ่มจุลินทรีย์ดีในดินเป็น 2 เท่า"
+        ],
+        correct: 1,
+        exp: "ในดินกรดจัด ธาตุอาหารสำคัญเช่นฟอสฟอรัสจะทำปฏิกิริยาจนพืชดูดไม่ได้ และอาจเกิดพิษจากอะลูมิเนียมทำลายรากพืช"
+      },
+      {
+        q: "วัสดุธรรมชาติชนิดใดเหมาะสมที่สุดในการนำมาโรยเพื่อปรับปรุงดินกรดให้กลับมาสมดุล (pH 6.0 - 7.0)?",
+        options: [
+          "A) ผงกำมะถัน (Sulfur)",
+          "B) ปูนขาว (Lime) หรือ โดโลไมท์ (Dolomite)",
+          "C) น้ำส้มสายชูหรือกรดอินทรีย์",
+          "D) เกลือแกงบดละเอียด"
+        ],
+        correct: 1,
+        exp: "ปูนขาวและโดโลไมท์มีคุณสมบัติเป็นด่าง ช่วยยกระดับค่า pH และเติมธาตุแคลเซียม-แมกนีเซียมที่มีประโยชน์ให้ดิน"
+      },
+      {
+        q: "ขั้นตอนแรกสุดที่ถูกต้องตามหลักวิชาการในการเตรียมแปลงดินก่อนปลูกพืชคืออะไร?",
+        options: [
+          "A) กำจัดวัชพืชและไถดะพลิกหน้าดินตากแดด 7-14 วัน",
+          "B) หว่านเมล็ดพันธุ์ทันที",
+          "C) รดน้ำให้ท่วมแปลงจนดินแฉะ",
+          "D) ฉีดสารเคมีฆ่าแมลงทุกวัน"
+        ],
+        correct: 0,
+        exp: "การไถดะพลิกหน้าดินตากแดดช่วยให้ความร้อนจากแสงแดดฆ่าเชื้อรา แบคทีเรียก่อโรค และไข่แมลงศัตรูพืชที่ฝังตัวในดิน"
+      },
+      {
+        q: "เหตุใดหลังจากไถดะตากดินแล้ว จึงต้องทำการ 'ไถแปร' และใส่ปุ๋ยคอก/ปุ๋ยหมัก?",
+        options: [
+          "A) เพื่อย่อยก้อนดินใหญ่ให้โปร่งร่วน และเพิ่มฮิวมัสกักเก็บน้ำกับอากาศ",
+          "B) เพื่อบดดินให้แน่นแข็งจนน้ำซึมไม่ได้",
+          "C) เพื่อทำให้ดินกลายเป็นกรดรุนแรง",
+          "D) เพื่อป้องกันไม่ให้มีอากาศถ่ายเทในดิน"
+        ],
+        correct: 0,
+        exp: "การไถแปรช่วยย่อยก้อนดิน และปุ๋ยอินทรีย์ช่วยสร้างอนุภาคดินร่วนซุย (Soil Structure) มีช่องว่างให้อากาศและรากชอนไช"
+      },
+      {
+        q: "ธาตุอาหารหลักของพืช (N - P - K) ทำหน้าที่บำรุงส่วนใดของพืชตามลำดับ?",
+        options: [
+          "A) N บำรุงใบและลำต้น, P บำรุงรากและดอก, K บำรุงผล หัว และความแข็งแรง",
+          "B) N บำรุงดอก, P บำรุงใบ, K บำรุงราก",
+          "C) N บำรุงผล, P บำรุงหนาม, K บำรุงใบ",
+          "D) N P K ทุกตัวบำรุงเฉพาะรากเท่านั้น"
+        ],
+        correct: 0,
+        exp: "ท่องจำง่ายๆ: N (ไนโตรเจน) เร่งใบเขียวลำต้น, P (ฟอสฟอรัส) เร่งรากแข็งแรงและดอก, K (โพแทสเซียม) เร่งผล แป้ง และภูมิต้านทาน"
+      }
+    ]
 };
 
 
@@ -932,19 +910,7 @@ class TerraQuestSuperEngine {
     this.quizInterval = null;
     this.totalScore = 0;
     this.bossHp = 100;
-    this.minigamesCompleted = {
-      nursery: false,
-      soil: false,
-      sort: false,
-      herbal: false,
-      pest: false,
-      jigsaw: false,
-      speed: false,
-      season: false,
-      terraces: false,
-      seedvault: false,
-      npk: false
-    };
+    this.minigamesCompleted = { nursery: false, soil: false, sort: false };
 
     this.particles = [];
     this.selectedCrops = [];
@@ -959,20 +925,6 @@ class TerraQuestSuperEngine {
     // Crop Planting Grid state
     this.cropSlots = [null, null];
     this.selectedCropItem = null;
-
-    // Herbal Bio-Extract Lab state (Zone 4)
-    this.herbalSelectedHerb = null;
-    this.herbalAssignments = { caterpillar: null, mosquito: null, fungus: null, nematode: null };
-
-    // Rice Terraces Dam state (Zone 9)
-    this.terracesValves = { 1: "fast", 2: "overflow", 3: "dry" };
-
-    // Cryogenic Seed Vault state (Zone 10)
-    this.seedVaultTemp = -5;
-    this.seedVaultMoist = 12;
-
-    // NPK Golden Harvest Blender state (Zone 11)
-    this.npkValues = { n: 1, p: 1, k: 1 };
 
     // Knowledge Jigsaw state
     this.jigsawSelectedProblem = null;
@@ -1101,25 +1053,9 @@ class TerraQuestSuperEngine {
     this.totalScore = 0;
     this.inventory = [];
     this.roomsDiscovered = { holy_chapel: true };
-    this.minigamesCompleted = {
-      nursery: false,
-      soil: false,
-      sort: false,
-      herbal: false,
-      pest: false,
-      jigsaw: false,
-      speed: false,
-      season: false,
-      terraces: false,
-      seedvault: false,
-      npk: false
-    };
-    this.herbalSelectedHerb = null;
-    this.herbalAssignments = { caterpillar: null, mosquito: null, fungus: null, nematode: null };
-    this.terracesValves = { 1: "fast", 2: "overflow", 3: "dry" };
-    this.seedVaultTemp = -5;
-    this.seedVaultMoist = 12;
-    this.npkValues = { n: 1, p: 1, k: 1 };
+    this.currentRoomId = "holy_chapel";
+    this.minigamesCompleted = { nursery: false, soil: false, sort: false };
+    this.bossHp = 800;
     this.npcAppearances = {};
     this.player.name = "ผู้กล้า";
     this.player.gender = "farmer_m";
@@ -1368,7 +1304,7 @@ class TerraQuestSuperEngine {
         spells: ["มนต์เร่งย่อยอินทรียวัตถุ"],
         items: ["ปุ๋ยหมักใบไม้แห้งเข้มข้น"],
         boss: "-",
-        connections: ["abandoned_village", "rodenia_chapel"],
+        connections: ["abandoned_village", "white_cathedral"],
         entities: [
           {
             type: "portal", id: "portal_to_village", targetRoom: "abandoned_village", spawnX: 2350,
@@ -1381,7 +1317,7 @@ class TerraQuestSuperEngine {
               "ยินดีต้อนรับสู่แปลงวิจัยเตรียมแปลงปลูก... ขั้นตอนที่สำคัญที่สุดก่อนจะลงเมล็ดหรือต้นกล้า!",
               "การเตรียมดินที่ดี ต้องเริ่มจากการกำจัดวัชพืช ไถดะตากดิน 7-14 วันเพื่อฆ่าเชื้อโรคและไข่แมลงศัตรูในดิน",
               "จากนั้นจึงไถแปรย่อยก้อนดินให้ละเอียด ใส่ปุ๋ยคอกปรับโครงสร้างดิน และยกร่องเพื่อให้น้ำระบายดี รากไม่เน่า!",
-              "ข้างหน้านี้มีแบบจำลองขั้นตอนเตรียมแปลงอยู่ จงเรียงลำดับให้ถูกต้องเพื่อเปิดทางไปสู่เขตพฤกษศาสตร์สมุนไพร!"
+              "ข้างหน้านี้มีแบบจำลองขั้นตอนเตรียมแปลงอยู่ จงเรียงลำดับให้ถูกต้องเพื่อเปิดประตูสู่มหาวิหารพิทักษ์พืชพันธุ์!"
             ]
           },
           {
@@ -1393,10 +1329,11 @@ class TerraQuestSuperEngine {
             name: "📋 แท่นจัดเรียงขั้นตอนเตรียมแปลงดิน", icon: "📋"
           },
           {
-            type: "portal", id: "portal_to_rodenia", targetRoom: "rodenia_chapel", spawnX: 80,
-            x: 2450, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตพฤกษศาสตร์สมุนไพร", icon: "🚪",
+            type: "portal", id: "portal_to_cathedral", targetRoom: "white_cathedral", spawnX: 80,
+            x: 2450, y: 350, width: 50, height: 90, name: "🚪 สู่ มหาวิหารพิทักษ์พืชพันธุ์ (ห้องบอส)", icon: "🚪",
             reqMinigame: "sort"
           }
+
         ]
       },
 
@@ -1412,44 +1349,39 @@ class TerraQuestSuperEngine {
         color: "#9b5de5",
         width: 2200,
         mapX: 330, mapY: 130,
-        altars: ["แท่นสกัดสมุนไพรเวหา"],
+        altars: ["แท่นสกัดสมุนไพรเวหา", "ห้องอบแห้งใบสะเดาลอยฟ้า"],
         npcs: ["Sister Beatrice (นักพฤกษศาสตร์สมุนไพร)"],
-        poi: ["แปลงสะเดา ตะไคร้หอม และดาวเรืองลอยฟ้า", "หม้อต้มสารสกัดชีวภาพ"],
+        poi: ["แปลงลาเวนเดอร์และสะเดาลอยฟ้า", "หม้อต้มสารสกัดชีวภาพ"],
         equipment: ["มีดเก็บสมุนไพรประณีต", "คทาสารสกัดสะเดา"],
         spells: ["ไอระเหยสะเดาไล่แมลง"],
-        items: ["สารสกัดสะเดาเข้มข้น"],
-        boss: "-",
-        connections: ["drawbridge", "ghost_town", "buried_church"],
+        items: ["สารสกัดสะเดาเข้มข้น", "ผลึกธาตุอาหาร x1"],
+        boss: "ปีศาจเชื้อราและเพลี้ยไฟ (Mold & Blight Lord)",
+        connections: ["drawbridge", "buried_church"],
         entities: [
           {
-            type: "portal", id: "portal_to_drawbridge", targetRoom: "drawbridge", spawnX: 2350,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ แปลงวิจัยเตรียมแปลงปลูก", icon: "🚪"
+            type: "portal", id: "portal_to_drawbridge", targetRoom: "drawbridge", spawnX: 1700,
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตสวนผลไม้", icon: "🚪"
           },
           {
-            type: "npc", id: "sister_beatrice", x: 550, y: 392, width: 32, height: 48,
+            type: "npc", id: "sister_beatrice", x: 600, y: 392, width: 32, height: 48,
             name: "Sister Beatrice", icon: "🧕", gender: "farmer_f",
             dialogue: [
-              "ยินดีต้อนรับสู่เขตพฤกษศาสตร์สมุนไพรลอยฟ้า... ดินแดนแห่งพืชพรรณอารักขาตามธรรมชาติ!",
-              "เราใช้สะเดากำจัดหนอน ตะไคร้หอมไล่แมลงบิน ขมิ้นชันต้านเชื้อรา และดาวเรืองปราบไส้เดือนฝอย",
-              "จงใช้แท่นสกัดสมุนไพรข้างหน้านี้ จับคู่สมุนไพรแก้ไขปัญหาศัตรูพืชให้ครบเพื่อปลดล็อคประตูสู่นครเกษตรอัจฉริยะ!"
+              "เกาะพฤกษศาสตร์ลอยฟ้าแห่งนี้ รวบรวมพืชสมุนไพรไล่แมลงและพืชบำรุงดินกว่าร้อยชนิดท่ามกลางสายหมอก!",
+              "การเตรียมดินก่อนปลูกพืชจำเป็นต้องทำตามลำดับขั้นตอนที่ถูกต้อง เพื่อตัดวงจรโรคพืช",
+              "ลองทดสอบจัดเรียงขั้นตอนการเตรียมดินที่แท่นข้างหน้านี้ดูสิ!"
             ]
           },
           {
-            type: "altar", id: "altar_rodenia", x: 1000, y: 380, width: 44, height: 60,
+            type: "altar", id: "altar_rodenia", x: 1100, y: 380, width: 44, height: 60,
             name: "แท่นสกัดสมุนไพรเวหา", icon: "🌿"
           },
           {
-            type: "minigame_herbal", id: "herbal_patch", x: 1350, y: 400, width: 48, height: 40,
-            name: "🌿 แท่นสกัดสมุนไพรชีวภาพ", icon: "🌿"
-          },
-          {
-            type: "item", id: "item_crimson_ring", x: 1650, y: 405, width: 28, height: 28,
+            type: "item", id: "item_crimson_ring", x: 1500, y: 405, width: 28, height: 28,
             name: "แหวนพฤกษารักษา", icon: "💍", desc: "แหวนสมุนไพร เพิ่มอัตราการฟื้นฟูพลังชีวิต"
           },
           {
-            type: "portal", id: "portal_to_ghost", targetRoom: "ghost_town", spawnX: 80,
-            x: 2050, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตนครเกษตรอัจฉริยะ", icon: "🚪",
-            reqMinigame: "herbal"
+            type: "portal", id: "portal_to_buried", targetRoom: "buried_church", spawnX: 100,
+            x: 2050, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตรากพืชใต้พิภพ", icon: "🚪"
           }
         ]
       },
@@ -1467,43 +1399,42 @@ class TerraQuestSuperEngine {
         width: 2800,
         mapX: 330, mapY: 390,
         altars: ["แท่นจุลินทรีย์ใต้เกาะ", "อุโมงค์รากพืชห้อยเวหา"],
-        npcs: ["นักจุลชีววิทยาการเกษตร (Captured Witch)"],
+        npcs: ["นักจุลชีววิทยาการเกษตร (Captured Witch)", "นักวิจัยรากพืช"],
         poi: ["รังตัวห้ำแมลงเต่าทอง", "ชั้นหินรากพืชห้อยกลางเวหา"],
         equipment: ["พลั่วขุดรากพืช", "โคมไฟเรืองแสงสปอร์"],
         spells: ["เครือข่ายรากพืชไมคอร์ไรซา", "เกราะป้องกันชีววิธี"],
         items: ["2 x ผลึกธาตุอาหาร", "กุญแจห้องวิจัยชีวภาพ"],
-        boss: "-",
-        connections: ["abandoned_village", "rodenia_chapel", "ghost_town", "sewers"],
+        boss: "พญาหนอนศัตรูพืชยักษ์ (Giant Pest Devourer)",
+        connections: ["drawbridge", "rodenia_chapel", "ghost_town", "sewers"],
         entities: [
           {
-            type: "portal", id: "portal_to_village", targetRoom: "abandoned_village", spawnX: 2350,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตทุ่งกสิกรรมฟื้นฟูดิน", icon: "🚪"
+            type: "portal", id: "portal_to_rodenia", targetRoom: "rodenia_chapel", spawnX: 1950,
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตสมุนไพร", icon: "🚪"
           },
           {
-            type: "npc", id: "captured_witch", x: 550, y: 392, width: 32, height: 48,
+            type: "npc", id: "captured_witch", x: 600, y: 392, width: 32, height: 48,
             name: "นักจุลชีววิทยา", icon: "🔬", gender: "farmer_f",
             dialogue: [
-              "ใต้ฐานของเกาะลอยฟ้าแห่งนี้ คือโลกของระบบราก จุลินทรีย์ดิน และราไมคอร์ไรซาที่ช่วยดูดซับฟอสฟอรัส!",
-              "จงช่วยปกป้องแปลงทดลองข้างหน้านี้ด้วยชีววิธีธรรมชาติ (ใช้แมลงเต่าทองกินเพลี้ยอ่อนและน้ำหมักสะเดา)",
-              "เมื่อสำเร็จ ทางด้านขวาจะเปิดออกสู่เขตบึงน้ำอควาโปนิกส์!"
+              "ใต้ฐานของเกาะลอยฟ้าแห่งนี้ คือโลกของระบบรากที่ยึดเกาะกับก้อนหินลอยฟ้าและจุลินทรีย์นับล้าน!",
+              "เราต้องปกป้องแปลงมะเขือเทศลอยฟ้าข้างหน้านี้ด้วยชีววิธีธรรมชาติ เช่น ปล่อยแมลงเต่าทองและฉีดน้ำหมักสะเดา",
+              "ทางบนจะขึ้นสู่ 'เกาะนครเกษตรอัจฉริยะ' ส่วนทางล่างจะลงสู่ 'เกาะบึงน้ำอควาโปนิกส์'!"
             ]
           },
           {
-            type: "altar", id: "altar_buried", x: 1100, y: 380, width: 44, height: 60,
+            type: "altar", id: "altar_buried", x: 1200, y: 380, width: 44, height: 60,
             name: "แท่นจุลินทรีย์ใต้เกาะ", icon: "🍄"
           },
           {
-            type: "minigame_pest", id: "pest_patch", x: 1550, y: 400, width: 48, height: 40,
+            type: "minigame_pest", id: "pest_patch", x: 1600, y: 400, width: 48, height: 40,
             name: "🐛 แปลงทดสอบชีววิธีปราบศัตรูพืช", icon: "🐛"
           },
           {
             type: "portal", id: "portal_to_ghost_town", targetRoom: "ghost_town", spawnX: 80,
-            x: 2150, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เขตเกษตรอัจฉริยะ", icon: "🚪"
+            x: 2000, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เขตเกษตรอัจฉริยะ", icon: "🚪"
           },
           {
             type: "portal", id: "portal_to_sewers", targetRoom: "sewers", spawnX: 80,
-            x: 2650, y: 350, width: 50, height: 90, name: "🚪 ลงสู่ เขตบึงน้ำอควาโปนิกส์", icon: "🚪",
-            reqMinigame: "pest"
+            x: 2650, y: 350, width: 50, height: 90, name: "🚪 ลงสู่ เขตบึงน้ำอควาโปนิกส์", icon: "🚪"
           }
         ]
       },
@@ -1521,25 +1452,25 @@ class TerraQuestSuperEngine {
         width: 2500,
         mapX: 470, mapY: 130,
         altars: ["แท่นโซลาร์เซลล์เวหา", "หอควบคุมโดรนเกษตรอัจฉริยะ"],
-        npcs: ["พ่อค้าเทคโนโลยีเกษตร (Illusive Merchant)"],
+        npcs: ["พ่อค้าเทคโนโลยีเกษตร (Illusive Merchant)", "วิศวกรโดรนการเกษตร"],
         poi: ["หอคอยปลูกพืชแนวตั้งลอยฟ้า", "สถานีตรวจวัดสภาพอากาศเวหา"],
         equipment: ["แท็บเล็ตเซนเซอร์ IoT", "มีดเลเซอร์ตัดแต่งกิ่ง"],
         spells: ["โดรนพ่นสารชีวภาพ", "เซนเซอร์ตรวจจับความชื้น"],
-        items: ["ชิปประมวลผลเกษตรแม่นยำ"],
-        boss: "-",
-        connections: ["rodenia_chapel", "buried_church", "pilgrimage"],
+        items: ["ชิปประมวลผลเกษตรแม่นยำ", "ผลึกธาตุอาหาร x1"],
+        boss: "ไวรัสคอมพิวเตอร์ควบคุมระบบน้ำ (Corrupted AI Irrigator)",
+        connections: ["buried_church", "pilgrimage"],
         entities: [
           {
-            type: "portal", id: "portal_to_rodenia", targetRoom: "rodenia_chapel", spawnX: 1950,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตพฤกษาสมุนไพร", icon: "🚪"
+            type: "portal", id: "portal_to_buried", targetRoom: "buried_church", spawnX: 1900,
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตรากพืช", icon: "🚪"
           },
           {
-            type: "npc", id: "merchant", x: 600, y: 392, width: 32, height: 48,
+            type: "npc", id: "merchant", x: 700, y: 392, width: 32, height: 48,
             name: "พ่อค้า AgriTech", icon: "🤖",
             dialogue: [
-              "ยินดีต้อนรับสู่นครเกษตรอัจฉริยะลอยฟ้า! เราใช้พลังงานแสงอาทิตย์และเซนเซอร์ IoT คุมแปลงพืชแนวตั้ง",
-              "จงแวะไปที่สถานีวิเคราะห์เกษตรอัจฉริยะข้างหน้านี้ จับคู่เทคโนโลยีแก้ปัญหาให้ถูกต้อง",
-              "เมื่อวิเคราะห์สำเร็จ ประตูสู่เขตนาขั้นบันไดเสียดฟ้าจะเปิดออก!"
+              "ยินดีต้อนรับสู่นครเกษตรอัจฉริยะลอยฟ้า! เราใช้พลังงานแสงอาทิตย์บนยอดเมฆและโดรนดูแลพืชแนวตั้ง",
+              "หากเจ้าต้องการทดสอบความสามารถในการวิเคราะห์ปัญหา ลองเล่นมินิเกมจับคู่ปัญหาเกษตรดูสิ!",
+              "ทางขวาจะนำเจ้าขึ้นสู่ 'เกาะนาขั้นบันไดเสียดฟ้า' อันตระการตา!"
             ]
           },
           {
@@ -1547,17 +1478,12 @@ class TerraQuestSuperEngine {
             name: "แท่นโซลาร์เซลล์เวหา", icon: "☀️"
           },
           {
-            type: "minigame_jigsaw", id: "jigsaw_patch", x: 1500, y: 400, width: 48, height: 40,
-            name: "🤖 สถานีวิเคราะห์เกษตรอัจฉริยะ", icon: "🤖"
-          },
-          {
-            type: "item", id: "item_assassin", x: 1850, y: 405, width: 28, height: 28,
+            type: "item", id: "item_assassin", x: 1800, y: 405, width: 28, height: 28,
             name: "มีดเซนเซอร์ความแม่นยำ", icon: "🔪", desc: "มีดเก็บเกี่ยวอัจฉริยะ ตรวจวัดความหวานของผลไม้"
           },
           {
             type: "portal", id: "portal_to_pilgrimage", targetRoom: "pilgrimage", spawnX: 80,
-            x: 2350, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตนาขั้นบันไดเสียดฟ้า", icon: "🚪",
-            reqMinigame: "jigsaw"
+            x: 2350, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตนาขั้นบันไดเสียดฟ้า", icon: "🚪"
           }
         ]
       },
@@ -1579,39 +1505,34 @@ class TerraQuestSuperEngine {
         poi: ["แปลงผักน้ำอควาโปนิกส์ลอยฟ้า", "บ่อเลี้ยงปลานิลชีวภาพ"],
         equipment: ["ฉมวกเก็บสาหร่าย", "เกราะใยพืชน้ำ"],
         spells: ["คลื่นน้ำบริสุทธิ์", "ละอองฟองออกซิเจน"],
-        items: ["ปุ๋ยชีวภาพมูลปลา"],
-        boss: "-",
+        items: ["ปุ๋ยชีวภาพมูลปลา", "กุญแจวาล์วน้ำโบราณ"],
+        boss: "พญาปลากลายพันธุ์ปนเปื้อน (Toxic Fishfiend)",
         connections: ["buried_church", "canyon", "pilgrimage"],
         entities: [
           {
             type: "portal", id: "portal_to_buried", targetRoom: "buried_church", spawnX: 2550,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตรากพืชใต้พิภพ", icon: "🚪"
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตรากพืช", icon: "🚪"
           },
           {
-            type: "npc", id: "ratkin", x: 600, y: 392, width: 32, height: 48,
+            type: "npc", id: "ratkin", x: 650, y: 392, width: 32, height: 48,
             name: "ผู้พิทักษ์น้ำเวหา", icon: "🐟",
             dialogue: [
               "ที่นี่คือเกาะบึงน้ำลอยฟ้าอควาโปนิกส์ เลี้ยงปลาควบคู่กับการปลูกผักกลางเวหา โดยใช้น้ำวนเวียนไม่ทิ้งสูญเปล่า!",
-              "แบคทีเรียจะเปลี่ยนแอมโมเนียจากมูลปลาเป็นไนเตรตให้พืชดูดไปใช้ น้ำสะอาดจะไหลวนกลับมาหาปลา",
-              "ลองทดสอบความรู้เกษตรแบบรวดเร็วที่ซุ้ม Speed Blitz ข้างหน้านี้ เพื่อเปิดทางสู่เขตสะวันนาวนเกษตร!"
+              "ลองทดสอบความรู้เกษตรแบบเร็วทันใจที่ซุ้ม Speed Blitz ข้างหน้านี้สิ!",
+              "ทางขวาบนทะลุขึ้นไปเกาะนาขั้นบันไดเสียดฟ้า และทางล่างจะพาเจ้าลงสู่เกาะสะวันนาลอยฟ้า!"
             ]
           },
           {
-            type: "altar", id: "altar_sewers", x: 1100, y: 380, width: 44, height: 60,
+            type: "altar", id: "altar_sewers", x: 1250, y: 380, width: 44, height: 60,
             name: "แท่นบึงบัวลอยฟ้าบำบัดน้ำ", icon: "🪷"
           },
           {
-            type: "minigame_speed", id: "speed_patch", x: 1500, y: 400, width: 48, height: 40,
-            name: "⚡ ซุ้มทดสอบอควาโปนิกส์ Blitz", icon: "⚡"
-          },
-          {
             type: "portal", id: "portal_to_canyon", targetRoom: "canyon", spawnX: 80,
-            x: 2000, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตสะวันนาวนเกษตร", icon: "🚪",
-            reqMinigame: "speed"
+            x: 1850, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตสะวันนาลอยฟ้า", icon: "🚪"
           },
           {
             type: "portal", id: "portal_to_pilgrimage", targetRoom: "pilgrimage", spawnX: 100,
-            x: 2400, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เขตนาขั้นบันได", icon: "🚪"
+            x: 2350, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เขตนาขั้นบันได", icon: "🚪"
           }
         ]
       },
@@ -1633,39 +1554,33 @@ class TerraQuestSuperEngine {
         poi: ["ดงกระบองเพชรกินผลลอยฟ้า", "แปลงทดลองแก้วมังกร"],
         equipment: ["เคียวด้ามไม้เบาบับ", "แหวนกักเก็บน้ำในดิน"],
         spells: ["คลื่นรากหญ้าแฝกยึดดิน"],
-        items: ["เมล็ดพันธุ์พืชทนแล้งยอดเยี่ยม"],
-        boss: "-",
+        items: ["เมล็ดพันธุ์พืชทนแล้งยอดเยี่ยม", "ผลึกธาตุอาหาร x4"],
+        boss: "โกเลมศิลาดินดานแตกระแหง (Cracked Earth Golem)",
         connections: ["sewers", "laboratory", "pilgrimage"],
         entities: [
           {
-            type: "portal", id: "portal_to_sewers", targetRoom: "sewers", spawnX: 1900,
+            type: "portal", id: "portal_to_sewers", targetRoom: "sewers", spawnX: 1750,
             x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตบึงน้ำอควาโปนิกส์", icon: "🚪"
           },
           {
-            type: "npc", id: "hermit", x: 550, y: 392, width: 32, height: 48,
+            type: "npc", id: "hermit", x: 600, y: 392, width: 32, height: 48,
             name: "ปราชญ์วนเกษตร", icon: "🧘‍♂️",
             dialogue: [
               "บนเกาะสะวันนาลอยฟ้าที่แห้งแล้ง วนเกษตร (Agroforestry) คือคำตอบ! ปลูกไม้ยืนต้นให้ร่มเงาควบคู่กับพืชทนแล้ง",
-              "หญ้าแฝกช่วยยึดขอบหน้าผาไม่ให้พังทลาย และรากพืชทนแล้งอย่างข้าวโพดและมันสำปะหลังจะช่วยพยุงระบบอาหาร",
-              "จงจัดสรรพืชทนแล้งลงแปลงข้างหน้านี้ เพื่อเปิดประตูสู่คลังเมล็ดพันธุ์เวหา!"
+              "หญ้าแฝกช่วยยึดขอบหน้าผาของเกาะลอยฟ้าไม่ให้พังทลาย และรากไม้ใหญ่ช่วยดึงความชื้นจากเมฆขึ้นมาสู่พืชผิวดิน!"
             ]
           },
           {
-            type: "altar", id: "altar_canyon", x: 1050, y: 380, width: 44, height: 60,
+            type: "altar", id: "altar_canyon", x: 1200, y: 380, width: 44, height: 60,
             name: "แท่นใต้ต้นเบาบับเวหา", icon: "🌳"
           },
           {
-            type: "minigame_season", id: "season_patch", x: 1450, y: 400, width: 48, height: 40,
-            name: "🌾 แปลงจัดสรรพืชทนแล้งวนเกษตร", icon: "🌾"
-          },
-          {
-            type: "item", id: "item_lightning_edge", x: 1800, y: 405, width: 28, height: 28,
+            type: "item", id: "item_lightning_edge", x: 1650, y: 405, width: 28, height: 28,
             name: "เคียวตัดแต่งกิ่งวนเกษตร", icon: "🌿", desc: "เคียวตัดแต่งกิ่งไม้ให้แสงส่องถึงแปลงพืชชั้นล่าง"
           },
           {
             type: "portal", id: "portal_to_lab", targetRoom: "laboratory", spawnX: 80,
-            x: 2250, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตคลังเมล็ดพันธุ์เวหา", icon: "🚪",
-            reqMinigame: "season"
+            x: 2250, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตคลังเมล็ดพันธุ์เวหา", icon: "🚪"
           }
         ]
       },
@@ -1688,38 +1603,36 @@ class TerraQuestSuperEngine {
         equipment: ["คทาฟางข้าวแห่งความอุดม", "เคียวทองคำ"],
         spells: ["พายุรวงข้าวทองคำ", "พรแห่งพระแม่โพสพ"],
         items: ["2 x ผลึกธาตุอาหาร", "เมล็ดพันธุ์ข้าวหอมมะลิบริสุทธิ์"],
-        boss: "-",
-        connections: ["ghost_town", "sewers", "white_cathedral", "laboratory"],
+        boss: "ปีศาจตั๊กแตนกลืนกินรวงข้าว (Locust Swarm King)",
+        connections: ["ghost_town", "sewers", "white_cathedral", "canyon", "laboratory", "lunar_gallery"],
         entities: [
           {
             type: "portal", id: "portal_to_ghost", targetRoom: "ghost_town", spawnX: 2250,
             x: 40, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตเกษตรอัจฉริยะ", icon: "🚪"
           },
           {
-            type: "npc", id: "paladin", x: 600, y: 392, width: 32, height: 48,
+            type: "npc", id: "paladin", x: 700, y: 392, width: 32, height: 48,
             name: "อัศวินชาวนาเวหา", icon: "🌾",
             dialogue: [
-              "เกาะนาขั้นบันไดเสียดฟ้านี้ใช้ภูมิปัญญาทำคันนาและฝายชะลอน้ำ ดักตะกอนดินและลดการชะล้างพังทลายของหน้าดิน!",
-              "หากปล่อยน้ำไหลเร็วเกินไป หน้าดินจะถูกชะล้างและคันนาจะพังถล่ม",
-              "จงช่วยควบคุมวาล์วผันน้ำและฝายชะลอน้ำที่แท่นข้างหน้านี้ เพื่อเปิดทางขึ้นสู่เขตทุ่งรวงทองแห่งสวรรค์!"
+              "เกาะนาขั้นบันไดเสียดฟ้านี้ใช้ภูมิปัญญาดักจับละอองเมฆมาหล่อเลี้ยงต้นข้าวบนความสูงเสียดฟ้า!",
+              "สะพานเวหาเบื้องหน้าเชื่อมต่อไปยัง 2 เกาะสำคัญ: เกาะทุ่งรวงทองด้านบน, และเกาะคลังเมล็ดพันธุ์โลกด้านล่าง!"
             ]
           },
           {
-            type: "altar", id: "altar_pilgrim", x: 1100, y: 380, width: 44, height: 60,
+            type: "altar", id: "altar_pilgrim", x: 1300, y: 380, width: 44, height: 60,
             name: "แท่นบูชาพระแม่โพสพเวหา", icon: "🌾"
           },
           {
-            type: "minigame_terraces", id: "terraces_patch", x: 1500, y: 400, width: 48, height: 40,
-            name: "🌊 ระบบฝายชะลอน้ำและนาขั้นบันได", icon: "🌊"
-          },
-          {
             type: "portal", id: "portal_to_cathedral", targetRoom: "white_cathedral", spawnX: 80,
-            x: 2150, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เขตทุ่งรวงทองแห่งสวรรค์", icon: "🚪",
-            reqMinigame: "terraces"
+            x: 1900, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เขตทุ่งรวงทองแห่งสวรรค์", icon: "🚪"
           },
           {
             type: "portal", id: "portal_to_lab", targetRoom: "laboratory", spawnX: 80,
-            x: 2750, y: 350, width: 50, height: 90, name: "🚪 ลงสู่ เขตคลังเมล็ดพันธุ์เวหา", icon: "🚪"
+            x: 2400, y: 350, width: 50, height: 90, name: "🚪 ลงสู่ เขตคลังเมล็ดพันธุ์เวหา", icon: "🚪"
+          },
+          {
+            type: "portal", id: "portal_to_lunar", targetRoom: "lunar_gallery", spawnX: 80,
+            x: 2850, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตพฤกษาจันทราลอยฟ้า", icon: "🚪"
           }
         ]
       },
@@ -1741,39 +1654,33 @@ class TerraQuestSuperEngine {
         poi: ["ตู้แช่แข็งเมล็ดพันธุ์ไครโอเจนิก", "แปลงขยายพันธุ์ปลอดโรค"],
         equipment: ["เข็มฉีดสารอาหารพืช", "กล้องจุลทรรศน์ตรวจสอบสปอร์"],
         spells: ["รังสีเร่งการงอกของเมล็ด", "เกราะป้องกันโรคพืช"],
-        items: ["กุญแจคลังเมล็ดพันธุ์ทองคำ"],
-        boss: "-",
-        connections: ["canyon", "pilgrimage", "white_cathedral"],
+        items: ["กุญแจคลังเมล็ดพันธุ์ทองคำ", "ผลึกธาตุอาหาร x2"],
+        boss: "สิ่งมีชีวิตดัดแปลงพันธุกรรมหลุดรอด (Mutated Crop Chimera)",
+        connections: ["canyon", "pilgrimage"],
         entities: [
           {
             type: "portal", id: "portal_to_canyon", targetRoom: "canyon", spawnX: 2150,
             x: 40, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตสะวันนาลอยฟ้า", icon: "🚪"
           },
           {
-            type: "npc", id: "alchemist", x: 550, y: 392, width: 32, height: 48,
+            type: "npc", id: "alchemist", x: 650, y: 392, width: 32, height: 48,
             name: "ดร. นักปรับปรุงพันธุ์พืช", icon: "🧬",
             dialogue: [
-              "เกาะคลังเมล็ดพันธุ์เวหาแห่งนี้เก็บรวบรวมสายพันธุ์พืชทนทานจากทั่วโลก เพื่อความมั่นคงทางอาหารของมนุษยชาติ!",
-              "เมล็ดพันธุ์ในคลังต้องถูกลดความชื้นเหลือ 4-6% และเก็บในอุณหภูมิติดลบ -18°C จึงจะคงความมีชีวิตได้นับร้อยปี",
-              "จงช่วยปรับตั้งค่าอุณหภูมิและความชื้นในตู้แช่ไครโอเจนิกข้างหน้านี้ เพื่อเปิดทางสู่เขตทุ่งรวงทอง!"
+              "เกาะคลังเมล็ดพันธุ์เวหาแห่งนี้เก็บรวบรวมสายพันธุ์พืชทนทานสภาพอากาศสุดขั้วจากทั่วโลกไว้บนชั้นบรรยากาศที่เย็นบริสุทธิ์!",
+              "ความหลากหลายทางพันธุกรรมคือความมั่นคงทางอาหารของมนุษยชาติในอนาคต!"
             ]
           },
           {
-            type: "altar", id: "altar_lab", x: 1050, y: 380, width: 44, height: 60,
+            type: "altar", id: "altar_lab", x: 1200, y: 380, width: 44, height: 60,
             name: "แท่นอนุรักษ์พันธุกรรมพืชเวหา", icon: "🧪"
           },
           {
-            type: "minigame_seedvault", id: "seedvault_patch", x: 1450, y: 400, width: 48, height: 40,
-            name: "🧬 เครื่องปรับสภาวะคลังเมล็ดพันธุ์", icon: "🧬"
-          },
-          {
-            type: "item", id: "item_black_key", x: 1800, y: 405, width: 28, height: 28,
+            type: "item", id: "item_black_key", x: 1700, y: 405, width: 28, height: 28,
             name: "กุญแจคลังเมล็ดพันธุ์ทองคำ", icon: "🗝️", desc: "กุญแจเปิดสู่เกาะทุ่งรวงทองแห่งสวรรค์"
           },
           {
-            type: "portal", id: "portal_to_cathedral", targetRoom: "white_cathedral", spawnX: 80,
-            x: 2250, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตทุ่งรวงทองแห่งสวรรค์", icon: "🚪",
-            reqMinigame: "seedvault"
+            type: "portal", id: "portal_to_pilgrimage", targetRoom: "pilgrimage", spawnX: 2300,
+            x: 2250, y: 350, width: 50, height: 90, name: "🚪 ขึ้นสู่ เขตนาขั้นบันได", icon: "🚪"
           }
         ]
       },
@@ -1795,35 +1702,34 @@ class TerraQuestSuperEngine {
         poi: ["ทุ่งข้าวสาลีสีทองลอยฟ้ากว้างใหญ่", "ลานเฉลิมฉลองเทศกาลเก็บเกี่ยวเวหา"],
         equipment: ["แหวนสติปัญญาเกษตรกร", "เคียวทองคำแห่งแสงสว่าง"],
         spells: ["ลำแสงแดดอบอุ่นบำรุงรวงข้าว", "ออร่าพืชผลบริสุทธิ์"],
-        items: ["3 x ผลึกธาตุอาหารสูงสุด"],
-        boss: "-",
-        connections: ["pilgrimage", "laboratory", "lunar_gallery"],
+        items: ["3 x ผลึกธาตุอาหารสูงสุด", "กุญแจสวนรุกขชาติจันทรา"],
+        boss: "ร่างจำแลง : ปีศาจปฐพีและพืชพันธุ์แปรปรวน (Disrupted Flora & Soil Demon)",
+        connections: ["drawbridge", "lunar_gallery"],
         entities: [
           {
-            type: "portal", id: "portal_to_pilgrim", targetRoom: "pilgrimage", spawnX: 2050,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตนาขั้นบันได", icon: "🚪"
+            type: "portal", id: "portal_to_drawbridge", targetRoom: "drawbridge", spawnX: 2350,
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ แปลงวิจัยการเตรียมแปลงปลูก", icon: "🚪"
           },
           {
             type: "npc", id: "priestess", x: 600, y: 392, width: 32, height: 48,
-            name: "ผู้พิทักษ์ทุ่งรวงทอง", icon: "👑", gender: "farmer_f",
+            name: "ผู้พิทักษ์วิหารพืชพันธุ์", icon: "👑", gender: "farmer_f",
             dialogue: [
-              "ยินดีต้อนรับสู่เขตทุ่งรวงทองแห่งสวรรค์... ที่นี่ต้องการธาตุอาหารหลัก N-P-K ที่สมดุลเพื่อสร้างเมล็ดข้าวสาลีทองคำ!",
-              "ในระยะออกรวง พืชต้องการโพแทสเซียม (K) สูงที่สุดเพื่อสร้างแป้งและเมล็ดเต่ง ฟอสฟอรัส (P) ปานกลาง และไนโตรเจน (N) พอเหมาะ",
-              "จงปรุงสูตรธาตุอาหาร N-P-K (1-2-3) ที่แท่นข้างหน้านี้ เพื่อเปิดมหาประตูสู่ 'เขตพฤกษาจันทรานิรันดร์' แดนพำนักสุดท้าย!"
+              "ผู้กล้าแห่งพืชพันธุ์... เจ้าได้ผ่านบททดสอบทั้ง 3 ด้านมาแล้ว ทั้งการเพาะกล้า การปรับดินกรด และการเตรียมแปลงปลูก!",
+              "บอส 'ปีศาจปฐพีและพืชพันธุ์แปรปรวน' รอเจ้าอยู่ในประตูบอสข้างหน้านี้!",
+              "จงก้าวเข้าสู่ประตูบอสเพื่อนำความรู้ทั้งหมดมาพิทักษ์เกาะแห่งพืชพันธุ์ให้กลับมาเขียวขจีอีกครั้ง!"
             ]
           },
           {
-            type: "altar", id: "altar_cathedral", x: 1100, y: 380, width: 44, height: 60,
+            type: "altar", id: "altar_cathedral", x: 1200, y: 380, width: 44, height: 60,
             name: "แท่นมหากสิกรรมแห่งแสง", icon: "✨"
           },
           {
-            type: "minigame_npk", id: "npk_patch", x: 1550, y: 400, width: 48, height: 40,
-            name: "👑 แท่นปรุงธาตุอาหารพืชทองคำ N-P-K", icon: "👑"
+            type: "portal", id: "portal_boss", x: 1900, y: 350, width: 60, height: 90,
+            name: "🌀 ประตูศึกประลองปัญญาบอส (Boss Battle)", icon: "🌀"
           },
           {
             type: "portal", id: "portal_to_lunar", targetRoom: "lunar_gallery", spawnX: 80,
-            x: 2650, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตพฤกษาจันทรานิรันดร์", icon: "🚪",
-            reqMinigame: "npk"
+            x: 2650, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตพฤกษาจันทราลอยฟ้า", icon: "🚪"
           }
         ]
       },
@@ -1840,39 +1746,39 @@ class TerraQuestSuperEngine {
         color: "#c77dff",
         width: 2500,
         mapX: 860, mapY: 270,
-        altars: ["แท่นพฤกษาใต้แสงจันทร์ (Save Point)"],
-        npcs: ["The Moon Witch (ผู้เฒ่าเทพีแห่งพฤกษาจันทรา)"],
-        poi: ["ต้นไม้แห่งชีวิตเรืองแสงลอยฟ้า", "ประตูมหาศึกประลองปัญญาบอส"],
+        altars: ["แท่นพฤกษาใต้แสงจันทร์", "ริมสระน้ำประกายดาวลอยฟ้า"],
+        npcs: ["The Moon Witch (เทพีผู้พิทักษ์ความอุดมสมบูรณ์)"],
+        poi: ["ต้นไม้แห่งชีวิตเรืองแสงลอยฟ้า", "ระเบียงพืชพรรณดวงดาว"],
         equipment: ["มงกุฎพฤกษาจันทรา", "แหวนพิทักษ์ธรรมชาติ"],
         spells: ["ประตูสวรรค์แห่งความงอกงาม", "ประกายแสงจันทราบำบัด"],
         items: ["ผลึกพลังธรรมชาติสูงสุด", "กุญแจจันทรานิรันดร์"],
-        boss: "ร่างจำแลง : ปีศาจปฐพีและพืชพันธุ์แปรปรวน (Disrupted Flora & Soil Demon)",
-        connections: ["white_cathedral"],
+        boss: "ร่างอวตารเทวะแห่งความอุดมสมบูรณ์",
+        connections: ["white_cathedral", "pilgrimage"],
         entities: [
           {
-            type: "portal", id: "portal_to_cathedral", targetRoom: "white_cathedral", spawnX: 2550,
-            x: 40, y: 350, width: 50, height: 90, name: "🚪 กลับ เขตทุ่งรวงทอง", icon: "🚪"
+            type: "portal", id: "portal_to_pilgrimage", targetRoom: "pilgrimage", spawnX: 2750,
+            x: 40, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตนาขั้นบันได", icon: "🚪"
           },
           {
-            type: "npc", id: "moon_witch", x: 550, y: 392, width: 32, height: 48,
+            type: "npc", id: "moon_witch", x: 650, y: 392, width: 32, height: 48,
             name: "The Moon Witch", icon: "🌙", gender: "farmer_f",
             dialogue: [
-              "ยินดีต้อนรับสู่ 'เขตพฤกษาจันทรานิรันดร์'... ดินแดนศักดิ์สิทธิ์สูงสุดแห่งเกาะพืชพรรณลอยฟ้า",
-              "ที่แห่งนี้คือแดนพำนักอันสงบสุข ไม่มีมินิเกมใดๆ ให้เจ้าต้องกังวล มีเพียงแท่นศักดิ์สิทธิ์ให้เจ้าได้พักผ่อนและบันทึกความก้าวหน้า",
-              "และเมื่อเจ้าพร้อม... จงก้าวเข้าสู่ 'มหาประตูบอส' เบื้องหน้า เพื่อตอบ 10 คำถามพิสูจน์ภูมิปัญญาทั้งหมดที่เจ้าสั่งสมมา!"
+              "ยินดีต้อนรับสู่เกาะพฤกษาจันทราลอยฟ้า... ดินแดนที่พืชพรรณเติบโตอย่างบริสุทธิ์ใต้แสงจันทร์และดวงดาว",
+              "เจ้าได้เดินทางสำรวจครบทั้ง 12 เกาะลอยฟ้าการเกษตรนี้แล้ว ความรู้ของเจ้าจะเปลี่ยนแปลงอนาคต!",
+              "จงรับพลังแห่งความอุดมสมบูรณ์นี้ไปสร้างสรรค์แปลงเกษตรที่ยั่งยืนสืบไป!"
             ]
           },
           {
-            type: "altar", id: "altar_lunar", x: 1100, y: 380, width: 44, height: 60,
+            type: "altar", id: "altar_lunar", x: 1250, y: 380, width: 44, height: 60,
             name: "แท่นพฤกษาใต้แสงจันทร์", icon: "🌳"
           },
           {
-            type: "item", id: "item_lunar_key", x: 1550, y: 405, width: 28, height: 28,
+            type: "item", id: "item_lunar_key", x: 1700, y: 405, width: 28, height: 28,
             name: "กุญแจจันทรานิรันดร์", icon: "🗝️", desc: "กุญแจแห่งความอุดมสมบูรณ์สูงสุด"
           },
           {
-            type: "portal", id: "portal_boss", x: 2000, y: 350, width: 60, height: 90,
-            name: "🌀 ประตูศึกประลองปัญญาบอส (Boss Battle)", icon: "🌀"
+            type: "portal", id: "portal_to_cathedral", targetRoom: "white_cathedral", spawnX: 2550,
+            x: 2350, y: 350, width: 50, height: 90, name: "🚪 สู่ เขตทุ่งรวงทอง", icon: "🚪"
           }
         ]
       }
@@ -2019,26 +1925,6 @@ class TerraQuestSuperEngine {
         const modalSpeed = document.getElementById("modal-minigame-speed");
         if (modalSpeed && !modalSpeed.classList.contains("hidden")) {
           this.closeSpeedQuiz();
-          return;
-        }
-        const modalHerbal = document.getElementById("modal-minigame-herbal");
-        if (modalHerbal && !modalHerbal.classList.contains("hidden")) {
-          this.closeHerbalLab();
-          return;
-        }
-        const modalTerraces = document.getElementById("modal-minigame-terraces");
-        if (modalTerraces && !modalTerraces.classList.contains("hidden")) {
-          this.closeTerracesFlow();
-          return;
-        }
-        const modalSeedVault = document.getElementById("modal-minigame-seedvault");
-        if (modalSeedVault && !modalSeedVault.classList.contains("hidden")) {
-          this.closeSeedVault();
-          return;
-        }
-        const modalNpk = document.getElementById("modal-minigame-npk");
-        if (modalNpk && !modalNpk.classList.contains("hidden")) {
-          this.closeNpkBlender();
           return;
         }
         const modalKc = document.getElementById("modal-knowledge-card");
@@ -2486,89 +2372,6 @@ class TerraQuestSuperEngine {
     if (btnExitSpeed) btnExitSpeed.addEventListener("click", () => this.closeSpeedQuiz());
     const btnCloseSpeedX = document.getElementById("btn-close-speed-x");
     if (btnCloseSpeedX) btnCloseSpeedX.addEventListener("click", () => this.closeSpeedQuiz());
-
-    // Minigame 7: Herbal Bio-Extract Lab (Zone 4)
-    document.querySelectorAll(".herbal-card-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const herb = btn.dataset.herb;
-        this.selectHerbalCard(herb);
-      });
-    });
-    document.querySelectorAll(".herbal-target-slot").forEach((slot) => {
-      slot.addEventListener("click", () => {
-        const target = slot.dataset.target;
-        this.assignHerbToTarget(target);
-      });
-    });
-    const btnSubmitHerbal = document.getElementById("btn-submit-herbal");
-    if (btnSubmitHerbal) {
-      btnSubmitHerbal.addEventListener("click", () => this.checkHerbalLab());
-    }
-    const btnExitHerbal = document.getElementById("btn-exit-herbal");
-    if (btnExitHerbal) btnExitHerbal.addEventListener("click", () => this.closeHerbalLab());
-    const btnCloseHerbalX = document.getElementById("btn-close-herbal-x");
-    if (btnCloseHerbalX) btnCloseHerbalX.addEventListener("click", () => this.closeHerbalLab());
-
-    // Minigame 8: Sky Rice Terraces Water Dam (Zone 9)
-    document.querySelectorAll(".terraces-valve-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const tier = btn.dataset.tier;
-        const val = btn.dataset.val;
-        this.setTerracesValve(tier, val);
-      });
-    });
-    const btnSubmitTerraces = document.getElementById("btn-submit-terraces");
-    if (btnSubmitTerraces) {
-      btnSubmitTerraces.addEventListener("click", () => this.checkTerracesFlow());
-    }
-    const btnExitTerraces = document.getElementById("btn-exit-terraces");
-    if (btnExitTerraces) btnExitTerraces.addEventListener("click", () => this.closeTerracesFlow());
-    const btnCloseTerracesX = document.getElementById("btn-close-terraces-x");
-    if (btnCloseTerracesX) btnCloseTerracesX.addEventListener("click", () => this.closeTerracesFlow());
-
-    // Minigame 9: Cryogenic Seed Vault Calibrator (Zone 10)
-    const btnTempDown = document.getElementById("btn-temp-down");
-    if (btnTempDown) btnTempDown.addEventListener("click", () => this.adjustSeedVaultTemp(-1));
-    const btnTempUp = document.getElementById("btn-temp-up");
-    if (btnTempUp) btnTempUp.addEventListener("click", () => this.adjustSeedVaultTemp(1));
-    const btnMoistDown = document.getElementById("btn-moist-down");
-    if (btnMoistDown) btnMoistDown.addEventListener("click", () => this.adjustSeedVaultMoist(-1));
-    const btnMoistUp = document.getElementById("btn-moist-up");
-    if (btnMoistUp) btnMoistUp.addEventListener("click", () => this.adjustSeedVaultMoist(1));
-
-    const btnSubmitSeedVault = document.getElementById("btn-submit-seedvault");
-    if (btnSubmitSeedVault) {
-      btnSubmitSeedVault.addEventListener("click", () => this.checkSeedVault());
-    }
-    const btnExitSeedVault = document.getElementById("btn-exit-seedvault");
-    if (btnExitSeedVault) btnExitSeedVault.addEventListener("click", () => this.closeSeedVault());
-    const btnCloseSeedVaultX = document.getElementById("btn-close-seedvault-x");
-    if (btnCloseSeedVaultX) btnCloseSeedVaultX.addEventListener("click", () => this.closeSeedVault());
-
-    // Minigame 10: N-P-K Golden Harvest Blender (Zone 11)
-    const btnNDown = document.getElementById("btn-n-down");
-    if (btnNDown) btnNDown.addEventListener("click", () => this.adjustNpk("n", -1));
-    const btnNUp = document.getElementById("btn-n-up");
-    if (btnNUp) btnNUp.addEventListener("click", () => this.adjustNpk("n", 1));
-
-    const btnPDown = document.getElementById("btn-p-down");
-    if (btnPDown) btnPDown.addEventListener("click", () => this.adjustNpk("p", -1));
-    const btnPUp = document.getElementById("btn-p-up");
-    if (btnPUp) btnPUp.addEventListener("click", () => this.adjustNpk("p", 1));
-
-    const btnKDown = document.getElementById("btn-k-down");
-    if (btnKDown) btnKDown.addEventListener("click", () => this.adjustNpk("k", -1));
-    const btnKUp = document.getElementById("btn-k-up");
-    if (btnKUp) btnKUp.addEventListener("click", () => this.adjustNpk("k", 1));
-
-    const btnSubmitNpk = document.getElementById("btn-submit-npk");
-    if (btnSubmitNpk) {
-      btnSubmitNpk.addEventListener("click", () => this.checkNpkBlender());
-    }
-    const btnExitNpk = document.getElementById("btn-exit-npk");
-    if (btnExitNpk) btnExitNpk.addEventListener("click", () => this.closeNpkBlender());
-    const btnCloseNpkX = document.getElementById("btn-close-npk-x");
-    if (btnCloseNpkX) btnCloseNpkX.addEventListener("click", () => this.closeNpkBlender());
 
     const btnCloseKcX = document.getElementById("btn-close-kc-x");
     if (btnCloseKcX) btnCloseKcX.addEventListener("click", () => this.closeKnowledgeCard());
@@ -5050,42 +4853,20 @@ class TerraQuestSuperEngine {
           const isBoss = (ent.id === "portal_boss");
           if (ent.reqMinigame && (!this.minigamesCompleted || !this.minigamesCompleted[ent.reqMinigame])) {
             this.sound.playWrong();
-            const minigameNames = {
-              nursery: "เพาะกล้าแอโรโปนิกส์ในเรือนเพาะชำ",
-              soil: "ปรับปรุงค่า pH ของดิน (6.0 - 7.0)",
-              sort: "จัดเรียงขั้นตอนการเตรียมแปลงปลูก",
-              herbal: "สกัดและจับคู่สมุนไพรอารักขาพืช",
-              pest: "ชีววิธีพิทักษ์แปลงควบคุมศัตรูพืช",
-              jigsaw: "วิเคราะห์และแก้ไขปัญหาระบบเกษตรอัจฉริยะ",
-              speed: "สปีดควิซระบบหมุนเวียนน้ำอควาโปนิกส์",
-              season: "จัดสรรพืชทนแล้งตามฤดูกาล",
-              terraces: "ควบคุมระบบผันน้ำนาขั้นบันไดและฝายชะลอน้ำ",
-              seedvault: "ปรับสภาวะจำศีลเมล็ดพันธุ์ไครโอเจนิก (-18°C)",
-              npk: "ปรุงสูตรธาตุอาหารหลัก N-P-K สู่ทุ่งรวงทอง (1-2-3)"
-            };
-            const taskName = minigameNames[ent.reqMinigame] || ent.reqMinigame;
-            this.showToastFeedback(`🔒 ประตูถูกผนึก! ต้องผ่านมินิเกม '${taskName}' ประจำด่านนี้ก่อน`, "danger");
+            let msg = "🔒 ประตูถูกผนึก! คุณต้องผ่านมินิเกมประจำด่านนี้ก่อน";
+            if (ent.reqMinigame === "nursery") msg = "🔒 ประตูถูกผนึกด้วยรากไม้เวทมนตร์! ต้องผ่านการทดลองเพาะต้นกล้าในเรือนเพาะชำก่อน";
+            else if (ent.reqMinigame === "soil") msg = "🔒 ม่านพลังศิลากรดสะกดประตูไว้! ต้องปรับสภาพค่า pH ของดิน (6.0 - 7.0) ให้สำเร็จก่อน";
+            else if (ent.reqMinigame === "sort") msg = "🔒 ประตูสะพานศิลาถูกล็อค! ต้องจัดเรียงขั้นตอนการเตรียมแปลงดินให้ถูกต้องก่อน";
+            this.showToastFeedback(msg, "danger");
             return;
           }
           if (isBoss) {
-            const requiredMinigames = [
-              { id: "nursery", name: "เพาะกล้าแอโรโปนิกส์" },
-              { id: "soil", name: "ปรับปรุง pH ดิน" },
-              { id: "sort", name: "จัดเตรียมแปลงปลูก" },
-              { id: "herbal", name: "สกัดสมุนไพร" },
-              { id: "pest", name: "ชีววิธีจัดการแมลง" },
-              { id: "jigsaw", name: "เกษตรอัจฉริยะ IoT" },
-              { id: "speed", name: "บึงอควาโปนิกส์" },
-              { id: "season", name: "จัดสรรพืชทนแล้ง" },
-              { id: "terraces", name: "ผันน้ำนาขั้นบันได" },
-              { id: "seedvault", name: "จำศีลคลังเมล็ดพันธุ์" },
-              { id: "npk", name: "ปรุงธาตุอาหาร N-P-K" }
-            ];
-            const missing = requiredMinigames.filter(m => !this.minigamesCompleted || !this.minigamesCompleted[m.id]);
-            if (missing.length > 0) {
+            const hasNursery = this.minigamesCompleted && this.minigamesCompleted.nursery;
+            const hasSoil = this.minigamesCompleted && this.minigamesCompleted.soil;
+            const hasSort = this.minigamesCompleted && this.minigamesCompleted.sort;
+            if (!hasNursery || !hasSoil || !hasSort) {
               this.sound.playWrong();
-              const missingList = missing.slice(0, 3).map(m => m.name).join(", ") + (missing.length > 3 ? ` และอีก ${missing.length - 3} ด่าน` : "");
-              this.showToastFeedback(`🔒 มหาประตูบอสถูกสะกด! ต้องผ่านมินิเกมให้ครบทั้ง 11 เขตกสิกรรมก่อน (ยังขาด: ${missingList})`, "danger");
+              this.showToastFeedback("🔒 มหาประตูบอสถูกสะกด! ต้องผ่านมินิเกมทั้ง 3 ด่าน (เพาะกล้า, ปรับดิน, จัดเตรียมแปลง) ให้ครบก่อน", "danger");
               return;
             }
             this.sound.playCorrect();
@@ -5159,58 +4940,6 @@ class TerraQuestSuperEngine {
             ],
             onStart: () => this.startMixerLab()
           });
-        } else if (ent.type === "minigame_herbal") {
-          this.showKnowledgeCard({
-            icon: "🌿",
-            title: "ศาสตร์แห่งพฤกษาสมุนไพรและสารสกัดธรรมชาติ (Herbal Bio-Extracts)",
-            category: "พฤกษาสมุนไพรอารักขาพืช",
-            facts: [
-              "1. <b>สะเดา (Neem)</b> มีสาร Azadirachtin ขัดขวางฮอร์โมนการลอกคราบของหนอนและเพลี้ยไฟ",
-              "2. <b>ตะไคร้หอม (Citronella)</b> มีน้ำมันหอมระเหยกลิ่นฉุนเฉพาะตัว ช่วยขับไล่ยุงและแมลงหวี่ขาวตอมใบ",
-              "3. <b>ข่าและขมิ้นชัน (Turmeric)</b> มีสารเคอร์คูมินช่วยยับยั้งสปอร์เชื้อราใบจุดและแผลใบไหม้",
-              "4. <b>ดาวเรือง (Marigold)</b> สารแอลฟา-เทอร์ธิเอนิลจากรากช่วยขับไล่และฆ่าไส้เดือนฝอยรากปมใต้ดิน"
-            ],
-            onStart: () => this.startHerbalLab()
-          });
-        } else if (ent.type === "minigame_pest") {
-          this.showKnowledgeCard({
-            icon: "🐛",
-            title: "ศาสตร์แห่งชีววิธีและการป้องกันศัตรูพืช",
-            category: "การอารักขาพืชและสมุนไพร",
-            facts: [
-              "<b>ชีววิธี (Biological Control)</b> คือการใช้สิ่งมีชีวิตควบคุมศัตรูพืช เช่น ใช้ <b>แมลงเต่าทอง (ตัวห้ำ)</b> กินเพลี้ยอ่อน",
-              "<b>สารสกัดสะเดา (Neem Extract)</b> มีสาร Azadirachtin ช่วยยับยั้งการเจริญเติบโตของหนอนและขับไล่แมลงอย่างปลอดภัย",
-              "การใช้สารเคมีเข้มข้นจะทำลายแมลงตัวดี จุลินทรีย์ในดิน และก่อให้เกิดสารพิษตกค้าง",
-              "การโรยเกลือทำลายโครงสร้างดิน ทำให้ดินเค็มและพืชเหี่ยวเฉาตาย"
-            ],
-            onStart: () => this.startBugDefender()
-          });
-        } else if (ent.type === "minigame_jigsaw") {
-          this.showKnowledgeCard({
-            icon: "📡",
-            title: "เกษตรอัจฉริยะและเซนเซอร์ IoT (AgriTech & Smart Farming)",
-            category: "เทคโนโลยีการเกษตรแม่นยำ",
-            facts: [
-              "1. <b>เซนเซอร์วัดความชื้นในดิน (Soil Moisture Sensor)</b> ส่งสัญญาณสั่งเปิดระบบน้ำหยดอัตโนมัติเฉพาะจุดที่ต้องการ",
-              "2. <b>โดรนตรวจจับดัชนีพืชพรรณ (NDVI Drone)</b> ใช้กล้อง Multispectral ถ่ายภาพสะท้อนแสงเพื่อตรวจสุขภาพใบและโรคพืชล่วงหน้า",
-              "3. <b>การให้น้ำและปุ๋ยร่วมกัน (Fertigation)</b> ผสมปุ๋ยทางระบบน้ำหยด ช่วยลดการสูญเสียปุ๋ยลงสู่ชั้นน้ำใต้ดินได้ถึง 40%",
-              "4. <b>การวิเคราะห์ปัญหาตรงจุด</b> นำข้อมูลเชิงตัวเลขมาตัดสินใจแก้ไขสภาพดินและแมลงศัตรูพืชได้อย่างแม่นยำ"
-            ],
-            onStart: () => this.startKnowledgeJigsaw()
-          });
-        } else if (ent.type === "minigame_speed") {
-          this.showKnowledgeCard({
-            icon: "🐟",
-            title: "ระบบนิเวศการเกษตรและบึงอควาโปนิกส์ (Aquaponics Ecology)",
-            category: "เกษตรผสมผสานและการหมุนเวียนธาตุอาหาร",
-            facts: [
-              "1. <b>อควาโปนิกส์ (Aquaponics)</b> คือการเลี้ยงปลาร่วมกับการปลูกพืชแบบไม่ใช้ดิน โดยใช้ของเสียจากปลาเป็นปุ๋ย",
-              "2. <b>แบคทีเรียไนตริฟายอิง (Nitrifying Bacteria)</b> เปลี่ยนแอมโมเนียที่เป็นพิษจากมูลปลา ให้กลายเป็น 'ไนเตรต' ซึ่งเป็นธาตุอาหารหลักของพืช",
-              "3. <b>รากพืชทำหน้าที่เสมือนตัวกรองชีวภาพ (Biofilter)</b> ดูดซับไนเตรต ทำให้น้ำสะอาดไหลวนกลับคืนสู่บ่อปลาได้ 100%",
-              "4. ความรู้ที่แม่นยำและรวดเร็วช่วยรักษาสมดุลชีวภาพในระบบหมุนเวียนน้ำได้อย่างยั่งยืน"
-            ],
-            onStart: () => this.startSpeedQuizBlitz()
-          });
         } else if (ent.type === "minigame_season") {
           this.showKnowledgeCard({
             icon: "☀️",
@@ -5224,44 +4953,18 @@ class TerraQuestSuperEngine {
             ],
             onStart: () => this.startCropPlanting()
           });
-        } else if (ent.type === "minigame_terraces") {
+        } else if (ent.type === "minigame_pest") {
           this.showKnowledgeCard({
-            icon: "🌊",
-            title: "ศาสตร์แห่งนาขั้นบันไดและการอนุรักษ์ดินและน้ำ (Soil & Water Conservation)",
-            category: "วิศวกรรมการจัดการน้ำบนพื้นที่สูง",
+            icon: "🐛",
+            title: "ศาสตร์แห่งชีววิธีและการป้องกันศัตรูพืช",
+            category: "การอารักขาพืชและสมุนไพร",
             facts: [
-              "1. <b>นาขั้นบันได (Rice Terraces)</b> เปลี่ยนความลาดชันของภูเขาให้เป็นขั้นบันไดราบเรียบ เพื่อลดอัตราความเร็วของน้ำท่า (Runoff Velocity)",
-              "2. <b>ฝายชะลอน้ำ (Check Dam)</b> ช่วยชะลอการไหล ดักตะกอนดินอินทรีย์ที่มีธาตุอาหาร ไม่ให้ถูกพัดชะล้างลงสู่หุบเหว",
-              "3. <b>ระบบคันนาและช่องระบายน้ำฉุกเฉิน (Spillway)</b> ควบคุมระดับน้ำขังในแต่ละขั้นให้พอเหมาะ (5-10 ซม.) ป้องกันคันนาดินถล่ม",
-              "4. การจัดการน้ำแบบ Slow & Store ช่วยให้ดินชุ่มชื้นตลอดฤดูเพาะปลูก"
+              "<b>ชีววิธี (Biological Control)</b> คือการใช้สิ่งมีชีวิตควบคุมศัตรูพืช เช่น ใช้ <b>แมลงเต่าทอง (ตัวห้ำ)</b> กินเพลี้ยอ่อน",
+              "<b>สารสกัดสะเดา (Neem Extract)</b> มีสาร Azadirachtin ช่วยยับยั้งการเจริญเติบโตของหนอนและขับไล่แมลงอย่างปลอดภัย",
+              "การใช้สารเคมีเข้มข้นจะทำลายแมลงตัวดี จุลินทรีย์ในดิน และก่อให้เกิดสารพิษตกค้าง",
+              "การโรยเกลือทำลายโครงสร้างดิน ทำให้ดินเค็มและพืชเหี่ยวเฉาตาย"
             ],
-            onStart: () => this.startTerracesFlow()
-          });
-        } else if (ent.type === "minigame_seedvault") {
-          this.showKnowledgeCard({
-            icon: "🧬",
-            title: "ศาสตร์แห่งการจำศีลเมล็ดพันธุ์ไครโอเจนิก (Seed Vault Cryogenics)",
-            category: "การอนุรักษ์พันธุกรรมพืชโลก",
-            facts: [
-              "1. <b>คลังเมล็ดพันธุ์ระดับโลก (เช่น Svalbard Global Seed Vault)</b> เก็บรักษาพันธุกรรมพืชไว้ในห้องเย็นถาวรเพื่อป้องกันการสูญพันธุ์จากภัยพิบัติ",
-              "2. <b>อุณหภูมิมาตรฐาน -18°C</b> ช่วยชะลอกระบวนการทางชีวเคมีและการหายใจของเมล็ดให้ลดลงต่ำสุด",
-              "3. <b>ความชื้นสัมพัทธ์ในเมล็ดต้องอยู่ที่ 4% - 6%</b> หากชื้นเกินไปผลึกน้ำแข็งจะฉีกเซลล์พืช หากแห้งเกินไปโปรตีนจะเสียสภาพ",
-              "4. การบรรจุในซองอลูมิเนียมฟอยล์สุญญากาศช่วยป้องกันความชื้นและออกซิเจนจากภายนอกได้อย่างสมบูรณ์"
-            ],
-            onStart: () => this.startSeedVault()
-          });
-        } else if (ent.type === "minigame_npk") {
-          this.showKnowledgeCard({
-            icon: "👑",
-            title: "ศาสตร์แห่งธาตุอาหารพืชหลัก N-P-K สู่ทุ่งรวงทอง (Plant Macronutrients)",
-            category: "สรีรวิทยาและโภชนาการพืช",
-            facts: [
-              "1. <b>ไนโตรเจน (N)</b> ส่งเสริมการสร้างคลอโรฟิลล์ การเจริญเติบโตของใบ ลำต้น และกิ่งก้าน",
-              "2. <b>ฟอสฟอรัส (P)</b> ส่งเสริมการพัฒนาระบบราก การแตกตาดอก และการติดผล",
-              "3. <b>โพแทสเซียม (K)</b> มีบทบาทสำคัญที่สุดในระยะออกรวง ช่วยสังเคราะห์และลำเลียงแป้ง น้ำตาล ทำให้เมล็ดเต่ง รวงสุกเหลืองอร่าม น้ำหนักดี",
-              "4. ในระยะออกรวงข้าวสาลี สูตรธาตุอาหาร N-P-K ควรเน้นโพแทสเซียม (K) สูงที่สุด (เช่น สัดส่วน 1 - 2 - 3)"
-            ],
-            onStart: () => this.startNpkBlender()
+            onStart: () => this.startBugDefender()
           });
         } else {
           this.openDialogue(ent.name, ent.dialogue, ent.icon);
@@ -5746,10 +5449,7 @@ class TerraQuestSuperEngine {
             stars: 3,
             knowledgeText: "การจับคู่ปัญหาและวิธีแก้ไขที่ตรงจุด คือหัวใจสำคัญของการทำเกษตรอินทรีย์และการบริหารจัดการแปลงเพาะปลูกอย่างยั่งยืน!",
             onContinue: () => {
-              this.minigamesCompleted = this.minigamesCompleted || {};
-              this.minigamesCompleted.jigsaw = true;
-              this.saveCurrentSlot();
-              this.showToastFeedback("✨ ผ่านมินิเกมจับคู่ปัญหาแล้ว! ประตูสู่เขตถัดไปเปิดออกแล้ว!", "success");
+              this.showToastFeedback("✨ ผ่านมินิเกมจับคู่ปัญหาแล้ว!", "success");
               this.gameState = "PLAYING";
             }
           });
@@ -5940,10 +5640,7 @@ class TerraQuestSuperEngine {
         stars: stars,
         knowledgeText: "สัญชาตญาณและความรู้ที่แม่นยำจะช่วยให้ตัดสินใจดูแลแปลงเกษตรได้อย่างรวดเร็วและปลอดภัย!",
         onContinue: () => {
-          this.minigamesCompleted = this.minigamesCompleted || {};
-          this.minigamesCompleted.speed = true;
-          this.saveCurrentSlot();
-          this.showToastFeedback("⚡ พิชิต Speed Quiz Blitz เรียบร้อย! ประตูสู่เขตถัดไปเปิดออกแล้ว!", "success");
+          this.showToastFeedback("⚡ พิชิต Speed Quiz Blitz เรียบร้อย!", "success");
           this.gameState = "PLAYING";
         }
       });
@@ -5994,400 +5691,6 @@ class TerraQuestSuperEngine {
     setTimeout(() => {
       this.loadSpeedQuizQuestion();
     }, 600);
-  }
-
-  /* ===== MINIGAME 7: HERBAL BIO-EXTRACT LAB (Zone 4) ===== */
-  startHerbalLab() {
-    this.herbalSelectedHerb = null;
-    this.herbalAssignments = { caterpillar: null, mosquito: null, fungus: null, nematode: null };
-
-    document.querySelectorAll(".herbal-card-btn").forEach(btn => btn.classList.remove("selected"));
-    
-    const targetKeys = ["caterpillar", "mosquito", "fungus", "nematode"];
-    targetKeys.forEach(t => {
-      const el = document.getElementById(`assigned-${t}`);
-      if (el) {
-        el.innerText = "[ยังไม่ได้เลือกสมุนไพร]";
-        el.style.color = "var(--hp-green)";
-      }
-      const slot = document.getElementById(`target-slot-${t}`);
-      if (slot) slot.classList.remove("assigned");
-    });
-
-    const modal = document.getElementById("modal-minigame-herbal");
-    if (modal) modal.classList.remove("hidden");
-  }
-
-  selectHerbalCard(herb) {
-    this.herbalSelectedHerb = herb;
-    document.querySelectorAll(".herbal-card-btn").forEach(btn => {
-      btn.classList.toggle("selected", btn.dataset.herb === herb);
-    });
-    if (this.sound) this.sound.playCoin();
-  }
-
-  assignHerbToTarget(target) {
-    if (!this.herbalSelectedHerb) {
-      this.sound.playWrong();
-      this.showToastFeedback("กรุณาคลิกเลือกการ์ดสมุนไพรด้านบนก่อน แล้วนำมาใส่ช่องนี้!", "danger");
-      return;
-    }
-
-    const herbLabels = {
-      neem: "🌿 สารสกัดสะเดา (Neem)",
-      citronella: "🌾 น้ำมันตะไคร้หอม (Citronella)",
-      galangal: "🥔 ข่า & ขมิ้นชัน (Turmeric)",
-      marigold: "🌼 สารสกัดรากดาวเรือง (Marigold)"
-    };
-
-    this.herbalAssignments[target] = this.herbalSelectedHerb;
-    
-    const el = document.getElementById(`assigned-${target}`);
-    if (el) {
-      el.innerText = `✓ ${herbLabels[this.herbalSelectedHerb] || this.herbalSelectedHerb}`;
-      el.style.color = "var(--gold-highlight)";
-    }
-    const slot = document.getElementById(`target-slot-${target}`);
-    if (slot) slot.classList.add("assigned");
-
-    if (this.sound) this.sound.playShoot();
-  }
-
-  checkHerbalLab() {
-    const a = this.herbalAssignments;
-    const isComplete = a.caterpillar && a.mosquito && a.fungus && a.nematode;
-    if (!isComplete) {
-      this.sound.playWrong();
-      this.showToastFeedback("⚠️ กรุณาจับคู่สมุนไพรให้ครบทั้ง 4 ชนิดก่อนสกัด!", "danger");
-      return;
-    }
-
-    const isCorrect = (
-      a.caterpillar === "neem" &&
-      a.mosquito === "citronella" &&
-      a.fungus === "galangal" &&
-      a.nematode === "marigold"
-    );
-
-    if (isCorrect) {
-      this.sound.playCorrect();
-      const modal = document.getElementById("modal-minigame-herbal");
-      if (modal) modal.classList.add("hidden");
-
-      this.showMinigameResult({
-        title: "🎉 สกัดและจับคู่สมุนไพรอารักขาพืชสำเร็จ!",
-        subtitle: "ควบคุมศัตรูพืชทั้ง 4 ชนิดด้วยภูมิปัญญาสมุนไพรธรรมชาติ 100%",
-        stars: 3,
-        knowledgeText: "สะเดา (Neem) ยับยั้งการลอกคราบของหนอน, ตะไคร้หอมขับไล่แมลงบินด้วยกลิ่นฉุน, ข่าและขมิ้นชันยับยั้งเชื้อราใบจุด, และดาวเรืองกำจัดไส้เดือนฝอยรากปมใต้ดินได้อย่างยอดเยี่ยม ปลอดภัยไร้สารพิษตกค้าง!",
-        onContinue: () => {
-          this.minigamesCompleted = this.minigamesCompleted || {};
-          this.minigamesCompleted.herbal = true;
-          this.saveCurrentSlot();
-          this.showToastFeedback("🌿 สกัดสมุนไพรอารักขาพืชสำเร็จ! ประตูสู่เขตถัดไปเปิดออกแล้ว!", "success");
-          this.gameState = "PLAYING";
-        }
-      });
-    } else {
-      this.sound.playWrong();
-      this.showToastFeedback("❌ การจับคู่สมุนไพรบางชนิดยังไม่ถูกต้อง! ตรวจสอบสรรพคุณแล้วลองใหม่อีกครั้ง", "danger");
-    }
-  }
-
-  closeHerbalLab() {
-    const modal = document.getElementById("modal-minigame-herbal");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากห้องทดลองสมุนไพรแล้ว", "info");
-  }
-
-  /* ===== MINIGAME 8: SKY RICE TERRACES WATER DAM (Zone 9) ===== */
-  startTerracesFlow() {
-    this.terracesValves = { 1: "fast", 2: "overflow", 3: "dry" };
-    this.updateTerracesVisual();
-    const modal = document.getElementById("modal-minigame-terraces");
-    if (modal) modal.classList.remove("hidden");
-  }
-
-  setTerracesValve(tier, val) {
-    this.terracesValves[tier] = val;
-    if (this.sound) this.sound.playCoin();
-    this.updateTerracesVisual();
-  }
-
-  updateTerracesVisual() {
-    const v = this.terracesValves;
-
-    // Update active button state
-    document.querySelectorAll(".terraces-valve-btn").forEach(btn => {
-      const tier = btn.dataset.tier;
-      const val = btn.dataset.val;
-      btn.classList.toggle("active", v[tier] === val);
-    });
-
-    // Subtext indicators
-    const sub1 = document.getElementById("terraces-sub-1");
-    if (sub1) {
-      if (v[1] === "slow") {
-        sub1.innerText = "สถานะ: ชะลอความเร็วน้ำฝน 30% ลดแรงกระแทกหน้าดิน (ปลอดภัย)";
-        sub1.style.color = "var(--hp-green)";
-      } else {
-        sub1.innerText = "สถานะ: น้ำไหลเชี่ยวจัด 80% เสี่ยงดินถล่มชะล้างหน้าดิน!";
-        sub1.style.color = "#f87171";
-      }
-    }
-
-    const sub2 = document.getElementById("terraces-sub-2");
-    if (sub2) {
-      if (v[2] === "trap") {
-        sub2.innerText = "สถานะ: ฝายเปิดดักตะกอนดินอุดมสมบูรณ์ กักเก็บแร่ธาตุ (ยอดเยี่ยม)";
-        sub2.style.color = "var(--hp-green)";
-      } else {
-        sub2.innerText = "สถานะ: น้ำล้นฝายท่วมทะลัก 90% ตะกอนดินไหลสูญเปล่า!";
-        sub2.style.color = "#f87171";
-      }
-    }
-
-    const sub3 = document.getElementById("terraces-sub-3");
-    if (sub3) {
-      if (v[3] === "balance") {
-        sub3.innerText = "สถานะ: ระดับน้ำขังแปลงรวงข้าว 50% พอเหมาะ ต้นข้าวไม่เน่า (สมบูรณ์)";
-        sub3.style.color = "var(--hp-green)";
-      } else {
-        sub3.innerText = "สถานะ: แปลงน้ำแห้งขอด 10% ต้นข้าวกำลังขาดน้ำเฉาตาย!";
-        sub3.style.color = "#f87171";
-      }
-    }
-
-    // Stream bar and flow status
-    const isBalanced = (v[1] === "slow" && v[2] === "trap" && v[3] === "balance");
-    const streamBar = document.getElementById("terraces-stream-bar");
-    const statusEl = document.getElementById("terraces-flow-status");
-
-    if (streamBar) {
-      streamBar.style.width = isBalanced ? "100%" : "45%";
-      streamBar.style.background = isBalanced 
-        ? "linear-gradient(90deg, #10b981, #06b6d4)" 
-        : "linear-gradient(90deg, #ef4444, #f59e0b)";
-    }
-
-    if (statusEl) {
-      if (isBalanced) {
-        statusEl.innerText = "💧 ระบบไหลเวียนน้ำ: ชะลอน้ำ ดักตะกอน และหล่อเลี้ยงต้นข้าวอย่างสมดุล (สมบูรณ์แบบ ✨)";
-        statusEl.style.color = "#a7f3d0";
-      } else {
-        statusEl.innerText = "⚠️ สภาวะปัจจุบัน: อัตราการไหลของน้ำยังไม่สมดุล เสี่ยงดินพังทลายหรือข้าวขาดน้ำ!";
-        statusEl.style.color = "#fecaca";
-      }
-    }
-  }
-
-  checkTerracesFlow() {
-    const v = this.terracesValves;
-    const isCorrect = (v[1] === "slow" && v[2] === "trap" && v[3] === "balance");
-
-    if (isCorrect) {
-      this.sound.playCorrect();
-      const modal = document.getElementById("modal-minigame-terraces");
-      if (modal) modal.classList.add("hidden");
-
-      this.showMinigameResult({
-        title: "🎉 จัดการระบบผันน้ำนาขั้นบันไดสำเร็จ!",
-        subtitle: "อนุรักษ์ดินและน้ำบนภูเขาสูงได้อย่างชาญฉลาด",
-        stars: 3,
-        knowledgeText: "ภูมิปัญญานาขั้นบันได (Rice Terraces) และฝายชะลอน้ำ ช่วยลดความลาดชัน ชะลอความเร็วของน้ำ ป้องกันการชะล้างพังทลายของหน้าดิน และกักเก็บตะกอนแร่ธาตุไว้หล่อเลี้ยงต้นข้าวได้ยาวนาน!",
-        onContinue: () => {
-          this.minigamesCompleted = this.minigamesCompleted || {};
-          this.minigamesCompleted.terraces = true;
-          this.saveCurrentSlot();
-          this.showToastFeedback("🌊 จัดการผันน้ำนาขั้นบันไดสำเร็จ! มุ่งหน้าสู่คลังเมล็ดพันธุ์!", "success");
-          this.gameState = "PLAYING";
-        }
-      });
-    } else {
-      this.sound.playWrong();
-      this.showToastFeedback("❌ ระดับการผันน้ำยังไม่สมดุล! ปรับทั้ง 3 ขั้นให้เป็นระบบชะลอน้ำและดักตะกอน", "danger");
-    }
-  }
-
-  closeTerracesFlow() {
-    const modal = document.getElementById("modal-minigame-terraces");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากระบบผันน้ำนาขั้นบันไดแล้ว", "info");
-  }
-
-  /* ===== MINIGAME 9: CRYOGENIC SEED VAULT CALIBRATOR (Zone 10) ===== */
-  startSeedVault() {
-    this.seedVaultTemp = -5;
-    this.seedVaultMoist = 12;
-    this.updateSeedVaultVisual();
-    const modal = document.getElementById("modal-minigame-seedvault");
-    if (modal) modal.classList.remove("hidden");
-  }
-
-  adjustSeedVaultTemp(delta) {
-    this.seedVaultTemp = Math.max(-30, Math.min(10, this.seedVaultTemp + delta));
-    if (this.sound) this.sound.playCoin();
-    this.updateSeedVaultVisual();
-  }
-
-  adjustSeedVaultMoist(delta) {
-    this.seedVaultMoist = Math.max(1, Math.min(25, this.seedVaultMoist + delta));
-    if (this.sound) this.sound.playCoin();
-    this.updateSeedVaultVisual();
-  }
-
-  updateSeedVaultVisual() {
-    const tempReading = document.getElementById("seedvault-temp-reading");
-    if (tempReading) {
-      tempReading.innerText = `${this.seedVaultTemp}°C`;
-      tempReading.style.color = (this.seedVaultTemp === -18) ? "#00f5d4" : (this.seedVaultTemp < -18 ? "#38bdf8" : "#f87171");
-    }
-
-    const moistReading = document.getElementById("seedvault-moist-reading");
-    if (moistReading) {
-      moistReading.innerText = `${this.seedVaultMoist}%`;
-      moistReading.style.color = (this.seedVaultMoist >= 4 && this.seedVaultMoist <= 6) ? "#fee440" : "#f87171";
-    }
-
-    const indicator = document.getElementById("seedvault-status-indicator");
-    if (indicator) {
-      const tempOk = (this.seedVaultTemp === -18);
-      const moistOk = (this.seedVaultMoist >= 4 && this.seedVaultMoist <= 6);
-
-      if (tempOk && moistOk) {
-        indicator.style.background = "rgba(16, 185, 129, 0.25)";
-        indicator.style.color = "#34d399";
-        indicator.style.border = "1px solid #10b981";
-        indicator.innerText = "✅ สภาวะมาตรฐานโลก (Svalbard Standard): -18°C / ความชื้น 4-6% พร้อมจำศีลเมล็ดพันธุ์นับร้อยปี!";
-      } else if (!tempOk && moistOk) {
-        indicator.style.background = "rgba(245, 158, 11, 0.2)";
-        indicator.style.color = "#fbbf24";
-        indicator.style.border = "1px solid #f59e0b";
-        indicator.innerText = `⚠️ ความชื้นเมล็ดได้แล้ว แต่ห้องเย็นอยู่ที่ ${this.seedVaultTemp}°C (ต้องการ -18°C)`;
-      } else if (tempOk && !moistOk) {
-        indicator.style.background = "rgba(245, 158, 11, 0.2)";
-        indicator.style.color = "#fbbf24";
-        indicator.style.border = "1px solid #f59e0b";
-        indicator.innerText = `⚠️ อุณหภูมิ -18°C พอดีแล้ว แต่ความชื้นเมล็ดอยู่ที่ ${this.seedVaultMoist}% (ต้องการ 4% - 6%)`;
-      } else {
-        indicator.style.background = "rgba(239, 68, 68, 0.2)";
-        indicator.style.color = "#f87171";
-        indicator.style.border = "1px solid #ef4444";
-        indicator.innerText = `⚠️ สภาวะปัจจุบัน: อุณหภูมิ ${this.seedVaultTemp}°C และความชื้น ${this.seedVaultMoist}% ยังไม่ตรงเกณฑ์สากล!`;
-      }
-    }
-  }
-
-  checkSeedVault() {
-    const isCorrect = (this.seedVaultTemp === -18 && this.seedVaultMoist >= 4 && this.seedVaultMoist <= 6);
-
-    if (isCorrect) {
-      this.sound.playCorrect();
-      const modal = document.getElementById("modal-minigame-seedvault");
-      if (modal) modal.classList.add("hidden");
-
-      this.showMinigameResult({
-        title: "🎉 คาลิเบรตคลังเมล็ดพันธุ์สำเร็จ!",
-        subtitle: "เมล็ดพันธุ์เข้าสู่ภาวะจำศีลไครโอเจนิกสมบูรณ์แบบ",
-        stars: 3,
-        knowledgeText: "ตามมาตรฐานคลังเมล็ดพันธุ์สากล (เช่น Svalbard Global Seed Vault) อุณหภูมิ -18°C ร่วมกับความชื้นสัมพัทธ์ในเมล็ดที่ 4-6% จะหยุดยั้งการหายใจและการแบ่งเซลล์ของเมล็ด ปราศจากน้ำแข็งแทงทำลายเยื่อหุ้มเซลล์ ทำให้รักษาอัตราการงอกได้นานนับศตวรรษ!",
-        onContinue: () => {
-          this.minigamesCompleted = this.minigamesCompleted || {};
-          this.minigamesCompleted.seedvault = true;
-          this.saveCurrentSlot();
-          this.showToastFeedback("🧬 ล็อคระบบคลังเมล็ดพันธุ์สำเร็จ! มุ่งหน้าสู่เขตทุ่งรวงทอง!", "success");
-          this.gameState = "PLAYING";
-        }
-      });
-    } else {
-      this.sound.playWrong();
-      this.showToastFeedback("❌ ยังไม่เข้าเกณฑ์! ปรับอุณหภูมิให้ได้ -18°C และความชื้น 4% - 6%", "danger");
-    }
-  }
-
-  closeSeedVault() {
-    const modal = document.getElementById("modal-minigame-seedvault");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากคลังเมล็ดพันธุ์แล้ว", "info");
-  }
-
-  /* ===== MINIGAME 10: N-P-K GOLDEN HARVEST BLENDER (Zone 11) ===== */
-  startNpkBlender() {
-    this.npkValues = { n: 1, p: 1, k: 1 };
-    this.updateNpkVisual();
-    const modal = document.getElementById("modal-minigame-npk");
-    if (modal) modal.classList.remove("hidden");
-  }
-
-  adjustNpk(element, delta) {
-    this.npkValues[element] = Math.max(0, Math.min(5, this.npkValues[element] + delta));
-    if (this.sound) this.sound.playCoin();
-    this.updateNpkVisual();
-  }
-
-  updateNpkVisual() {
-    const elN = document.getElementById("npk-val-n");
-    if (elN) elN.innerText = `${this.npkValues.n} ส่วน`;
-    const elP = document.getElementById("npk-val-p");
-    if (elP) elP.innerText = `${this.npkValues.p} ส่วน`;
-    const elK = document.getElementById("npk-val-k");
-    if (elK) elK.innerText = `${this.npkValues.k} ส่วน`;
-
-    const display = document.getElementById("npk-status-display");
-    if (display) {
-      const isGolden = (this.npkValues.n === 1 && this.npkValues.p === 2 && this.npkValues.k === 3);
-      if (isGolden) {
-        display.style.background = "rgba(16, 185, 129, 0.2)";
-        display.style.border = "1px solid #10b981";
-        display.style.color = "#34d399";
-        display.innerHTML = "✨ สูตรปัจจุบัน: <b>1 - 2 - 3</b> (สูตรรวงทองคำ! N พอเหมาะ P สร้างดอก K สูงสุดเร่งแป้งเมล็ดเต่ง)";
-      } else {
-        display.style.background = "rgba(0,0,0,0.4)";
-        display.style.border = "1px solid #334e68";
-        display.style.color = "#cbd5e1";
-        display.innerHTML = `🌾 สูตรปัจจุบัน: <b>${this.npkValues.n} - ${this.npkValues.p} - ${this.npkValues.k}</b> (เป้าหมาย: N=1, P=2, K=3 สำหรับระยะออกรวงสะสมแป้ง)`;
-      }
-    }
-  }
-
-  checkNpkBlender() {
-    const isCorrect = (this.npkValues.n === 1 && this.npkValues.p === 2 && this.npkValues.k === 3);
-
-    if (isCorrect) {
-      this.sound.playCorrect();
-      const modal = document.getElementById("modal-minigame-npk");
-      if (modal) modal.classList.add("hidden");
-
-      this.showMinigameResult({
-        title: "🎉 ปรุงสูตรธาตุอาหาร N-P-K รวงทองคำสำเร็จ!",
-        subtitle: "ทุ่งรวงทองสุกปลั่ง พร้อมเปิดมหาประตูสู่พฤกษาจันทรานิรันดร์",
-        stars: 3,
-        knowledgeText: "ธาตุอาหารหลักของพืช (Macronutrients): ไนโตรเจน (N) ดูแลใบเขียว, ฟอสฟอรัส (P) พัฒนารากและตาดอก, และโพแทสเซียม (K) เป็นหัวใจสำคัญในระยะติดเมล็ดเพื่อสังเคราะห์แป้งและน้ำตาล ทำให้รวงข้าวเต่งน้ำหนักดี!",
-        onContinue: () => {
-          this.minigamesCompleted = this.minigamesCompleted || {};
-          this.minigamesCompleted.npk = true;
-          this.saveCurrentSlot();
-          this.showToastFeedback("👑 ปรุงสูตรธาตุอาหารสำเร็จ! มหาประตูสู่เขตพฤกษาจันทราเปิดออกแล้ว!", "success");
-          this.gameState = "PLAYING";
-        }
-      });
-    } else {
-      this.sound.playWrong();
-      this.showToastFeedback("❌ สูตรยังไม่ถูกต้อง! ระยะออกรวงต้องการ N=1, P=2, และ K=3 เพื่อสะสมแป้งเมล็ดเต่ง", "danger");
-    }
-  }
-
-  closeNpkBlender() {
-    const modal = document.getElementById("modal-minigame-npk");
-    if (modal) modal.classList.add("hidden");
-    this.gameState = "PLAYING";
-    if (this.sound) this.sound.playCoin();
-    this.showToastFeedback("ออกจากแท่นปรุงธาตุอาหารแล้ว", "info");
   }
 
   openDialogue(speaker, text, icon) {
@@ -6623,7 +5926,7 @@ class TerraQuestSuperEngine {
         score: finalScore,
         trophy: "พิทักษ์พืชพันธุ์",
         island_completed: "island_1",
-        total_questions: 10,
+        total_questions: 8,
         time_spent_seconds: Math.floor((Date.now() - (this.gameStartTime || Date.now())) / 1000)
       })
     }).then(res => res.json()).then(data => {
@@ -6754,13 +6057,9 @@ class TerraQuestSuperEngine {
         if (ent.reqMinigame && (!this.minigamesCompleted || !this.minigamesCompleted[ent.reqMinigame])) {
           isLocked = true;
           lockReason = " 🔒 [ต้องผ่านมินิเกม]";
-        } else if (isBoss) {
-          const reqs = ["nursery", "soil", "sort", "herbal", "pest", "jigsaw", "speed", "season", "terraces", "seedvault", "npk"];
-          const missingCount = reqs.filter(k => !this.minigamesCompleted || !this.minigamesCompleted[k]).length;
-          if (missingCount > 0) {
-            isLocked = true;
-            lockReason = ` 🔒 [บอสสะกด: ขาดอีก ${missingCount} ด่าน]`;
-          }
+        } else if (isBoss && (!this.minigamesCompleted?.nursery || !this.minigamesCompleted?.soil || !this.minigamesCompleted?.sort)) {
+          isLocked = true;
+          lockReason = " 🔒 [บอสถูกสะกด]";
         }
         const screenY = ((ent.y - 8) / 540) * 100;
         const tagClass = isLocked ? "tag-portal-locked" : (isBoss ? "tag-boss-portal" : "tag-portal");
@@ -8043,7 +7342,7 @@ class TerraQuestSuperEngine {
       if (isDiscovered) {
         let badgeStr = "";
         if (room.altars && room.altars.length) badgeStr += "🕯️";
-        if (room.entities && room.entities.some(e => e.type && e.type.startsWith("minigame"))) badgeStr += "🎮";
+        if (room.equipment && room.equipment.length) badgeStr += "⚔️";
         if (room.items && room.items.length) badgeStr += "📦";
         if (room.boss && room.boss !== "-") badgeStr += "💀";
         ctx.font = "8px 'Prompt', 'Kanit', 'Chakra Petch', sans-serif";
