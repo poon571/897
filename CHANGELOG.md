@@ -2,7 +2,16 @@
 
 เอกสารบันทึกประวัติเวอร์ชันและการแก้ไขปรับปรุงของโปรเจกต์ Harvest Frontier
 
-## [v1.6.0] - 2026-09-22 (Current Version)
+## [v1.6.1] - 2026-09-22 (Current Version)
+### 🛠️ แก้ไขข้อผิดพลาด Turbopack Font Rewrite ตอน Build บน Vercel
+- **Root Cause:** แท็ก `<link href="https://fonts.googleapis.com/css2?...">` ในหน้า HTML สำรองของ `/api/auth/google` ถูกระบบ Turbopack ของ Next.js พยายามแปลงเป็น Font Asset ทำให้ติดเงื่อนไข Assertion `next/font/google queries have exactly one entry`
+- **Fix Applied:**
+  - นำแท็ก `<link>` ของ Google Fonts ภายนอกออกจาก Route Handler และสลับมาใช้ System Font Stack ที่เบาและปลอดภัย
+- **Verification:** ผ่านการทดสอบ `next build` ผ่านฉลุย 100% (Compiled successfully in 5.5s, 23 routes)
+
+---
+
+## [v1.6.0] - 2026-09-22
 ### 🔑 เพิ่มระบบเชื่อมต่อ Google OAuth (Sign in & Sign up with Google)
 - **Google Social Authentication Button & UI:**
   - เพิ่มปุ่ม "เข้าสู่ระบบด้วย Google" ในหน้า `/auth/login` และ "สมัครสมาชิกด้วย Google" ในหน้า `/auth/register` พร้อมโลโก้ SVG Google ตามมาตรฐาน

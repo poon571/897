@@ -15,13 +15,12 @@ export async function GET(req) {
       <head>
         <meta charset="UTF-8">
         <title>ตั้งค่า Google Sign-in — Harvest Frontier</title>
-        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
         <style>
           * { box-sizing: border-box; margin: 0; padding: 0; }
           body {
             background: linear-gradient(135deg, #0d1b2a, #1b263b);
             color: #f8fafc;
-            font-family: 'Kanit', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Prompt", "Kanit", sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
