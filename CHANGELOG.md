@@ -2,7 +2,20 @@
 
 เอกสารบันทึกประวัติเวอร์ชันและการแก้ไขปรับปรุงของโปรเจกต์ Harvest Frontier
 
-## [v1.5.0] - 2026-09-16 (Current Version)
+## [v1.5.1] - 2026-09-22 (Current Version)
+### 🐛 แก้ไขบั๊กหน้าสมัครสมาชิก (/auth/register) รีเฟรชตัวเองไม่หยุด (Infinite Reload Loop Fix)
+- **Root Cause:** Next.js 16 Dev Server รันด้วย Turbopack และเกิดข้อผิดพลาดระดับ Fatal Panic ใน Windows (`Failed to write app endpoint /auth/register/page: Next.js package not found`) เมื่อ HMR แครชจึงสั่งให้ไคลเอนต์เบราว์เซอร์ทำ Hard Reload วนลูปไม่สิ้นสุด
+- **Fix Applied:**
+  - ล้างไฟล์แคชเก่าตกค้าง `.next` ที่ติดมาจากการย้ายเครื่อง
+  - สลับโหมด Dev Server เป็น `--webpack` เพื่อเสถียรภาพสูงสุดบน Windows
+- **Verification:** ผ่านการทดสอบด้วย Browser Subagent: หน้าเว็บนิ่ง 100%, กรอก Username, Email, Password ได้ราบรื่น
+- **Files Modified:**
+  - `package.json` — อัปเดตสคริปต์ `"dev": "next dev --webpack"`
+- **Backup Snapshot:** `_backup/versions/v1.5.1-fix-register-reload-loop/`
+
+---
+
+## [v1.5.0] - 2026-09-16
 ### 🌱 เพิ่มมินิเกม "ห้องเพาะกล้าลอยฟ้า" — เรือนเพาะชำ (เกาะ 1 ด่าน 1) ให้ความรู้ควบคู่การเล่น
 - **Nursery Seedling Lab Minigame (ห้องเพาะกล้า):**
   - ผู้เล่นเลือกสภาวะ 3 ด้าน (ความชื้น, อุณหภูมิ, แสง) เพื่อเพาะเมล็ดพันธุ์ให้งอกสำเร็จ
