@@ -2,7 +2,19 @@
 
 เอกสารบันทึกประวัติเวอร์ชันและการแก้ไขปรับปรุงของโปรเจกต์ Harvest Frontier
 
-## [v1.5.1] - 2026-09-22 (Current Version)
+## [v1.6.0] - 2026-09-22 (Current Version)
+### 🔑 เพิ่มระบบเชื่อมต่อ Google OAuth (Sign in & Sign up with Google)
+- **Google Social Authentication Button & UI:**
+  - เพิ่มปุ่ม "เข้าสู่ระบบด้วย Google" ในหน้า `/auth/login` และ "สมัครสมาชิกด้วย Google" ในหน้า `/auth/register` พร้อมโลโก้ SVG Google ตามมาตรฐาน
+  - เพิ่มเส้นแบ่งโมเดิร์น "หรือ" ใน `styles/auth.module.css`
+- **Backend OAuth Engine:**
+  - สร้าง Endpoint `/api/auth/google`: นำทางไปยัง Google OAuth Consent Screen พร้อมหน้าแนะนำการตั้งค่าในกรณีที่ยังไม่ได้ใส่ Client ID
+  - สร้าง Endpoint `/api/auth/callback/google`: รับ Authorization Code แลก Token ดึงโปรไฟล์ผู้ใช้ เชื่อมโยงบัญชีอัตโนมัติในฐานข้อมูล PostgreSQL และสร้าง Session Cookie เข้าเล่นเกมทันที
+- **Backup Snapshot:** `_backup/versions/v1.6.0-google-oauth-integration/`
+
+---
+
+## [v1.5.1] - 2026-09-22
 ### 🐛 แก้ไขบั๊กหน้าสมัครสมาชิก (/auth/register) รีเฟรชตัวเองไม่หยุด (Infinite Reload Loop Fix)
 - **Root Cause:** Next.js 16 Dev Server รันด้วย Turbopack และเกิดข้อผิดพลาดระดับ Fatal Panic ใน Windows (`Failed to write app endpoint /auth/register/page: Next.js package not found`) เมื่อ HMR แครชจึงสั่งให้ไคลเอนต์เบราว์เซอร์ทำ Hard Reload วนลูปไม่สิ้นสุด
 - **Fix Applied:**
